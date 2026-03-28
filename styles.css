@@ -1207,6 +1207,15 @@ input, button, textarea, select { font-family: inherit; }
   color: rgba(255,255,255,0.9);
   font-weight: 500;
 }
+.quick-cta-form ::placeholder {
+  color: rgba(255,255,255,0.7);
+  opacity: 1; /* Firefox */
+}
+.cta-section__form-wrap {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 /* ──────────────────────────────────────
    FOOTER

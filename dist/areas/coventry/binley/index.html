@@ -426,18 +426,56 @@
   </section>
 
   <!-- CTA -->
-  <section class="section cta-section">
+  <!-- ===== FINAL CTA ===== -->
+  <section class="section cta-section" id="cta">
     <div class="cta-section__bg">
       <img src="/images/modern_home_exterior.png" alt="Beautiful home" />
     </div>
-    <div class="cta-section__overlay"></div>
-    <div class="container cta-section__inner">
-      <h2 class="cta-section__title">Moving in Binley?</h2>
-      <p class="cta-section__sub">Get your free, no-obligation removal quote in just 2 minutes. Trusted by families across Coventry.</p>
-      <div class="cta-section__buttons" style="display:flex;gap:10px;justify-content:center;">
-        <a href="/get-a-quote/" class="btn btn--gold btn--large">👑 Get My Free Quote Now</a>
-        <a href="/contact/" class="btn btn--outline btn--large" style="color:var(--white);border-color:var(--white);">✉ Contact Us</a>
+    <div class="cta-section__overlay" style="background: rgba(17,17,17, 0.9);"></div>
+    <div class="container cta-section__inner split-section" style="align-items: center; gap: 48px;">
+      
+      <!-- LEFT SIDE: Text + Call Button -->
+      <div class="cta-section__copy">
+        <h2 class="cta-section__title" style="margin-bottom: 1rem;">Ready for a <span class="gold-text">Royal Move?</span></h2>
+        <p class="cta-section__sub" style="margin-bottom: 2rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;">Get your free, no-obligation quote in under 2 minutes. Fill out the quick form or call us directly. Our team responds in 10 to 15 minutes.</p>
+        
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+          <a href="tel:+44 7345 624506" class="btn btn--gold btn--large">
+            📞 Call 07345 624506
+          </a>
+          <a href="https://wa.me/447345624506" class="btn btn--outline btn--large" target="_blank" style="color:var(--white);border-color:var(--white);">
+            📱 WhatsApp Us
+          </a>
+        </div>
+        
+        <div class="cta-section__badges">
+          <span>✓ No Hidden Fees</span>
+          <span>✓ Fully Insured</span>
+        </div>
       </div>
+      
+      <!-- RIGHT SIDE: Quick Form -->
+      <div class="cta-section__form-wrap">
+        <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <form class="quick-cta-form" action="https://formspree.io/f/mnnqkqzo" method="POST">
+            <input type="hidden" name="_subject" value="New Quick Web Lead (Call Back Request)">
+            <div class="form-field" style="margin-bottom: 1rem;">
+              <input type="text" name="name" class="form-input" placeholder="Your Name" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+               <div class="form-field">
+                 <input type="email" name="email" class="form-input" placeholder="Email Address" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+               <div class="form-field">
+                 <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Get Started →</button>
+          </form>
+        </div>
+      </div>
+      
     </div>
   </section>
 
