@@ -732,6 +732,14 @@ input, button, textarea, select { font-family: inherit; }
   object-fit: cover;
   max-height: 500px;
 }
+.split-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
 .split-section__copy p {
   font-size: 1.125rem;
   line-height: 1.7;
