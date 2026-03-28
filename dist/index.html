@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Royals Removals | Premium House Removals in Birmingham</title>
+  <meta name="description" content="The Royals Removals — Birmingham's most trusted premium house removal company. Get a fast, free quote in minutes. Careful handling, stress-free moving, professional team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-crown">♛</span>
+        <span class="nav__logo-text">The Royal <strong>Removals</strong></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+      <a href="#quote-form" class="btn btn--gold nav__cta">Get Free Quote</a>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero__bg-image">
+      <img src="images/modern_home_exterior.png" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero__bg-overlay"></div>
+    <div class="container hero__inner">
+
+      <!-- Left: Copy -->
+      <div class="hero__copy">
+        <div class="hero__badge">
+          <span class="hero__badge-icon">⭐⭐⭐⭐⭐</span>
+          <span>Rated 5-Star by Birmingham Families</span>
+        </div>
+        <h1 class="hero__h1">
+          Birmingham's Most <span class="gold-text">Trusted</span> Premium Removal Service
+        </h1>
+        <p class="hero__sub">
+          From your first box to the last piece of furniture — The Royals Removals delivers a stress-free, carefully handled move you can rely on. Serving Birmingham and surrounding areas with unmatched care and professionalism.
+        </p>
+        <ul class="hero__trust-list">
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Fully insured &amp; vetted professional team</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Free no-obligation quotes in minutes</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Same-day response &amp; flexible move dates</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Careful handling &amp; damage protection guarantee</span>
+          </li>
+        </ul>
+
+        <div class="hero__images">
+          <div class="hero__img-card hero__img-card--main">
+            <img src="images/the-royals-removals-birmingham (14).webp" alt="The Royals Removals team loading van in Birmingham" />
+          </div>
+          <div class="hero__img-stack">
+            <div class="hero__img-card">
+              <img src="images/the-royals-removals-birmingham (19).webp" alt="Fully loaded removals van in Birmingham" />
+            </div>
+            <div class="hero__img-card">
+              <img src="images/happy_family_moving.png" alt="Happy family moving to their new home" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Multi-step Form -->
+      <div class="hero__form-wrap" id="quote-form">
+        <div class="form-card glass-card">
+          <div class="form-card__header">
+            <h2 class="form-card__title">Get Your <span class="gold-text">Free Quote</span></h2>
+            <p class="form-card__subtitle">2 minutes · No obligation · Instant response</p>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="form-progress">
+            <div class="form-progress__steps" id="progressSteps">
+              <div class="form-progress__step active" data-step="1">
+                <span class="form-progress__num">1</span>
+                <span class="form-progress__label">Property</span>
+              </div>
+              <div class="form-progress__connector"></div>
+              <div class="form-progress__step" data-step="2">
+                <span class="form-progress__num">2</span>
+                <span class="form-progress__label">From</span>
+              </div>
+              <div class="form-progress__connector"></div>
+              <div class="form-progress__step" data-step="3">
+                <span class="form-progress__num">3</span>
+                <span class="form-progress__label">To</span>
+              </div>
+              <div class="form-progress__connector"></div>
+              <div class="form-progress__step" data-step="4">
+                <span class="form-progress__num">4</span>
+                <span class="form-progress__label">Date</span>
+              </div>
+              <div class="form-progress__connector"></div>
+              <div class="form-progress__step" data-step="5">
+                <span class="form-progress__num">5</span>
+                <span class="form-progress__label">Contact</span>
+              </div>
+            </div>
+            <div class="form-progress__bar-wrap">
+              <div class="form-progress__bar" id="progressBar"></div>
+            </div>
+          </div>
+
+          <form id="quoteForm" novalidate>
+
+            <!-- STEP 1: Property Type -->
+            <div class="form-step active" id="step-1">
+              <h3 class="form-step__heading">What are you moving?</h3>
+              <p class="form-step__sub">Select your property type to get started</p>
+              <div class="pill-grid pill-grid--2">
+                <label class="pill-option">
+                  <input type="radio" name="property" value="1bed" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">🛏️</span>
+                    <span>1 Bedroom</span>
+                  </span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="property" value="2bed" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">🛏️</span>
+                    <span>2 Bedroom</span>
+                  </span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="property" value="3bed" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">🏠</span>
+                    <span>3 Bedroom</span>
+                  </span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="property" value="4bed" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">🏡</span>
+                    <span>4+ Bedroom</span>
+                  </span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="property" value="flat" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">🏢</span>
+                    <span>Flat / Apartment</span>
+                  </span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="property" value="office" />
+                  <span class="pill-option__label">
+                    <span class="pill-option__icon">💼</span>
+                    <span>Office Move</span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-step__error hidden" id="err-1">Please select a property type.</div>
+              <button type="button" class="btn btn--gold btn--full step-next" data-validate="property">Next Step →</button>
+            </div>
+
+            <!-- STEP 2: Moving From -->
+            <div class="form-step" id="step-2">
+              <h3 class="form-step__heading">Where are you moving from?</h3>
+              <p class="form-step__sub">Enter your current postcode or area</p>
+              <div class="form-field">
+                <label for="fromPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
+                <input type="text" id="fromPostcode" name="fromPostcode" class="form-input" placeholder="e.g. B1 1AA or Harborne, Birmingham" />
+              </div>
+              <div class="form-step__error hidden" id="err-2">Please enter your moving-from postcode or area.</div>
+              <div class="form-step__actions">
+                <button type="button" class="btn btn--outline step-back">← Back</button>
+                <button type="button" class="btn btn--gold step-next" data-validate="fromPostcode">Next Step →</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Moving To -->
+            <div class="form-step" id="step-3">
+              <h3 class="form-step__heading">Where are you moving to?</h3>
+              <p class="form-step__sub">Enter your destination postcode or area</p>
+              <div class="form-field">
+                <label for="toPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
+                <input type="text" id="toPostcode" name="toPostcode" class="form-input" placeholder="e.g. B15 2TT or Solihull" />
+              </div>
+              <div class="form-step__error hidden" id="err-3">Please enter your moving-to postcode or area.</div>
+              <div class="form-step__actions">
+                <button type="button" class="btn btn--outline step-back">← Back</button>
+                <button type="button" class="btn btn--gold step-next" data-validate="toPostcode">Next Step →</button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Move Date + Extra Services -->
+            <div class="form-step" id="step-4">
+              <h3 class="form-step__heading">When are you moving?</h3>
+              <p class="form-step__sub">Please provide an estimated date — this can be flexible</p>
+              <div class="form-field">
+                <label for="moveDate" class="form-label">Estimated Move Date <span class="req">*</span></label>
+                <input type="date" id="moveDate" name="moveDate" class="form-input" />
+              </div>
+              <div class="form-field">
+                <label class="form-label">Do you require any extra services?</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="extras" value="packing" />
+                    <span>📦 Packing Service</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="extras" value="materials" />
+                    <span>🗃️ Packing Materials</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="extras" value="dismantling" />
+                    <span>🔧 Dismantling &amp; Reassembling</span>
+                  </label>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="extras" value="storage" />
+                    <span>🏪 Storage Solutions</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form-step__error hidden" id="err-4">Please select a move date.</div>
+              <div class="form-step__actions">
+                <button type="button" class="btn btn--outline step-back">← Back</button>
+                <button type="button" class="btn btn--gold step-next" data-validate="moveDate">Next Step →</button>
+              </div>
+            </div>
+
+            <!-- STEP 5: Contact Details -->
+            <div class="form-step" id="step-5">
+              <h3 class="form-step__heading">Your Contact Details</h3>
+              <p class="form-step__sub">We'll use these to send your personalised quote</p>
+              <div class="form-field">
+                <label for="fullName" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. James Smith" />
+              </div>
+              <div class="form-field">
+                <label for="phone" class="form-label">Phone Number <span class="req">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 07700 900123" />
+              </div>
+              <div class="form-field">
+                <label for="email" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. james@example.com" />
+              </div>
+              <div class="form-step__error hidden" id="err-5">Please fill in all required fields.</div>
+              <div class="form-step__actions">
+                <button type="button" class="btn btn--outline step-back">← Back</button>
+                <button type="submit" class="btn btn--gold btn--submit" id="submitBtn">
+                  <span class="btn__text">👑 Get My Free Quote</span>
+                  <span class="btn__loader hidden" id="btnLoader">Sending…</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- SUCCESS STATE -->
+            <div class="form-step form-success hidden" id="step-success">
+              <div class="form-success__icon">✅</div>
+              <h3 class="form-success__title">Quote Request Received!</h3>
+              <p class="form-success__msg">
+                Thank you! A member of <strong>The Royals Removals</strong> team will contact you within <strong>10–15 minutes</strong> with your personalised pricing and quote details.
+              </p>
+              <p class="form-success__note">📞 Can't wait? Call us direct: <a href="tel:01216189000" class="gold-text">0121 618 9000</a></p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-bar__item">
+        <span class="trust-bar__icon">🏆</span>
+        <div>
+          <strong>500+</strong>
+          <span>Happy Moves</span>
+        </div>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <span class="trust-bar__icon">⭐</span>
+        <div>
+          <strong>5.0 Rating</strong>
+          <span>Avg. Google & Facebook</span>
+        </div>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <span class="trust-bar__icon">🛡️</span>
+        <div>
+          <strong>Fully Insured</strong>
+          <span>Up to £50,000 cover</span>
+        </div>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <span class="trust-bar__icon">⚡</span>
+        <div>
+          <strong>10–15 Min</strong>
+          <span>Quote Response Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Why Royal Removals?</p>
+        <h2 class="section-title">Moving Made <span class="gold-text">Majestically</span> Simple</h2>
+        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Trusted by hundreds of Birmingham families to deliver a premium, stress-free moving experience.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">👑</div>
+          <h3>Royal-Grade Care</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Every item is treated with the utmost care and wrapped in premium protective materials.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3>Fast Quote Response</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Receive your personalised quote within 10–15 minutes of submitting your request.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">🛡️</div>
+          <h3>Fully Insured &amp; Safe</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Complete peace of mind with comprehensive insurance covering your entire move.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">🗓️</div>
+          <h3>Flexible Scheduling</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. We work around your timeline, including weekends and bank holidays.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">💰</div>
+          <h3>Transparent Pricing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. No hidden fees — your quote is your final price. Honest, upfront, and fair.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">🤝</div>
+          <h3>Local Birmingham Experts</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Born and raised in Birmingham — we know every road, estate, and postcode.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section--gold-bg" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2 class="section-title">Our Premium <span class="gold-text">Removal Services</span></h2>
+        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. From single-room moves to full office relocations, we have you covered.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/happy_family_moving.png" alt="House Removals Birmingham" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">🏠</div>
+            <h3>House Removals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Full house removal service for all property sizes across Birmingham.</p>
+            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="images/services_boxes_packing.png" alt="Packing Service" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">📦</div>
+            <h3>Packing Service</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Professional packing team to safely wrap and box all your belongings.</p>
+            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="images/the-royals-removals-birmingham (14).webp" alt="Office Removals Birmingham" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">💼</div>
+            <h3>Office Removals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minimise downtime with our efficient and organised commercial moving service.</p>
+            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Simple Process</p>
+        <h2 class="section-title">How It <span class="gold-text">Works</span></h2>
+        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Moving with The Royals Removals is easy, transparent, and stress-free.</p>
+      </div>
+      <div class="steps-timeline">
+        <div class="steps-timeline__item">
+          <div class="steps-timeline__num">01</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Get Your Free Quote</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fill in our simple 2-minute form and receive a personalised, transparent quote within minutes.</p>
+          </div>
+        </div>
+        <div class="steps-timeline__connector"></div>
+        <div class="steps-timeline__item">
+          <div class="steps-timeline__num">02</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Book Your Move</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choose your preferred date and confirm your booking with a small deposit and no hidden fees.</p>
+          </div>
+        </div>
+        <div class="steps-timeline__connector"></div>
+        <div class="steps-timeline__item">
+          <div class="steps-timeline__num">03</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>We Do the Heavy Lifting</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our professional team arrives on time, handles everything carefully, and keeps you informed throughout.</p>
+          </div>
+        </div>
+        <div class="steps-timeline__connector"></div>
+        <div class="steps-timeline__item">
+          <div class="steps-timeline__num">04</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Settle Into Your New Home</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Relax while we unload and position your belongings exactly where you want them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Customer Reviews</p>
+        <h2 class="section-title">What Our <span class="gold-text">Customers Say</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__quote">"Absolutely outstanding service from start to finish. The team were professional, careful, and made moving day completely stress-free. Would 100% recommend The Royals Removals to anyone."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SJ</div>
+            <div>
+              <strong>Sarah J.</strong>
+              <span>Harborne, Birmingham</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__quote">"Got my quote within 10 minutes of filling in the form. The price was fair and transparent — no surprises on the day. Brilliant team, brilliant service."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MK</div>
+            <div>
+              <strong>Michael K.</strong>
+              <span>Solihull</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__quote">"We used The Royals Removals for our office relocation. Seamless, efficient, and incredibly professional. Everything was set up exactly as we asked. Highly recommended."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">LT</div>
+            <div>
+              <strong>Lisa T.</strong>
+              <span>Birmingham City Centre</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE AREAS ===== -->
+  <section class="section section--gold-bg" id="areas">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Coverage</p>
+        <h2 class="section-title">Areas We <span class="gold-text">Serve</span></h2>
+        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. We cover Birmingham and all surrounding towns, delivering the same premium service wherever you are.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-pill">Birmingham City</div>
+        <div class="area-pill">Harborne</div>
+        <div class="area-pill">Edgbaston</div>
+        <div class="area-pill">Solihull</div>
+        <div class="area-pill">Sutton Coldfield</div>
+        <div class="area-pill">Moseley</div>
+        <div class="area-pill">Kings Heath</div>
+        <div class="area-pill">Erdington</div>
+        <div class="area-pill">Aston</div>
+        <div class="area-pill">Handsworth</div>
+        <div class="area-pill">Coventry</div>
+        <div class="area-pill">Wolverhampton</div>
+        <div class="area-pill">Walsall</div>
+        <div class="area-pill">West Bromwich</div>
+        <div class="area-pill">Dudley</div>
+        <div class="area-pill">Redditch</div>
+        <div class="area-pill">Bromsgrove</div>
+        <div class="area-pill">+ More Areas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE FEATURE STRIP ===== -->
+  <section class="image-strip">
+    <div class="image-strip__item">
+      <img src="images/the-royals-removals-birmingham (19).webp" alt="Fully loaded removals van Birmingham" />
+      <div class="image-strip__overlay">
+        <p>Full House Moves Covered</p>
+      </div>
+    </div>
+    <div class="image-strip__item">
+      <img src="images/the-royals-removals-birmingham (14).webp" alt="Professional movers loading van" />
+      <div class="image-strip__overlay">
+        <p>Professional &amp; Trusted Team</p>
+      </div>
+    </div>
+    <div class="image-strip__item">
+      <img src="images/services_boxes_packing.png" alt="Professional packing service" />
+      <div class="image-strip__overlay">
+        <p>Expert Packing Service</p>
+      </div>
+    </div>
+    <div class="image-strip__item">
+      <img src="images/modern_home_exterior.png" alt="Beautiful Birmingham home" />
+      <div class="image-strip__overlay">
+        <p>Serving Birmingham &amp; Beyond</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQs ===== -->
+  <section class="section" id="faqs">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Got Questions?</p>
+        <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
+      </div>
+      <div class="faqs-wrap">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            How quickly will I receive my quote?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. You will typically receive your personalised quote within 10–15 minutes of submitting the form. Our team is available 7 days a week.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            Are you insured for damage?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes, we are fully insured with comprehensive goods in transit cover up to £50,000. Your belongings are in safe hands.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            Do you offer packing services?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes! We offer a full professional packing service. Our team will carefully pack and label all of your belongings using premium materials.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            Can I move on a weekend or bank holiday?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Absolutely. We operate 7 days a week including weekends and most bank holidays to fit your schedule.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            How far in advance should I book?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. We recommend booking at least 2–4 weeks in advance for peak periods to secure your preferred date. However, we do accommodate last-minute moves when availability permits.
+          </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            Do you cover areas outside Birmingham?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes, we serve all surrounding areas including Solihull, Coventry, Wolverhampton, Walsall and many more. Contact us if you're unsure whether we cover your area.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="section cta-section" id="cta">
+    <div class="cta-section__bg">
+      <img src="images/modern_home_exterior.png" alt="Beautiful home" />
+    </div>
+    <div class="cta-section__overlay"></div>
+    <div class="container cta-section__inner">
+      <h2 class="cta-section__title">Ready for a <span class="gold-text">Royal Move?</span></h2>
+      <p class="cta-section__sub">Join hundreds of satisfied Birmingham families. Get your free, no-obligation quote in under 2 minutes. Our team responds in 10–15 minutes.</p>
+      <div class="cta-section__badges">
+        <span>✓ No Obligation</span>
+        <span>✓ Free Quote</span>
+        <span>✓ Instant Response</span>
+        <span>✓ Fully Insured</span>
+      </div>
+      <a href="#quote-form" class="btn btn--gold btn--large cta-scroll">
+        👑 Get My Free Quote Now
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-crown">♛</span>
+          <span>The Royal <strong>Removals</strong></span>
+        </div>
+        <p>Birmingham's most trusted premium home removals service. Stress-free, insured, and royal-grade care for every move.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Google">G</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">House Removals</a></li>
+          <li><a href="#">Flat Removals</a></li>
+          <li><a href="#">Office Removals</a></li>
+          <li><a href="#">Packing Service</a></li>
+          <li><a href="#">Storage Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Areas</h4>
+        <ul>
+          <li><a href="#">Birmingham</a></li>
+          <li><a href="#">Solihull</a></li>
+          <li><a href="#">Sutton Coldfield</a></li>
+          <li><a href="#">Coventry</a></li>
+          <li><a href="#">Wolverhampton</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:01216189000">📞 0121 618 9000</a></li>
+          <li><a href="mailto:info@theroyalremovals.co.uk">✉ info@theroyalremovals.co.uk</a></li>
+          <li><span>📍 Birmingham, UK</span></li>
+          <li><span>🕐 Mon–Sun: 7am – 8pm</span></li>
+        </ul>
+        <a href="#quote-form" class="btn btn--gold footer__cta">Get Free Quote</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 The Royals Removals. All rights reserved. Registered in England &amp; Wales.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

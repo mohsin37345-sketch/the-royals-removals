@@ -1,0 +1,54 @@
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-crown">♛</span>
+          <span>The Royal <strong>Removals</strong></span>
+        </div>
+        <p>Birmingham's most trusted premium home removals service. Stress-free, insured, and royal-grade care for every move.</p>
+        <div class="footer__social">
+          <a href="{{whatsapp}}" aria-label="WhatsApp" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          {{serviceLinks}}
+          <li><a href="/insurance/">🛡️ Our Insurance</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Areas</h4>
+        <ul>
+          {{areaLinks}}
+          <li><a href="/areas/">View All Areas →</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:{{phone}}">📞 {{phoneDisplay}}</a></li>
+          <li><a href="mailto:{{email}}">✉ {{email}}</a></li>
+          <li><span>📍 {{address}}</span></li>
+          <li><span>🕐 {{hours}}</span></li>
+        </ul>
+        <a href="/get-a-quote/" class="btn btn--gold footer__cta">Get Free Quote</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© {{currentYear}} {{businessName}}. All rights reserved. &nbsp;|&nbsp; Company No. 17089311</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms &amp; Conditions</a>
+          <a href="/sitemap/">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-mobile-cta" id="stickyMobileCta">
+    <a href="tel:{{phone}}" class="sticky-mobile-cta__call">📞 Call Now</a>
+    <a href="/get-a-quote/" class="sticky-mobile-cta__quote">👑 Free Quote</a>
+  </div>

@@ -1,0 +1,21 @@
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-crown">♛</span>
+        <span class="nav__logo-text">The Royal <strong>Removals</strong></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        {{navItems}}
+      </ul>
+      <div class="nav__actions">
+        <a href="tel:{{phone}}" class="nav__phone-btn" aria-label="Call us">
+          <span class="nav__phone-icon">📞</span>
+          <span class="nav__phone-text">{{phoneDisplay}}</span>
+        </a>
+        <a href="/get-a-quote/" class="btn btn--gold nav__cta">Get Free Quote</a>
+      </div>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>

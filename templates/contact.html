@@ -1,0 +1,88 @@
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">Contact</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+    <section class="inner-hero">
+    <div class="container">
+      <h1 class="inner-hero__h1">Contact <span class="gold-text">Us</span></h1>
+      <p class="inner-hero__sub">Have a question or need a quick answer? Get in touch with The Royals Removals team. We typically respond within 10–15 minutes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <div class="contact-card glass-card">
+            <div class="contact-card__item">
+              <span class="contact-card__icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:{{phone}}">{{phoneDisplay}}</a>
+              </div>
+            </div>
+            <div class="contact-card__item">
+              <span class="contact-card__icon">✉</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:{{email}}">{{email}}</a>
+              </div>
+            </div>
+            <div class="contact-card__item">
+              <span class="contact-card__icon">💬</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="{{whatsapp}}" target="_blank" rel="noopener">Send a message</a>
+              </div>
+            </div>
+            <div class="contact-card__item">
+              <span class="contact-card__icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <span>{{address}}</span>
+              </div>
+            </div>
+            <div class="contact-card__item">
+              <span class="contact-card__icon">🕐</span>
+              <div>
+                <strong>Hours</strong>
+                <span>{{hours}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h2>Send Us a Message</h2>
+          <form class="contact-form glass-card" id="contactForm">
+            <div class="form-field">
+              <label for="contactName" class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="contactEmail" class="form-label">Email <span class="req">*</span></label>
+              <input type="email" id="contactEmail" name="email" class="form-input" placeholder="Your email" required />
+            </div>
+            <div class="form-field">
+              <label for="contactPhone" class="form-label">Phone</label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="Your phone number" />
+            </div>
+            <div class="form-field">
+              <label for="contactMessage" class="form-label">Message <span class="req">*</span></label>
+              <textarea id="contactMessage" name="message" class="form-input form-textarea" rows="5" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
