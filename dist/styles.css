@@ -279,7 +279,7 @@ input, button, textarea, select { font-family: inherit; }
   background: linear-gradient(160deg, #1a1814 0%, #0d0c0a 50%, #050505 100%);
   overflow: hidden;
 }
-/* Hero background image — low opacity for subtle context */
+/* Hero background image — covered with black less opacity */
 .hero__bg-image {
   position: absolute;
   inset: 0;
@@ -290,9 +290,15 @@ input, button, textarea, select { font-family: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  opacity: 0.12;
-  filter: grayscale(20%) saturate(0.8);
+  object-position: center;
+  opacity: 0.6; /* Increased opacity from 0.12 so the picture is visible */
+}
+.hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Black layer with less opacity */
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero::before {
@@ -312,6 +318,8 @@ input, button, textarea, select { font-family: inherit; }
   pointer-events: none;
 }
 .hero__inner {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 56px;
