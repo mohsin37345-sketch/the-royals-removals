@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Royals Removals | Premium House Removals in Birmingham</title>
-  <meta name="description" content="The Royals Removals — Birmingham's most trusted premium house removal company. Get a fast, free quote in minutes. Careful handling, stress-free moving, professional team." />
+  <title>Home Removals Birmingham | The Royals Removals</title>
+  <meta name="description" content="Professional home removals in Birmingham. The Royals Removals offers careful, insured house moves across Birmingham and the West Midlands. Get your free quote today." />
+  <meta name="keywords" content="home removals birmingham, removals birmingham, birmingham removals, removal company birmingham, moving company birmingham, house removals birmingham, home removal company birmingham, removals in birmingham, movers birmingham, moving service birmingham" />
+  <link rel="canonical" href="https://theroyalremovals.co.uk/" />
+  <meta property="og:title" content="Home Removals Birmingham | The Royals Removals" />
+  <meta property="og:description" content="Professional home removals in Birmingham. The Royals Removals offers careful, insured house moves across Birmingham and the West Midlands. Get your free quote today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theroyalremovals.co.uk/" />
+  <meta property="og:site_name" content="The Royals Removals" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Home Removals Birmingham | The Royals Removals" />
+  <meta name="twitter:description" content="Professional home removals in Birmingham. The Royals Removals offers careful, insured house moves across Birmingham and the West Midlands. Get your free quote today." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+
 </head>
 <body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="nav" id="navbar">
+    <nav class="nav" id="navbar">
     <div class="container nav__inner">
-      <a href="#" class="nav__logo">
+      <a href="/" class="nav__logo">
         <span class="nav__logo-crown">♛</span>
         <span class="nav__logo-text">The Royal <strong>Removals</strong></span>
       </a>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#areas">Areas</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#faqs">FAQs</a></li>
+        <li class="nav__item"><a href="/">Home</a></li>
+              <li class="nav__item"><a href="/services/">Services</a></li>
+              <li class="nav__item"><a href="/areas/">Areas We Serve</a></li>
+              <li class="nav__item nav__item--dropdown">
+                <a href="/about/" class="nav__dropdown-toggle">About <span class="nav__arrow">&#9660;</span></a>
+                <ul class="nav__dropdown"><li><a href="/prices/">Prices</a></li><li><a href="/blog/">Blog</a></li><li><a href="/reviews/">Reviews</a></li></ul>
+              </li>
+              <li class="nav__item"><a href="/contact/">Contact</a></li>
       </ul>
-      <a href="#quote-form" class="btn btn--gold nav__cta">Get Free Quote</a>
+      <div class="nav__actions">
+        <a href="tel:+44 7345 624506" class="nav__phone-btn" aria-label="Call us">
+          <span class="nav__phone-icon">📞</span>
+          <span class="nav__phone-text">07345 624506</span>
+        </a>
+        <a href="/get-a-quote/" class="btn btn--gold nav__cta">Get Free Quote</a>
+      </div>
       <button class="nav__burger" id="navBurger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <main>
+      <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero__bg-image">
-      <img src="images/modern_home_exterior.png" alt="" aria-hidden="true" />
-    </div>
+    <div class="hero__bg-image" style="background-image: url('images/modern_home_exterior.png');"></div>
     <div class="hero__bg-overlay"></div>
     <div class="container hero__inner">
 
       <!-- Left: Copy -->
       <div class="hero__copy">
-        <div class="hero__badge">
-          <span class="hero__badge-icon">⭐⭐⭐⭐⭐</span>
-          <span>Rated 5-Star by Birmingham Families</span>
-        </div>
+        
         <h1 class="hero__h1">
-          Birmingham's Most <span class="gold-text">Trusted</span> Premium Removal Service
+          Home Removals Birmingham
         </h1>
         <p class="hero__sub">
-          From your first box to the last piece of furniture — The Royals Removals delivers a stress-free, carefully handled move you can rely on. Serving Birmingham and surrounding areas with unmatched care and professionalism.
+          From your first box to the last piece of furniture — as trusted movers in Birmingham, The Royals Removals delivers a stress-free, carefully handled move you can rely on. Your dedicated moving company in Birmingham for meticulous and professional care.
         </p>
         <ul class="hero__trust-list">
           <li>
@@ -72,16 +86,22 @@
           </li>
         </ul>
 
+        <div class="hero__ctas" style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#quote-form" class="btn btn--gold">Get Your Quote</a>
+          <a href="tel:+44 7345 624506" class="btn btn--outline">📞 07345 624506</a>
+          <a href="https://wa.me/447345624506" class="btn btn--outline" target="_blank">📱 WhatsApp Us</a>
+        </div>
+
         <div class="hero__images">
           <div class="hero__img-card hero__img-card--main">
-            <img src="images/the-royals-removals-birmingham (14).webp" alt="The Royals Removals team loading van in Birmingham" />
+            <img src="/images/the-royals-removals-birmingham (14).webp" alt="The Royals Removals team loading van in Birmingham" />
           </div>
           <div class="hero__img-stack">
             <div class="hero__img-card">
-              <img src="images/the-royals-removals-birmingham (19).webp" alt="Fully loaded removals van in Birmingham" />
+              <img src="/images/the-royals-removals-birmingham (19).webp" alt="Professional removal team" />
             </div>
             <div class="hero__img-card">
-              <img src="images/happy_family_moving.png" alt="Happy family moving to their new home" />
+              <img src="/images/happy_family_moving.png" alt="Happy family moving home" />
             </div>
           </div>
         </div>
@@ -281,7 +301,7 @@
               <p class="form-success__msg">
                 Thank you! A member of <strong>The Royals Removals</strong> team will contact you within <strong>10–15 minutes</strong> with your personalised pricing and quote details.
               </p>
-              <p class="form-success__note">📞 Can't wait? Call us direct: <a href="tel:01216189000" class="gold-text">0121 618 9000</a></p>
+              <p class="form-success__note">📞 Can't wait? Call us direct: <a href="tel:+44 7345 624506" class="gold-text">07345 624506</a></p>
             </div>
 
           </form>
@@ -295,18 +315,18 @@
   <section class="trust-bar">
     <div class="container trust-bar__inner">
       <div class="trust-bar__item">
-        <span class="trust-bar__icon">🏆</span>
+        <span class="trust-bar__icon">📍</span>
         <div>
-          <strong>500+</strong>
-          <span>Happy Moves</span>
+          <strong>Local Movers</strong>
+          <span>Birmingham, B9 5EJ</span>
         </div>
       </div>
       <div class="trust-bar__divider"></div>
       <div class="trust-bar__item">
-        <span class="trust-bar__icon">⭐</span>
+        <span class="trust-bar__icon">📞</span>
         <div>
-          <strong>5.0 Rating</strong>
-          <span>Avg. Google & Facebook</span>
+          <strong>Call or WhatsApp</strong>
+          <span><a href="tel:+44 7345 624506" style="color:inherit;text-decoration:none">07345 624506</a></span>
         </div>
       </div>
       <div class="trust-bar__divider"></div>
@@ -314,15 +334,23 @@
         <span class="trust-bar__icon">🛡️</span>
         <div>
           <strong>Fully Insured</strong>
-          <span>Up to £50,000 cover</span>
+          <span>Comprehensive protection</span>
         </div>
       </div>
       <div class="trust-bar__divider"></div>
       <div class="trust-bar__item">
         <span class="trust-bar__icon">⚡</span>
         <div>
-          <strong>10–15 Min</strong>
-          <span>Quote Response Time</span>
+          <strong>Same-Day Response</strong>
+          <span>Quote within 15 mins</span>
+        </div>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <span class="trust-bar__icon">🔧</span>
+        <div>
+          <strong>Reassembly</strong>
+          <span>Dismantling included</span>
         </div>
       </div>
     </div>
@@ -334,39 +362,88 @@
       <div class="section-header">
         <p class="section-eyebrow">Why Royal Removals?</p>
         <h2 class="section-title">Moving Made <span class="gold-text">Majestically</span> Simple</h2>
-        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Trusted by hundreds of Birmingham families to deliver a premium, stress-free moving experience.</p>
+        <p class="section-sub">Trusted by hundreds of Birmingham families to deliver a premium, stress-free moving experience. Here is what sets our removal company in Birmingham apart from the rest.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card glass-card">
           <div class="feature-card__icon">👑</div>
           <h3>Royal-Grade Care</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Every item is treated with the utmost care and wrapped in premium protective materials.</p>
+          <p>Every item is treated as if it were our own. We use professional furniture blankets, bubble wrap, and stretch film to protect your belongings from the moment we arrive until the last box is in place.</p>
         </div>
         <div class="feature-card glass-card">
           <div class="feature-card__icon">⚡</div>
           <h3>Fast Quote Response</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Receive your personalised quote within 10–15 minutes of submitting your request.</p>
+          <p>Fill in our simple 2-minute form and receive a personalised, transparent quote within 10 to 15 minutes. No chasing, no waiting around, no automated responses — a real person reviews every request.</p>
         </div>
         <div class="feature-card glass-card">
           <div class="feature-card__icon">🛡️</div>
           <h3>Fully Insured &amp; Safe</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Complete peace of mind with comprehensive insurance covering your entire move.</p>
+          <p>Complete peace of mind with comprehensive goods-in-transit insurance. Your belongings are protected throughout the entire journey from your old home to your new one.</p>
         </div>
         <div class="feature-card glass-card">
           <div class="feature-card__icon">🗓️</div>
           <h3>Flexible Scheduling</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. We work around your timeline, including weekends and bank holidays.</p>
+          <p>We work around your timeline. Choose any day of the week including weekends and bank holidays. Need to change your date? No problem — we accommodate changes with minimal notice.</p>
         </div>
         <div class="feature-card glass-card">
           <div class="feature-card__icon">💰</div>
           <h3>Transparent Pricing</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. No hidden fees — your quote is your final price. Honest, upfront, and fair.</p>
+          <p>No hidden fees, no surprise charges on the day. The quote we give you is the price you pay. We believe in honest, upfront pricing that respects your budget and your trust.</p>
         </div>
         <div class="feature-card glass-card">
           <div class="feature-card__icon">🤝</div>
           <h3>Local Birmingham Experts</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Born and raised in Birmingham — we know every road, estate, and postcode.</p>
+          <p>Born and raised in Birmingham, we know every road, estate, and postcode. This local expertise means faster routes, better parking planning, and a smoother move for you.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSURANCE ===== -->
+  <section class="section" id="insurance">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Fully Insured Removals Birmingham</p>
+        <h2 class="section-title">Why Insurance <span class="gold-text">Matters</span> When Moving</h2>
+        <p class="section-sub">Moving house or office involves genuine risk. Choosing a fully insured removals company in Birmingham ensures your belongings and property are protected from start to finish — with no compromise.</p>
+      </div>
+
+      <div class="features-grid" style="margin-top: 2rem;">
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">🏛️</div>
+          <h3>Public Liability Insurance</h3>
+          <p>Our <strong>public liability removals cover</strong> protects against injury or property damage during your move.</p>
+          <ul style="list-style:none;padding:0;margin-top:0.75rem;">
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Covers injury or property damage</li>
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Up to £5 million cover</li>
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Protects from unexpected accidents</li>
+          </ul>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">🚛</div>
+          <h3>Goods in Transit Insurance</h3>
+          <p>Every item is covered under our <strong>goods in transit insurance</strong> throughout the entire removal journey.</p>
+          <ul style="list-style:none;padding:0;margin-top:0.75rem;">
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Covers items during transport</li>
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Protection against theft, damage, or loss</li>
+            <li style="padding:0.3rem 0;"><span style="color:var(--gold);">✓</span> Up to £50,000 cover</li>
+          </ul>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-card__icon">⚠️</div>
+          <h3>What Is Not Covered</h3>
+          <p>In the interest of full transparency, standard insurance does not cover the following:</p>
+          <ul style="list-style:none;padding:0;margin-top:0.75rem;">
+            <li style="padding:0.3rem 0;"><span style="color:#c0a040;">—</span> Items after delivery at destination</li>
+            <li style="padding:0.3rem 0;"><span style="color:#c0a040;">—</span> Self-packed items (if not packed by us)</li>
+            <li style="padding:0.3rem 0;"><span style="color:#c0a040;">—</span> Storage (unless separately arranged)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <p style="margin-bottom:1rem;opacity:0.85;">Want full details on our cover? Read our complete insurance information.</p>
+        <a href="/insurance/" class="btn btn--gold">🛡️ View Full Insurance Details</a>
       </div>
     </div>
   </section>
@@ -377,36 +454,66 @@
       <div class="section-header">
         <p class="section-eyebrow">What We Offer</p>
         <h2 class="section-title">Our Premium <span class="gold-text">Removal Services</span></h2>
-        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. From single-room moves to full office relocations, we have you covered.</p>
+        <p class="section-sub">Whether you need a full house removal, a man-and-van for a quick job, or professional packing to keep your valuables safe, we have a service designed for your exact situation.</p>
       </div>
-      <div class="services-grid">
+      <div class="services-grid services-grid--full">
         <div class="service-card">
-          <img src="images/happy_family_moving.png" alt="House Removals Birmingham" class="service-card__img" />
+          <img src="/images/the-royals-removals-birmingham (12).webp" alt="House Removals Birmingham" class="service-card__img" />
           <div class="service-card__body">
             <div class="service-card__icon">🏠</div>
             <h3>House Removals</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Full house removal service for all property sizes across Birmingham.</p>
-            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+            <p>Complete house removal service for all property sizes across Birmingham. Careful handling, furniture wrapping, and full transit protection included.</p>
+            <a href="/services/house-removals-birmingham/" class="btn btn--gold-outline">Learn More</a>
           </div>
         </div>
         <div class="service-card">
-          <img src="images/services_boxes_packing.png" alt="Packing Service" class="service-card__img" />
+          <img src="/images/services_boxes_packing.png" alt="Furniture Removals Birmingham" class="service-card__img" />
           <div class="service-card__body">
-            <div class="service-card__icon">📦</div>
-            <h3>Packing Service</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Professional packing team to safely wrap and box all your belongings.</p>
-            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+            <div class="service-card__icon">🛋️</div>
+            <h3>Furniture Removals</h3>
+            <p>Single-item or full furniture moves, carefully wrapped and transported. Sofas, beds, wardrobes, and fragile pieces handled with precision and care.</p>
+            <a href="/services/furniture-removals-birmingham/" class="btn btn--gold-outline">Learn More</a>
           </div>
         </div>
         <div class="service-card">
-          <img src="images/the-royals-removals-birmingham (14).webp" alt="Office Removals Birmingham" class="service-card__img" />
+          <img src="/images/the-royals-removals-birmingham (2).webp" alt="Office Relocation Birmingham" class="service-card__img" />
           <div class="service-card__body">
             <div class="service-card__icon">💼</div>
-            <h3>Office Removals</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minimise downtime with our efficient and organised commercial moving service.</p>
-            <a href="#quote-form" class="btn btn--gold-outline">Get Quote</a>
+            <h3>Office Relocation</h3>
+            <p>Minimise downtime with our efficient and organised commercial moving service. IT equipment, furniture, and full office relocations handled expertly.</p>
+            <a href="/services/office-relocation-birmingham/" class="btn btn--gold-outline">Learn More</a>
           </div>
         </div>
+        <div class="service-card">
+          <img src="/images/modern_home_exterior.png" alt="Commercial Removals Birmingham" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">🏢</div>
+            <h3>Commercial Removals</h3>
+            <p>Large-scale business moves for warehouses, retail units, and commercial premises. Project-managed relocations with minimal disruption to operations.</p>
+            <a href="/services/commercial-removals-birmingham/" class="btn btn--gold-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="/images/services_boxes_packing.png" alt="Packing Services Birmingham" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">📦</div>
+            <h3>Packing Services</h3>
+            <p>Professional packing team to safely wrap and box all your belongings using premium materials. Room-by-room, labelled, and ready for transit.</p>
+            <a href="/services/packing-services-birmingham/" class="btn btn--gold-outline">Learn More</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <img src="/images/the-royals-removals-birmingham (24).webp" alt="Man and Van Birmingham" class="service-card__img" />
+          <div class="service-card__body">
+            <div class="service-card__icon">🚐</div>
+            <h3>Man and Van</h3>
+            <p>Affordable, flexible man-and-van service for smaller moves, single items, and quick deliveries across Birmingham and the West Midlands.</p>
+            <a href="/services/man-and-van-birmingham/" class="btn btn--gold-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a href="/services/" class="btn btn--gold">View All Services →</a>
       </div>
     </div>
   </section>
@@ -417,14 +524,14 @@
       <div class="section-header">
         <p class="section-eyebrow">Simple Process</p>
         <h2 class="section-title">How It <span class="gold-text">Works</span></h2>
-        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Moving with The Royals Removals is easy, transparent, and stress-free.</p>
+        <p class="section-sub">Moving in Birmingham with our house removal experts is easy, transparent, and stress-free. Here is our simple four-step process.</p>
       </div>
       <div class="steps-timeline">
         <div class="steps-timeline__item">
           <div class="steps-timeline__num">01</div>
           <div class="steps-timeline__content glass-card">
             <h3>Get Your Free Quote</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fill in our simple 2-minute form and receive a personalised, transparent quote within minutes.</p>
+            <p>Fill in our simple 2-minute form with details about your move. Tell us your property type, where you are moving from and to, and your preferred date. You will receive a personalised, transparent quote within minutes.</p>
           </div>
         </div>
         <div class="steps-timeline__connector"></div>
@@ -432,7 +539,7 @@
           <div class="steps-timeline__num">02</div>
           <div class="steps-timeline__content glass-card">
             <h3>Book Your Move</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choose your preferred date and confirm your booking with a small deposit and no hidden fees.</p>
+            <p>Choose your preferred date, confirm your booking, and relax. There are no hidden fees and the price we quote is the price you pay. We will confirm all the details and keep you informed as your moving day approaches.</p>
           </div>
         </div>
         <div class="steps-timeline__connector"></div>
@@ -440,7 +547,7 @@
           <div class="steps-timeline__num">03</div>
           <div class="steps-timeline__content glass-card">
             <h3>We Do the Heavy Lifting</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Our professional team arrives on time, handles everything carefully, and keeps you informed throughout.</p>
+            <p>Our professional team arrives on time, handles everything carefully, and keeps you informed throughout the day. We wrap, load, transport, and unload your belongings with precision and care.</p>
           </div>
         </div>
         <div class="steps-timeline__connector"></div>
@@ -448,7 +555,7 @@
           <div class="steps-timeline__num">04</div>
           <div class="steps-timeline__content glass-card">
             <h3>Settle Into Your New Home</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Relax while we unload and position your belongings exactly where you want them.</p>
+            <p>We place everything exactly where you want it. Furniture is reassembled, boxes are placed in the right rooms, and we make sure you are completely happy before we leave. Welcome home.</p>
           </div>
         </div>
       </div>
@@ -456,77 +563,70 @@
   </section>
 
   <!-- ===== TESTIMONIALS ===== -->
-  <section class="section testimonials-section" id="testimonials">
+  <section class="section testimonials-section" id="testimonials" style="overflow: hidden;">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" style="margin-bottom: 2rem;">
         <p class="section-eyebrow">Customer Reviews</p>
         <h2 class="section-title">What Our <span class="gold-text">Customers Say</span></h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__quote">"Absolutely outstanding service from start to finish. The team were professional, careful, and made moving day completely stress-free. Would 100% recommend The Royals Removals to anyone."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">SJ</div>
-            <div>
-              <strong>Sarah J.</strong>
-              <span>Harborne, Birmingham</span>
-            </div>
-          </div>
+      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-cf0dc61d-cfbd-4c38-8ed3-fda4c2ca02f9" data-elfsight-app-lazy></div>
+    </div>
+  </section>
+
+  <!-- ===== LOCAL LOGISTICS ===== -->
+  <section class="section section--gold-bg" id="logistics">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Birmingham Moving Logistics</p>
+        <h2 class="section-title">We Handle The <span class="gold-text">Details</span></h2>
+        <p class="section-sub">Moving in Birmingham requires planning. As local experts, we manage parking and emissions compliance so you don't have to.</p>
+      </div>
+      <div class="features-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; text-align: center;">
+        <div class="feature-card glass-card" style="max-width: 450px;">
+          <div class="feature-card__icon">🅿️</div>
+          <h3>Parking Dispensations</h3>
+          <p>We can help advise or arrange the necessary parking suspensions for your moving day. Learn more on the <a href="https://www.birmingham.gov.uk/info/20109/parking/2012/parking_dispensations" target="_blank" class="gold-text">Birmingham City Council page</a>.</p>
         </div>
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__quote">"Got my quote within 10 minutes of filling in the form. The price was fair and transparent — no surprises on the day. Brilliant team, brilliant service."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">MK</div>
-            <div>
-              <strong>Michael K.</strong>
-              <span>Solihull</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__quote">"We used The Royals Removals for our office relocation. Seamless, efficient, and incredibly professional. Everything was set up exactly as we asked. Highly recommended."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">LT</div>
-            <div>
-              <strong>Lisa T.</strong>
-              <span>Birmingham City Centre</span>
-            </div>
-          </div>
+        <div class="feature-card glass-card" style="max-width: 450px;">
+          <div class="feature-card__icon">🍃</div>
+          <h3>Clean Air Zone (CAZ) Ready</h3>
+          <p>Our modern fleet of removal vehicles is fully compliant with the Birmingham Clean Air Zone. Check details at <a href="https://www.brumbreathes.co.uk/" target="_blank" class="gold-text">Brum Breathes</a>.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== SERVICE AREAS ===== -->
-  <section class="section section--gold-bg" id="areas">
+  <section class="section" id="areas">
     <div class="container">
       <div class="section-header">
         <p class="section-eyebrow">Coverage</p>
         <h2 class="section-title">Areas We <span class="gold-text">Serve</span></h2>
-        <p class="section-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. We cover Birmingham and all surrounding towns, delivering the same premium service wherever you are.</p>
+        <p class="section-sub">We cover Birmingham and all surrounding towns and cities across the West Midlands, delivering the same premium service wherever you are. Click an area to learn more.</p>
       </div>
       <div class="areas-grid">
-        <div class="area-pill">Birmingham City</div>
-        <div class="area-pill">Harborne</div>
-        <div class="area-pill">Edgbaston</div>
-        <div class="area-pill">Solihull</div>
-        <div class="area-pill">Sutton Coldfield</div>
-        <div class="area-pill">Moseley</div>
-        <div class="area-pill">Kings Heath</div>
-        <div class="area-pill">Erdington</div>
-        <div class="area-pill">Aston</div>
-        <div class="area-pill">Handsworth</div>
-        <div class="area-pill">Coventry</div>
-        <div class="area-pill">Wolverhampton</div>
-        <div class="area-pill">Walsall</div>
-        <div class="area-pill">West Bromwich</div>
-        <div class="area-pill">Dudley</div>
-        <div class="area-pill">Redditch</div>
-        <div class="area-pill">Bromsgrove</div>
-        <div class="area-pill">+ More Areas</div>
+        
+        <a href="/areas/birmingham/" class="area-pill">Birmingham</a>
+        
+        <a href="/areas/dudley/" class="area-pill">Dudley</a>
+        
+        <a href="/areas/sandwell/" class="area-pill">Sandwell</a>
+        
+        <a href="/areas/walsall/" class="area-pill">Walsall</a>
+        
+        <a href="/areas/wolverhampton/" class="area-pill">Wolverhampton</a>
+        
+        <a href="/areas/solihull/" class="area-pill">Solihull</a>
+        
+        <a href="/areas/coventry/" class="area-pill">Coventry</a>
+        
+        <a href="/areas/lichfield/" class="area-pill">Lichfield</a>
+        
+        <a href="/areas/redditch/" class="area-pill">Redditch</a>
+        
+        <a href="/areas/" class="area-pill area-pill--cta">+ View All Areas</a>
       </div>
     </div>
   </section>
@@ -534,25 +634,19 @@
   <!-- ===== IMAGE FEATURE STRIP ===== -->
   <section class="image-strip">
     <div class="image-strip__item">
-      <img src="images/the-royals-removals-birmingham (19).webp" alt="Fully loaded removals van Birmingham" />
-      <div class="image-strip__overlay">
-        <p>Full House Moves Covered</p>
-      </div>
+      <img src="/images/the-royals-removals-birmingham.webp" alt="Premium removals van Birmingham" />
     </div>
     <div class="image-strip__item">
-      <img src="images/the-royals-removals-birmingham (14).webp" alt="Professional movers loading van" />
+      <img src="/images/the-royals-removals-birmingham (22).webp" alt="Professional movers team" />
       <div class="image-strip__overlay">
         <p>Professional &amp; Trusted Team</p>
       </div>
     </div>
     <div class="image-strip__item">
-      <img src="images/services_boxes_packing.png" alt="Professional packing service" />
-      <div class="image-strip__overlay">
-        <p>Expert Packing Service</p>
-      </div>
+      <img src="/images/the-royals-removals-birmingham (3).webp" alt="Professional packing service" />
     </div>
     <div class="image-strip__item">
-      <img src="images/modern_home_exterior.png" alt="Beautiful Birmingham home" />
+      <img src="/images/the-royals-removals-birmingham (4).webp" alt="Beautiful Birmingham home" />
       <div class="image-strip__overlay">
         <p>Serving Birmingham &amp; Beyond</p>
       </div>
@@ -560,6 +654,7 @@
   </section>
 
   <!-- ===== FAQs ===== -->
+  
   <section class="section" id="faqs">
     <div class="container">
       <div class="section-header">
@@ -567,87 +662,223 @@
         <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
       </div>
       <div class="faqs-wrap">
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             How quickly will I receive my quote?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. You will typically receive your personalised quote within 10–15 minutes of submitting the form. Our team is available 7 days a week.
+            You will typically receive your personalised quote within 10 to 15 minutes. Our team is available 7 days a week and reviews every request personally — no automated responses.
           </div>
         </div>
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             Are you insured for damage?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes, we are fully insured with comprehensive goods in transit cover up to £50,000. Your belongings are in safe hands.
+            Yes, we are fully insured with comprehensive goods-in-transit cover. Your belongings are protected throughout the entire move. We also use professional wrapping and padding to prevent damage in the first place.
           </div>
         </div>
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             Do you offer packing services?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes! We offer a full professional packing service. Our team will carefully pack and label all of your belongings using premium materials.
+            Yes. We offer both full and partial professional packing services. Our trained packers will carefully wrap and box all of your belongings using high-quality materials. We can pack your entire property or focus on fragile and valuable items only.
           </div>
         </div>
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             Can I move on a weekend or bank holiday?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Absolutely. We operate 7 days a week including weekends and most bank holidays to fit your schedule.
+            Absolutely. We operate 7 days a week including weekends and most bank holidays. We understand that moving often needs to happen on specific days, and we are happy to accommodate your preferred schedule.
           </div>
         </div>
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             How far in advance should I book?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. We recommend booking at least 2–4 weeks in advance for peak periods to secure your preferred date. However, we do accommodate last-minute moves when availability permits.
+            We recommend booking at least 2 to 4 weeks in advance, particularly during peak periods such as summer and the end of the month. However, we do accommodate short-notice and last-minute moves whenever our schedule allows.
           </div>
         </div>
+        
         <div class="faq-item" onclick="toggleFaq(this)">
           <div class="faq-item__question">
             Do you cover areas outside Birmingham?
             <span class="faq-item__icon">+</span>
           </div>
           <div class="faq-item__answer">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Yes, we serve all surrounding areas including Solihull, Coventry, Wolverhampton, Walsall and many more. Contact us if you're unsure whether we cover your area.
+            Yes. While we are based in Birmingham, we serve the entire West Midlands region including Solihull, Sutton Coldfield, Coventry, Wolverhampton, Walsall, Dudley, Sandwell, and many surrounding areas. Contact us to confirm we cover your location.
           </div>
         </div>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            How do you handle parking and Clean Air Zone (CAZ) charges?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            As local Birmingham movers, we handle all the logistics. We can help guide you on arranging parking dispensations with the City Council if needed, and our modern vehicle fleet meets Clean Air Zone requirements, so you won't face unexpected CAZ charges.
+          </div>
+        </div>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-item__question">
+            Do you dismantle and reassemble furniture?
+            <span class="faq-item__icon">+</span>
+          </div>
+          <div class="faq-item__answer">
+            Yes, our team is fully equipped to dismantle and reassemble beds, wardrobes, and other large furniture items. Simply let us know what you need during your quote process so we can allocate the right amount of time for your move.
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
+  
 
   <!-- ===== FINAL CTA ===== -->
   <section class="section cta-section" id="cta">
     <div class="cta-section__bg">
-      <img src="images/modern_home_exterior.png" alt="Beautiful home" />
+      <img src="/images/modern_home_exterior.png" alt="Beautiful home" />
     </div>
     <div class="cta-section__overlay"></div>
     <div class="container cta-section__inner">
       <h2 class="cta-section__title">Ready for a <span class="gold-text">Royal Move?</span></h2>
-      <p class="cta-section__sub">Join hundreds of satisfied Birmingham families. Get your free, no-obligation quote in under 2 minutes. Our team responds in 10–15 minutes.</p>
+      <p class="cta-section__sub">Get your free, no-obligation quote in under 2 minutes. Our team responds in 10 to 15 minutes.</p>
       <div class="cta-section__badges">
         <span>✓ No Obligation</span>
         <span>✓ Free Quote</span>
         <span>✓ Instant Response</span>
         <span>✓ Fully Insured</span>
       </div>
-      <a href="#quote-form" class="btn btn--gold btn--large cta-scroll">
-        👑 Get My Free Quote Now
-      </a>
+      <div class="cta-section__buttons">
+        <a href="/get-a-quote/" class="btn btn--gold btn--large cta-scroll">
+          👑 Get My Free Quote Now
+        </a>
+        <a href="/contact/" class="btn btn--outline btn--large">
+          ✉ Contact Us
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
+  <!-- Homepage Schemas -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Royals Removals",
+    "url": "https://theroyalremovals.co.uk",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://theroyalremovals.co.uk/areas/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "LocalBusiness"],
+    "name": "The Royals Removals",
+    "url": "https://theroyalremovals.co.uk",
+    "logo": "https://theroyalremovals.co.uk/images/hero_removals_van.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44 7345 624506",
+      "contactType": "customer service",
+      "areaServed": "GB",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+      "@type": "Question",
+      "name": "How quickly will I receive my quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You will typically receive your personalised quote within 10 to 15 minutes. Our team is available 7 days a week and reviews every request personally — no automated responses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you insured for damage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we are fully insured with comprehensive goods-in-transit cover. Your belongings are protected throughout the entire move. We also use professional wrapping and padding to prevent damage in the first place."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer packing services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer both full and partial professional packing services. Our trained packers will carefully wrap and box all of your belongings using high-quality materials. We can pack your entire property or focus on fragile and valuable items only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I move on a weekend or bank holiday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We operate 7 days a week including weekends and most bank holidays. We understand that moving often needs to happen on specific days, and we are happy to accommodate your preferred schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend booking at least 2 to 4 weeks in advance, particularly during peak periods such as summer and the end of the month. However, we do accommodate short-notice and last-minute moves whenever our schedule allows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you cover areas outside Birmingham?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While we are based in Birmingham, we serve the entire West Midlands region including Solihull, Sutton Coldfield, Coventry, Wolverhampton, Walsall, Dudley, Sandwell, and many surrounding areas. Contact us to confirm we cover your location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you handle parking and Clean Air Zone (CAZ) charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As local Birmingham movers, we handle all the logistics. We can help guide you on arranging parking dispensations with the City Council if needed, and our modern vehicle fleet meets Clean Air Zone requirements, so you won't face unexpected CAZ charges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you dismantle and reassemble furniture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our team is fully equipped to dismantle and reassemble beds, wardrobes, and other large furniture items. Simply let us know what you need during your quote process so we can allocate the right amount of time for your move."
+      }
+    }
+    ]
+  }
+  </script>
+
+  </main>
+    <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <div class="footer__logo">
@@ -656,54 +887,92 @@
         </div>
         <p>Birmingham's most trusted premium home removals service. Stress-free, insured, and royal-grade care for every move.</p>
         <div class="footer__social">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Google">G</a>
+          <a href="https://wa.me/447345624506" aria-label="WhatsApp" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
       <div class="footer__col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#">House Removals</a></li>
-          <li><a href="#">Flat Removals</a></li>
-          <li><a href="#">Office Removals</a></li>
-          <li><a href="#">Packing Service</a></li>
-          <li><a href="#">Storage Solutions</a></li>
+          <li><a href="/services/house-removals-birmingham/">House Removals</a></li>
+              <li><a href="/services/furniture-removals-birmingham/">Furniture Removals</a></li>
+              <li><a href="/services/office-relocation-birmingham/">Office Relocation</a></li>
+              <li><a href="/services/commercial-removals-birmingham/">Commercial Removals</a></li>
+              <li><a href="/services/packing-services-birmingham/">Packing Services</a></li>
+              <li><a href="/services/man-and-van-birmingham/">Man and Van</a></li>
+              <li><a href="/services/equipment-removals-birmingham/">Equipment Removals</a></li>
+              <li><a href="/services/student-removals-birmingham/">Student Removals</a></li>
+          <li><a href="/insurance/">🛡️ Our Insurance</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Areas</h4>
         <ul>
-          <li><a href="#">Birmingham</a></li>
-          <li><a href="#">Solihull</a></li>
-          <li><a href="#">Sutton Coldfield</a></li>
-          <li><a href="#">Coventry</a></li>
-          <li><a href="#">Wolverhampton</a></li>
+          <li><a href="/areas/birmingham/">Birmingham</a></li>
+              <li><a href="/areas/dudley/">Dudley</a></li>
+              <li><a href="/areas/sandwell/">Sandwell</a></li>
+              <li><a href="/areas/walsall/">Walsall</a></li>
+              <li><a href="/areas/wolverhampton/">Wolverhampton</a></li>
+          <li><a href="/areas/">View All Areas →</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:01216189000">📞 0121 618 9000</a></li>
-          <li><a href="mailto:info@theroyalremovals.co.uk">✉ info@theroyalremovals.co.uk</a></li>
-          <li><span>📍 Birmingham, UK</span></li>
+          <li><a href="tel:+44 7345 624506">📞 07345 624506</a></li>
+          <li><a href="mailto:theroyalsremoval@gmail.com">✉ theroyalsremoval@gmail.com</a></li>
+          <li><span>📍 22 Whitehall Rd, Small Heath, Birmingham B9 5EJ, United Kingdom</span></li>
           <li><span>🕐 Mon–Sun: 7am – 8pm</span></li>
         </ul>
-        <a href="#quote-form" class="btn btn--gold footer__cta">Get Free Quote</a>
+        <a href="/get-a-quote/" class="btn btn--gold footer__cta">Get Free Quote</a>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© 2024 The Royals Removals. All rights reserved. Registered in England &amp; Wales.</p>
+        <p>© 2026 The Royals Removals. All rights reserved. &nbsp;|&nbsp; Company No. 17089311</p>
         <div class="footer__bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Cookie Policy</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms &amp; Conditions</a>
+          <a href="/sitemap/">Sitemap</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-mobile-cta" id="stickyMobileCta">
+    <a href="tel:+44 7345 624506" class="sticky-mobile-cta__call">📞 Call Now</a>
+    <a href="/get-a-quote/" class="sticky-mobile-cta__quote">👑 Free Quote</a>
+  </div>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "The Royals Removals",
+    "url": "https://theroyalremovals.co.uk",
+    "telephone": "+44 7345 624506",
+    "email": "theroyalsremoval@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22 Whitehall Rd",
+      "addressLocality": "Birmingham",
+      "postalCode": "B9 5EJ",
+      "addressCountry": "GB"
+    },
+    "openingHours": "Mo-Su 07:00-20:00",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.4862,
+        "longitude": -1.8904
+      },
+      "geoRadius": "50000"
+    },
+    "priceRange": "££"
+  }
+  </script>
+
+  <script src="/script.js"></script>
 </body>
 </html>
