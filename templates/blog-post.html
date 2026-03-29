@@ -1,0 +1,167 @@
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li class="active">{{breadcrumbName}}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Hero -->
+  <section class="inner-hero">
+    <div class="container">
+      <div class="blog-post__meta" style="margin-bottom:0.75rem;">
+        <span class="blog-post__tag">{{category}}</span>
+        <span style="color:var(--text-muted);margin-left:1rem;">{{publishDate}}</span>
+      </div>
+      <h1 class="inner-hero__h1" style="font-size:clamp(1.6rem,4vw,2.6rem);max-width:820px;">{{h1}}</h1>
+      <p class="inner-hero__sub" style="max-width:720px;">{{metaDescription}}</p>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-post__layout">
+
+        <!-- Main Content -->
+        <article class="blog-post__content">
+          {{articleBody}}
+
+          <!-- CTA Box inline -->
+          <div class="blog-post__cta-box glass-card" style="margin-top:3rem;padding:2.5rem;text-align:center;">
+            <h3 style="font-family:var(--font-serif);font-size:1.6rem;margin-bottom:1rem;">Need an Accurate House Clearance Quote?</h3>
+            <p style="margin-bottom:1.5rem;opacity:0.85;">Tell us your property size and location — we'll give you a transparent, itemised price with no hidden fees.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+              <a href="/get-a-quote/" class="btn btn--gold">👑 Get Your Free Quote</a>
+              <a href="tel:{{phone}}" class="btn btn--outline" style="border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
+              <a href="{{whatsapp}}" class="btn btn--outline" target="_blank" style="border-color:var(--gold);color:var(--gold);">📱 WhatsApp Us</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="blog-post__sidebar">
+          <div class="glass-card" style="padding:2rem;margin-bottom:2rem;">
+            <h4 style="font-family:var(--font-serif);margin-bottom:1rem;font-size:1.2rem;">Get a Free Quote</h4>
+            <p style="font-size:0.95rem;margin-bottom:1.5rem;opacity:0.85;">Our team responds within 10–15 minutes. No obligation.</p>
+            <a href="/get-a-quote/" class="btn btn--gold btn--full">Get Quote →</a>
+            <a href="tel:{{phone}}" class="btn btn--outline btn--full" style="margin-top:0.75rem;border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
+          </div>
+
+          <div class="glass-card" style="padding:2rem;margin-bottom:2rem;">
+            <h4 style="font-family:var(--font-serif);margin-bottom:1rem;font-size:1.2rem;">✅ Why Choose Us?</h4>
+            <ul style="list-style:none;padding:0;font-size:0.9rem;line-height:2;">
+              <li>✓ Fully insured (£50,000 cover)</li>
+              <li>✓ Transparent hourly pricing</li>
+              <li>✓ No hidden fees</li>
+              <li>✓ Same-day response</li>
+              <li>✓ Professional Birmingham team</li>
+              <li>✓ Dismantling &amp; reassembly included</li>
+            </ul>
+          </div>
+
+          <div class="glass-card" style="padding:2rem;">
+            <h4 style="font-family:var(--font-serif);margin-bottom:1rem;font-size:1.2rem;">📚 Our Services</h4>
+            <ul style="list-style:none;padding:0;font-size:0.9rem;line-height:2.2;">
+              <li><a href="/services/house-removals-birmingham/" style="color:var(--gold);">House Removals</a></li>
+              <li><a href="/services/furniture-removals-birmingham/" style="color:var(--gold);">Furniture Removals</a></li>
+              <li><a href="/services/office-relocation-birmingham/" style="color:var(--gold);">Office Relocation</a></li>
+              <li><a href="/services/packing-services-birmingham/" style="color:var(--gold);">Packing Services</a></li>
+              <li><a href="/services/man-and-van-birmingham/" style="color:var(--gold);">Man and Van</a></li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related / Back to Blog -->
+  <section class="section section--gold-bg">
+    <div class="container" style="text-align:center;">
+      <h2 class="section-title" style="margin-bottom:1rem;">More from The <span class="gold-text">Royals Removals</span> Blog</h2>
+      <p style="margin-bottom:2rem;opacity:0.85;">Expert moving guides, tips, and advice from our Birmingham team.</p>
+      <a href="/blog/" class="btn btn--gold">← Back to Blog</a>
+    </div>
+  </section>
+
+  <style>
+    .blog-post__layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      align-items: start;
+    }
+    .blog-post__tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #111;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+    }
+    .blog-post__content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--gold);
+    }
+    .blog-post__content h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin: 2rem 0 0.75rem;
+    }
+    .blog-post__content p {
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      opacity: 0.9;
+    }
+    .blog-post__content ul, .blog-post__content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 2;
+    }
+    .blog-post__content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .blog-post__content table th {
+      background: var(--gold);
+      color: #111;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 700;
+    }
+    .blog-post__content table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .blog-post__content table tr:nth-child(even) td {
+      background: rgba(255,255,255,0.03);
+    }
+    .blog-post__callout {
+      background: rgba(212,175,55,0.1);
+      border-left: 4px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 900px) {
+      .blog-post__layout {
+        grid-template-columns: 1fr;
+      }
+      .blog-post__sidebar {
+        order: -1;
+      }
+    }
+  </style>

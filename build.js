@@ -1038,6 +1038,184 @@ Sitemap: ${config.business.url}/sitemap.xml
   console.log('  ✓ robots.txt');
 }
 
+// ── Build Blog Posts ─────────────────────────────────────
+function buildBlogPosts() {
+  console.log('\n📝 Building blog posts...');
+  const tpl = readTemplate('blog-post.html');
+
+  const posts = [
+    {
+      slug: 'house-clearance-cost-uk',
+      h1: 'How Much Does House Clearance Cost in the UK? (2026 Guide)',
+      metaTitle: 'House Clearance Cost UK 2026 | The Royals Removals',
+      metaDescription: 'How much does house clearance cost in the UK? We break down average prices by property size and share The Royals Removals\' transparent hourly pricing for 2026.',
+      category: 'Pricing Guide',
+      publishDate: 'March 2026',
+      breadcrumbName: 'House Clearance Cost UK 2026',
+      articleBody: `
+        <p>If you're planning a house clearance, one of the first questions you'll ask is: <strong>how much does it cost?</strong></p>
+        <p>The truth is, house clearance costs vary depending on property size, volume of items, access, and time required. In this guide, we'll break down average UK prices and share The Royals Removals' transparent pricing so you know exactly what to expect.</p>
+
+        <h2>💰 Average House Clearance Costs in the UK</h2>
+        <p>Typical UK house clearance prices range widely by property size:</p>
+        <table>
+          <thead><tr><th>Property Size</th><th>Estimated Cost</th></tr></thead>
+          <tbody>
+            <tr><td>1-Bedroom Property</td><td>£150 – £400</td></tr>
+            <tr><td>2-Bedroom Property</td><td>£300 – £700</td></tr>
+            <tr><td>3-Bedroom Property</td><td>£500 – £1,200</td></tr>
+            <tr><td>4+ Bedroom Property</td><td>£800 – £2,000+</td></tr>
+          </tbody>
+        </table>
+        <p>These are rough estimates. Your final price depends on volume of furniture and waste, access (stairs, lifts, parking), labour required, and disposal fees.</p>
+
+        <h2>🚛 The Royals Removals Pricing</h2>
+        <p>At The Royals Removals, pricing is simple, transparent, and based on time and team size.</p>
+
+        <h3>⏱️ Hourly Rate</h3>
+        <div class="blog-post__callout">
+          <strong>£90 per hour</strong> — Minimum booking: 2 hours
+        </div>
+
+        <h3>🏠 House Clearance Cost by Property Size</h3>
+        <table>
+          <thead><tr><th>Property</th><th>Time Est.</th><th>Price Est.</th></tr></thead>
+          <tbody>
+            <tr><td>1 Bedroom House</td><td>2–3 hours</td><td>£180 – £270</td></tr>
+            <tr><td>2 Bedroom House</td><td>3–5 hours</td><td>£270 – £450</td></tr>
+            <tr><td>3 Bedroom House</td><td>5–7 hours</td><td>£450 – £630</td></tr>
+            <tr><td>4+ Bedroom House</td><td>7–10+ hours</td><td>£630 – £900+</td></tr>
+          </tbody>
+        </table>
+        <p>👉 These prices include loading, transport, and careful handling of all items.</p>
+
+        <h3>🏢 Flats &amp; Apartments Clearance Costs</h3>
+        <table>
+          <thead><tr><th>Property</th><th>Price Est.</th></tr></thead>
+          <tbody>
+            <tr><td>Studio Flat</td><td>£90 – £180</td></tr>
+            <tr><td>1 Bed Flat</td><td>£180 – £270</td></tr>
+            <tr><td>2 Bed Flat</td><td>£270 – £450</td></tr>
+            <tr><td>3 Bed Flat</td><td>£450 – £630</td></tr>
+          </tbody>
+        </table>
+
+        <h2>🚐 Full-Day Clearance Deals (Best Value)</h2>
+        <p>For larger clearances, full-day bookings are more cost-effective:</p>
+        <table>
+          <thead><tr><th>Package</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>🚐 1 Man + Van (8 hours)</td><td>£450</td></tr>
+            <tr><td>👷 2 Movers + Van (8 hours)</td><td>£700</td></tr>
+          </tbody>
+        </table>
+
+        <h2>📦 Additional Costs to Consider</h2>
+        <p>Some jobs may include extra charges depending on the situation:</p>
+        <ul>
+          <li><strong>Extra mover:</strong> £25 – £35/hour</li>
+          <li><strong>Long-distance mileage:</strong> £1.50 per mile</li>
+          <li><strong>Waiting time:</strong> Charged hourly</li>
+          <li><strong>Difficult access (stairs, no lift):</strong> May apply</li>
+          <li><strong>Congestion/ULEZ charges:</strong> If applicable</li>
+        </ul>
+
+        <h2>🪑 Specialist Item Removal Costs</h2>
+        <p>Some items require extra care and handling:</p>
+        <table>
+          <thead><tr><th>Item</th><th>Estimated Cost</th></tr></thead>
+          <tbody>
+            <tr><td>Upright Piano</td><td>£150 – £250</td></tr>
+            <tr><td>Grand Piano</td><td>£300 – £500</td></tr>
+            <tr><td>American Fridge Freezer</td><td>£100 – £180</td></tr>
+            <tr><td>Sofa (3–4 seater)</td><td>£60 – £120</td></tr>
+            <tr><td>Wardrobe (large/heavy)</td><td>£80 – £150</td></tr>
+            <tr><td>Pool Table</td><td>£200 – £350</td></tr>
+            <tr><td>Heavy Safe</td><td>£200 – £500</td></tr>
+          </tbody>
+        </table>
+
+        <h2>📦 Packing Services (Optional)</h2>
+        <table>
+          <thead><tr><th>Service</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Partial Packing</td><td>£100 – £180</td></tr>
+            <tr><td>Full Packing Service</td><td>£250 – £450</td></tr>
+            <tr><td>Packing Materials</td><td>From £50</td></tr>
+          </tbody>
+        </table>
+
+        <h2>⚠️ What Affects House Clearance Costs?</h2>
+        <p>Your final quote may vary based on:</p>
+        <ul>
+          <li>Amount of items to remove</li>
+          <li>Property size and floor level</li>
+          <li>Distance between locations</li>
+          <li>Parking availability</li>
+          <li>Type of items (heavy, bulky, fragile)</li>
+        </ul>
+
+        <h2>✅ How to Save Money on House Clearance</h2>
+        <ul>
+          <li>Declutter before booking</li>
+          <li>Separate items for donation or recycling</li>
+          <li>Book a full-day service for larger jobs</li>
+          <li>Ensure easy access — clear pathways and available parking</li>
+        </ul>
+
+        <h2>🏆 Why Choose The Royals Removals?</h2>
+        <ul>
+          <li>Fully insured and professional Birmingham team</li>
+          <li>Transparent hourly pricing — no hidden fees</li>
+          <li>Flexible services from small moves to full house clearances</li>
+          <li>Fast quote response — typically within 10–15 minutes</li>
+          <li>WhatsApp, phone, and online quote available</li>
+        </ul>
+
+        <h2>📞 How to Get an Accurate Quote</h2>
+        <p>For the most accurate quote, it's always best to:</p>
+        <ul>
+          <li>Send photos of your items via WhatsApp</li>
+          <li>Provide your postcode and access details</li>
+          <li>Mention any heavy or specialist items</li>
+        </ul>
+        <div class="blog-post__callout">
+          📱 WhatsApp us at <strong>07345 624506</strong> with photos for the fastest response.
+        </div>
+      `,
+    },
+  ];
+
+  posts.forEach(post => {
+    const content = render(tpl, {
+      ...getCommonVars(),
+      pageTitle: post.metaTitle,
+      metaDescription: post.metaDescription,
+      canonicalUrl: `${config.business.url}/blog/${post.slug}/`,
+      navItems: getNavItems(),
+      serviceLinks: getServiceLinks(),
+      areaLinks: getAreaLinks(),
+      ogType: 'article',
+      h1: post.h1,
+      category: post.category,
+      publishDate: post.publishDate,
+      breadcrumbName: post.breadcrumbName,
+      articleBody: post.articleBody,
+    });
+    const html = buildPage(content, {
+      ...getCommonVars(),
+      pageTitle: post.metaTitle,
+      metaDescription: post.metaDescription,
+      canonicalUrl: `${config.business.url}/blog/${post.slug}/`,
+      navItems: getNavItems(),
+      serviceLinks: getServiceLinks(),
+      areaLinks: getAreaLinks(),
+      ogType: 'article',
+    });
+    writePage(`blog/${post.slug}/index.html`, html);
+  });
+}
+
 // ── Main Build ────────────────────────────────────────────
 function main() {
   console.log('👑 The Royals Removals — Static Site Build\n');
@@ -1054,6 +1232,7 @@ function main() {
   buildServicePages();
   buildAreaPages();
   buildSupportingPages();
+  buildBlogPosts();
   generateSitemap();
   generateRobots();
 
