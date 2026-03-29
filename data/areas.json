@@ -68,7 +68,10 @@
           "house removal alum rock",
           "man with a van alum rock"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "balsall-heath",
@@ -145,7 +148,10 @@
           "yardley-wood",
           "brandwood",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "bordesley",
@@ -157,7 +163,10 @@
           "house removal bordesley",
           "man with a van bordesley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "bordesley-green",
@@ -174,7 +183,10 @@
           "hodge-hill",
           "ward-end",
           "saltley"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "bournville",
@@ -191,7 +203,10 @@
           "stirchley",
           "cotteridge",
           "kings-norton"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "brandwood",
@@ -208,7 +223,10 @@
           "kings-norton",
           "billesley",
           "druids-heath"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "castle-bromwich",
@@ -225,7 +243,10 @@
           "marston-green",
           "castle-vale",
           "water-orton"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "cotteridge",
@@ -242,7 +263,10 @@
           "bournville",
           "kings-norton",
           "kings-heath"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "digbeth",
@@ -259,7 +283,10 @@
           "birmingham-city-centre",
           "highgate",
           "deritend"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "edgbaston",
@@ -291,7 +318,10 @@
           "house removal erdington",
           "man with a van erdington"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "falcon-lodge",
@@ -303,7 +333,10 @@
           "house removal falcon lodge",
           "man with a van falcon lodge"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "garretts-green",
@@ -315,7 +348,10 @@
           "house removal garretts green",
           "man with a van garretts green"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "great-barr",
@@ -332,7 +368,10 @@
           "aldridge",
           "handsworth",
           "perry-barr"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "handsworth",
@@ -349,7 +388,10 @@
           "lozells",
           "perry-barr",
           "handsworth-wood"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "handsworth-wood",
@@ -366,7 +408,10 @@
           "perry-barr",
           "great-barr",
           "hamstead"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "harborne",
@@ -403,7 +448,10 @@
           "bordesley-green",
           "ward-end",
           "castle-bromwich"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "kings-heath",
@@ -460,7 +508,10 @@
           "birmingham-city-centre",
           "jewellery-quarter",
           "five-ways"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "lozells",
@@ -477,7 +528,10 @@
           "handsworth",
           "hockley",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "longbridge",
@@ -494,7 +548,10 @@
           "rubery",
           "kings-norton",
           "rednal"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "moseley",
@@ -530,7 +587,10 @@
           "aston",
           "duddeston",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "northfield",
@@ -567,7 +627,10 @@
           "handsworth-wood",
           "aston",
           "great-barr"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "quinton",
@@ -604,7 +667,10 @@
           "northfield",
           "rednal",
           "bromsgrove"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "selly-oak",
@@ -641,7 +707,10 @@
           "stechford",
           "marston-green",
           "solihull"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "small-heath",
@@ -679,7 +748,10 @@
             "q": "Are you fully insured for moves in Birmingham?",
             "a": "Yes, we hold comprehensive Goods in Transit and Public Liability insurance for total peace of mind."
           }
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "sparkbrook",
@@ -696,7 +768,10 @@
           "balsall-heath",
           "small-heath",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "sparkhill",
@@ -713,7 +788,10 @@
           "moseley",
           "acocks-green",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "stechford",
@@ -730,7 +808,10 @@
           "ward-end",
           "hodge-hill",
           "sheldon"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "stirchley",
@@ -783,7 +864,10 @@
             "q": "Are quotes free of charge?",
             "a": "Yes, we offer free, no-obligation moving surveys (either via video or in-person) for all Sutton Coldfield residents."
           }
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "tyseley",
@@ -800,7 +884,10 @@
           "small-heath",
           "sparkhill",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "ward-end",
@@ -817,7 +904,10 @@
           "stechford",
           "bordesley-green",
           "washwood-heath"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "yardley",
@@ -834,7 +924,10 @@
           "stechford",
           "sheldon",
           "south-yardley"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "yardley-wood",
@@ -851,7 +944,10 @@
           "kings-heath",
           "warstock",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "hall-green",
@@ -868,7 +964,10 @@
           "moseley",
           "sparkhill",
           "yardley-wood"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "gravelly-hill",
@@ -884,7 +983,10 @@
           "erdington",
           "aston",
           "nechells"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "highgate",
@@ -901,7 +1003,10 @@
           "bordesley",
           "digbeth",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "birmingham-city-centre",
@@ -919,7 +1024,10 @@
           "digbeth",
           "edgbaston",
           "aston"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "weoley-castle",
@@ -935,7 +1043,10 @@
           "bartley-green",
           "northfield",
           "rubery"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "saltley",
@@ -951,7 +1062,10 @@
           "bordesley-green",
           "washwood-heath",
           "small-heath"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "druids-heath",
@@ -967,7 +1081,10 @@
           "brandwood",
           "kings-norton",
           "kings-heath"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "castle-vale",
@@ -983,7 +1100,10 @@
           "castle-bromwich",
           "erdington",
           "hodge-hill"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "water-orton",
@@ -999,7 +1119,10 @@
           "castle-bromwich",
           "sheldon",
           "erdington"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "deritend",
@@ -1015,7 +1138,10 @@
           "digbeth",
           "bordesley",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "five-ways",
@@ -1031,7 +1157,10 @@
           "edgbaston",
           "ladywood",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "hamstead",
@@ -1047,7 +1176,10 @@
           "handsworth-wood",
           "great-barr",
           "perry-barr"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "jewellery-quarter",
@@ -1063,7 +1195,10 @@
           "ladywood",
           "birmingham-city-centre",
           "hockley"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "hockley",
@@ -1080,7 +1215,10 @@
           "handsworth",
           "jewellery-quarter",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "rednal",
@@ -1096,7 +1234,10 @@
           "longbridge",
           "rubery",
           "northfield"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "duddeston",
@@ -1112,7 +1253,10 @@
           "nechells",
           "aston",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "washwood-heath",
@@ -1128,7 +1272,10 @@
           "ward-end",
           "saltley",
           "bordesley-green"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "south-yardley",
@@ -1144,7 +1291,10 @@
           "yardley",
           "acocks-green",
           "stechford"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Birmingham"
       },
       {
         "slug": "warstock",
@@ -1160,7 +1310,10 @@
           "yardley-wood",
           "kings-heath",
           "billesley"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Birmingham"
       }
     ],
     "customIntro": "As the second-largest city in the UK, Birmingham features incredibly diverse housing—from grand Victorian properties in Edgbaston to chic new-build apartments in the Jewellery Quarter. Our Birmingham removals team knows every rat-run, one-way system, and access challenge the city has to offer. Whether you're moving your family across town or relocating your business to Colmore Row, we deliver a stress-free experience.",
@@ -1200,7 +1353,10 @@
           "halesowen",
           "old-hill",
           "wordsley"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "sedgley",
@@ -1217,7 +1373,10 @@
           "coseley",
           "penn",
           "dudley-town"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "gornal",
@@ -1229,7 +1388,10 @@
           "house removal gornal",
           "man with a van gornal"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "kingswinford",
@@ -1246,7 +1408,10 @@
           "stourbridge",
           "sedgley",
           "wordsley"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "wall-heath",
@@ -1258,7 +1423,10 @@
           "house removal wall heath",
           "man with a van wall heath"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "stourbridge",
@@ -1275,7 +1443,10 @@
           "brierley-hill",
           "kingswinford",
           "amblecote"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "amblecote",
@@ -1291,7 +1462,10 @@
           "stourbridge",
           "brierley-hill",
           "wordsley"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "brockmoor",
@@ -1303,7 +1477,10 @@
           "house removal brockmoor",
           "man with a van brockmoor"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "lye",
@@ -1315,7 +1492,10 @@
           "house removal lye",
           "man with a van lye"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "quarry-bank",
@@ -1327,7 +1507,10 @@
           "house removal quarry bank",
           "man with a van quarry bank"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "netherton",
@@ -1344,7 +1527,10 @@
           "halesowen",
           "old-hill",
           "dudley-town"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "coseley",
@@ -1361,7 +1547,10 @@
           "bilston",
           "tipton",
           "dudley"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "pensnett",
@@ -1373,7 +1562,10 @@
           "house removal pensnett",
           "man with a van pensnett"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "woodside",
@@ -1385,7 +1577,10 @@
           "house removal woodside",
           "man with a van woodside"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "halesowen",
@@ -1423,7 +1618,10 @@
             "q": "Do you work on weekends?",
             "a": "Yes, we provide weekend removal services in Halesowen to best fit your personal schedule, though these slots book up quickly."
           }
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "old-hill",
@@ -1440,7 +1638,10 @@
           "cradley-heath",
           "rowley-regis",
           "netherton"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "dudley-town",
@@ -1457,7 +1658,10 @@
           "netherton",
           "coseley",
           "brierley-hill"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Dudley"
       },
       {
         "slug": "wordsley",
@@ -1474,7 +1678,10 @@
           "stourbridge",
           "amblecote",
           "brierley-hill"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Dudley"
       }
     ],
     "customIntro": "Moving in the historic capital of the Black Country requires local expertise. From the hilly streets around Dudley Castle to the quieter residential developments in Gornal and Sedgley, our Dudley removal services are tailored to the unique landscape of the borough. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
@@ -1513,7 +1720,10 @@
           "oldbury",
           "wednesbury",
           "great-barr"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "oldbury",
@@ -1530,7 +1740,10 @@
           "west-bromwich",
           "rowley-regis",
           "blackheath"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "smethwick",
@@ -1547,7 +1760,10 @@
           "oldbury",
           "bearwood",
           "handsworth"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "tipton",
@@ -1564,7 +1780,10 @@
           "west-bromwich",
           "wednesbury",
           "dudley"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "rowley-regis",
@@ -1580,7 +1799,10 @@
           "blackheath",
           "oldbury",
           "old-hill"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "wednesbury",
@@ -1597,7 +1819,10 @@
           "darlaston",
           "tipton",
           "walsall"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "blackheath",
@@ -1613,7 +1838,10 @@
           "halesowen",
           "rowley-regis",
           "old-hill"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "cradley-heath",
@@ -1630,7 +1858,10 @@
           "brierley-hill",
           "rowley-regis",
           "old-hill"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "tividale",
@@ -1647,7 +1878,10 @@
           "tipton",
           "rowley-regis",
           "dudley"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Sandwell"
       },
       {
         "slug": "langley",
@@ -1659,7 +1893,10 @@
           "house removal langley",
           "man with a van langley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Sandwell"
       }
     ],
     "customIntro": "Covering the six towns of Sandwell—Oldbury, Rowley Regis, Smethwick, Tipton, Wednesbury, and West Bromwich—our removals team is constantly active across the borough. We provide rapid, careful, and considerate house and office moves, whether you're relocating out of a terraced property in Smethwick or a larger detached home in Great Barr.",
@@ -1698,7 +1935,10 @@
           "pelsall",
           "walsall-town",
           "walsall-wood"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "brownhills",
@@ -1714,7 +1954,10 @@
           "aldridge",
           "pelsall",
           "walsall-wood"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "aldridge",
@@ -1731,7 +1974,10 @@
           "brownhills",
           "great-barr",
           "walsall-town"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "willenhall",
@@ -1748,7 +1994,10 @@
           "darlaston",
           "walsall",
           "pleck"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "darlaston",
@@ -1765,7 +2014,10 @@
           "willenhall",
           "bilston",
           "walsall"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "pelsall",
@@ -1781,7 +2033,10 @@
           "bloxwich",
           "brownhills",
           "walsall-wood"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "streetly",
@@ -1797,7 +2052,10 @@
           "aldridge",
           "great-barr",
           "sutton-coldfield"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "rushall",
@@ -1809,7 +2067,10 @@
           "house removal rushall",
           "man with a van rushall"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "shelfield",
@@ -1821,7 +2082,10 @@
           "house removal shelfield",
           "man with a van shelfield"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "leamore",
@@ -1833,7 +2097,10 @@
           "house removal leamore",
           "man with a van leamore"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "blakenall",
@@ -1845,7 +2112,10 @@
           "house removal blakenall",
           "man with a van blakenall"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "birchills",
@@ -1857,7 +2127,10 @@
           "house removal birchills",
           "man with a van birchills"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "walsall-town",
@@ -1874,7 +2147,10 @@
           "willenhall",
           "darlaston",
           "aldridge"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "walsall-wood",
@@ -1891,7 +2167,10 @@
           "aldridge",
           "pelsall",
           "bloxwich"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Walsall"
       },
       {
         "slug": "pleck",
@@ -1907,7 +2186,10 @@
           "walsall-town",
           "darlaston",
           "willenhall"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Walsall"
       }
     ],
     "customIntro": "From the bustling market center to the quieter outlying villages like Aldridge and Streetly, Walsall is a key service area for The Royals Removals. We've managed hundreds of residential and commercial relocations across the WS postcode area, providing dependable, stress-free moving solutions tailored to your timeline.",
@@ -1946,7 +2228,10 @@
           "darlaston",
           "coseley",
           "wolverhampton-city-centre"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "wednesfield",
@@ -1962,7 +2247,10 @@
           "willenhall",
           "wolverhampton-city-centre",
           "essington"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "tettenhall",
@@ -1978,7 +2266,10 @@
           "penn",
           "wolverhampton-city-centre",
           "compton"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "penn",
@@ -1994,7 +2285,10 @@
           "tettenhall",
           "sedgley",
           "wolverhampton-city-centre"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "whitmore-reans",
@@ -2006,7 +2300,10 @@
           "house removal whitmore reans",
           "man with a van whitmore reans"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "bushbury",
@@ -2022,7 +2319,10 @@
           "wednesfield",
           "wolverhampton-city-centre",
           "essington"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "fallings-park",
@@ -2034,7 +2334,10 @@
           "house removal fallings park",
           "man with a van fallings park"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "finchfield",
@@ -2050,7 +2353,10 @@
           "tettenhall",
           "penn",
           "compton"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "oxley",
@@ -2062,7 +2368,10 @@
           "house removal oxley",
           "man with a van oxley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "ettingshall",
@@ -2074,7 +2383,10 @@
           "house removal ettingshall",
           "man with a van ettingshall"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "parkfields",
@@ -2086,7 +2398,10 @@
           "house removal parkfields",
           "man with a van parkfields"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "wolverhampton-city-centre",
@@ -2104,7 +2419,10 @@
           "tettenhall",
           "penn",
           "whitmore-reans"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "essington",
@@ -2120,7 +2438,10 @@
           "wednesfield",
           "bushbury",
           "wolverhampton-city-centre"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Wolverhampton"
       },
       {
         "slug": "compton",
@@ -2137,7 +2458,10 @@
           "finchfield",
           "penn",
           "wolverhampton-city-centre"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Wolverhampton"
       }
     ],
     "customIntro": "Relocating within the dynamic city of Wolverhampton? Whether you're moving out of a student property near the University, a family home in Tettenhall, or a business unit in Bilston, our Wolverhampton removals crew has the local insight to make your transition effortlessly smooth.",
@@ -2176,7 +2500,10 @@
           "solihull-town",
           "monkspath",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "knowle",
@@ -2193,7 +2520,10 @@
           "balsall-common",
           "solihull-town",
           "bentley-heath"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "dorridge",
@@ -2210,7 +2540,10 @@
           "hockley-heath",
           "solihull-town",
           "bentley-heath"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "balsall-common",
@@ -2226,7 +2559,10 @@
           "knowle",
           "dorridge",
           "meriden"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "chelmsley-wood",
@@ -2238,7 +2574,10 @@
           "house removal chelmsley wood",
           "man with a van chelmsley wood"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "marston-green",
@@ -2255,7 +2594,10 @@
           "sheldon",
           "elmdon",
           "birmingham-airport"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "olton",
@@ -2272,7 +2614,10 @@
           "acocks-green",
           "solihull-town",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "hockley-heath",
@@ -2288,7 +2633,10 @@
           "dorridge",
           "knowle",
           "cheswick-green"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "dickens-heath",
@@ -2304,7 +2652,10 @@
           "shirley",
           "monkspath",
           "cheswick-green"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "smiths-wood",
@@ -2316,7 +2667,10 @@
           "house removal smiths wood",
           "man with a van smiths wood"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "solihull-town",
@@ -2334,7 +2688,10 @@
           "knowle",
           "dorridge",
           "dickens-heath"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "monkspath",
@@ -2350,7 +2707,10 @@
           "shirley",
           "dickens-heath",
           "solihull-town"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "bentley-heath",
@@ -2366,7 +2726,10 @@
           "knowle",
           "dorridge",
           "solihull-town"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "meriden",
@@ -2382,7 +2745,10 @@
           "balsall-common",
           "chelmsley-wood",
           "solihull-town"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "elmdon",
@@ -2399,7 +2765,10 @@
           "sheldon",
           "solihull-town",
           "birmingham-airport"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "birmingham-airport",
@@ -2416,7 +2785,10 @@
           "elmdon",
           "sheldon",
           "chelmsley-wood"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Solihull"
       },
       {
         "slug": "cheswick-green",
@@ -2432,7 +2804,10 @@
           "dickens-heath",
           "hockley-heath",
           "solihull-town"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Solihull"
       }
     ],
     "customIntro": "Widely regarded as one of the most affluent and desirable places to live in the West Midlands, moving to or within Solihull demands a premier removal service. Whether you are transitioning to a substantial property in Knowle or Dorridge, or downsizing to an apartment near Touchwood, our Solihull removals team guarantees exceptional care for your possessions.",
@@ -2471,7 +2846,10 @@
           "wyken",
           "walsgrave",
           "stoke-coventry"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "tile-hill",
@@ -2487,7 +2865,10 @@
           "canley",
           "earlsdon",
           "allesley"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "earlsdon",
@@ -2504,7 +2885,10 @@
           "tile-hill",
           "coventry-city-centre",
           "chapelfields"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "foleshill",
@@ -2516,7 +2900,10 @@
           "house removal foleshill",
           "man with a van foleshill"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "radford",
@@ -2528,7 +2915,10 @@
           "house removal radford",
           "man with a van radford"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "stoke",
@@ -2540,7 +2930,10 @@
           "house removal stoke",
           "man with a van stoke"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "wyken",
@@ -2556,7 +2949,10 @@
           "binley",
           "walsgrave",
           "stoke-coventry"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "canley",
@@ -2572,7 +2968,10 @@
           "earlsdon",
           "tile-hill",
           "coventry-city-centre"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "walsgrave",
@@ -2588,7 +2987,10 @@
           "binley",
           "wyken",
           "ansty"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "allesley",
@@ -2604,7 +3006,10 @@
           "tile-hill",
           "coventry-city-centre",
           "keresley"
-        ]
+        ],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "coundon",
@@ -2616,7 +3021,10 @@
           "house removal coundon",
           "man with a van coundon"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "cheylesmore",
@@ -2632,7 +3040,10 @@
           "coventry-city-centre",
           "stivichall",
           "finham"
-        ]
+        ],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "bell-green",
@@ -2644,7 +3055,10 @@
           "house removal bell green",
           "man with a van bell green"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "longford",
@@ -2656,7 +3070,10 @@
           "house removal longford",
           "man with a van longford"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "stoke-coventry",
@@ -2673,7 +3090,10 @@
           "wyken",
           "cheylesmore",
           "coventry-city-centre"
-        ]
+        ],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "coventry-city-centre",
@@ -2691,7 +3111,10 @@
           "canley",
           "foleshill",
           "allesley"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "chapelfields",
@@ -2707,7 +3130,10 @@
           "earlsdon",
           "canley",
           "coventry-city-centre"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "ansty",
@@ -2723,7 +3149,10 @@
           "walsgrave",
           "binley",
           "coventry-city-centre"
-        ]
+        ],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "keresley",
@@ -2739,7 +3168,10 @@
           "allesley",
           "coundon",
           "coventry-city-centre"
-        ]
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "stivichall",
@@ -2755,7 +3187,10 @@
           "cheylesmore",
           "earlsdon",
           "canley"
-        ]
+        ],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Coventry"
       },
       {
         "slug": "finham",
@@ -2771,7 +3206,10 @@
           "cheylesmore",
           "stivichall",
           "canley"
-        ]
+        ],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Coventry"
       }
     ]
   },
@@ -2798,7 +3236,10 @@
           "house removal boley park",
           "man with a van boley park"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "darwin-park",
@@ -2810,7 +3251,10 @@
           "house removal darwin park",
           "man with a van darwin park"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "leomansley",
@@ -2822,7 +3266,10 @@
           "house removal leomansley",
           "man with a van leomansley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "nether-stowe",
@@ -2834,7 +3281,10 @@
           "house removal nether stowe",
           "man with a van nether stowe"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "stowe",
@@ -2846,7 +3296,10 @@
           "house removal stowe",
           "man with a van stowe"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "streethay",
@@ -2858,7 +3311,10 @@
           "house removal streethay",
           "man with a van streethay"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "curborough",
@@ -2870,7 +3326,10 @@
           "house removal curborough",
           "man with a van curborough"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "sandfields",
@@ -2882,7 +3341,10 @@
           "house removal sandfields",
           "man with a van sandfields"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "huddlesford",
@@ -2894,7 +3356,10 @@
           "house removal huddlesford",
           "man with a van huddlesford"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "wall",
@@ -2906,7 +3371,10 @@
           "house removal wall",
           "man with a van wall"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "burntwood",
@@ -2918,7 +3386,10 @@
           "house removal burntwood",
           "man with a van burntwood"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "armitage",
@@ -2930,7 +3401,10 @@
           "house removal armitage",
           "man with a van armitage"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "handsacre",
@@ -2942,7 +3416,10 @@
           "house removal handsacre",
           "man with a van handsacre"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "whittington",
@@ -2954,7 +3431,10 @@
           "house removal whittington",
           "man with a van whittington"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "shenstone",
@@ -2966,7 +3446,10 @@
           "house removal shenstone",
           "man with a van shenstone"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "fazeley",
@@ -2978,7 +3461,10 @@
           "house removal fazeley",
           "man with a van fazeley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "alrewas",
@@ -2990,7 +3476,10 @@
           "house removal alrewas",
           "man with a van alrewas"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "fradley",
@@ -3002,7 +3491,10 @@
           "house removal fradley",
           "man with a van fradley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "hammerwich",
@@ -3014,7 +3506,10 @@
           "house removal hammerwich",
           "man with a van hammerwich"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "little-aston",
@@ -3026,7 +3521,10 @@
           "house removal little aston",
           "man with a van little aston"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "swinfen",
@@ -3038,7 +3536,10 @@
           "house removal swinfen",
           "man with a van swinfen"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "elford",
@@ -3050,7 +3551,10 @@
           "house removal elford",
           "man with a van elford"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "beautiful period properties and converted flats",
+        "accessNotes": "generally good access with wide tree-lined roads",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "edingale",
@@ -3062,7 +3566,10 @@
           "house removal edingale",
           "man with a van edingale"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Lichfield"
       },
       {
         "slug": "clifton-campville",
@@ -3074,9 +3581,14 @@
           "house removal clifton campville",
           "man with a van clifton campville"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "modern apartment complexes and new-build houses",
+        "accessNotes": "busy main routes requiring careful van positioning",
+        "mainRoads": "local routes connecting to Lichfield"
       }
-    ]
+    ],
+    "regionLandscape": "Lichfield is a historic cathedral city with a mix of medieval streets in the centre and wider modern roads in the outer suburbs. Moving in the city centre often requires careful navigation of pedestrianised zones and historic narrow lanes like Dam Street or Bird Street. However, the outer residential areas offer excellent access for larger removal vehicles with unrestricted parking on most estates.",
+    "propertyTypeSummary": "At the heart of Lichfield, you will find Georgian townhouses, listed buildings, and historic cottages that require careful handling of furniture through tight spaces. The surrounding suburbs and villages feature a high number of large detached family homes, modern 1990s-2010s developments, and spacious bungalows."
   },
   {
     "slug": "redditch",
@@ -3101,7 +3613,10 @@
           "house removal abbeydale",
           "man with a van abbeydale"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "astwood-bank",
@@ -3113,7 +3628,10 @@
           "house removal astwood bank",
           "man with a van astwood bank"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "batchley",
@@ -3125,7 +3643,10 @@
           "house removal batchley",
           "man with a van batchley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "church-hill",
@@ -3137,7 +3658,10 @@
           "house removal church hill",
           "man with a van church hill"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "crabbs-cross",
@@ -3149,7 +3673,10 @@
           "house removal crabbs cross",
           "man with a van crabbs cross"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "enfield",
@@ -3161,7 +3688,10 @@
           "house removal enfield",
           "man with a van enfield"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "greenlands",
@@ -3173,7 +3703,10 @@
           "house removal greenlands",
           "man with a van greenlands"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "headless-cross",
@@ -3185,7 +3718,10 @@
           "house removal headless cross",
           "man with a van headless cross"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "lodge-park",
@@ -3197,7 +3733,10 @@
           "house removal lodge park",
           "man with a van lodge park"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "matchborough",
@@ -3209,7 +3748,10 @@
           "house removal matchborough",
           "man with a van matchborough"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a variety of terraced homes and traditional semis",
+        "accessNotes": "mostly unrestricted residential parking with easy van access",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "moons-moat",
@@ -3221,7 +3763,10 @@
           "house removal moons moat",
           "man with a van moons moat"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "a mix of historic cottages and mid-century family homes",
+        "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "oakenshaw",
@@ -3233,7 +3778,10 @@
           "house removal oakenshaw",
           "man with a van oakenshaw"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "1930s semi-detached and detached homes",
+        "accessNotes": "ample driveway space for smooth loading",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "southcrest",
@@ -3245,7 +3793,10 @@
           "house removal southcrest",
           "man with a van southcrest"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "walkwood",
@@ -3257,7 +3808,10 @@
           "house removal walkwood",
           "man with a van walkwood"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "large detached properties with generous gardens",
+        "accessNotes": "historic narrow lanes that require smaller luton vans",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "winyates",
@@ -3269,7 +3823,10 @@
           "house removal winyates",
           "man with a van winyates"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "woodrow",
@@ -3281,7 +3838,10 @@
           "house removal woodrow",
           "man with a van woodrow"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "predominantly 1970s and 1980s residential estates",
+        "accessNotes": "narrow residential streets with high on-street parking",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "alvechurch",
@@ -3293,7 +3853,10 @@
           "house removal alvechurch",
           "man with a van alvechurch"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "post-war semi-detached houses and bungalows",
+        "accessNotes": "permit parking zones in place on several roads",
+        "mainRoads": "local routes connecting to Redditch"
       },
       {
         "slug": "studley",
@@ -3305,9 +3868,14 @@
           "house removal studley",
           "man with a van studley"
         ],
-        "nearbyAreas": []
+        "nearbyAreas": [],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "some tight corners and restricted parking zones",
+        "mainRoads": "local routes connecting to Redditch"
       }
-    ]
+    ],
+    "regionLandscape": "Redditch is famously designated as a New Town, which means it benefits from a highly efficient road network, including the ring road and dual carriageways that make moving logistics straightforward. However, the town incorporates older villages and districts with tighter roads. Parking is generally plentiful, though some terraced streets in older parts of the town require careful van positioning.",
+    "propertyTypeSummary": "Housing in Redditch ranges from large 1970s and 1980s estates to much older Victorian properties in areas like Headless Cross and Astwood Bank. We frequently handle moves for standard 3-bed family semi-detached houses and modern new-builds, which typically offer great access for our removal teams."
   },
   {
     "slug": "bromsgrove",
@@ -3324,7 +3892,9 @@
       "house removals bromsgrove"
     ],
     "intro": "Moving in Bromsgrove requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
-    "children": []
+    "children": [],
+    "regionLandscape": "Bromsgrove sits perfectly between Birmingham and Worcester, offering fantastic links via the M5 and M42. The town centre can be busy, particularly around the high street, but the surrounding residential roads are generally wide and accommodate removal vans easily. We always map the best routes to avoid rush-hour bottlenecks on the A38.",
+    "propertyTypeSummary": "The mix of properties in Bromsgrove is vast. We move clients in and out of Victorian red-brick terraces near the town centre, traditional 1930s semis, and sprawling modern developments in the Aston Fields and Oakalls areas. Larger detached properties in the surrounding villages are also a common request."
   },
   {
     "slug": "droitwich-spa",
@@ -3341,7 +3911,9 @@
       "house removals droitwich spa"
     ],
     "intro": "Moving in Droitwich Spa requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
-    "children": []
+    "children": [],
+    "regionLandscape": "Droitwich Spa is a charming, historic town with a relaxed pace, but moving day still requires planning. The core of the town features older, sometimes restricted roads, but the outer residential estates are highly accessible. The close proximity to the M5 means excellent logistical links for moves heading out of the county.",
+    "propertyTypeSummary": "Properties here range from historic black-and-white timber-framed cottages that need specialist moving care, to classic 1950s family semis and sprawling new-build estates on the fringes of town. We tailor our vehicle sizes and crew depending on the specific neighborhood."
   },
   {
     "slug": "alcester",
@@ -3358,6 +3930,8 @@
       "house removals alcester"
     ],
     "intro": "Moving in Alcester requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
-    "children": []
+    "children": [],
+    "regionLandscape": "Alcester is a market town where history is visible on every corner. Moving in the town centre means routing around medieval layouts and high street traffic, often requiring smaller vans or parking dispensations. The outer roads leading into Warwickshire provide much easier access for larger vehicles.",
+    "propertyTypeSummary": "We frequently handle moves from beautiful, period listed buildings and small historic cottages in the town centre, which demand precision packing and carrying. The outskirts consist mainly of mid-to-late 20th-century family homes with generous driveway access."
   }
 ]
