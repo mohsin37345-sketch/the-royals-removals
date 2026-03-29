@@ -22,11 +22,11 @@
       "google": "BLANK",
       "whatsapp": "https://wa.me/447345624506"
     },
-    "yearFounded": "BLANK",
+    "yearFounded": "2025",
     "registrationNumber": "17089311",
-    "insuranceCover": "BLANK",
-    "happyMoves": "BLANK",
-    "googleRating": "BLANK"
+    "insuranceCover": "£50,000",
+    "happyMoves": "500+",
+    "googleRating": "5.0"
   },
   "seo": {
     "siteName": "The Royals Removals",
@@ -112,6 +112,30 @@
       "location": "Wolverhampton",
       "rating": 5,
       "text": "Moving out of Birmingham to Wolverhampton felt daunting but The Royals Removals made it so easy. The lads were friendly, hardworking, and got everything done well ahead of schedule. Would use again without hesitation."
+    },
+    {
+      "author": "Sufyaan Hussain",
+      "location": "Birmingham",
+      "rating": 5,
+      "text": "Excellent Service – Highly Recommended! The Royals Removals provided an outstanding service from start to finish. The team was punctual, professional, and handled all our furniture with great care. Everything arrived safely and on time. Very friendly and stress-free experience. I highly recommend The Royals Removals to anyone looking for a reliable moving company."
+    },
+    {
+      "author": "Danyal Ch.",
+      "location": "Birmingham",
+      "rating": 5,
+      "text": "Very efficient and well-organised team. They arrived on time, packed and loaded everything quickly, and delivered without any damage. Very happy with the service."
+    },
+    {
+      "author": "Nickean Sewell",
+      "location": "Birmingham",
+      "rating": 5,
+      "text": "They were absolutely brilliant — amazing service."
+    },
+    {
+      "author": "Adam Jarvis",
+      "location": "Birmingham",
+      "rating": 5,
+      "text": "Really nice guys, did the job with care. Would recommend and look to book again."
     }
   ],
   "homeFaqs": [
