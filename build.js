@@ -821,12 +821,16 @@ function getCtaVariant(slug, areaName) {
   return variants[hash % variants.length];
 }
 
-/** Get trust note variant (3 sentence openers for short insurance mention) */
+/** Get trust note variant (7 sentence openers for short insurance mention) */
 function getTrustNote(areaName) {
   const notes = [
     `All moves in ${areaName} are covered by our comprehensive Goods in Transit and Public Liability insurance.`,
     `Our ${areaName} customers benefit from comprehensive Goods in Transit cover up to £50,000 and Public Liability cover up to £5 million.`,
     `Every removal we carry out in ${areaName} is backed by full Goods in Transit and Public Liability insurance for complete peace of mind.`,
+    `You can trust us with your ${areaName} move, knowing our team operates with full, industry-standard insurance as standard.`,
+    `Moving home in ${areaName} is stress-free with our fully insured service, protecting your items from door to door.`,
+    `We don't take chances with your belongings in ${areaName}. Every booking includes £50,000 Goods in Transit cover.`,
+    `Your property is fully protected during your ${areaName} relocation, thanks to our £5M Public Liability cover.`
   ];
   const hash = strHash(areaName + 'trust');
   return notes[hash % notes.length];
