@@ -21,14 +21,14 @@
         {{#if googleRating}}
         <div class="hero__badge">
           <span class="hero__badge-icon">⭐⭐⭐⭐⭐</span>
-          <span>Rated {{googleRating}}-Star by Birmingham Families</span>
+          <span>Rated {{googleRating}}-Star by Local Families</span>
         </div>
         {{/if}}
         <h1 class="hero__h1">
           {{h1}}
         </h1>
         <p class="hero__sub">
-          Professional, fully insured removal services covering all areas within {{regionName}}. The Royals Removals is your trusted local moving partner.
+          {{heroIntro}}
         </p>
         <ul class="hero__trust-list">
           <li>
@@ -50,12 +50,13 @@
         </ul>
 
         <div class="hero__ctas" style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="#quote-form" class="btn btn--gold">Get Your Quote</a>
+          <a href="#quote-form" class="btn btn--gold">Get Your Free Quote</a>
           <a href="tel:{{phone}}" class="btn btn--outline">📞 {{phoneDisplay}}</a>
           <a href="{{whatsapp}}" class="btn btn--outline" target="_blank">📱 WhatsApp Us</a>
         </div>
+      </div>
 
-        <!-- Right: Multi-step Form -->
+      <!-- Right: Multi-step Form -->
       <div class="hero__form-wrap" id="quote-form">
         <div class="form-card glass-card">
           <div class="form-card__header">
@@ -259,57 +260,60 @@
     </div>
   </section>
 
-  <!-- Intro -->
+  <!-- Regional Intro -->
   <section class="section">
     <div class="container content-section">
-      <p>{{regionIntro}}</p> <!-- Support rich HTML -->
+      <p>{{regionIntro}}</p>
     </div>
   </section>
 
-  {{#if logistics}}
-  <!-- Logistics & CAZ -->
+  <!-- Regional Landscape & Logistics -->
+  {{#if regionLandscape}}
   <section class="section section--gold-bg">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Logistics & <span class="gold-text">Parking in {{regionName}}</span></h2>
+        <h2 class="section-title">Moving in <span class="gold-text">{{regionName}}</span> — What You Need to Know</h2>
       </div>
       <div class="content-section">
-        <p>{{logistics}}</p>
+        <p>{{regionLandscape}}</p>
       </div>
     </div>
   </section>
   {{/if}}
 
-  {{#if whyChooseUs}}
-  <!-- Why Choose Us -->
+  <!-- Property Type Summary -->
+  {{#if propertyTypeSummary}}
   <section class="section">
     <div class="container content-section">
       <div class="section-header">
-        <h2 class="section-title">Why Choose Us in <span class="gold-text">{{regionName}}?</span></h2>
+        <h2 class="section-title">Property Types We Move in <span class="gold-text">{{regionName}}</span></h2>
       </div>
-      <p>{{whyChooseUs}}</p>
+      <p>{{propertyTypeSummary}}</p>
     </div>
   </section>
   {{/if}}
 
+  {{#if childCount}}
   <!-- Areas We Cover -->
   <section class="section section--gold-bg">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Areas in <span class="gold-text">{{regionName}}</span></h2>
-        <p class="section-sub">We cover {{childCount}} areas across {{regionName}}. Click on your area to learn more about our services.</p>
+        <h2 class="section-title">Areas Covered Across <span class="gold-text">{{regionName}}</span></h2>
+        <p class="section-sub">{{childAreaIntro}}</p>
       </div>
       <div class="areas-grid">
         {{childAreaLinks}}
       </div>
     </div>
   </section>
+  {{/if}}
 
   <!-- Services Available -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Services Available in <span class="gold-text">{{regionName}}</span></h2>
+        <h2 class="section-title">Services Available Across <span class="gold-text">{{regionName}}</span></h2>
+        <p class="section-sub">{{servicesIntro}}</p>
       </div>
       <ul class="services-list-simple">
         {{availableServices}}
@@ -317,8 +321,26 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <!-- ===== FINAL CTA ===== -->
+  <!-- Short Trust Mention -->
+  <section class="section section--gold-bg">
+    <div class="container content-section" style="text-align:center;">
+      <p style="max-width:640px;margin:0 auto;">{{trustNote}} <a href="/insurance/" class="gold-text" style="font-weight:600;">See our full insurance cover →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section" id="faqs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">{{regionName}} Removal <span class="gold-text">FAQs</span></h2>
+      </div>
+      <div class="faqs-wrap">
+        {{regionFaqs}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
   <section class="section cta-section" id="cta">
     <div class="cta-section__bg">
       <img src="/images/modern_home_exterior.png" alt="Beautiful home" />
@@ -328,8 +350,8 @@
       
       <!-- LEFT SIDE: Text + Call Button -->
       <div class="cta-section__copy">
-        <h2 class="cta-section__title" style="margin-bottom: 1rem;">Ready for a <span class="gold-text">Royal Move?</span></h2>
-        <p class="cta-section__sub" style="margin-bottom: 2rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;">Get your free, no-obligation quote in under 2 minutes. Fill out the quick form or call us directly. Our team responds in 10 to 15 minutes.</p>
+        <h2 class="cta-section__title" style="margin-bottom: 1rem;">{{ctaHeadline}}</h2>
+        <p class="cta-section__sub" style="margin-bottom: 2rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;">{{ctaSub}}</p>
         
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
           <a href="tel:{{phone}}" class="btn btn--gold btn--large">
@@ -349,7 +371,7 @@
       <!-- RIGHT SIDE: Quick Form -->
       <div class="cta-section__form-wrap">
         <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">{{ctaFormTitle}}</h3>
           <form class="quick-cta-form" action="https://formspree.io/f/mnnqkqzo" method="POST">
             <input type="hidden" name="_subject" value="New Quick Web Lead (Call Back Request)">
             <div class="form-field" style="margin-bottom: 1rem;">
@@ -363,33 +385,11 @@
                  <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
                </div>
             </div>
-            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Get Started →</button>
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">{{ctaButtonText}}</button>
           </form>
         </div>
       </div>
       
-    </div>
-  </section>
-
-  <!-- Trust Section -->
-  <section class="section">
-    <div class="container content-section">
-      <div class="section-header">
-        <h2 class="section-title">Trusted Removals in <span class="gold-text">{{regionName}}</span></h2>
-      </div>
-      <p>The Royals Removals is proud to be one of the most trusted removal companies serving {{regionName}}. All of our staff are fully trained, our vehicles are properly equipped with blankets and straps, and we carry comprehensive goods-in-transit and public liability insurance for your complete peace of mind.</p>
-    </div>
-  </section>
-
-  <!-- FAQs -->
-  <section class="section section--gold-bg" id="faqs">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">{{regionName}} Removal <span class="gold-text">FAQs</span></h2>
-      </div>
-      <div class="faqs-wrap">
-        {{regionFaqs}}
-      </div>
     </div>
   </section>
 

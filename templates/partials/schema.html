@@ -1,11 +1,18 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MovingCompany",
+    "@type": ["MovingCompany", "LocalBusiness", "Organization"],
     "name": "{{businessName}}",
+    "legalName": "{{legalName}}",
     "url": "{{siteUrl}}",
+    "logo": "{{siteUrl}}/images/hero_removals_van.png",
+    "image": "{{siteUrl}}/images/hero_removals_van.png",
     "telephone": "{{phone}}",
     "email": "{{email}}",
+    "taxID": "{{registrationNumber}}",
+    "sameAs": [
+      "{{whatsapp}}"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "{{street}}",

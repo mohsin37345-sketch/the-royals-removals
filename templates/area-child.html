@@ -22,14 +22,14 @@
         {{#if googleRating}}
         <div class="hero__badge">
           <span class="hero__badge-icon">⭐⭐⭐⭐⭐</span>
-          <span>Rated {{googleRating}}-Star by Birmingham Families</span>
+          <span>Rated {{googleRating}}-Star by Local Families</span>
         </div>
         {{/if}}
         <h1 class="hero__h1">
           {{h1}}
         </h1>
         <p class="hero__sub">
-          Professional, careful, and fully insured removal services in {{childName}}, {{regionName}}. The Royals Removals is your trusted partner for a smooth, stress-free move.
+          {{heroSub}}
         </p>
         <ul class="hero__trust-list">
           <li>
@@ -55,8 +55,9 @@
           <a href="tel:{{phone}}" class="btn btn--outline">📞 {{phoneDisplay}}</a>
           <a href="{{whatsapp}}" class="btn btn--outline" target="_blank">📱 WhatsApp Us</a>
         </div>
+      </div>
 
-        <!-- Right: Multi-step Form -->
+      <!-- Right: Multi-step Form -->
       <div class="hero__form-wrap" id="quote-form">
         <div class="form-card glass-card">
           <div class="form-card__header">
@@ -263,36 +264,38 @@
   <!-- Intro Content -->
   <section class="section">
     <div class="container content-section">
-      <p>{{childIntro}}</p> <!-- Supports HTML for formatting -->
+      <p>{{childIntro}}</p>
     </div>
   </section>
 
-  {{#if whyChooseUs}}
-  <!-- Why Choose Us -->
+  <!-- Local Move Profile -->
+  {{#if localMoveProfile}}
   <section class="section section--gold-bg">
-    <div class="container content-section">
+    <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Why Choose The Royals Removals in <span class="gold-text">{{childName}}?</span></h2>
+        <h2 class="section-title">Moving Profile for <span class="gold-text">{{childName}}</span></h2>
       </div>
-      <p>{{whyChooseUs}}</p>
+      <div class="content-section">
+        <p>{{localMoveProfile}}</p>
+      </div>
     </div>
   </section>
   {{/if}}
 
-  {{#if logistics}}
-  <!-- Logistics & CAZ -->
+  <!-- Access, Parking & Loading Notes -->
+  {{#if accessParkingNotes}}
   <section class="section">
     <div class="container content-section">
       <div class="section-header">
-        <h2 class="section-title">Local Knowledge & <span class="gold-text">Logistics</span></h2>
+        <h2 class="section-title">Access &amp; Parking in <span class="gold-text">{{childName}}</span></h2>
       </div>
-      <p>{{logistics}}</p>
+      <p>{{accessParkingNotes}}</p>
     </div>
   </section>
   {{/if}}
 
   <!-- Services in This Area -->
-  <section class="section {{#unless logistics}}section--gold-bg{{/unless}}">
+  <section class="section section--gold-bg">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Services in <span class="gold-text">{{childName}}</span></h2>
@@ -304,38 +307,20 @@
     </div>
   </section>
 
-  <!-- Fully Insured Removals in Area -->
+  <!-- Why Choose Us -->
+  {{#if whyChooseUsBlock}}
   <section class="section">
-    <div class="container">
+    <div class="container content-section">
       <div class="section-header">
-        <h2 class="section-title">Fully Insured Removals in <span class="gold-text">{{childName}}</span></h2>
-        <p class="section-sub">Every removal we carry out in {{childName}} is covered by our comprehensive insurance — giving you complete protection and total peace of mind on moving day.</p>
+        <h2 class="section-title">Why Choose The Royals Removals in <span class="gold-text">{{childName}}?</span></h2>
       </div>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;">
-        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.25);border-radius:12px;padding:1rem 1.5rem;text-align:center;min-width:180px;">
-          <div style="font-size:1.8rem;">🛡️</div>
-          <strong>Public Liability</strong>
-          <p style="margin:0.25rem 0 0;font-size:0.9rem;opacity:0.85;">Up to £5 million</p>
-        </div>
-        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.25);border-radius:12px;padding:1rem 1.5rem;text-align:center;min-width:180px;">
-          <div style="font-size:1.8rem;">🚛</div>
-          <strong>Goods in Transit</strong>
-          <p style="margin:0.25rem 0 0;font-size:0.9rem;opacity:0.85;">Up to £50,000</p>
-        </div>
-        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.25);border-radius:12px;padding:1rem 1.5rem;text-align:center;min-width:180px;">
-          <div style="font-size:1.8rem;">✅</div>
-          <strong>Every Move Covered</strong>
-          <p style="margin:0.25rem 0 0;font-size:0.9rem;opacity:0.85;">On every job, no exceptions</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:1.5rem;">
-        <a href="/insurance/" class="btn btn--gold">🛡️ View Our Full Insurance Details</a>
-      </div>
+      <p>{{whyChooseUsBlock}}</p>
     </div>
   </section>
+  {{/if}}
 
   <!-- Nearby Areas -->
-  <section class="section">
+  <section class="section section--gold-bg">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Nearby <span class="gold-text">Areas</span></h2>
@@ -348,7 +333,7 @@
   </section>
 
   <!-- FAQs -->
-  <section class="section section--gold-bg" id="faqs">
+  <section class="section" id="faqs">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">{{childName}} Removal <span class="gold-text">FAQs</span></h2>
@@ -359,8 +344,14 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <!-- ===== FINAL CTA ===== -->
+  <!-- Short Trust Mention -->
+  <section class="section section--gold-bg">
+    <div class="container content-section" style="text-align:center;">
+      <p style="max-width:640px;margin:0 auto;">{{trustNote}} <a href="/insurance/" class="gold-text" style="font-weight:600;">See our full insurance cover →</a></p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
   <section class="section cta-section" id="cta">
     <div class="cta-section__bg">
       <img src="/images/modern_home_exterior.png" alt="Beautiful home" />
@@ -370,8 +361,8 @@
       
       <!-- LEFT SIDE: Text + Call Button -->
       <div class="cta-section__copy">
-        <h2 class="cta-section__title" style="margin-bottom: 1rem;">Ready for a <span class="gold-text">Royal Move?</span></h2>
-        <p class="cta-section__sub" style="margin-bottom: 2rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;">Get your free, no-obligation quote in under 2 minutes. Fill out the quick form or call us directly. Our team responds in 10 to 15 minutes.</p>
+        <h2 class="cta-section__title" style="margin-bottom: 1rem;">{{ctaHeadline}}</h2>
+        <p class="cta-section__sub" style="margin-bottom: 2rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;">{{ctaSub}}</p>
         
         <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
           <a href="tel:{{phone}}" class="btn btn--gold btn--large">
@@ -391,7 +382,7 @@
       <!-- RIGHT SIDE: Quick Form -->
       <div class="cta-section__form-wrap">
         <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">{{ctaFormTitle}}</h3>
           <form class="quick-cta-form" action="https://formspree.io/f/mnnqkqzo" method="POST">
             <input type="hidden" name="_subject" value="New Quick Web Lead (Call Back Request)">
             <div class="form-field" style="margin-bottom: 1rem;">
@@ -405,7 +396,7 @@
                  <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
                </div>
             </div>
-            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Get Started →</button>
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">{{ctaButtonText}}</button>
           </form>
         </div>
       </div>

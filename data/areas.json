@@ -14,6 +14,9 @@
       "house removals birmingham"
     ],
     "intro": "Birmingham is more than just a city — it is a patchwork of vibrant communities, each with its own character and charm. From the leafy avenues of Harborne to the bustling streets of Digbeth, The Royals Removals has helped hundreds of families and businesses move smoothly across every corner of this great city.\n\nAs a Birmingham-based removal company, we know the local roads, parking restrictions, and access challenges that come with moving in a major city. Whether you are relocating from a terraced house in Balsall Heath or a modern apartment in the Jewellery Quarter, our team has the local expertise to plan and execute your move efficiently.",
+    "heroIntro": "Birmingham is the UK's second city and one of the most diverse and dynamic places to live in the country. From the leafy suburbs of Harborne and Edgbaston to the regenerating neighbourhoods of Digbeth and Jewellery Quarter, we have helped hundreds of families and professionals move across every corner of the city.",
+    "regionLandscape": "Birmingham's road network is extensive but carries its own set of moving-day considerations. The city operates a Clean Air Zone covering the inner ring road, which applies to older diesel and petrol vehicles — we confirm your move route to avoid any unexpected charges. One-way systems in the city centre, permit parking schemes in areas such as Edgbaston and Moseley, and resident bays in the Victorian terraced streets of Balsall Heath and Sparkbrook all require planning before the van arrives. We carry out a pre-move logistics review for every job to ensure parking is sorted in advance.",
+    "propertyTypeSummary": "Birmingham's housing stock reflects its history. The inner suburbs — Balsall Heath, Sparkbrook, Handsworth — are dominated by late-Victorian and Edwardian terraced houses with narrow hallways and steep staircases. The outer suburbs — Harborne, Edgbaston, Sutton Coldfield — offer Edwardian and inter-war semis and detached homes with wider drives. Areas like Jewellery Quarter and Digbeth contain converted warehouses and purpose-built flats that require lift access co-ordination. Northfield, Longbridge, and Kings Norton are largely post-war semi-detached — solid brick with reasonable road access.",
     "children": [
       {
         "slug": "aston",
@@ -28,9 +31,12 @@
         "nearbyAreas": [
           "handsworth",
           "lozells",
-          "gravelly-hill",
-          "nechells"
-        ]
+          "nechells",
+          "gravelly-hill"
+        ],
+        "propertyTypes": "late-Victorian and Edwardian terraced houses",
+        "accessNotes": "narrow residential streets; on-street parking mostly unrestricted but limited space near Victoria Road junction",
+        "mainRoads": "Aston Lane, Trinity Road (A34)"
       },
       {
         "slug": "acocks-green",
@@ -43,11 +49,14 @@
           "man with a van acocks green"
         ],
         "nearbyAreas": [
-          "hall-green",
           "yardley",
           "sparkhill",
-          "tyseley"
-        ]
+          "tyseley",
+          "hall-green"
+        ],
+        "propertyTypes": "1930s semi-detached and detached homes with front gardens",
+        "accessNotes": "generally good access; Westley Road and side streets have unrestricted parking",
+        "mainRoads": "Warwick Road (A41), Westley Road"
       },
       {
         "slug": "alum-rock",
@@ -76,7 +85,10 @@
           "sparkbrook",
           "highgate",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced houses",
+        "accessNotes": "narrow terraced streets; permit parking zone on many roads — check before booking",
+        "mainRoads": "Moseley Road (B12), Ladypool Road"
       },
       {
         "slug": "bartley-green",
@@ -93,7 +105,10 @@
           "northfield",
           "harborne",
           "weoley-castle"
-        ]
+        ],
+        "propertyTypes": "1950s–1970s semi-detached council-built and owner-occupied homes",
+        "accessNotes": "mostly unrestricted residential streets with good van access",
+        "mainRoads": "Bourn Brook Road, Romsley Road"
       },
       {
         "slug": "bearwood",
@@ -110,7 +125,10 @@
           "harborne",
           "quinton",
           "edgbaston"
-        ]
+        ],
+        "propertyTypes": "Edwardian and inter-war semi-detached and terraced homes",
+        "accessNotes": "Lightwoods Road and Sandon Road have on-street parking; loading bay near the high street",
+        "mainRoads": "Bearwood Road, Lightwoods Road"
       },
       {
         "slug": "billesley",
@@ -124,9 +142,9 @@
         ],
         "nearbyAreas": [
           "kings-heath",
-          "hall-green",
           "yardley-wood",
-          "brandwood"
+          "brandwood",
+          "hall-green"
         ]
       },
       {
@@ -237,10 +255,10 @@
           "man with a van digbeth"
         ],
         "nearbyAreas": [
+          "bordesley",
           "birmingham-city-centre",
           "highgate",
-          "deritend",
-          "bordesley"
+          "deritend"
         ]
       },
       {
@@ -255,10 +273,13 @@
         ],
         "nearbyAreas": [
           "harborne",
-          "five-ways",
           "selly-oak",
+          "five-ways",
           "birmingham-city-centre"
-        ]
+        ],
+        "propertyTypes": "large Victorian and Edwardian detached and semi-detached homes, period mansion flats",
+        "accessNotes": "wide residential roads in outer Edgbaston; Hagley Road (A456) has loading restrictions during peak hours",
+        "mainRoads": "Hagley Road (A456), Pershore Road (A441)"
       },
       {
         "slug": "erdington",
@@ -362,7 +383,10 @@
           "quinton",
           "selly-oak",
           "bearwood"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian semi-detached and detached homes",
+        "accessNotes": "High Street has double yellow lines; residential side streets are mostly unrestricted",
+        "mainRoads": "Harborne High Street, Lordswood Road (B4124)"
       },
       {
         "slug": "hodge-hill",
@@ -393,10 +417,13 @@
         ],
         "nearbyAreas": [
           "moseley",
-          "hall-green",
           "billesley",
-          "brandwood"
-        ]
+          "brandwood",
+          "hall-green"
+        ],
+        "propertyTypes": "Edwardian and inter-war semi-detached homes with mature gardens",
+        "accessNotes": "Vicarage Road and side streets are mostly unrestricted; high street has loading bays",
+        "mainRoads": "Vicarage Road, Alcester Road South (A435)"
       },
       {
         "slug": "kings-norton",
@@ -413,7 +440,10 @@
           "bournville",
           "northfield",
           "brandwood"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached and 1960s–1970s terraced homes",
+        "accessNotes": "most residential streets have unrestricted parking; Pershore Road has loading restrictions",
+        "mainRoads": "Pershore Road (A441), Lifford Lane"
       },
       {
         "slug": "ladywood",
@@ -426,8 +456,8 @@
           "man with a van ladywood"
         ],
         "nearbyAreas": [
-          "birmingham-city-centre",
           "edgbaston",
+          "birmingham-city-centre",
           "jewellery-quarter",
           "five-ways"
         ]
@@ -462,8 +492,8 @@
         "nearbyAreas": [
           "northfield",
           "rubery",
-          "rednal",
-          "kings-norton"
+          "kings-norton",
+          "rednal"
         ]
       },
       {
@@ -481,7 +511,10 @@
           "balsall-heath",
           "sparkhill",
           "hall-green"
-        ]
+        ],
+        "propertyTypes": "large Victorian semi-detached and terraced homes",
+        "accessNotes": "Alcester Road has double yellows; side streets are mostly unrestricted residential",
+        "mainRoads": "Alcester Road (A435), Wake Green Road"
       },
       {
         "slug": "nechells",
@@ -514,7 +547,10 @@
           "longbridge",
           "rubery",
           "cotteridge"
-        ]
+        ],
+        "propertyTypes": "post-war semi-detached and inter-war terraced homes",
+        "accessNotes": "Bristol Road South has restrictions; residential streets are mostly unrestricted",
+        "mainRoads": "Bristol Road South (A38), Bunbury Road"
       },
       {
         "slug": "perry-barr",
@@ -548,7 +584,10 @@
           "bartley-green",
           "halesowen",
           "bearwood"
-        ]
+        ],
+        "propertyTypes": "1930s–1960s semi-detached and bungalows",
+        "accessNotes": "Hagley Road West loading is restricted; Quinton Road and Side Streets are mostly unrestricted",
+        "mainRoads": "Hagley Road West (A456), Quinton Road"
       },
       {
         "slug": "rubery",
@@ -582,7 +621,10 @@
           "bournville",
           "edgbaston",
           "stirchley"
-        ]
+        ],
+        "propertyTypes": "Victorian and Edwardian terraced and semi-detached homes; student flat conversions near university",
+        "accessNotes": "Bristol Road has loading restrictions; Oak Tree Lane and side streets mostly unrestricted",
+        "mainRoads": "Bristol Road (A38), Oak Tree Lane"
       },
       {
         "slug": "sheldon",
@@ -668,9 +710,9 @@
         ],
         "nearbyAreas": [
           "sparkbrook",
-          "hall-green",
           "moseley",
-          "acocks-green"
+          "acocks-green",
+          "hall-green"
         ]
       },
       {
@@ -705,7 +747,10 @@
           "selly-oak",
           "cotteridge",
           "kings-heath"
-        ]
+        ],
+        "propertyTypes": "inter-war and post-war semi-detached homes",
+        "accessNotes": "Pershore Road South mostly unrestricted at property level; high street has double yellows",
+        "mainRoads": "Pershore Road South (A441), Mary Vale Road"
       },
       {
         "slug": "sutton-coldfield",
@@ -753,8 +798,8 @@
         "nearbyAreas": [
           "acocks-green",
           "small-heath",
-          "hall-green",
-          "sparkhill"
+          "sparkhill",
+          "hall-green"
         ]
       },
       {
@@ -803,9 +848,318 @@
         ],
         "nearbyAreas": [
           "billesley",
-          "hall-green",
           "kings-heath",
-          "warstock"
+          "warstock",
+          "hall-green"
+        ]
+      },
+      {
+        "slug": "hall-green",
+        "name": "Hall Green",
+        "primaryKeyword": "house removals hall green",
+        "secondaryKeywords": [
+          "house removals in hall green",
+          "house removal company hall green",
+          "house removal hall green",
+          "man with a van hall green"
+        ],
+        "nearbyAreas": [
+          "acocks-green",
+          "moseley",
+          "sparkhill",
+          "yardley-wood"
+        ]
+      },
+      {
+        "slug": "gravelly-hill",
+        "name": "Gravelly Hill",
+        "primaryKeyword": "house removals gravelly hill",
+        "secondaryKeywords": [
+          "house removals in gravelly hill",
+          "house removal company gravelly hill",
+          "house removal gravelly hill",
+          "man with a van gravelly hill"
+        ],
+        "nearbyAreas": [
+          "erdington",
+          "aston",
+          "nechells"
+        ]
+      },
+      {
+        "slug": "highgate",
+        "name": "Highgate",
+        "primaryKeyword": "house removals highgate birmingham",
+        "secondaryKeywords": [
+          "house removals in highgate",
+          "house removal company highgate",
+          "house removal highgate",
+          "man with a van highgate"
+        ],
+        "nearbyAreas": [
+          "balsall-heath",
+          "bordesley",
+          "digbeth",
+          "birmingham-city-centre"
+        ]
+      },
+      {
+        "slug": "birmingham-city-centre",
+        "name": "Birmingham City Centre",
+        "primaryKeyword": "house removals birmingham city centre",
+        "secondaryKeywords": [
+          "house removals in birmingham city centre",
+          "man and van birmingham city centre",
+          "removal company birmingham city centre",
+          "moving company birmingham centre"
+        ],
+        "nearbyAreas": [
+          "ladywood",
+          "nechells",
+          "digbeth",
+          "edgbaston",
+          "aston"
+        ]
+      },
+      {
+        "slug": "weoley-castle",
+        "name": "Weoley Castle",
+        "primaryKeyword": "house removals weoley castle",
+        "secondaryKeywords": [
+          "house removals in weoley castle",
+          "house removal company weoley castle",
+          "house removal weoley castle",
+          "man with a van weoley castle"
+        ],
+        "nearbyAreas": [
+          "bartley-green",
+          "northfield",
+          "rubery"
+        ]
+      },
+      {
+        "slug": "saltley",
+        "name": "Saltley",
+        "primaryKeyword": "house removals saltley",
+        "secondaryKeywords": [
+          "house removals in saltley",
+          "house removal company saltley",
+          "house removal saltley",
+          "man with a van saltley"
+        ],
+        "nearbyAreas": [
+          "bordesley-green",
+          "washwood-heath",
+          "small-heath"
+        ]
+      },
+      {
+        "slug": "druids-heath",
+        "name": "Druids Heath",
+        "primaryKeyword": "house removals druids heath",
+        "secondaryKeywords": [
+          "house removals in druids heath",
+          "house removal company druids heath",
+          "house removal druids heath",
+          "man with a van druids heath"
+        ],
+        "nearbyAreas": [
+          "brandwood",
+          "kings-norton",
+          "kings-heath"
+        ]
+      },
+      {
+        "slug": "castle-vale",
+        "name": "Castle Vale",
+        "primaryKeyword": "house removals castle vale",
+        "secondaryKeywords": [
+          "house removals in castle vale",
+          "house removal company castle vale",
+          "house removal castle vale",
+          "man with a van castle vale"
+        ],
+        "nearbyAreas": [
+          "castle-bromwich",
+          "erdington",
+          "hodge-hill"
+        ]
+      },
+      {
+        "slug": "water-orton",
+        "name": "Water Orton",
+        "primaryKeyword": "house removals water orton",
+        "secondaryKeywords": [
+          "house removals in water orton",
+          "house removal company water orton",
+          "house removal water orton",
+          "man with a van water orton"
+        ],
+        "nearbyAreas": [
+          "castle-bromwich",
+          "sheldon",
+          "erdington"
+        ]
+      },
+      {
+        "slug": "deritend",
+        "name": "Deritend",
+        "primaryKeyword": "house removals deritend",
+        "secondaryKeywords": [
+          "house removals in deritend",
+          "house removal company deritend",
+          "house removal deritend",
+          "man with a van deritend"
+        ],
+        "nearbyAreas": [
+          "digbeth",
+          "bordesley",
+          "birmingham-city-centre"
+        ]
+      },
+      {
+        "slug": "five-ways",
+        "name": "Five Ways",
+        "primaryKeyword": "house removals five ways birmingham",
+        "secondaryKeywords": [
+          "house removals in five ways",
+          "house removal company five ways",
+          "house removal five ways",
+          "man with a van five ways"
+        ],
+        "nearbyAreas": [
+          "edgbaston",
+          "ladywood",
+          "birmingham-city-centre"
+        ]
+      },
+      {
+        "slug": "hamstead",
+        "name": "Hamstead",
+        "primaryKeyword": "house removals hamstead",
+        "secondaryKeywords": [
+          "house removals in hamstead",
+          "house removal company hamstead",
+          "house removal hamstead",
+          "man with a van hamstead"
+        ],
+        "nearbyAreas": [
+          "handsworth-wood",
+          "great-barr",
+          "perry-barr"
+        ]
+      },
+      {
+        "slug": "jewellery-quarter",
+        "name": "Jewellery Quarter",
+        "primaryKeyword": "house removals jewellery quarter birmingham",
+        "secondaryKeywords": [
+          "house removals in jewellery quarter",
+          "removal company jewellery quarter",
+          "man and van jewellery quarter",
+          "moving company jewellery quarter"
+        ],
+        "nearbyAreas": [
+          "ladywood",
+          "birmingham-city-centre",
+          "hockley"
+        ]
+      },
+      {
+        "slug": "hockley",
+        "name": "Hockley",
+        "primaryKeyword": "house removals hockley birmingham",
+        "secondaryKeywords": [
+          "house removals in hockley",
+          "house removal company hockley",
+          "house removal hockley",
+          "man with a van hockley"
+        ],
+        "nearbyAreas": [
+          "lozells",
+          "handsworth",
+          "jewellery-quarter",
+          "birmingham-city-centre"
+        ]
+      },
+      {
+        "slug": "rednal",
+        "name": "Rednal",
+        "primaryKeyword": "house removals rednal",
+        "secondaryKeywords": [
+          "house removals in rednal",
+          "house removal company rednal",
+          "house removal rednal",
+          "man with a van rednal"
+        ],
+        "nearbyAreas": [
+          "longbridge",
+          "rubery",
+          "northfield"
+        ]
+      },
+      {
+        "slug": "duddeston",
+        "name": "Duddeston",
+        "primaryKeyword": "house removals duddeston",
+        "secondaryKeywords": [
+          "house removals in duddeston",
+          "house removal company duddeston",
+          "house removal duddeston",
+          "man with a van duddeston"
+        ],
+        "nearbyAreas": [
+          "nechells",
+          "aston",
+          "birmingham-city-centre"
+        ]
+      },
+      {
+        "slug": "washwood-heath",
+        "name": "Washwood Heath",
+        "primaryKeyword": "house removals washwood heath",
+        "secondaryKeywords": [
+          "house removals in washwood heath",
+          "house removal company washwood heath",
+          "house removal washwood heath",
+          "man with a van washwood heath"
+        ],
+        "nearbyAreas": [
+          "ward-end",
+          "saltley",
+          "bordesley-green"
+        ]
+      },
+      {
+        "slug": "south-yardley",
+        "name": "South Yardley",
+        "primaryKeyword": "house removals south yardley",
+        "secondaryKeywords": [
+          "house removals in south yardley",
+          "house removal company south yardley",
+          "house removal south yardley",
+          "man with a van south yardley"
+        ],
+        "nearbyAreas": [
+          "yardley",
+          "acocks-green",
+          "stechford"
+        ]
+      },
+      {
+        "slug": "warstock",
+        "name": "Warstock",
+        "primaryKeyword": "house removals warstock",
+        "secondaryKeywords": [
+          "house removals in warstock",
+          "house removal company warstock",
+          "house removal warstock",
+          "man with a van warstock"
+        ],
+        "nearbyAreas": [
+          "yardley-wood",
+          "kings-heath",
+          "billesley"
         ]
       }
     ],
@@ -826,19 +1180,10 @@
       "moving company dudley"
     ],
     "intro": "Dudley sits at the heart of the Black Country and is home to a diverse mix of residential areas, from historic town centres to modern housing developments. The Royals Removals provides careful, professional removal services across the entire Dudley borough.\n\nWhether you are moving within Dudley or relocating from further afield, our experienced team ensures your belongings are treated with respect and handled with care throughout the entire process.",
+    "heroIntro": "Dudley sits at the heart of the Black Country, covering well-known areas from Brierley Hill to Stourbridge and Kingswinford. We have helped families and professionals across the entire Dudley borough move with confidence.",
+    "regionLandscape": "Moving in Dudley comes with its own set of road considerations. The A461, A459, and A4036 carry a significant amount of commercial traffic, particularly near the town centre and the Merry Hill retail corridor. Side streets in older residential areas around Gornal and Sedgley can be narrow, so we route our vans carefully and confirm access at every pre-move call. Permit parking is less common here than in Birmingham, but loading on high street properties in Stourbridge and Brierley Hill requires advance planning.",
+    "propertyTypeSummary": "Dudley's housing stock is a mix of Black Country terraces, post-war semis, and newer private developments. Gornal and Sedgley feature solid brick 1930s–1960s semis. Stourbridge and Pedmore skew towards larger detached homes and conversion properties. The Brierley Hill and Kingswinford areas contain a higher proportion of newer builds with good access.",
     "children": [
-      {
-        "slug": "dudley",
-        "name": "Dudley",
-        "primaryKeyword": "house removals dudley",
-        "secondaryKeywords": [
-          "house removals in dudley",
-          "house removal company dudley",
-          "house removal dudley",
-          "man with a van dudley"
-        ],
-        "nearbyAreas": []
-      },
       {
         "slug": "brierley-hill",
         "name": "Brierley Hill",
@@ -851,9 +1196,10 @@
         ],
         "nearbyAreas": [
           "stourbridge",
-          "dudley-town",
           "kingswinford",
-          "halesowen"
+          "halesowen",
+          "old-hill",
+          "wordsley"
         ]
       },
       {
@@ -867,10 +1213,10 @@
           "man with a van sedgley"
         ],
         "nearbyAreas": [
-          "dudley-town",
           "kingswinford",
           "coseley",
-          "penn"
+          "penn",
+          "dudley-town"
         ]
       },
       {
@@ -898,8 +1244,8 @@
         "nearbyAreas": [
           "brierley-hill",
           "stourbridge",
-          "dudley-town",
-          "sedgley"
+          "sedgley",
+          "wordsley"
         ]
       },
       {
@@ -994,9 +1340,10 @@
           "man with a van netherton"
         ],
         "nearbyAreas": [
-          "dudley-town",
           "brierley-hill",
-          "halesowen"
+          "halesowen",
+          "old-hill",
+          "dudley-town"
         ]
       },
       {
@@ -1011,9 +1358,9 @@
         ],
         "nearbyAreas": [
           "sedgley",
-          "dudley-town",
           "bilston",
-          "tipton"
+          "tipton",
+          "dudley"
         ]
       },
       {
@@ -1077,6 +1424,57 @@
             "a": "Yes, we provide weekend removal services in Halesowen to best fit your personal schedule, though these slots book up quickly."
           }
         ]
+      },
+      {
+        "slug": "old-hill",
+        "name": "Old Hill",
+        "primaryKeyword": "house removals old hill",
+        "secondaryKeywords": [
+          "house removals in old hill",
+          "house removal company old hill",
+          "house removal old hill",
+          "man with a van old hill"
+        ],
+        "nearbyAreas": [
+          "blackheath",
+          "cradley-heath",
+          "rowley-regis",
+          "netherton"
+        ]
+      },
+      {
+        "slug": "dudley-town",
+        "name": "Dudley Town",
+        "primaryKeyword": "house removals dudley town",
+        "secondaryKeywords": [
+          "house removals in dudley",
+          "house removal company dudley",
+          "house removal dudley town",
+          "man with a van dudley"
+        ],
+        "nearbyAreas": [
+          "sedgley",
+          "netherton",
+          "coseley",
+          "brierley-hill"
+        ]
+      },
+      {
+        "slug": "wordsley",
+        "name": "Wordsley",
+        "primaryKeyword": "house removals wordsley",
+        "secondaryKeywords": [
+          "house removals in wordsley",
+          "house removal company wordsley",
+          "house removal wordsley",
+          "man with a van wordsley"
+        ],
+        "nearbyAreas": [
+          "kingswinford",
+          "stourbridge",
+          "amblecote",
+          "brierley-hill"
+        ]
       }
     ],
     "customIntro": "Moving in the historic capital of the Black Country requires local expertise. From the hilly streets around Dudley Castle to the quieter residential developments in Gornal and Sedgley, our Dudley removal services are tailored to the unique landscape of the borough. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
@@ -1096,6 +1494,9 @@
       "smethwick removals"
     ],
     "intro": "Sandwell is a diverse and vibrant borough in the heart of the Black Country, covering well-known areas such as West Bromwich, Smethwick, Oldbury, and Wednesbury. The Royals Removals provides comprehensive removal services across every part of the Sandwell borough.\n\nOur team has extensive experience working in the Sandwell area and understands the unique property types and access challenges found across the borough. From Victorian terraces to modern new-builds, we handle every move with care.",
+    "heroIntro": "Sandwell covers a broad swathe of the Black Country, from the industrial heritage of West Bromwich to the residential communities of Smethwick, Oldbury, and Wednesbury. Our team serves every corner of the borough on a regular basis.",
+    "regionLandscape": "Sandwell sits adjacent to Birmingham and shares several road links, including the A41, A457, and the M5. The borough's road network is well-connected but can be congested around West Bromwich town centre and the Smethwick corridor. Older terraced streets in Smethwick and Oldbury require smaller vehicles or careful van positioning — we assess access at every booking.",
+    "propertyTypeSummary": "Sandwell's dominant housing type is the Victorian and Edwardian terraced house, particularly in Smethwick and West Bromwich. Older and inter-war semis are common across Oldbury and Wednesbury. Newer private estates are scattered throughout Great Barr and Newton, offering better access and wider roads.",
     "children": [
       {
         "slug": "west-bromwich",
@@ -1160,9 +1561,9 @@
         ],
         "nearbyAreas": [
           "coseley",
-          "dudley-town",
           "west-bromwich",
-          "wednesbury"
+          "wednesbury",
+          "dudley"
         ]
       },
       {
@@ -1177,8 +1578,8 @@
         ],
         "nearbyAreas": [
           "blackheath",
-          "old-hill",
-          "oldbury"
+          "oldbury",
+          "old-hill"
         ]
       },
       {
@@ -1210,8 +1611,8 @@
         ],
         "nearbyAreas": [
           "halesowen",
-          "old-hill",
-          "rowley-regis"
+          "rowley-regis",
+          "old-hill"
         ]
       },
       {
@@ -1225,10 +1626,10 @@
           "man with a van cradley heath"
         ],
         "nearbyAreas": [
-          "old-hill",
           "halesowen",
           "brierley-hill",
-          "rowley-regis"
+          "rowley-regis",
+          "old-hill"
         ]
       },
       {
@@ -1244,8 +1645,8 @@
         "nearbyAreas": [
           "oldbury",
           "tipton",
-          "dudley",
-          "rowley-regis"
+          "rowley-regis",
+          "dudley"
         ]
       },
       {
@@ -1279,40 +1680,10 @@
       "moving company walsall"
     ],
     "intro": "Walsall is a thriving town in the West Midlands with a rich industrial heritage and a growing residential community. The Royals Removals provides reliable, professional removal services throughout Walsall and its surrounding areas.\n\nOur team understands the unique aspects of moving in the Walsall area, from navigating narrow residential streets to handling properties on the newer housing estates. Every move is planned carefully to ensure a smooth, stress-free experience.",
+    "heroIntro": "Walsall covers a broad area of the northern West Midlands, from Aldridge and Rushall to Bloxwich and Willenhall. Our team operates across the full borough weekly, with good knowledge of local access, parking, and property types.",
+    "regionLandscape": "Walsall town centre has a busy one-way system and restricted loading zones, particularly around Park Street and Walsall ring road. Outer residential areas such as Streetly, Aldridge, and Pelsall have generous road access and mostly unrestricted parking. The A34, A452, and A4148 are the main arterial routes used for removal van access across the borough.",
+    "propertyTypeSummary": "Walsall's housing stock is a mix of inter-war semis, post-war council homes, and newer private estates. Aldridge and Streetly skew towards larger detached and executive homes. Bloxwich and Willenhall contain more compact terraced and semi-detached stock from the 1940s–1970s. Rushall and Pelsall have a blend of older and newer semi-detached properties.",
     "children": [
-      {
-        "slug": "walsall",
-        "name": "Walsall",
-        "primaryKeyword": "house removals walsall",
-        "secondaryKeywords": [
-          "house removals in walsall",
-          "house removal company walsall",
-          "house removal walsall",
-          "man with a van walsall"
-        ],
-        "nearbyAreas": [],
-        "customIntro": "When you need a reliable house removal in Walsall, look no further than The Royals Removals. Covering the heart of the WS1 postcode, we tackle moves of all sizes—from cozy Victorian terraces near the Arboretum to modern townhouses. We blend efficiency with enormous care, so your moving day feels effortless.",
-        "whyChooseUs": "We offer absolute clarity in our Walsall removals pricing. Your quote includes all labor, fuel, and insurance—no nasty surprises. Our teams are consistently praised for their hard work, friendly attitudes, and the expert way they maneuver difficult items down narrow staircases.",
-        "logistics": "Traffic around the Walsall ring road can be unpredictable, but our local drivers know the best alternative routes. We also assist with permit-only parking zones in central Walsall, ensuring our removal vans have immediate access to your front door for safe loading.",
-        "customFaqs": [
-          {
-            "q": "Can you dismantle and reassemble my flat-pack furniture?",
-            "a": "Yes, our team carries full toolkits and is highly adept at dismantling and reassembling modern flat-pack furniture."
-          },
-          {
-            "q": "What size removal vans do you use in Walsall?",
-            "a": "We utilize a fleet of 3.5-ton Luton vans. They offer a vast volume for furniture whilst being nimble enough to park on typical Walsall streets."
-          },
-          {
-            "q": "How much notice do you need for a move?",
-            "a": "We recommend booking 2-4 weeks in advance, but we frequently accommodate short-notice emergency moves in Walsall—just contact us directly."
-          },
-          {
-            "q": "Can I leave drawers full of clothes?",
-            "a": "For lightweight clothing, yes! However, heavy items like books or breakables must be removed from drawers before transit."
-          }
-        ]
-      },
       {
         "slug": "bloxwich",
         "name": "Bloxwich",
@@ -1324,9 +1695,9 @@
           "man with a van bloxwich"
         ],
         "nearbyAreas": [
-          "walsall-town",
           "pelsall",
-          "essington"
+          "walsall-town",
+          "walsall-wood"
         ]
       },
       {
@@ -1341,8 +1712,8 @@
         ],
         "nearbyAreas": [
           "aldridge",
-          "walsall-wood",
-          "pelsall"
+          "pelsall",
+          "walsall-wood"
         ]
       },
       {
@@ -1356,10 +1727,10 @@
           "man with a van aldridge"
         ],
         "nearbyAreas": [
-          "walsall-town",
           "streetly",
           "brownhills",
-          "great-barr"
+          "great-barr",
+          "walsall-town"
         ]
       },
       {
@@ -1374,9 +1745,9 @@
         ],
         "nearbyAreas": [
           "wednesfield",
-          "wolverhampton-city-centre",
+          "darlaston",
           "walsall",
-          "darlaston"
+          "pleck"
         ]
       },
       {
@@ -1390,10 +1761,10 @@
           "man with a van darlaston"
         ],
         "nearbyAreas": [
-          "pleck",
           "wednesbury",
           "willenhall",
-          "bilston"
+          "bilston",
+          "walsall"
         ]
       },
       {
@@ -1487,6 +1858,56 @@
           "man with a van birchills"
         ],
         "nearbyAreas": []
+      },
+      {
+        "slug": "walsall-town",
+        "name": "Walsall Town",
+        "primaryKeyword": "house removals walsall town",
+        "secondaryKeywords": [
+          "house removals in walsall",
+          "house removal company walsall",
+          "house removal walsall town",
+          "man with a van walsall"
+        ],
+        "nearbyAreas": [
+          "bloxwich",
+          "willenhall",
+          "darlaston",
+          "aldridge"
+        ]
+      },
+      {
+        "slug": "walsall-wood",
+        "name": "Walsall Wood",
+        "primaryKeyword": "house removals walsall wood",
+        "secondaryKeywords": [
+          "house removals in walsall wood",
+          "house removal company walsall wood",
+          "house removal walsall wood",
+          "man with a van walsall wood"
+        ],
+        "nearbyAreas": [
+          "brownhills",
+          "aldridge",
+          "pelsall",
+          "bloxwich"
+        ]
+      },
+      {
+        "slug": "pleck",
+        "name": "Pleck",
+        "primaryKeyword": "house removals pleck",
+        "secondaryKeywords": [
+          "house removals in pleck",
+          "house removal company pleck",
+          "house removal pleck",
+          "man with a van pleck"
+        ],
+        "nearbyAreas": [
+          "walsall-town",
+          "darlaston",
+          "willenhall"
+        ]
       }
     ],
     "customIntro": "From the bustling market center to the quieter outlying villages like Aldridge and Streetly, Walsall is a key service area for The Royals Removals. We've managed hundreds of residential and commercial relocations across the WS postcode area, providing dependable, stress-free moving solutions tailored to your timeline.",
@@ -1506,19 +1927,10 @@
       "moving company wolverhampton"
     ],
     "intro": "Wolverhampton is a vibrant city in the heart of the Black Country with excellent transport links and a diverse range of properties. The Royals Removals provides professional removal services across all Wolverhampton neighbourhoods.\n\nOur experienced team handles moves of all sizes, from compact terraced houses to large detached family homes. We bring the same level of care and professionalism to every job, regardless of distance or property size.",
+    "heroIntro": "Wolverhampton is the largest city in the Black Country, with a wide range of residential areas from the Victorian terraced streets near the city centre to the leafy suburbs of Penn and Tettenhall. We cover the full city on a regular basis.",
+    "regionLandscape": "Wolverhampton city centre has a ring road, pedestrianised areas, and loading restrictions that require advance route planning. Penn Road, Stafford Road, and Dudley Road are the primary arterial routes. Residential areas such as Finchfield, Penn, and Fordhouses have excellent access with mostly unrestricted parking. Compact Victorian streets in the Whitmore Reans and Blakenhall areas need careful van sizing.",
+    "propertyTypeSummary": "Wolverhampton's housing is strongly Victorian and Edwardian in the inner areas, transitioning to inter-war and post-war semis in the middle suburbs. Penn and Tettenhall offer larger Edwardian and 1930s detached homes. Fordhouses and Low Hill feature post-war council stock with reasonable access. New private estates are active in Wednesfield and Bilston.",
     "children": [
-      {
-        "slug": "wolverhampton",
-        "name": "Wolverhampton",
-        "primaryKeyword": "house removals wolverhampton",
-        "secondaryKeywords": [
-          "house removals in wolverhampton",
-          "house removal company wolverhampton",
-          "house removal wolverhampton",
-          "man with a van wolverhampton"
-        ],
-        "nearbyAreas": []
-      },
       {
         "slug": "bilston",
         "name": "Bilston",
@@ -1530,10 +1942,10 @@
           "man with a van bilston"
         ],
         "nearbyAreas": [
-          "wolverhampton-city-centre",
           "wednesbury",
           "darlaston",
-          "coseley"
+          "coseley",
+          "wolverhampton-city-centre"
         ]
       },
       {
@@ -1547,8 +1959,8 @@
           "man with a van wednesfield"
         ],
         "nearbyAreas": [
-          "wolverhampton-city-centre",
           "willenhall",
+          "wolverhampton-city-centre",
           "essington"
         ]
       },
@@ -1563,8 +1975,8 @@
           "man with a van tettenhall"
         ],
         "nearbyAreas": [
-          "wolverhampton-city-centre",
           "penn",
+          "wolverhampton-city-centre",
           "compton"
         ]
       },
@@ -1580,8 +1992,8 @@
         ],
         "nearbyAreas": [
           "tettenhall",
-          "wolverhampton-city-centre",
-          "sedgley"
+          "sedgley",
+          "wolverhampton-city-centre"
         ]
       },
       {
@@ -1607,9 +2019,9 @@
           "man with a van bushbury"
         ],
         "nearbyAreas": [
+          "wednesfield",
           "wolverhampton-city-centre",
-          "essington",
-          "wednesfield"
+          "essington"
         ]
       },
       {
@@ -1635,9 +2047,9 @@
           "man with a van finchfield"
         ],
         "nearbyAreas": [
-          "compton",
           "tettenhall",
-          "penn"
+          "penn",
+          "compton"
         ]
       },
       {
@@ -1675,6 +2087,57 @@
           "man with a van parkfields"
         ],
         "nearbyAreas": []
+      },
+      {
+        "slug": "wolverhampton-city-centre",
+        "name": "Wolverhampton City Centre",
+        "primaryKeyword": "house removals wolverhampton city centre",
+        "secondaryKeywords": [
+          "house removals in wolverhampton",
+          "removal company wolverhampton",
+          "man and van wolverhampton",
+          "moving company wolverhampton centre"
+        ],
+        "nearbyAreas": [
+          "bilston",
+          "wednesfield",
+          "tettenhall",
+          "penn",
+          "whitmore-reans"
+        ]
+      },
+      {
+        "slug": "essington",
+        "name": "Essington",
+        "primaryKeyword": "house removals essington",
+        "secondaryKeywords": [
+          "house removals in essington",
+          "house removal company essington",
+          "house removal essington",
+          "man with a van essington"
+        ],
+        "nearbyAreas": [
+          "wednesfield",
+          "bushbury",
+          "wolverhampton-city-centre"
+        ]
+      },
+      {
+        "slug": "compton",
+        "name": "Compton",
+        "primaryKeyword": "house removals compton wolverhampton",
+        "secondaryKeywords": [
+          "house removals in compton",
+          "house removal company compton",
+          "house removal compton",
+          "man with a van compton"
+        ],
+        "nearbyAreas": [
+          "tettenhall",
+          "finchfield",
+          "penn",
+          "wolverhampton-city-centre"
+        ]
       }
     ],
     "customIntro": "Relocating within the dynamic city of Wolverhampton? Whether you're moving out of a student property near the University, a family home in Tettenhall, or a business unit in Bilston, our Wolverhampton removals crew has the local insight to make your transition effortlessly smooth.",
@@ -1694,40 +2157,10 @@
       "removal company solihull"
     ],
     "intro": "Solihull is one of the most desirable places to live in the West Midlands, offering a perfect blend of countryside charm and urban convenience. The Royals Removals provides premium removal services across the entire Solihull borough.\n\nWhether you are moving within Solihull or relocating from Birmingham, our team delivers the same careful, professional service. We handle everything from packing and loading to transport and setup at your new property.",
+    "heroIntro": "Solihull is consistently ranked among the most desirable places to live in the UK — from the executive homes of Dorridge and Knowle to the family-friendly streets of Shirley and Olton. Our team serves the full Solihull borough and covers it on a weekly basis.",
+    "regionLandscape": "Solihull's road network is well-maintained, with the A41, A34, and M42 providing fast access from Birmingham. The town centre has loading restrictions on Solihull High Street, and residential areas in Shirley and Olton have controlled parking zones on some streets. Knowle and Dorridge properties often sit on private driveways or gravel approaches, which we factor into our access planning. The NEC and Birmingham Airport proximity means the A45 can be congested on event days — we route around it where possible.",
+    "propertyTypeSummary": "Solihull is predominantly a borough of 1930s–1960s semi-detached and detached family homes. Shirley and Solihull Old Town contain large Edwardian and inter-war detached homes. Knowle and Dorridge skew towards executive and period properties on generous plots. Olton and Acocks Green (Solihull border) have Victorian and Edwardian terraced and semi-detached stock. New-build developments are active in Shirley, Blythe Valley, and Dickens Heath.",
     "children": [
-      {
-        "slug": "solihull",
-        "name": "Solihull",
-        "primaryKeyword": "house removals solihull",
-        "secondaryKeywords": [
-          "house removals in solihull",
-          "house removal company solihull",
-          "house removal solihull",
-          "man with a van solihull"
-        ],
-        "nearbyAreas": [],
-        "customIntro": "Moving within Solihull town requires a meticulous and refined approach. From the bustling avenues near Touchwood Shopping Centre to the quiet, leafy residential streets, we provide an unparalleled removal service. We manage everything from luxury apartment relocations to substantial detached house moves.",
-        "whyChooseUs": "Our commitment to excellence makes us the preferred removal company in Solihull. We employ a permanent, fully trained workforce—never casual labor. We use premium padded covers for all sofas, TVs, and mattresses, and will carefully rebuild your furniture in your new rooms exactly as requested.",
-        "logistics": "We manage all local logistics so you don't have to. We are familiar with the parking restrictions around Solihull town center and can organize necessary council dispensations. Furthermore, our modern fleet is entirely Clean Air Zone compliant, so your move through the wider Midlands will never incur unexpected charges.",
-        "customFaqs": [
-          {
-            "q": "Do you provide wardrobe boxes on moving day?",
-            "a": "Yes, we bring portable wardrobe boxes on the day of your move so your clothes can stay on their hangers during transit."
-          },
-          {
-            "q": "Do you cover long-distance moves from Solihull?",
-            "a": "Absolutely. While we are locally based, we regularly relocate Solihull residents anywhere within the UK with the same high standards."
-          },
-          {
-            "q": "Will my furniture be insured while in transit?",
-            "a": "Yes, your belongings are shielded by our comprehensive Goods in Transit insurance up to high coverage limits."
-          },
-          {
-            "q": "Do you offer secure storage solutions?",
-            "a": "Yes, if there is a gap between your move-out and move-in dates, we can arrange secure, climate-controlled local storage."
-          }
-        ]
-      },
       {
         "slug": "shirley",
         "name": "Shirley",
@@ -1739,9 +2172,9 @@
           "man with a van shirley"
         ],
         "nearbyAreas": [
+          "olton",
           "solihull-town",
           "monkspath",
-          "olton",
           "hall-green"
         ]
       },
@@ -1757,9 +2190,9 @@
         ],
         "nearbyAreas": [
           "dorridge",
+          "balsall-common",
           "solihull-town",
-          "bentley-heath",
-          "balsall-common"
+          "bentley-heath"
         ]
       },
       {
@@ -1774,9 +2207,9 @@
         ],
         "nearbyAreas": [
           "knowle",
+          "hockley-heath",
           "solihull-town",
-          "bentley-heath",
-          "hockley-heath"
+          "bentley-heath"
         ]
       },
       {
@@ -1835,9 +2268,9 @@
           "man with a van olton"
         ],
         "nearbyAreas": [
-          "solihull-town",
           "shirley",
           "acocks-green",
+          "solihull-town",
           "hall-green"
         ]
       },
@@ -1853,8 +2286,8 @@
         ],
         "nearbyAreas": [
           "dorridge",
-          "cheswick-green",
-          "knowle"
+          "knowle",
+          "cheswick-green"
         ]
       },
       {
@@ -1868,8 +2301,8 @@
           "man with a van dickens heath"
         ],
         "nearbyAreas": [
-          "monkspath",
           "shirley",
+          "monkspath",
           "cheswick-green"
         ]
       },
@@ -1884,6 +2317,122 @@
           "man with a van smiths wood"
         ],
         "nearbyAreas": []
+      },
+      {
+        "slug": "solihull-town",
+        "name": "Solihull Town",
+        "primaryKeyword": "house removals solihull town",
+        "secondaryKeywords": [
+          "house removals in solihull",
+          "removal company solihull",
+          "man and van solihull",
+          "moving company solihull"
+        ],
+        "nearbyAreas": [
+          "shirley",
+          "olton",
+          "knowle",
+          "dorridge",
+          "dickens-heath"
+        ]
+      },
+      {
+        "slug": "monkspath",
+        "name": "Monkspath",
+        "primaryKeyword": "house removals monkspath",
+        "secondaryKeywords": [
+          "house removals in monkspath",
+          "house removal company monkspath",
+          "house removal monkspath",
+          "man with a van monkspath"
+        ],
+        "nearbyAreas": [
+          "shirley",
+          "dickens-heath",
+          "solihull-town"
+        ]
+      },
+      {
+        "slug": "bentley-heath",
+        "name": "Bentley Heath",
+        "primaryKeyword": "house removals bentley heath",
+        "secondaryKeywords": [
+          "house removals in bentley heath",
+          "house removal company bentley heath",
+          "house removal bentley heath",
+          "man with a van bentley heath"
+        ],
+        "nearbyAreas": [
+          "knowle",
+          "dorridge",
+          "solihull-town"
+        ]
+      },
+      {
+        "slug": "meriden",
+        "name": "Meriden",
+        "primaryKeyword": "house removals meriden",
+        "secondaryKeywords": [
+          "house removals in meriden",
+          "house removal company meriden",
+          "house removal meriden",
+          "man with a van meriden"
+        ],
+        "nearbyAreas": [
+          "balsall-common",
+          "chelmsley-wood",
+          "solihull-town"
+        ]
+      },
+      {
+        "slug": "elmdon",
+        "name": "Elmdon",
+        "primaryKeyword": "house removals elmdon",
+        "secondaryKeywords": [
+          "house removals in elmdon",
+          "house removal company elmdon",
+          "house removal elmdon",
+          "man with a van elmdon"
+        ],
+        "nearbyAreas": [
+          "marston-green",
+          "sheldon",
+          "solihull-town",
+          "birmingham-airport"
+        ]
+      },
+      {
+        "slug": "birmingham-airport",
+        "name": "Birmingham Airport",
+        "primaryKeyword": "house removals birmingham airport area",
+        "secondaryKeywords": [
+          "house removals near birmingham airport",
+          "removal company birmingham airport",
+          "man and van birmingham airport",
+          "moving company airport solihull"
+        ],
+        "nearbyAreas": [
+          "marston-green",
+          "elmdon",
+          "sheldon",
+          "chelmsley-wood"
+        ]
+      },
+      {
+        "slug": "cheswick-green",
+        "name": "Cheswick Green",
+        "primaryKeyword": "house removals cheswick green",
+        "secondaryKeywords": [
+          "house removals in cheswick green",
+          "house removal company cheswick green",
+          "house removal cheswick green",
+          "man with a van cheswick green"
+        ],
+        "nearbyAreas": [
+          "dickens-heath",
+          "hockley-heath",
+          "solihull-town"
+        ]
       }
     ],
     "customIntro": "Widely regarded as one of the most affluent and desirable places to live in the West Midlands, moving to or within Solihull demands a premier removal service. Whether you are transitioning to a substantial property in Knowle or Dorridge, or downsizing to an apartment near Touchwood, our Solihull removals team guarantees exceptional care for your possessions.",
@@ -1904,19 +2453,10 @@
       "movers coventry"
     ],
     "intro": "Coventry is a historic city with a proud heritage and a thriving modern community. The Royals Removals extends its premium removal services to Coventry and all surrounding areas, bringing the same level of care and professionalism that Birmingham families have come to trust.\n\nOur team covers every part of Coventry, from the city centre to the suburbs and surrounding villages. Whether you are a young professional, a growing family, or a business looking to relocate, we provide a tailored service to match your needs.",
+    "heroIntro": "Coventry is a dynamic, forward-looking city with a student population, thriving business sector, and a wide range of residential communities from city-centre apartments to leafy suburbs like Earlsdon and Kenilworth Road. Our team covers Coventry and its surrounding areas every week.",
+    "regionLandscape": "Coventry's ring road is the defining feature of moves in and around the city centre — access to inner city properties requires knowing the correct junctions and avoiding restricted bus lanes. The A45, A46, and A423 are the main arterial routes for outer suburb access. University-area streets in Spon End and Chapelfields have heavy parking demand during term time. Earlsdon and Styvechale have permit parking on some residential roads that require advance planning.",
+    "propertyTypeSummary": "Coventry's city centre and inner suburbs feature a high proportion of purpose-built student flats and post-war terraced housing. Earlsdon, Chapelfields, and Styvechale have Edwardian terraces and inter-war semis popular with families and professionals. Kenilworth Road and Finham offer larger detached homes. Binley, Walsgrave, and Willenhall have post-war semis and newer estates with good access.",
     "children": [
-      {
-        "slug": "coventry",
-        "name": "Coventry",
-        "primaryKeyword": "house removals coventry",
-        "secondaryKeywords": [
-          "house removals in coventry",
-          "house removal company coventry",
-          "house removal coventry",
-          "man with a van coventry"
-        ],
-        "nearbyAreas": []
-      },
       {
         "slug": "binley",
         "name": "Binley",
@@ -1929,8 +2469,8 @@
         ],
         "nearbyAreas": [
           "wyken",
-          "stoke-coventry",
-          "walsgrave"
+          "walsgrave",
+          "stoke-coventry"
         ]
       },
       {
@@ -1960,9 +2500,9 @@
           "man with a van earlsdon"
         ],
         "nearbyAreas": [
-          "coventry-city-centre",
           "canley",
           "tile-hill",
+          "coventry-city-centre",
           "chapelfields"
         ]
       },
@@ -2013,9 +2553,9 @@
           "man with a van wyken"
         ],
         "nearbyAreas": [
-          "stoke-coventry",
           "binley",
-          "walsgrave"
+          "walsgrave",
+          "stoke-coventry"
         ]
       },
       {
@@ -2117,6 +2657,121 @@
           "man with a van longford"
         ],
         "nearbyAreas": []
+      },
+      {
+        "slug": "stoke-coventry",
+        "name": "Stoke (Coventry)",
+        "primaryKeyword": "house removals stoke coventry",
+        "secondaryKeywords": [
+          "house removals in stoke coventry",
+          "house removal company stoke coventry",
+          "house removal stoke",
+          "man with a van stoke coventry"
+        ],
+        "nearbyAreas": [
+          "binley",
+          "wyken",
+          "cheylesmore",
+          "coventry-city-centre"
+        ]
+      },
+      {
+        "slug": "coventry-city-centre",
+        "name": "Coventry City Centre",
+        "primaryKeyword": "house removals coventry city centre",
+        "secondaryKeywords": [
+          "house removals in coventry",
+          "removal company coventry",
+          "man and van coventry",
+          "moving company coventry centre"
+        ],
+        "nearbyAreas": [
+          "earlsdon",
+          "cheylesmore",
+          "canley",
+          "foleshill",
+          "allesley"
+        ]
+      },
+      {
+        "slug": "chapelfields",
+        "name": "Chapelfields",
+        "primaryKeyword": "house removals chapelfields coventry",
+        "secondaryKeywords": [
+          "house removals in chapelfields",
+          "house removal company chapelfields",
+          "house removal chapelfields",
+          "man with a van chapelfields"
+        ],
+        "nearbyAreas": [
+          "earlsdon",
+          "canley",
+          "coventry-city-centre"
+        ]
+      },
+      {
+        "slug": "ansty",
+        "name": "Ansty",
+        "primaryKeyword": "house removals ansty",
+        "secondaryKeywords": [
+          "house removals in ansty",
+          "house removal company ansty",
+          "house removal ansty",
+          "man with a van ansty"
+        ],
+        "nearbyAreas": [
+          "walsgrave",
+          "binley",
+          "coventry-city-centre"
+        ]
+      },
+      {
+        "slug": "keresley",
+        "name": "Keresley",
+        "primaryKeyword": "house removals keresley",
+        "secondaryKeywords": [
+          "house removals in keresley",
+          "house removal company keresley",
+          "house removal keresley",
+          "man with a van keresley"
+        ],
+        "nearbyAreas": [
+          "allesley",
+          "coundon",
+          "coventry-city-centre"
+        ]
+      },
+      {
+        "slug": "stivichall",
+        "name": "Stivichall",
+        "primaryKeyword": "house removals stivichall",
+        "secondaryKeywords": [
+          "house removals in stivichall",
+          "house removal company stivichall",
+          "house removal stivichall",
+          "man with a van stivichall"
+        ],
+        "nearbyAreas": [
+          "cheylesmore",
+          "earlsdon",
+          "canley"
+        ]
+      },
+      {
+        "slug": "finham",
+        "name": "Finham",
+        "primaryKeyword": "house removals finham coventry",
+        "secondaryKeywords": [
+          "house removals in finham",
+          "house removal company finham",
+          "house removal finham",
+          "man with a van finham"
+        ],
+        "nearbyAreas": [
+          "cheylesmore",
+          "stivichall",
+          "canley"
+        ]
       }
     ]
   },
@@ -2133,18 +2788,6 @@
     ],
     "intro": "Lichfield is a vibrant area with excellent properties. The Royals Removals provides reliable, professional moving services throughout Lichfield and surrounding areas.",
     "children": [
-      {
-        "slug": "lichfield",
-        "name": "Lichfield",
-        "primaryKeyword": "house removals lichfield",
-        "secondaryKeywords": [
-          "house removals in lichfield",
-          "house removal company lichfield",
-          "house removal lichfield",
-          "man with a van lichfield"
-        ],
-        "nearbyAreas": []
-      },
       {
         "slug": "boley-park",
         "name": "Boley Park",
@@ -2449,18 +3092,6 @@
     "intro": "Redditch is a vibrant area with excellent properties. The Royals Removals provides reliable, professional moving services throughout Redditch and surrounding areas.",
     "children": [
       {
-        "slug": "redditch",
-        "name": "Redditch",
-        "primaryKeyword": "house removals redditch",
-        "secondaryKeywords": [
-          "house removals in redditch",
-          "house removal company redditch",
-          "house removal redditch",
-          "man with a van redditch"
-        ],
-        "nearbyAreas": []
-      },
-      {
         "slug": "abbeydale",
         "name": "Abbeydale",
         "primaryKeyword": "house removals abbeydale",
@@ -2675,43 +3306,58 @@
           "man with a van studley"
         ],
         "nearbyAreas": []
-      },
-      {
-        "slug": "bromsgrove",
-        "name": "Bromsgrove",
-        "primaryKeyword": "house removals bromsgrove",
-        "secondaryKeywords": [
-          "house removals in bromsgrove",
-          "house removal company bromsgrove",
-          "house removal bromsgrove",
-          "man with a van bromsgrove"
-        ],
-        "nearbyAreas": []
-      },
-      {
-        "slug": "droitwich-spa",
-        "name": "Droitwich Spa",
-        "primaryKeyword": "house removals droitwich spa",
-        "secondaryKeywords": [
-          "house removals in droitwich spa",
-          "house removal company droitwich spa",
-          "house removal droitwich spa",
-          "man with a van droitwich spa"
-        ],
-        "nearbyAreas": []
-      },
-      {
-        "slug": "alcester",
-        "name": "Alcester",
-        "primaryKeyword": "house removals alcester",
-        "secondaryKeywords": [
-          "house removals in alcester",
-          "house removal company alcester",
-          "house removal alcester",
-          "man with a van alcester"
-        ],
-        "nearbyAreas": []
       }
     ]
+  },
+  {
+    "slug": "bromsgrove",
+    "name": "Bromsgrove",
+    "h1": "Removals in Bromsgrove",
+    "metaTitle": "Removals Bromsgrove | Trusted House Movers | The Royals Removals",
+    "metaDescription": "Professional removal services across Bromsgrove and the local area. The Royals Removals provides careful, insured house and office moves. Free quotes available.",
+    "primaryKeyword": "removals bromsgrove",
+    "secondaryKeywords": [
+      "bromsgrove removals",
+      "removal company bromsgrove",
+      "movers bromsgrove",
+      "moving company bromsgrove",
+      "house removals bromsgrove"
+    ],
+    "intro": "Moving in Bromsgrove requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
+    "children": []
+  },
+  {
+    "slug": "droitwich-spa",
+    "name": "Droitwich Spa",
+    "h1": "Removals in Droitwich Spa",
+    "metaTitle": "Removals Droitwich Spa | Trusted House Movers | The Royals Removals",
+    "metaDescription": "Professional removal services across Droitwich Spa and the local area. The Royals Removals provides careful, insured house and office moves. Free quotes available.",
+    "primaryKeyword": "removals droitwich spa",
+    "secondaryKeywords": [
+      "droitwich spa removals",
+      "removal company droitwich spa",
+      "movers droitwich spa",
+      "moving company droitwich spa",
+      "house removals droitwich spa"
+    ],
+    "intro": "Moving in Droitwich Spa requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
+    "children": []
+  },
+  {
+    "slug": "alcester",
+    "name": "Alcester",
+    "h1": "Removals in Alcester",
+    "metaTitle": "Removals Alcester | Trusted House Movers | The Royals Removals",
+    "metaDescription": "Professional removal services across Alcester and the local area. The Royals Removals provides careful, insured house and office moves. Free quotes available.",
+    "primaryKeyword": "removals alcester",
+    "secondaryKeywords": [
+      "alcester removals",
+      "removal company alcester",
+      "movers alcester",
+      "moving company alcester",
+      "house removals alcester"
+    ],
+    "intro": "Moving in Alcester requires local expertise. Our removal services are tailored to the unique landscape of the area. We understand the local routing and typical property styles, ensuring your move is seamless and efficient.",
+    "children": []
   }
 ]

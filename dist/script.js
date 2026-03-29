@@ -1,5 +1,5 @@
 /* =============================================
-   THE ROYAL REMOVALS — Multi-Step Form & UI JS
+   THE ROYALS REMOVALS — Multi-Step Form & UI JS
    ============================================= */
 
 (function () {

@@ -104,6 +104,8 @@ function getCommonVars() {
     yearFounded: config.business.yearFounded,
     currentYear: new Date().getFullYear(),
     titleSuffix: config.seo.titleSuffix,
+    registrationNumber: config.business.registrationNumber,
+    legalName: config.business.legalName,
   };
 }
 
@@ -386,7 +388,7 @@ function buildAreaPages() {
   const regionCardsHtml = regions.map(r => `
     <div class="area-region-card glass-card">
       <h3><a href="/areas/${r.slug}/">${r.name}</a></h3>
-      <p>${r.children.length} areas covered</p>
+      ${r.children.length > 0 ? `<p>${r.children.length} areas covered</p>` : ''}
       <div class="area-region-card__children">
         ${r.children.slice(0, 6).map(c => `<a href="/areas/${r.slug}/${c.slug}/" class="area-pill area-pill--sm">${c.name}</a>`).join('')}
         ${r.children.length > 6 ? `<a href="/areas/${r.slug}/" class="area-pill area-pill--sm area-pill--more">+${r.children.length - 6} more</a>` : ''}
@@ -433,7 +435,11 @@ function buildAreaPages() {
       `<li><a href="/services/${s.slug}/">${s.icon} ${s.title}</a></li>`
     ).join('\n');
 
-    const regionFaqsHtml = generateRegionAreaFaqs(region);
+    const regionFaqsHtml = generateRegionFaqs(region);
+    const regionCta = getCtaVariant(region.slug, region.name);
+    const regionChildAreaIntro = getChildAreaIntroText(region);
+    const regionServicesIntro = getServicesIntroText(region.name);
+    const regionTrustNote = getTrustNote(region.name);
     const regionVars = {
       ...getCommonVars(),
       pageTitle: `${region.h1}${config.seo.titleSuffix}`,
@@ -447,6 +453,16 @@ function buildAreaPages() {
       h1: region.h1,
       regionName: region.name,
       regionIntro: region.customIntro || region.intro.replace(/\n\n/g, '</p><p>'),
+      heroIntro: region.heroIntro || region.customIntro || region.intro.replace(/\n\n/g, '</p><p>'),
+      regionLandscape: region.regionLandscape || '',
+      propertyTypeSummary: region.propertyTypeSummary || '',
+      childAreaIntro: regionChildAreaIntro,
+      servicesIntro: regionServicesIntro,
+      trustNote: regionTrustNote,
+      ctaHeadline: regionCta.headline,
+      ctaSub: regionCta.sub,
+      ctaButtonText: regionCta.button,
+      ctaFormTitle: 'Request a Quick Call Back',
       whyChooseUs: region.whyChooseUs || '',
       logistics: region.logistics || '',
       childAreaLinks: childLinksHtml,
@@ -462,10 +478,10 @@ function buildAreaPages() {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Do you cover all areas in ${region.name}?",
+            "name": "Do you cover ${region.name} for removals?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. We provide professional removal services across all ${region.children.length} areas in ${region.name}, including local and long-distance moves."
+              "text": "Yes. We provide professional, fully insured removal services in ${region.name}${region.children.length > 0 ? `, covering all ${region.children.length} local areas` : ''}, including house removals, office moves, and man and van services."
             }
           },
           {
@@ -509,9 +525,13 @@ function buildAreaPages() {
     // Child area pages
     region.children.forEach(child => {
       const nearbyHtml = (child.nearbyAreas || []).map(slug => {
-        // Find the area name from slug
+        // Check if slug is a top-level region (e.g. bromsgrove, solihull, walsall, dudley)
+        const matchedRegion = regions.find(r => r.slug === slug);
+        if (matchedRegion) {
+          return `<a href="/areas/${slug}/" class="area-pill area-pill--sm">${matchedRegion.name}</a>`;
+        }
+        // Find the area name from slug across all child areas
         let areaName = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-        // Try to find the actual area in any region
         for (const r of regions) {
           const found = r.children.find(c => c.slug === slug);
           if (found) {
@@ -519,7 +539,7 @@ function buildAreaPages() {
             return `<a href="/areas/${r.slug}/${slug}/" class="area-pill area-pill--sm">${areaName}</a>`;
           }
         }
-        return `<span class="area-pill area-pill--sm">${areaName}</span>`;
+        return `<a href="/areas/" class="area-pill area-pill--sm">${areaName}</a>`;
       }).join('\n');
 
       const childServiceLinksHtml = services.filter(s => s.published).map(s =>
@@ -585,6 +605,13 @@ function buildAreaPages() {
         }
       `;
 
+      const childCta = getCtaVariant(child.slug, child.name);
+      const childWhyChooseUs = child.whyChooseUs || getWhyChooseUsVariant(child.slug);
+      const childLocalMoveProfile = child.localMoveProfile || generateLocalMoveProfile(child, region);
+      const childAccessParkingNotes = child.accessParkingNotes || generateAccessParkingNotes(child, region);
+      const childHeroSub = child.heroSub || generateHeroSub(child, region);
+      const childTrustNote = getTrustNote(child.name);
+
       const childVars = {
         ...getCommonVars(),
         pageTitle: `House Removals ${child.name}${config.seo.titleSuffix}`,
@@ -599,8 +626,17 @@ function buildAreaPages() {
         regionName: region.name,
         regionSlug: region.slug,
         childIntro: childIntro,
-        whyChooseUs: child.whyChooseUs || '',
+        heroSub: childHeroSub,
+        localMoveProfile: childLocalMoveProfile,
+        accessParkingNotes: childAccessParkingNotes,
+        whyChooseUsBlock: childWhyChooseUs,
+        whyChooseUs: childWhyChooseUs,
         logistics: child.logistics || '',
+        trustNote: childTrustNote,
+        ctaHeadline: childCta.headline,
+        ctaSub: childCta.sub,
+        ctaButtonText: childCta.button,
+        ctaFormTitle: 'Request a Quick Call Back',
         nearbyAreaLinks: nearbyHtml,
         availableServices: childServiceLinksHtml,
         childFaqs: childFaqs,
@@ -624,11 +660,61 @@ function buildAreaPages() {
         serviceSchema: `<script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "Removals in ${child.name}",
-          "provider": { "@type": "LocalBusiness", "name": "${config.business.name}" },
-          "areaServed": { "@type": "City", "name": "${child.name}" },
-          "url": "${config.business.url}/areas/${region.slug}/${child.slug}/"
+          "@type": "MovingCompany",
+          "name": "${config.business.name}",
+          "legalName": "${config.business.legalName || config.business.name}",
+          "url": "${config.business.url}",
+          "telephone": "${config.business.phone}",
+          "email": "${config.business.email}",
+          "taxID": "${config.business.registrationNumber || ''}",
+          "image": "${config.business.url}/images/hero_removals_van.png",
+          "logo": "${config.business.url}/images/hero_removals_van.png",
+          "sameAs": ["${config.business.social.whatsapp}"],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "${config.business.address.street}",
+            "addressLocality": "${config.business.address.city}",
+            "postalCode": "${config.business.address.postcode}",
+            "addressCountry": "GB"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "07:00",
+              "closes": "20:00"
+            }
+          ],
+          "priceRange": "\u00a3\u00a3",
+          "areaServed": {
+            "@type": "City",
+            "name": "${child.name}",
+            "containedInPlace": {
+              "@type": "AdministrativeArea",
+              "name": "${region.name}"
+            }
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Removal Services in ${child.name}",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Removals in ${child.name}" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office Removals in ${child.name}" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Packing Services in ${child.name}" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Man and Van ${child.name}" } }
+            ]
+          },
+          "review": {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "author": { "@type": "Organization", "name": "Google Reviews" }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "${config.business.googleRating || '5.0'}",
+            "reviewCount": "47",
+            "bestRating": "5"
+          }
         }
         </script>`
       };
@@ -639,74 +725,217 @@ function buildAreaPages() {
   });
 }
 
-/** Generate unique intro content for child area pages */
+// ── Simple string hash for deterministic variation ─────────
+function strHash(str) {
+  return str.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+}
+
+/** Generate unique intro content for child area pages (10 patterns) */
 function generateChildAreaIntro(child, region) {
+  const pt = child.propertyTypes || 'a mix of terraced and semi-detached homes';
+  const mainRoad = (child.mainRoads || '').split(',')[0].trim() || 'the main road';
   const intros = [
-    `${child.name} is a well-established area within ${region.name}, known for its strong community feel and excellent transport links. Whether you are moving to or from ${child.name}, The Royals Removals provides a professional, fully insured removal service tailored to your specific needs.\n\nOur team has extensive experience working in ${child.name} and understands the local property types, road layouts, and access considerations that can affect your move. From terraced houses to modern apartments, we handle every relocation with the same level of care and attention.`,
-    `If you are planning a move in ${child.name}, you want a removal company that knows the area and treats your belongings with genuine care. The Royals Removals has helped countless families across ${child.name} and ${region.name} relocate smoothly and without stress.\n\nWe offer a complete removal service including packing, loading, transport, and unloading — all carried out by our experienced, friendly team. Every item is carefully wrapped and secured using professional protective materials to ensure safe transit.`,
-    `Moving home in ${child.name} does not have to be stressful. The Royals Removals provides a reliable, professional removal service that takes the pressure off your moving day. Our team arrives on time, handles your belongings with care, and ensures everything reaches your new property safely.\n\nAs a locally based removal company, we know ${child.name} and the wider ${region.name} area well. This local knowledge helps us plan the most efficient route and anticipate any access challenges at your property.`,
+    `${child.name} is one of those ${region.name} neighbourhoods where character and community go hand in hand. Whether you're leaving a ${pt} you've called home for decades or arriving for the first time, we make sure the move itself is the easiest part of the day.`,
+    `Moving in ${child.name} means navigating the practical realities of a busy residential area — and that's where local experience makes a real difference. The Royals Removals has helped families and professionals relocate across ${region.name} for years, with ${child.name} being one of our most regularly served communities.`,
+    `House moves in ${child.name} come in all shapes — from compact ${pt} to larger family homes — and each one has its own logistical story. Our team plans every ${child.name} move individually so nothing is left to chance.`,
+    `If you're planning a move in ${child.name}, you'll want a removals company that already knows the area and doesn't need to spend the first thirty minutes figuring out where to park. That's exactly what we offer.`,
+    `${child.name} sits within one of the most active moving corridors in ${region.name}. We cover moves into and out of ${child.name} on a weekly basis, which means our planning, pricing, and parking knowledge is current and practical.`,
+    `Relocating from ${child.name} is often the start of something new — a bigger home, a fresh start, or simply the right neighbourhood at the right time. Our job is to make sure the move itself is smooth, punctual, and stress-free.`,
+    `The ${pt} that defines much of ${child.name}'s housing stock brings its own set of practical considerations on moving day. We've done enough ${child.name} moves to know what to bring, how to approach the access, and how to get you in before it gets dark.`,
+    `People move to ${child.name} for the community, the schools, the transport links — and they trust us to get their belongings there safely. We've built that trust through straightforward pricing, reliable timekeeping, and a crew that treats your home with respect.`,
+    `Our ${child.name} customers tell us the same thing afterwards: they wish they'd called sooner and worried less. We take that as the highest possible review, and we try to earn it on every single job.`,
+    `Moving out of — or into — ${child.name} is a decision that usually takes months. We hope getting the removals sorted is the easy part. Give us a call or drop us a WhatsApp and we'll have a no-obligation quote back to you within the hour.`,
+  ];
+  const hash = strHash(child.slug);
+  return intros[hash % intros.length];
+}
+
+/** Generate hero subtitle for child area pages */
+function generateHeroSub(child, region) {
+  const subs = [
+    `Professional, careful removal services in ${child.name}, ${region.name}. Local knowledge, fixed pricing, and a team that treats your home with respect.`,
+    `Trusted house removals in ${child.name} — fully insured, punctual, and priced transparently. The Royals Removals is your local moving partner.`,
+    `Moving in ${child.name}? We cover the area every week. Get a free, no-obligation quote in under 2 minutes.`,
+    `Expert removal services in ${child.name}, ${region.name}. We handle the heavy lifting so your moving day runs exactly as planned.`,
+    `${child.name} removals done right — experienced crew, protective wrapping, fixed quotes, and same-day response. Call or WhatsApp us today.`,
+  ];
+  const hash = strHash(child.slug + 'sub');
+  return subs[hash % subs.length];
+}
+
+/** Generate local move profile paragraph for child area pages */
+function generateLocalMoveProfile(child, region) {
+  const pt = child.propertyTypes || 'a varied mix of terraced, semi-detached, and modern homes';
+  const profiles = [
+    `${child.name} is a predominantly residential area featuring ${pt}. Moves here typically involve family households relocating within ${region.name} or arriving from neighbouring boroughs. Properties often have front drives or small forecourts, which can ease loading access — though street parking on residential roads varies by street.`,
+    `The housing stock in ${child.name} is largely ${pt}, with most properties offering reasonable ground-floor access for furniture removal. We encounter a mix of owner-occupiers upgrading to larger homes and tenants relocating at end of lease — both require clear, efficient logistics on moving day.`,
+    `${child.name}'s residential character is shaped by its ${pt}. This affects everything from the width of staircases to the loading access at the front of the property. Our team comes prepared with the right equipment for the property type and discusses access specifics during your pre-move call.`,
+  ];
+  const hash = strHash(child.slug + 'profile');
+  return profiles[hash % profiles.length];
+}
+
+/** Generate access and parking notes for child area pages (10 patterns) */
+function generateAccessParkingNotes(child, region) {
+  const accessNote = child.accessNotes || 'mostly unrestricted residential parking';
+  const mainRoad = (child.mainRoads || '').split(',')[0].trim() || 'the main road through the area';
+  const patterns = [
+    `Most properties in ${child.name} have ${accessNote}, which means loading access is usually straightforward — though we always confirm the specifics during your pre-move call.`,
+    `The streets around ${mainRoad} can become congested mid-morning, so we typically plan loading to start before 9am or after the school run has cleared.`,
+    `${child.name} sits close to the Birmingham Clean Air Zone boundary — we confirm your route before the move to make sure there are no unexpected charges.`,
+    `Parking suspensions in ${child.name} are available from the local council if you need to reserve loading space. We can guide you through the process if it's your first time.`,
+    `Many ${child.name} streets have ${accessNote}, so we factor in a clear drop-off zone as part of your move plan rather than leaving it to chance on the day.`,
+    `Access to ${child.name} from ${mainRoad} can be tight for larger vehicles — our team will assess the best approach route during your pre-move call.`,
+    `${child.name} properties built before the 1950s often have narrower hallways and tighter stairwells, so we bring a selection of trolley sizes and use multi-person lifts for heavier items.`,
+    `For flat moves in ${child.name}, we always confirm lift dimensions and booking requirements with your block management company ahead of the move.`,
+    `The ${mainRoad} junction can stack up during peak traffic. Our routing plan uses quieter cut-throughs to keep your van moving and your move on time.`,
+    `Loading in ${child.name} works best mid-week — weekend moves near the high street require earlier starts and a bit more co-ordination with parking.`,
+  ];
+  const hash = strHash(child.slug + 'access');
+  return patterns[hash % patterns.length];
+}
+
+/** Get Why Choose Us variant (5 variants, assigned by slug hash) */
+function getWhyChooseUsVariant(slug) {
+  const variants = [
+    `Moving day runs to a tight schedule, and we never leave you waiting. Our team arrives at the booked time, works methodically through your home, and wraps up loading faster than most customers expect. Every van is pre-loaded with moving blankets, furniture straps, and floor runners so we hit the ground running from the first minute on site. You'll get a named contact before your move and a follow-up call once you're settled in.`,
+    `We treat your belongings the same way we'd treat our own. Furniture is wrapped before it leaves the property, not after it gets to the van. We use double-layer protection on glass-topped furniture and mirrors, carry specialist covers for mattresses, and lay floor runners before we even think about moving the first item. Our goal is a zero-damage move, and that starts with preparation, not luck.`,
+    `We operate from Birmingham and we move in Birmingham every week — that means we know the back streets, the permit parking zones, the one-way systems, and the loading constraints before your van even leaves the depot. Local knowledge cuts delays and keeps your move on schedule. We're not a national franchise dispatching a distant crew — we're your local team.`,
+    `Our quotes are fixed and itemised. You won't discover extras when the van pulls up. We tell you upfront what the move includes — the vehicle size, the crew, the mileage, and any packing services you've asked for. If something changes on the day, we discuss it before acting. No surprises, no pressure, no invoice that looks nothing like the quote.`,
+    `Life doesn't follow a fixed timetable, and neither do we. If your completion date shifts, call us — we'll do our best to accommodate. We offer early-morning starts, weekend availability, and have helped customers who needed to move within 24 hours of contacting us. Our office responds to calls and WhatsApp messages within the hour during business hours, and we keep you updated at every stage.`,
+  ];
+  const hash = strHash(slug + 'why');
+  return variants[hash % variants.length];
+}
+
+/** Get CTA wording variant (5 variants, assigned by slug hash) */
+function getCtaVariant(slug, areaName) {
+  const variants = [
+    { headline: `Ready to Book Your ${areaName} Move?`, sub: `Get a free, no-obligation quote in under 2 minutes. We respond within 10–15 minutes during business hours.`, button: 'Get My Free Quote' },
+    { headline: `Your ${areaName} Move Deserves a Proper Plan`, sub: `Tell us about your property and moving date — we'll give you a fixed, transparent price with no hidden fees.`, button: 'Start My Quote' },
+    { headline: `Let's Get Your ${areaName} Move Sorted`, sub: `Call us, WhatsApp us, or fill in the quick form below. A member of our team will be back to you promptly.`, button: 'Get a Quote Now' },
+    { headline: `Moving in ${areaName}? We're Ready When You Are`, sub: `Free quote. Fixed price. Fully insured. Flexible dates. Fill in the form or give us a ring.`, button: 'Request a Quote' },
+    { headline: `Take the Stress Out of Moving in ${areaName}`, sub: `Our team handles the heavy lifting — literally. Get your personalised moving quote in minutes.`, button: 'Get My Moving Quote' },
+  ];
+  const hash = strHash(slug + 'cta');
+  return variants[hash % variants.length];
+}
+
+/** Get trust note variant (3 sentence openers for short insurance mention) */
+function getTrustNote(areaName) {
+  const notes = [
+    `All moves in ${areaName} are covered by our comprehensive Goods in Transit and Public Liability insurance.`,
+    `Our ${areaName} customers benefit from comprehensive Goods in Transit cover up to £50,000 and Public Liability cover up to £5 million.`,
+    `Every removal we carry out in ${areaName} is backed by full Goods in Transit and Public Liability insurance for complete peace of mind.`,
+  ];
+  const hash = strHash(areaName + 'trust');
+  return notes[hash % notes.length];
+}
+
+/** Get child area intro text for region page */
+function getChildAreaIntroText(region) {
+  const intros = [
+    `We cover ${region.children.length} areas across ${region.name}. Click on your area to learn more about local services and get a tailored quote.`,
+    `From the heart of ${region.name} to its quieter residential edges, our team covers every area below. Select your neighbourhood to see local information and pricing.`,
+    `Every area across ${region.name} is covered by our professional removal service. Choose your neighbourhood for local access notes, property insights, and a free quote.`,
+  ];
+  const hash = strHash(region.slug + 'childintro');
+  return intros[hash % intros.length];
+}
+
+/** Get services intro text for region page */
+function getServicesIntroText(regionName) {
+  const intros = [
+    `All of our professional removal services are available across ${regionName} and the surrounding area.`,
+    `Whether you need a full house removal or a man with a van in ${regionName}, we have the right service for your move.`,
+    `From packing to transport and storage, every service is available to customers across ${regionName}.`,
+  ];
+  const hash = strHash(regionName + 'svc');
+  return intros[hash % intros.length];
+}
+
+/** Generate FAQ content for region hub pages (6 questions, select 4 by hash) */
+function generateRegionFaqs(region) {
+  const coverageText = region.children.length > 0
+    ? `Yes. We provide professional removal services across all ${region.children.length} areas in ${region.name}, including local and long-distance moves.`
+    : `Yes. We provide professional, fully insured removal services throughout ${region.name}. Contact us for a free quote.`;
+
+  const allFaqs = [
+    { q: `Do you cover ${region.name} for removals?`, a: coverageText },
+    { q: `How much does a house removal in ${region.name} cost?`, a: `The cost depends on the size of your property, volume of items, and distance. We offer free, no-obligation quotes for all moves in ${region.name} with transparent pricing and no hidden fees.` },
+    { q: `Do you cover all postcode districts in ${region.name}?`, a: `Yes — we cover the full extent of ${region.name}${region.children.length > 0 ? `, including all ${region.children.length} local areas listed on this page` : ''}. If you're unsure whether your street is within our range, just call or WhatsApp us and we'll confirm immediately.` },
+    { q: `Can you help with parking when moving in ${region.name}?`, a: `We advise on applying for temporary parking suspensions where needed. Some streets in ${region.name} require advance notice to the council — we'll flag this during your pre-move call if it applies to your address.` },
+    { q: `How far in advance should I book removals in ${region.name}?`, a: `We recommend booking 2–4 weeks ahead once your completion date is confirmed. We also take short-notice bookings when availability allows, so even if your date is close, it's always worth calling.` },
+    { q: `Are your removal teams based locally?`, a: `Yes — we operate from Birmingham and our crews are familiar with ${region.name} and the surrounding area. Local knowledge means less time navigating and more time focused on your move.` },
   ];
 
-  // Use a deterministic selection based on the slug
-  const hash = child.slug.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
-  return intros[hash % intros.length].replace(/\n\n/g, '</p><p>');
-}
+  // Select 4 FAQs deterministically based on region slug
+  const hash = strHash(region.slug);
+  const indices = [hash % 6, (hash + 1) % 6, (hash + 2) % 6, (hash + 3) % 6];
+  const uniqueIndices = [...new Set(indices)];
+  while (uniqueIndices.length < 4) {
+    for (let i = 0; i < 6; i++) {
+      if (!uniqueIndices.includes(i)) { uniqueIndices.push(i); break; }
+    }
+  }
+  const selectedFaqs = uniqueIndices.slice(0, 4).map(i => allFaqs[i]);
 
-/** Generate FAQ content for region hub pages */
-function generateRegionAreaFaqs(region) {
-  return `
+  return selectedFaqs.map(faq => `
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-item__question">
-        Do you cover all areas in ${region.name}?
+        ${faq.q}
         <span class="faq-item__icon">+</span>
       </div>
-      <div class="faq-item__answer">
-        Yes. We provide professional removal services across all ${region.children.length} areas in ${region.name}, including local and long-distance moves.
-      </div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-item__question">
-        How much does a house removal in ${region.name} cost?
-        <span class="faq-item__icon">+</span>
-      </div>
-      <div class="faq-item__answer">
-        The cost depends on the size of your property, volume of items, and distance. We offer free, no-obligation quotes for all moves in ${region.name} with transparent pricing.
-      </div>
-    </div>
-  `;
+      <div class="faq-item__answer">${faq.a}</div>
+    </div>`).join('\n');
 }
 
-/** Generate FAQ content for child area pages */
+/** Generate FAQ content for child area pages (10 patterns, pick 4 by hash) */
 function generateChildAreaFaqs(child, region) {
-  return `
+  const nearby = (child.nearbyAreas || []).slice(0, 3).map(s => {
+    for (const r of regions) {
+      const f = r.children.find(c => c.slug === s);
+      if (f) return f.name;
+    }
+    return s.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+  });
+  const nearby1 = nearby[0] || region.name;
+  const nearby2 = nearby[1] || 'the surrounding area';
+  const nearby3 = nearby[2] || '';
+
+  const allFaqs = [
+    { q: `Do you cover moves both into and out of ${child.name}?`, a: `Yes — we handle removals from ${child.name} to anywhere in the UK, and moves arriving in ${child.name} from other regions. Local moves within ${child.name} are also covered.` },
+    { q: `How much do house removals in ${child.name} typically cost?`, a: `Pricing depends on property size, distance, and any extra services. A local move within ${child.name} for a 2–3 bedroom home typically takes 3–5 hours. We'll give you a fixed, itemised quote after a quick consultation — no guessing.` },
+    { q: `Can you help with parking when moving in ${child.name}?`, a: `We can advise on applying for a temporary parking suspension with the local authority if your street has permit controls or yellow lines close to your door. We'll flag this as part of your pre-move planning.` },
+    { q: `Do you offer packing as well as removals in ${child.name}?`, a: `Yes. We can pack your entire home, specific rooms, or just fragile items like glassware and artwork. We bring all the materials — boxes, bubble wrap, packing paper, and tape.` },
+    { q: `How far in advance should I book removals in ${child.name}?`, a: `We recommend booking as soon as your completion date is confirmed — typically 2–4 weeks ahead for standard moves. However, we do take short-notice bookings when availability allows, so even if your date is close, it's worth calling.` },
+    { q: `Is parking always available on ${child.name} streets for a removal van?`, a: `It varies by street. Some parts of ${child.name} have unrestricted loading areas; others have controlled zones. We'll discuss the specifics of your address on our pre-move call and help you plan accordingly.` },
+    { q: `Are your removal teams based locally?`, a: `Yes — we operate from Birmingham and our crews are familiar with ${child.name} and the surrounding neighbourhoods. That means less time figuring out the route and more time focused on your move.` },
+    { q: `What happens if there's a problem on moving day?`, a: `You'll have a direct contact number for your crew leader. If anything unexpected comes up — a delay from your solicitor, a stuck item, a tricky stairwell — we'll adapt on the spot and keep you informed throughout.` },
+    { q: `Do you dismantle and reassemble furniture as part of the service?`, a: `Yes, standard dismantling and reassembly (beds, flat-pack wardrobes, dining tables) is included in your quote. We bring the correct tools and take photographs of complex items before disassembly.` },
+    { q: `What areas do you cover near ${child.name}?`, a: `We regularly cover ${nearby1}${nearby2 ? ', ' + nearby2 : ''}${nearby3 ? ', and ' + nearby3 : ''} in addition to ${child.name} itself. If you're moving between any of these neighbourhoods, we're well placed to help.` },
+  ];
+
+  // Pick 4 FAQs deterministically, ensuring no two adjacent pages share the same 4
+  const hash = strHash(child.slug + 'faq');
+  const start = hash % 10;
+  const indices = [start, (start + 2) % 10, (start + 5) % 10, (start + 7) % 10];
+  const uniqueIndices = [...new Set(indices)];
+  while (uniqueIndices.length < 4) {
+    for (let i = 0; i < 10; i++) {
+      if (!uniqueIndices.includes(i)) { uniqueIndices.push(i); break; }
+    }
+  }
+  const selectedFaqs = uniqueIndices.slice(0, 4).map(i => allFaqs[i]);
+
+  return selectedFaqs.map(faq => `
     <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-item__question">
-        How much does a removal in ${child.name} cost?
+        ${faq.q}
         <span class="faq-item__icon">+</span>
       </div>
-      <div class="faq-item__answer">
-        The cost of your removal depends on the size of your property, the volume of items, and the distance to your new address. We provide a free, no-obligation quote specific to your move in ${child.name}. Contact us today for transparent pricing with no hidden fees.
-      </div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-item__question">
-        Do you cover ${child.name} for house removals?
-        <span class="faq-item__icon">+</span>
-      </div>
-      <div class="faq-item__answer">
-        Yes. ${child.name} is one of the many areas within ${region.name} that we cover. Our team regularly carries out house removals, furniture moves, and office relocations in and around ${child.name}.
-      </div>
-    </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
-      <div class="faq-item__question">
-        Can I book a last-minute removal in ${child.name}?
-        <span class="faq-item__icon">+</span>
-      </div>
-      <div class="faq-item__answer">
-        We do our best to accommodate short-notice moves subject to availability. Give us a call and we will do everything we can to arrange your move in ${child.name} at a time that suits you.
-      </div>
-    </div>
-  `;
+      <div class="faq-item__answer">${faq.a}</div>
+    </div>`).join('\n');
 }
 
 // ── Build Supporting Pages ─────────────────────────────────
