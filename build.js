@@ -227,7 +227,7 @@ function buildHomepage() {
     "@type": ["Organization", "LocalBusiness"],
     "name": "${config.business.name}",
     "url": "${config.business.url}",
-    "logo": "${config.business.url}/images/hero_removals_van.png",
+    "logo": "${config.business.url}/images/logo_trimmed.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "${config.business.phone}",
@@ -668,8 +668,8 @@ function buildAreaPages() {
           "telephone": "${config.business.phone}",
           "email": "${config.business.email}",
           "taxID": "${config.business.registrationNumber || ''}",
-          "image": "${config.business.url}/images/hero_removals_van.png",
-          "logo": "${config.business.url}/images/hero_removals_van.png",
+          "image": "${config.business.url}/images/og-image.jpg",
+          "logo": "${config.business.url}/images/logo_trimmed.png",
           "sameAs": ["${config.business.social.whatsapp}"],
           "address": {
             "@type": "PostalAddress",
