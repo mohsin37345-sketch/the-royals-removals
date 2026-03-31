@@ -113,8 +113,9 @@ function getCommonVars() {
 function getNavItems() {
   const aboutSubMenu = [
     { href: '/prices/', label: 'Prices' },
-    { href: '/blog/', label: 'Blog' },
     { href: '/reviews/', label: 'Reviews' },
+    { href: '/insurance/', label: 'Insurance' },
+    { href: '/blog/', label: 'Blog' },
   ];
   return config.nav.map(n => {
     if (n.href === '/about/') {
