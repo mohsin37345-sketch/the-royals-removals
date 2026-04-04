@@ -13,7 +13,7 @@
     <section class="inner-hero">
     <div class="container">
       <h1 class="inner-hero__h1">Get Your Free <span class="gold-text">Quote</span></h1>
-      <p class="inner-hero__sub">Fill in our simple form below and receive a personalised, transparent quote within 10–15 minutes. No obligation, no hidden fees.</p>
+      <p class="inner-hero__sub">Select your service, share your details, and we'll get back to you within 15 minutes. No obligation, no hidden fees.</p>
     </div>
   </section>
 
@@ -23,34 +23,47 @@
         <div class="quote-page-form" id="quote-form">
           <div class="form-card glass-card">
             <div class="form-card__header">
-              <h2 class="form-card__title">Your Move <span class="gold-text">Details</span></h2>
-              <p class="form-card__subtitle">2 minutes · No obligation · Instant response</p>
+              <h2 class="form-card__title">Let's Get Your <span class="gold-text">Move On</span></h2>
+              <p class="form-card__subtitle">Whatever you're moving, we've got a van for that.</p>
             </div>
 
             <div class="form-progress">
               <div class="form-progress__steps" id="progressSteps">
                 <div class="form-progress__step active" data-step="1">
                   <span class="form-progress__num">1</span>
-                  <span class="form-progress__label">Property</span>
+                  <span class="form-progress__label">Service</span>
                 </div>
-                <div class="form-progress__connector"></div>
-                <div class="form-progress__step" data-step="2">
+                <!-- House Removals flow steps -->
+                <div class="form-progress__connector form-progress__connector--house"></div>
+                <div class="form-progress__step form-progress__step--house" data-step="2">
                   <span class="form-progress__num">2</span>
-                  <span class="form-progress__label">From</span>
+                  <span class="form-progress__label">Details</span>
                 </div>
-                <div class="form-progress__connector"></div>
-                <div class="form-progress__step" data-step="3">
+                <div class="form-progress__connector form-progress__connector--house"></div>
+                <div class="form-progress__step form-progress__step--house" data-step="3">
                   <span class="form-progress__num">3</span>
-                  <span class="form-progress__label">To</span>
+                  <span class="form-progress__label">Inventory</span>
                 </div>
-                <div class="form-progress__connector"></div>
-                <div class="form-progress__step" data-step="4">
+                <div class="form-progress__connector form-progress__connector--house"></div>
+                <div class="form-progress__step form-progress__step--house" data-step="contact">
                   <span class="form-progress__num">4</span>
-                  <span class="form-progress__label">Date</span>
+                  <span class="form-progress__label">Contact</span>
                 </div>
-                <div class="form-progress__connector"></div>
-                <div class="form-progress__step" data-step="5">
-                  <span class="form-progress__num">5</span>
+                <!-- Simple flow steps (non-house-removals, non-furniture) -->
+                <div class="form-progress__connector form-progress__connector--simple"></div>
+                <div class="form-progress__step form-progress__step--simple" data-step="simple">
+                  <span class="form-progress__num">2</span>
+                  <span class="form-progress__label">Contact</span>
+                </div>
+                <!-- Furniture flow steps -->
+                <div class="form-progress__connector form-progress__connector--furniture"></div>
+                <div class="form-progress__step form-progress__step--furniture" data-step="furniture-1">
+                  <span class="form-progress__num">2</span>
+                  <span class="form-progress__label">Addresses</span>
+                </div>
+                <div class="form-progress__connector form-progress__connector--furniture"></div>
+                <div class="form-progress__step form-progress__step--furniture" data-step="furniture-contact">
+                  <span class="form-progress__num">3</span>
                   <span class="form-progress__label">Contact</span>
                 </div>
               </div>
@@ -60,106 +73,706 @@
             </div>
 
             <form id="quoteForm" novalidate>
+              <!-- STEP 1: Service Selection -->
               <div class="form-step active" id="step-1">
-                <h3 class="form-step__heading">What are you moving?</h3>
-                <p class="form-step__sub">Select your property type to get started</p>
-                <div class="pill-grid pill-grid--2">
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="1bed" />
-                    <span class="pill-option__label"><span class="pill-option__icon">🛏️</span><span>1 Bedroom</span></span>
+                <h3 class="form-step__heading">What do you need help with?</h3>
+                <p class="form-step__sub">Select your service to get started</p>
+                <div class="service-select-grid" id="serviceSelectGrid">
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Home removals" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🏠</span>
+                      <span class="service-select-card__label">Home removals</span>
+                    </span>
                   </label>
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="2bed" />
-                    <span class="pill-option__label"><span class="pill-option__icon">🛏️</span><span>2 Bedroom</span></span>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Furniture & appliance delivery" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🛋️</span>
+                      <span class="service-select-card__label">Furniture & appliance delivery</span>
+                    </span>
                   </label>
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="3bed" />
-                    <span class="pill-option__label"><span class="pill-option__icon">🏠</span><span>3 Bedroom</span></span>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Office removals" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🏢</span>
+                      <span class="service-select-card__label">Office removals</span>
+                    </span>
                   </label>
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="4bed" />
-                    <span class="pill-option__label"><span class="pill-option__icon">🏡</span><span>4+ Bedroom</span></span>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Storage services" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">📦</span>
+                      <span class="service-select-card__label">Storage services</span>
+                    </span>
                   </label>
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="flat" />
-                    <span class="pill-option__label"><span class="pill-option__icon">🏢</span><span>Flat / Apartment</span></span>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Man and van" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🚐</span>
+                      <span class="service-select-card__label">Man and van</span>
+                    </span>
                   </label>
-                  <label class="pill-option">
-                    <input type="radio" name="property" value="office" />
-                    <span class="pill-option__label"><span class="pill-option__icon">💼</span><span>Office Move</span></span>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Packing services" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🗃️</span>
+                      <span class="service-select-card__label">Packing services</span>
+                    </span>
+                  </label>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Student removals" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🎓</span>
+                      <span class="service-select-card__label">Student removals</span>
+                    </span>
+                  </label>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Commercial removals" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🏭</span>
+                      <span class="service-select-card__label">Commercial removals</span>
+                    </span>
+                  </label>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Equipment & machinery" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">⚙️</span>
+                      <span class="service-select-card__label">Equipment & machinery</span>
+                    </span>
+                  </label>
+                  <label class="service-select-card">
+                    <input type="radio" name="service" value="Clearance" />
+                    <span class="service-select-card__inner">
+                      <span class="service-select-card__icon">🧹</span>
+                      <span class="service-select-card__label">Clearance</span>
+                    </span>
                   </label>
                 </div>
-                <div class="form-step__error hidden" id="err-1">Please select a property type.</div>
-                <button type="button" class="btn btn--gold btn--full step-next" data-validate="property">Next Step →</button>
+                <div class="form-step__error hidden" id="err-1">Please select a service.</div>
+                <button type="button" class="btn btn--gold btn--full step-next" data-validate="service">Next Step →</button>
               </div>
 
+              <!-- FURNITURE STEP 1: Pickup & Delivery Addresses -->
+              <div class="form-step" id="step-furniture-1">
+                <h3 class="form-step__heading">Where are you moving from and to?</h3>
+                <p class="form-step__sub">Tell us your pickup and delivery locations</p>
+
+                <div class="move-details">
+                  <!-- Pickup -->
+                  <div class="move-details__section">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">📍</span>
+                      Pickup Details
+                    </h3>
+                    <div class="move-details__fields">
+                      <div class="form-field">
+                        <label for="furniturePickupAddress" class="form-label">Enter postcode or address <span class="req">*</span></label>
+                        <input type="text" id="furniturePickupAddress" name="furniturePickupAddress" class="form-input" placeholder="e.g. B1 1AA or 10 Downing Street" autocomplete="off" />
+                      </div>
+                      <div class="form-field">
+                        <label for="furniturePickupFloor" class="form-label">Select floor <span class="req">*</span></label>
+                        <select id="furniturePickupFloor" name="furniturePickupFloor" class="form-input form-select">
+                          <option value="" disabled selected>Select floor</option>
+                          <option value="Ground floor">Ground floor</option>
+                          <option value="1st floor">1st floor</option>
+                          <option value="2nd floor">2nd floor</option>
+                          <option value="3rd floor">3rd floor</option>
+                          <option value="4th floor or above">4th floor or above</option>
+                          <option value="Basement">Basement</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Delivery -->
+                  <div class="move-details__section">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">📦</span>
+                      Delivery Details
+                    </h3>
+                    <div class="move-details__fields">
+                      <div class="form-field">
+                        <label for="furnitureDeliveryAddress" class="form-label">Enter postcode or address <span class="req">*</span></label>
+                        <input type="text" id="furnitureDeliveryAddress" name="furnitureDeliveryAddress" class="form-input" placeholder="e.g. B15 2TT or 221B Baker Street" autocomplete="off" />
+                      </div>
+                      <div class="form-field">
+                        <label for="furnitureDeliveryFloor" class="form-label">Select floor <span class="req">*</span></label>
+                        <select id="furnitureDeliveryFloor" name="furnitureDeliveryFloor" class="form-input form-select">
+                          <option value="" disabled selected>Select floor</option>
+                          <option value="Ground floor">Ground floor</option>
+                          <option value="1st floor">1st floor</option>
+                          <option value="2nd floor">2nd floor</option>
+                          <option value="3rd floor">3rd floor</option>
+                          <option value="4th floor or above">4th floor or above</option>
+                          <option value="Basement">Basement</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Extra Stops -->
+                  <div id="furnitureExtraStops"></div>
+                  <button type="button" class="btn-add-stop" id="addExtraStopBtn">
+                    <span class="btn-add-stop__icon">⊕</span>
+                    <span>Add an extra stop</span>
+                  </button>
+                </div>
+
+                <div class="form-step__error hidden" id="err-furniture-1">Please fill in all pickup and delivery details.</div>
+                <div class="form-step__actions">
+                  <button type="button" class="btn btn--outline step-back">← Back</button>
+                  <button type="button" class="btn btn--gold step-next">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- STEP 2: Move Details -->
               <div class="form-step" id="step-2">
-                <h3 class="form-step__heading">Where are you moving from?</h3>
-                <p class="form-step__sub">Enter your current postcode or area</p>
-                <div class="form-field">
-                  <label for="fromPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
-                  <input type="text" id="fromPostcode" name="fromPostcode" class="form-input" placeholder="e.g. B1 1AA or Harborne" />
-                </div>
-                <div class="form-step__error hidden" id="err-2">Please enter your moving-from postcode or area.</div>
-                <div class="form-step__actions">
-                  <button type="button" class="btn btn--outline step-back">← Back</button>
-                  <button type="button" class="btn btn--gold step-next" data-validate="fromPostcode">Next Step →</button>
-                </div>
-              </div>
+                <div class="move-details">
+                  <!-- Pickup Section -->
+                  <div class="move-details__section">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">📍</span>
+                      Pickup details
+                    </h3>
+                    <div class="move-details__fields">
+                      <div class="form-field">
+                        <label for="pickupAddress" class="form-label">Enter postcode or address <span class="req">*</span></label>
+                        <input type="text" id="pickupAddress" name="pickupAddress" class="form-input" placeholder="e.g. B1 1AA or 10 Downing Street" autocomplete="off" />
+                      </div>
+                      <div class="form-field">
+                        <label for="pickupPropertyType" class="form-label">Select property type <span class="req">*</span></label>
+                        <select id="pickupPropertyType" name="pickupPropertyType" class="form-input form-select">
+                          <option value="" disabled selected>Select property type</option>
+                          <option value="1 Bed House">1 Bed House</option>
+                          <option value="2 Bed House">2 Bed House</option>
+                          <option value="3 Bed House">3 Bed House</option>
+                          <option value="4+ Bed House">4+ Bed House</option>
+                          <option value="5+ Bed House">5+ Bed House</option>
+                          <option value="1 Bed Flat">1 Bed Flat</option>
+                          <option value="2 Bed Flat">2 Bed Flat</option>
+                          <option value="3 Bed Flat">3 Bed Flat</option>
+                          <option value="4+ Bed Flat">4+ Bed Flat</option>
+                          <option value="Studio">Studio</option>
+                          <option value="Storage">Storage Unit</option>
+                          <option value="Flatshare">Flatshare</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
 
-              <div class="form-step" id="step-3">
-                <h3 class="form-step__heading">Where are you moving to?</h3>
-                <p class="form-step__sub">Enter your destination postcode or area</p>
-                <div class="form-field">
-                  <label for="toPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
-                  <input type="text" id="toPostcode" name="toPostcode" class="form-input" placeholder="e.g. B15 2TT or Solihull" />
-                </div>
-                <div class="form-step__error hidden" id="err-3">Please enter your moving-to postcode or area.</div>
-                <div class="form-step__actions">
-                  <button type="button" class="btn btn--outline step-back">← Back</button>
-                  <button type="button" class="btn btn--gold step-next" data-validate="toPostcode">Next Step →</button>
-                </div>
-              </div>
+                  <!-- Delivery Section -->
+                  <div class="move-details__section">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">📦</span>
+                      Delivery details
+                    </h3>
+                    <div class="move-details__fields">
+                      <div class="form-field">
+                        <label for="deliveryAddress" class="form-label">Enter postcode or address <span class="req">*</span></label>
+                        <input type="text" id="deliveryAddress" name="deliveryAddress" class="form-input" placeholder="e.g. B15 2TT or 221B Baker Street" autocomplete="off" />
+                      </div>
+                      <div class="form-field">
+                        <label for="deliveryPropertyType" class="form-label">Select property type <span class="req">*</span></label>
+                        <select id="deliveryPropertyType" name="deliveryPropertyType" class="form-input form-select">
+                          <option value="" disabled selected>Select property type</option>
+                          <option value="1 Bed House">1 Bed House</option>
+                          <option value="2 Bed House">2 Bed House</option>
+                          <option value="3 Bed House">3 Bed House</option>
+                          <option value="4+ Bed House">4+ Bed House</option>
+                          <option value="5+ Bed House">5+ Bed House</option>
+                          <option value="1 Bed Flat">1 Bed Flat</option>
+                          <option value="2 Bed Flat">2 Bed Flat</option>
+                          <option value="3 Bed Flat">3 Bed Flat</option>
+                          <option value="4+ Bed Flat">4+ Bed Flat</option>
+                          <option value="Studio">Studio</option>
+                          <option value="Storage">Storage Unit</option>
+                          <option value="Flatshare">Flatshare</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
 
-              <div class="form-step" id="step-4">
-                <h3 class="form-step__heading">When are you moving?</h3>
-                <p class="form-step__sub">Please provide an estimated date</p>
-                <div class="form-field">
-                  <label for="moveDate" class="form-label">Estimated Move Date <span class="req">*</span></label>
-                  <input type="date" id="moveDate" name="moveDate" class="form-input" />
-                </div>
-                <div class="form-field">
-                  <label class="form-label">Extra services?</label>
-                  <div class="checkbox-group">
-                    <label class="checkbox-pill"><input type="checkbox" name="extras" value="packing" /><span>📦 Packing</span></label>
-                    <label class="checkbox-pill"><input type="checkbox" name="extras" value="materials" /><span>🗃️ Materials</span></label>
-                    <label class="checkbox-pill"><input type="checkbox" name="extras" value="dismantling" /><span>🔧 Assembly</span></label>
-                    <label class="checkbox-pill"><input type="checkbox" name="extras" value="storage" /><span>🏪 Storage</span></label>
+                  <!-- Move Date Section -->
+                  <div class="move-details__section">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">📅</span>
+                      Estimated move date
+                    </h3>
+                    <div class="move-date-options">
+                      <label class="move-date-option move-date-option--active" id="dateOptionSelect">
+                        <input type="radio" name="dateChoice" value="hasDate" checked />
+                        <span class="move-date-option__label">Select a move date</span>
+                      </label>
+                      <label class="move-date-option" id="dateOptionNoDate">
+                        <input type="radio" name="dateChoice" value="noDate" />
+                        <span class="move-date-option__label">I don't have a move date yet</span>
+                      </label>
+                    </div>
+                    <div class="form-field" id="moveDateField">
+                      <label for="moveDate" class="form-label">Move date</label>
+                      <input type="date" id="moveDate" name="moveDate" class="form-input" />
+                    </div>
+                    <div class="move-date-confirm hidden" id="moveDateConfirm">
+                      <div class="move-date-confirm__icon">✅</div>
+                      <p><strong>Great!</strong> We have availability on <span id="moveDateText"></span></p>
+                    </div>
                   </div>
                 </div>
-                <div class="form-step__error hidden" id="err-4">Please select a move date.</div>
+
+                <div class="form-step__error hidden" id="err-2">Please fill in all required fields.</div>
                 <div class="form-step__actions">
                   <button type="button" class="btn btn--outline step-back">← Back</button>
-                  <button type="button" class="btn btn--gold step-next" data-validate="moveDate">Next Step →</button>
+                  <button type="button" class="btn btn--gold step-next" data-validate="moveDetails">Next Step →</button>
                 </div>
               </div>
 
-              <div class="form-step" id="step-5">
+              <!-- STEP 3: Inventory (House Removals Only) -->
+              <div class="form-step" id="step-3">
+                <h3 class="form-step__heading">What are you moving?</h3>
+                <p class="form-step__sub">Add your items so we can give you the most accurate quote</p>
+
+                <!-- Preset Toggle -->
+                <div class="inventory-preset-toggle">
+                  <label class="inventory-toggle" id="presetToggle">
+                    <span class="inventory-toggle__switch">
+                      <input type="checkbox" id="presetToggleInput" />
+                      <span class="inventory-toggle__slider"></span>
+                    </span>
+                    <span class="inventory-toggle__label">Prefer to use our <strong>1 Bed House</strong> inventory list?</span>
+                  </label>
+                </div>
+
+                <!-- Room Tabs -->
+                <div class="inventory-rooms" id="inventoryRooms">
+                  <div class="inventory-room-tabs">
+                    <button type="button" class="inventory-room-tab active" data-room="bedroom">
+                      <span class="inventory-room-tab__icon">🛏️</span>
+                      <span class="inventory-room-tab__label">Bedrooms</span>
+                    </button>
+                    <button type="button" class="inventory-room-tab" data-room="living">
+                      <span class="inventory-room-tab__icon">🛋️</span>
+                      <span class="inventory-room-tab__label">Living</span>
+                    </button>
+                    <button type="button" class="inventory-room-tab" data-room="kitchen">
+                      <span class="inventory-room-tab__icon">🍳</span>
+                      <span class="inventory-room-tab__label">Kitchen</span>
+                    </button>
+                    <button type="button" class="inventory-room-tab" data-room="bathroom">
+                      <span class="inventory-room-tab__icon">🚿</span>
+                      <span class="inventory-room-tab__label">Bathroom</span>
+                    </button>
+                    <button type="button" class="inventory-room-tab" data-room="boxes">
+                      <span class="inventory-room-tab__icon">📦</span>
+                      <span class="inventory-room-tab__label">Boxes &amp; Packaging</span>
+                    </button>
+                  </div>
+
+                  <!-- Room Panels -->
+                  <div class="inventory-panel active" data-room-panel="bedroom">
+                    <div class="inventory-item" data-item="double-bed">
+                      <span class="inventory-item__name">Double Bed &amp; Mattress</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="kingsize-bed">
+                      <span class="inventory-item__name">Kingsize Bed &amp; Mattress</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="single-wardrobe">
+                      <span class="inventory-item__name">Single Wardrobe</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="chest-of-drawers">
+                      <span class="inventory-item__name">Chest Of Drawers</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bedside-table">
+                      <span class="inventory-item__name">Bedside Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="dressing-table">
+                      <span class="inventory-item__name">Dressing Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="tv-bedroom">
+                      <span class="inventory-item__name">Tv</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="single-bed">
+                      <span class="inventory-item__name">Single Bed &amp; Mattress</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="double-wardrobe">
+                      <span class="inventory-item__name">Double Wardrobe</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="cot">
+                      <span class="inventory-item__name">Cot</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="side-table-bedroom">
+                      <span class="inventory-item__name">Side Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inventory-panel" data-room-panel="living">
+                    <div class="inventory-item" data-item="two-seater-sofa">
+                      <span class="inventory-item__name">Two Seater Sofa</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="three-seater-sofa">
+                      <span class="inventory-item__name">Three Seater Sofa</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="armchair">
+                      <span class="inventory-item__name">Armchair</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="coffee-table">
+                      <span class="inventory-item__name">Coffee Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="small-tv">
+                      <span class="inventory-item__name">Small Television TV (Less than 30")</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="large-tv">
+                      <span class="inventory-item__name">Large Television TV (Greater than 40")</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="tv-stand">
+                      <span class="inventory-item__name">TV Stand</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bookcase">
+                      <span class="inventory-item__name">Bookcase</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="rug">
+                      <span class="inventory-item__name">Rug</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="desk">
+                      <span class="inventory-item__name">Desk</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="office-chair">
+                      <span class="inventory-item__name">Office Chair</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="artwork">
+                      <span class="inventory-item__name">Artwork</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="computer">
+                      <span class="inventory-item__name">Computer</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="office-desk">
+                      <span class="inventory-item__name">Office Desk</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="monitor">
+                      <span class="inventory-item__name">Monitor</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="floor-lamp">
+                      <span class="inventory-item__name">Floor Lamp</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inventory-panel" data-room-panel="kitchen">
+                    <div class="inventory-item" data-item="fridge-freezer">
+                      <span class="inventory-item__name">Fridge Freezer</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="washing-machine">
+                      <span class="inventory-item__name">Washing Machine</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="microwave-oven">
+                      <span class="inventory-item__name">Microwave Oven</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="cooker">
+                      <span class="inventory-item__name">Cooker</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="dishwasher">
+                      <span class="inventory-item__name">Dishwasher</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="kitchen-table">
+                      <span class="inventory-item__name">Kitchen Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="4-seater-dining-table">
+                      <span class="inventory-item__name">4 Seater Dining Table</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="dining-chair">
+                      <span class="inventory-item__name">Dining Chair</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bin">
+                      <span class="inventory-item__name">Bin</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="tumble-dryer">
+                      <span class="inventory-item__name">Tumble Dryer</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="ironing-board">
+                      <span class="inventory-item__name">Ironing Board</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="garden-chair">
+                      <span class="inventory-item__name">Garden Chair</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inventory-panel" data-room-panel="bathroom">
+                    <div class="inventory-item" data-item="large-mirror">
+                      <span class="inventory-item__name">Large Mirror</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="small-mirror">
+                      <span class="inventory-item__name">Small Mirror</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="rug-bathroom">
+                      <span class="inventory-item__name">Rug</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bathroom-cabinet">
+                      <span class="inventory-item__name">Bathroom Cabinet</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bath-tub">
+                      <span class="inventory-item__name">Bath Tub</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="inventory-panel" data-room-panel="boxes">
+                    <div class="inventory-item" data-item="small-box">
+                      <span class="inventory-item__name">Small Box</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="medium-box">
+                      <span class="inventory-item__name">Medium Box</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="large-box">
+                      <span class="inventory-item__name">Large Box</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="wardrobe-box">
+                      <span class="inventory-item__name">Wardrobe Box</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="bubble-wrap">
+                      <span class="inventory-item__name">Bubble Wrap Roll</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="packing-tape">
+                      <span class="inventory-item__name">Packing Tape Roll</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="mattress-cover">
+                      <span class="inventory-item__name">Mattress Cover</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                    <div class="inventory-item" data-item="sofa-cover">
+                      <span class="inventory-item__name">Sofa Cover</span>
+                      <div class="inventory-item__controls">
+                        <button type="button" class="inventory-item__add" title="Add item">＋</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Search -->
+                  <div class="inventory-search">
+                    <div class="inventory-search__field">
+                      <span class="inventory-search__icon">🔍</span>
+                      <input type="text" id="inventorySearch" class="form-input" placeholder="Search for more items here" autocomplete="off" />
+                    </div>
+                    <div class="inventory-search-results hidden" id="inventorySearchResults"></div>
+                  </div>
+                </div>
+
+                <!-- Inventory Summary -->
+                <div class="inventory-summary" id="inventorySummary">
+                  <div class="inventory-summary__header">
+                    <span class="inventory-summary__icon">📋</span>
+                    <span class="inventory-summary__title">Your inventory (<span id="inventoryCount">0</span> items)</span>
+                  </div>
+                  <div class="inventory-summary__list" id="inventorySummaryList"></div>
+                </div>
+
+                <div class="inventory-info">
+                  <span>💡 You can add or modify items till 24 hours before your move</span>
+                </div>
+
+                <div class="form-step__error hidden" id="err-3">Please add at least one item to your inventory.</div>
+                <div class="form-step__actions">
+                  <button type="button" class="btn btn--outline step-back">← Back</button>
+                  <button type="button" class="btn btn--gold step-next" data-validate="inventory">Next Step →</button>
+                </div>
+              </div>
+
+              <!-- SIMPLE CONTACT: For all non-house-removals services -->
+              <div class="form-step" id="step-simple">
+                <h3 class="form-step__heading">Your Details</h3>
+                <p class="form-step__sub">Tell us a bit about yourself and we'll get back to you within 15 minutes</p>
+                <div class="form-field">
+                  <label for="simpleName" class="form-label">Full Name <span class="req">*</span></label>
+                  <input type="text" id="simpleName" name="simpleName" class="form-input" placeholder="James Smith" />
+                </div>
+                <div class="form-field">
+                  <label for="simpleEmail" class="form-label">Email <span class="req">*</span></label>
+                  <input type="email" id="simpleEmail" name="simpleEmail" class="form-input" placeholder="james@example.com" />
+                </div>
+                <div class="form-field">
+                  <label for="simplePhone" class="form-label">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="simplePhone" name="simplePhone" class="form-input" placeholder="07700 900123" />
+                </div>
+                <div class="form-field">
+                  <label for="simpleAddress" class="form-label">Address / Postcode <span class="req">*</span></label>
+                  <input type="text" id="simpleAddress" name="simpleAddress" class="form-input" placeholder="e.g. B1 1AA or 10 Downing Street" autocomplete="off" />
+                </div>
+                <div class="form-step__error hidden" id="err-simple">Please fill in all fields correctly.</div>
+                <div class="form-step__actions">
+                  <button type="button" class="btn btn--outline step-back">← Back</button>
+                  <button type="submit" class="btn btn--gold btn--submit" id="submitBtnSimple">
+                    <span class="btn__text">👑 Get My Free Quote</span>
+                    <span class="btn__loader hidden" id="btnLoaderSimple">Sending…</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 4: Contact Details (House Removals) -->
+              <div class="form-step" id="step-contact">
                 <h3 class="form-step__heading">Your Contact Details</h3>
-                <p class="form-step__sub">We'll send your quote here</p>
+                <p class="form-step__sub">We'll get back to you within 15 minutes with a personalised quote</p>
                 <div class="form-field">
                   <label for="fullName" class="form-label">Full Name <span class="req">*</span></label>
                   <input type="text" id="fullName" name="fullName" class="form-input" placeholder="James Smith" />
                 </div>
                 <div class="form-field">
-                  <label for="phone" class="form-label">Phone <span class="req">*</span></label>
-                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="07700 900123" />
-                </div>
-                <div class="form-field">
                   <label for="email" class="form-label">Email <span class="req">*</span></label>
                   <input type="email" id="email" name="email" class="form-input" placeholder="james@example.com" />
                 </div>
-                <div class="form-step__error hidden" id="err-5">Please fill in all fields.</div>
+                <div class="form-field">
+                  <label for="phone" class="form-label">Phone Number <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="07700 900123" />
+                </div>
+                <div class="form-step__error hidden" id="err-contact">Please fill in all fields correctly.</div>
                 <div class="form-step__actions">
                   <button type="button" class="btn btn--outline step-back">← Back</button>
                   <button type="submit" class="btn btn--gold btn--submit" id="submitBtn">
@@ -169,11 +782,40 @@
                 </div>
               </div>
 
+              <!-- SUCCESS STATE -->
               <div class="form-step form-success hidden" id="step-success">
-                <div class="form-success__icon">✅</div>
-                <h3 class="form-success__title">Quote Request Received!</h3>
-                <p class="form-success__msg">Thank you! We will contact you within <strong>10–15 minutes</strong>.</p>
-                <p class="form-success__note">📞 Call direct: <a href="tel:{{phone}}" class="gold-text">{{phoneDisplay}}</a></p>
+                <div class="quote-success">
+                  <div class="quote-success__icon">✅</div>
+                  <h3 class="quote-success__title">Quote Request Received!</h3>
+                  <p class="quote-success__subtitle">Thank you! A member of our team will contact you shortly.</p>
+
+                  <div class="quote-success__options">
+                    <div class="quote-success__option">
+                      <div class="quote-success__option-icon">📞</div>
+                      <h4>15-Minute Callback</h4>
+                      <p>Sit back — we'll call you within <strong>15 minutes</strong> with your personalised quote.</p>
+                    </div>
+                    <div class="quote-success__option quote-success__option--highlighted">
+                      <div class="quote-success__option-icon">⚡</div>
+                      <h4>Need It Quicker?</h4>
+                      <p>Call us directly for an <strong>instant quote</strong> right now:</p>
+                      <a href="tel:{{phone}}" class="btn btn--gold btn--full quote-success__phone-btn">
+                        📞 {{phoneDisplay}}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="quote-success__whatsapp">
+                    <p>Or message us on WhatsApp for a fast response:</p>
+                    <a href="{{whatsapp}}" target="_blank" class="btn btn--outline btn--full" style="border-color: #25D366; color: #25D366;">
+                      💬 WhatsApp Us
+                    </a>
+                  </div>
+
+                  <div class="quote-success__hours">
+                    <p>📅 Our support team is available <strong>7 days a week</strong>, 7am – 8pm.</p>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -190,6 +832,23 @@
               <li>✓ Professional, experienced team</li>
               <li>✓ 7 days a week availability</li>
             </ul>
+            <hr style="border-color:rgba(191,155,48,0.2);margin:1.5rem 0;" />
+            <div class="sidebar-trust-badges">
+              <div class="sidebar-trust-badge">
+                <span class="sidebar-trust-badge__icon">🛡️</span>
+                <div>
+                  <strong>£50k Complimentary Cover</strong>
+                  <p style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 2px;">Goods in transit insurance included</p>
+                </div>
+              </div>
+              <div class="sidebar-trust-badge">
+                <span class="sidebar-trust-badge__icon">⭐</span>
+                <div>
+                  <strong>5-Star Rated</strong>
+                  <p style="font-size: 0.8rem; color: var(--mid-grey); margin-top: 2px;">Trusted by hundreds of customers</p>
+                </div>
+              </div>
+            </div>
             <hr style="border-color:rgba(191,155,48,0.2);margin:1.5rem 0;" />
             <h3>Need Help Now?</h3>
             <p style="margin-bottom:1rem;">Call us directly for an instant quote:</p>

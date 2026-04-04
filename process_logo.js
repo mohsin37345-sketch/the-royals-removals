@@ -11,10 +11,31 @@ async function processLogo() {
   }
   
   try {
-    // 1. Full logo with trimmed whitespace
-    await sharp(input)
+    // 1. Full logo with trimmed whitespace and transparent background
+    const trimmedBuffer = await sharp(input)
       .trim({ background: '#ffffff', threshold: 10 })
-      .toFile(path.join(__dirname, 'images', 'logo_trimmed.png'));
+      .toBuffer();
+
+    const { data, info } = await sharp(trimmedBuffer)
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i] > 240 && data[i + 1] > 240 && data[i + 2] > 240) {
+        data[i + 3] = 0; // alpha to 0
+      }
+    }
+
+    await sharp(data, {
+      raw: {
+        width: info.width,
+        height: info.height,
+        channels: 4
+      }
+    })
+    .png()
+    .toFile(path.join(__dirname, 'images', 'logo_trimmed.png'));
       
     // 2. Favicon (square)
     await sharp(input)
