@@ -2187,31 +2187,42 @@
     // Build payload
     const service = getSelectedService();
     const payload = {
-      _subject: `New Quote Request: ${service}`
+      _subject: `New Quote Request: ${service}`,
+      Service: service
     };
 
-    // Gather filled fields from visible (active/done) steps
-    const visibleInputs = Array.from(form.querySelectorAll('.form-step.active, .form-step.done')).flatMap(step => Array.from(step.querySelectorAll('input, select, textarea')));
+    // Gather filled fields from ALL steps in the current flow (not just active/done)
+    const flowStepElements = stepFlow.map(sid => document.getElementById(getStepElementId(sid))).filter(Boolean);
+    const allInputs = flowStepElements.flatMap(step => Array.from(step.querySelectorAll('input, select, textarea')));
     
-    visibleInputs.forEach(el => {
-      if (el.name && el.value) {
-         if (el.type === 'radio' && !el.checked) return;
-         if (el.type === 'checkbox') {
-            payload[el.name] = el.checked ? 'Yes' : 'No';
-            return;
-         }
-         payload[el.name] = el.value;
+    allInputs.forEach(el => {
+      if (!el.name) return;
+      // Skip radio buttons that are not checked
+      if (el.type === 'radio' && !el.checked) return;
+      // Only include checkboxes that are checked
+      if (el.type === 'checkbox') {
+         if (el.checked) payload[el.name] = 'Yes';
+         return;
       }
+      // Skip selects still on default placeholder
+      if (el.tagName === 'SELECT' && (!el.value || el.selectedOptions[0]?.disabled)) return;
+      // Skip empty values
+      if (!el.value || !el.value.trim()) return;
+      payload[el.name] = el.value;
     });
 
     // Build inventory string depending on service
     let inventoryText = '';
     const mergeInventory = (itemsObj) => Object.entries(itemsObj).filter(([k,v]) => v > 0).map(([k,v]) => `${v}x ${k}`).join(', ');
+    // House removals inventory has different structure: { id: { name, qty } }
+    const mergeHouseInventory = (inv) => Object.entries(inv).filter(([k,v]) => v.qty > 0).map(([k,v]) => `${v.qty}x ${v.name}`).join(', ');
 
-    if (service === 'Home removals' || service === 'Man and van') inventoryText = mergeInventory(addedItems);
-    else if (service === 'Office relocation') inventoryText = mergeInventory(officeAddedItems);
-    else if (service === 'Equipment & Machinery') inventoryText = mergeInventory(equipAddedItems);
-    else if (service === 'Storage Services') inventoryText = mergeInventory(storageAddedItems);
+    if (service === 'Home removals' || service === 'Man and van') inventoryText = mergeHouseInventory(inventory);
+    else if (service === 'Furniture & appliance delivery') inventoryText = mergeInventory(furnitureAddedItems);
+    else if (service === 'Office removals') inventoryText = mergeInventory(officeAddedItems);
+    else if (service === 'Packing services') inventoryText = mergeInventory(packingAddedItems);
+    else if (service === 'Equipment & machinery') inventoryText = mergeInventory(equipAddedItems);
+    else if (service === 'Storage services') inventoryText = mergeInventory(storageAddedItems);
     else if (service === 'Clearance') inventoryText = mergeInventory(clearAddedItems);
     else if (service === 'Commercial removals') inventoryText = mergeInventory(commAddedItems);
 
