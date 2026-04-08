@@ -3294,7 +3294,6 @@ body.flow-student .form-progress__connector--student {
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; }
   .quote-page-grid { grid-template-columns: 1fr; }
-  .quote-page-sidebar { order: -1; }
 }
 
 @media (max-width: 640px) {
