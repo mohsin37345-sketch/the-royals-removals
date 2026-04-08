@@ -2025,6 +2025,47 @@ a.area-pill {
   gap: 14px;
 }
 
+/* Floor + Lift wrapper (House Removals) */
+.move-details__floor-lift {
+  margin-top: 14px;
+}
+
+/* Lift Available checkbox */
+.lift-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 12px 16px;
+  margin-top: 12px;
+  background: rgba(201,168,76,0.04);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+.lift-checkbox:hover {
+  border-color: var(--gold-1);
+  background: rgba(201,168,76,0.08);
+}
+.lift-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--gold-2);
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+}
+.lift-checkbox__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.lift-checkbox.hidden {
+  display: none;
+}
+
 /* Select dropdown style */
 .form-select {
   appearance: none;
@@ -2102,7 +2143,23 @@ a.area-pill {
 .form-progress__step--simple,
 .form-progress__connector--simple,
 .form-progress__step--furniture,
-.form-progress__connector--furniture {
+.form-progress__connector--furniture,
+.form-progress__step--piano,
+.form-progress__connector--piano,
+.form-progress__step--office,
+.form-progress__connector--office,
+.form-progress__step--packing,
+.form-progress__connector--packing,
+.form-progress__step--equip,
+.form-progress__connector--equip,
+.form-progress__step--storage,
+.form-progress__connector--storage,
+.form-progress__step--clear,
+.form-progress__connector--clear,
+.form-progress__step--comm,
+.form-progress__connector--comm,
+.form-progress__step--student,
+.form-progress__connector--student {
   display: none;
 }
 /* Show house removals flow when active */
@@ -2119,6 +2176,229 @@ body.flow-simple .form-progress__connector--simple {
 body.flow-furniture .form-progress__step--furniture,
 body.flow-furniture .form-progress__connector--furniture {
   display: flex;
+}
+/* Show piano flow when active */
+body.flow-piano .form-progress__step--piano,
+body.flow-piano .form-progress__connector--piano {
+  display: flex;
+}
+/* Show office flow when active */
+body.flow-office .form-progress__step--office,
+body.flow-office .form-progress__connector--office {
+  display: flex;
+}
+/* Show packing flow when active */
+body.flow-packing .form-progress__step--packing,
+body.flow-packing .form-progress__connector--packing {
+  display: flex;
+}
+/* Show equip flow when active */
+body.flow-equip .form-progress__step--equip,
+body.flow-equip .form-progress__connector--equip {
+  display: flex;
+}
+/* Show storage flow when active */
+body.flow-storage .form-progress__step--storage,
+body.flow-storage .form-progress__connector--storage {
+  display: flex;
+}
+/* Show clearance flow when active */
+body.flow-clear .form-progress__step--clear,
+body.flow-clear .form-progress__connector--clear {
+  display: flex;
+}
+/* Show commercial flow when active */
+body.flow-comm .form-progress__step--comm,
+body.flow-comm .form-progress__connector--comm {
+  display: flex;
+}
+/* Show student flow when active */
+body.flow-student .form-progress__step--student,
+body.flow-student .form-progress__connector--student {
+  display: flex;
+}
+
+/* ── Student Move Cards ── */
+.student-move-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+@media (max-width: 600px) {
+  .student-move-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+.student-move-card {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  background: var(--white);
+  transition: border-color 0.25s ease;
+}
+.student-move-card:focus-within {
+  border-color: var(--gold-1);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.08);
+}
+.student-move-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.student-move-card__icon {
+  font-size: 1.4rem;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,168,76,0.08);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.student-move-card__title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+}
+
+/* Student Contact Section */
+.student-contact-section {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  background: var(--white);
+  margin-bottom: 4px;
+}
+.student-contact-section__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.student-contact-section__title span {
+  font-size: 1.2rem;
+}
+.student-contact-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 601px) {
+  .student-contact-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+}
+
+/* ── Piano Type Selection Cards ── */
+.piano-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .piano-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.piano-type-card {
+  cursor: pointer;
+}
+.piano-type-card input[type="radio"] {
+  display: none;
+}
+.piano-type-card__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.piano-type-card__inner:hover {
+  border-color: var(--gold-1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201,168,76,0.12);
+}
+.piano-type-card input:checked + .piano-type-card__inner {
+  border-color: var(--gold-2);
+  background: rgba(201,168,76,0.06);
+  box-shadow: 0 0 0 2px var(--gold-1), 0 4px 12px rgba(201,168,76,0.15);
+  transform: translateY(-2px);
+}
+.piano-type-card__icon {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201,168,76,0.08);
+  border-radius: 12px;
+  transition: background 0.25s ease;
+}
+.piano-type-card input:checked + .piano-type-card__inner .piano-type-card__icon {
+  background: rgba(201,168,76,0.15);
+}
+.piano-type-card__label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.piano-type-card input:checked + .piano-type-card__inner .piano-type-card__label {
+  color: var(--gold-3);
+}
+
+/* Custom piano type button & input */
+.btn-add-custom-piano {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--gold-3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 4px;
+  transition: color 0.2s ease;
+  margin-bottom: 8px;
+}
+.btn-add-custom-piano:hover {
+  color: var(--gold-2);
+}
+.btn-add-custom-piano span {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.piano-custom-input {
+  margin-top: 4px;
+  animation: fadeInUp 0.25s ease both;
+}
+.piano-custom-input.hidden {
+  display: none;
 }
 
 /* Add Extra Stop button */
@@ -2182,6 +2462,338 @@ body.flow-furniture .form-progress__connector--furniture {
 .extra-stop-section__remove:hover {
   color: #e53e3e;
   background: rgba(229,62,62,0.06);
+}
+
+/* ── Utility classes ── */
+.text-mid { color: var(--mid-grey); }
+.mb-sm { margin-bottom: 12px; }
+
+/* ── Furniture Items Step (Categories & Grid) ── */
+.furniture-inventory {
+  position: relative;
+}
+.search-input-wrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--mid-grey);
+  pointer-events: none;
+}
+.search-input-wrapper input {
+  padding-left: 42px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.search-input-wrapper input:focus {
+  border-color: var(--gold-1);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.furniture-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 4px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 25;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.furniture-search-results.hidden { display: none; }
+.furniture-search-results .furniture-item {
+  padding: 11px 16px;
+  cursor: pointer;
+}
+.furniture-search-results .furniture-item:hover {
+  background: rgba(201,168,76,0.06);
+}
+
+.furniture-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .furniture-categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .furniture-categories-grid > .furniture-category:nth-child(3n) .furniture-cat-dropdown { right: auto; left: 0; }
+  .furniture-categories-grid > .furniture-category:nth-child(2n) .furniture-cat-dropdown { left: auto; right: 0; }
+}
+@media (max-width: 480px) {
+  .furniture-categories-grid { grid-template-columns: repeat(2, 1fr); }
+  .furniture-categories-grid > .furniture-category .furniture-cat-dropdown { left: 0; right: 0; width: 100%; }
+}
+.furniture-category {
+  position: relative;
+}
+.furniture-cat-btn {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.furniture-cat-btn:hover {
+  border-color: var(--gold-1);
+  box-shadow: 0 2px 8px rgba(201,168,76,0.12);
+  transform: translateY(-1px);
+}
+/* Hide the plain text chevron and use a CSS arrow instead */
+.furniture-cat-btn > span:last-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+.furniture-cat-btn > span:last-child::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--mid-grey);
+  border-bottom: 2px solid var(--mid-grey);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  margin-top: -2px;
+}
+.furniture-category.open .furniture-cat-btn {
+  background: var(--gold-2);
+  color: var(--white);
+  border-color: var(--gold-2);
+  box-shadow: 0 4px 12px rgba(201,168,76,0.25);
+}
+.furniture-category.open .furniture-cat-btn > span:last-child::after {
+  border-color: var(--white);
+  transform: rotate(-135deg);
+  margin-top: 3px;
+}
+.furniture-cat-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.furniture-cat-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: max(100%, 280px);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+  z-index: 20;
+  display: none;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.furniture-cat-dropdown::-webkit-scrollbar {
+  width: 5px;
+}
+.furniture-cat-dropdown::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+/* By default, right align 3rd column drop-downs to prevent overflow */
+.furniture-categories-grid > .furniture-category:nth-child(3n) .furniture-cat-dropdown {
+  left: auto;
+  right: 0;
+}
+.furniture-category.open .furniture-cat-dropdown {
+  display: block;
+  animation: furnitureDropIn 0.2s ease both;
+}
+@keyframes furnitureDropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.furniture-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 16px;
+  font-size: 0.88rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.15s ease;
+  color: var(--dark);
+  gap: 12px;
+}
+.furniture-item:last-child {
+  border-bottom: none;
+}
+.furniture-item:hover {
+  background: rgba(201,168,76,0.04);
+}
+.furniture-item-desc {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--mid-grey);
+  margin-top: 3px;
+  font-weight: 400;
+}
+.furniture-item-add {
+  color: var(--gold-3);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 12px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  background: rgba(201,168,76,0.08);
+  border: 1.5px solid rgba(201,168,76,0.2);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.furniture-item-add:hover {
+  background: rgba(201,168,76,0.15);
+  border-color: var(--gold-1);
+  transform: scale(1.03);
+}
+
+.furniture-custom-item {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.furniture-custom-item input {
+  width: 100%;
+}
+.furniture-custom-item .btn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Furniture Added Items Summary */
+.furniture-summary {
+  background: var(--white);
+  border: 2px dashed var(--gold-1);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-top: 24px;
+  animation: fadeInUp 0.3s ease both;
+}
+.furniture-summary__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: var(--dark);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--border);
+}
+.furniture-summary__title #furnitureTotalCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-2);
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  padding: 0 4px;
+  font-family: var(--font-sans);
+}
+.furniture-summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.furniture-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.9rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+.furniture-summary-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.furniture-summary-item .inventory-item__qty-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.furniture-summary-item .inventory-item__qty-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-2);
+  background: var(--white);
+  color: var(--gold-3);
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  font-weight: 700;
+}
+.furniture-summary-item .inventory-item__qty-btn:hover {
+  background: rgba(201,168,76,0.1);
+}
+.furniture-summary-item .inventory-item__qty-btn:active {
+  transform: scale(0.9);
+}
+.furniture-summary-item .inventory-item__qty-input {
+  width: 32px;
+  height: 28px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  outline: none;
+  -moz-appearance: textfield;
+}
+.furniture-summary-item .inventory-item__qty-input::-webkit-inner-spin-button,
+.furniture-summary-item .inventory-item__qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Preset Toggle */
