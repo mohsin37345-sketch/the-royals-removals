@@ -348,6 +348,18 @@ function buildServicePages() {
         </div>
       `).join('\n');
 
+    // Keyword section image map (use existing site images)
+    const keywordImageMap = {
+      'house-removals-services': '/images/the-royals-removals-birmingham.webp',
+      'furniture-removals-services': '/images/the-royals-removals-birmingham15.webp',
+      'office-relocation-services': '/images/the-royals-removals-birmingham16.webp',
+      'commercial-removals-services': '/images/the-royals-removals-birmingham17.webp',
+      'packing-services': '/images/the-royals-removals-birmingham18.webp',
+      'man-and-van-services': '/images/the-royals-removals-birmingham19.webp',
+      'equipment-removals-services': '/images/the-royals-removals-birmingham12.webp',
+      'student-removals-services': '/images/the-royals-removals-birmingham8.webp',
+    };
+
     const vars = {
       ...getCommonVars(),
       pageTitle: s.metaTitle,
@@ -373,6 +385,11 @@ function buildServicePages() {
       relatedServices: relatedServicesHtml,
       slug: s.slug,
       breadcrumbName: s.title,
+      // Keyword content section
+      keywordSectionTitle: s.keywordSection ? s.keywordSection.title : '',
+      keywordSectionImage: keywordImageMap[s.slug] || '/images/the-royals-removals-birmingham.webp',
+      keywordSectionImageAlt: s.keywordSection ? s.keywordSection.imageAlt : '',
+      keywordSectionContent: s.keywordSection ? s.keywordSection.content.replace(/\n\n/g, '</p><p>') : '',
     };
     const content = render(serviceTpl, vars);
     const html = buildPage(content, vars);

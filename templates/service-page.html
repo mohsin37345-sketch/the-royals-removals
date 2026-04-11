@@ -134,6 +134,21 @@
     </div>
   </section>
 
+  <!-- Keyword Content Section (50/50 Split) -->
+  {{#if keywordSectionTitle}}
+  <section class="section" style="background:var(--off-white);">
+    <div class="container split-section" style="align-items:center;gap:48px;">
+      <div class="split-section__img-wrap">
+        <img src="{{keywordSectionImage}}" alt="{{keywordSectionImageAlt}}" class="split-section__img" style="border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);" />
+      </div>
+      <div class="split-section__text">
+        <h2 style="margin-bottom:1rem;">{{keywordSectionTitle}}</h2>
+        <p>{{keywordSectionContent}}</p>
+      </div>
+    </div>
+  </section>
+  {{/if}}
+
   <!-- Insurance Trust Section -->
   <section class="section section--gold-bg">
     <div class="container">
