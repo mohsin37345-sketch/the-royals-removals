@@ -2236,17 +2236,26 @@
        if (pianoCustom && pianoCustom.value) payload.pianoType = pianoCustom.value;
     }
 
-    // Send payload via Formsubmit.co AJAX API
-    fetch('https://formsubmit.co/ajax/jhsmohsin@gmail.com', {
+    // Send to email and Make.com in parallel
+    const emailPromise = fetch('https://formsubmit.co/ajax/jhsmohsin@gmail.com', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
-    })
-    .then(response => response.json())
-    .then(data => {
+    });
+
+    // Make.com webhook for Slack forwarding & countdown reminders
+    const MAKE_WEBHOOK = 'https://hook.eu1.make.com/838q63uv1gxtcvj5jypyqr9rjiadx36b';
+    const makePayload = Object.assign({}, payload, {
+      _inventoryText: inventoryText || ''
+    });
+    const makePromise = fetch(MAKE_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(makePayload)
+    }).catch(err => console.warn('Make.com notification failed:', err));
+
+    Promise.all([emailPromise, makePromise])
+    .then(() => {
       // Show success
       const currentStepEl = document.getElementById(getStepElementId(lastStepId));
       if (currentStepEl) currentStepEl.classList.remove('active');
@@ -2263,7 +2272,6 @@
       scrollToForm();
     })
     .catch(error => {
-      // In case of error still show success so the user doesn't get blocked
       console.error('Error submitting form:', error);
       submitBtn.disabled = false;
       if (btnText) btnText.classList.remove('hidden');

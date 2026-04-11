@@ -49,209 +49,30 @@
         </ul>
 
         <div class="hero__ctas" style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="#quote-form" class="btn btn--gold">Get Your Quote</a>
-          <a href="tel:{{phone}}" class="btn btn--outline">📞 {{phoneDisplay}}</a>
-          <a href="{{whatsapp}}" class="btn btn--outline" target="_blank">📱 WhatsApp Us</a>
+          <a href="/get-a-quote/" class="btn btn--gold">📝 Get a Quote</a>
+          <a href="tel:{{phone}}" class="btn btn--outline" style="color:var(--white);border-color:rgba(255,255,255,0.3);">📞 {{phoneDisplay}}</a>
+          <a href="{{whatsapp}}" class="btn btn--outline" target="_blank" style="color:var(--white);border-color:rgba(255,255,255,0.3);">📱 WhatsApp Us</a>
         </div>
       </div>
 
-      <!-- Right: Multi-step Form -->
+      <!-- Right: Quick Callback Form -->
       <div class="hero__form-wrap" id="quote-form">
-        <div class="form-card glass-card">
-          <div class="form-card__header">
-            <h2 class="form-card__title">Get Your <span class="gold-text">Free Quote</span></h2>
-            <p class="form-card__subtitle">2 minutes · No obligation · Instant response</p>
-          </div>
-
-          <!-- Progress Bar -->
-          <div class="form-progress">
-            <div class="form-progress__steps" id="progressSteps">
-              <div class="form-progress__step active" data-step="1">
-                <span class="form-progress__num">1</span>
-                <span class="form-progress__label">Property</span>
-              </div>
-              <div class="form-progress__connector"></div>
-              <div class="form-progress__step" data-step="2">
-                <span class="form-progress__num">2</span>
-                <span class="form-progress__label">From</span>
-              </div>
-              <div class="form-progress__connector"></div>
-              <div class="form-progress__step" data-step="3">
-                <span class="form-progress__num">3</span>
-                <span class="form-progress__label">To</span>
-              </div>
-              <div class="form-progress__connector"></div>
-              <div class="form-progress__step" data-step="4">
-                <span class="form-progress__num">4</span>
-                <span class="form-progress__label">Date</span>
-              </div>
-              <div class="form-progress__connector"></div>
-              <div class="form-progress__step" data-step="5">
-                <span class="form-progress__num">5</span>
-                <span class="form-progress__label">Contact</span>
-              </div>
+        <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <form class="quick-cta-form" action="https://formspree.io/f/mnnqkqzo" method="POST">
+            <input type="hidden" name="_subject" value="New Quick Web Lead (Call Back Request)">
+            <div class="form-field" style="margin-bottom: 1rem;">
+              <input type="text" name="name" class="form-input" placeholder="Your Name" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
             </div>
-            <div class="form-progress__bar-wrap">
-              <div class="form-progress__bar" id="progressBar"></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+               <div class="form-field">
+                 <input type="email" name="email" class="form-input" placeholder="Email Address" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+               <div class="form-field">
+                 <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
             </div>
-          </div>
-
-          <form id="quoteForm" novalidate>
-
-            <!-- STEP 1: Property Type -->
-            <div class="form-step active" id="step-1">
-              <h3 class="form-step__heading">What are you moving?</h3>
-              <p class="form-step__sub">Select your property type to get started</p>
-              <div class="pill-grid pill-grid--2">
-                <label class="pill-option">
-                  <input type="radio" name="property" value="1bed" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">🛏️</span>
-                    <span>1 Bedroom</span>
-                  </span>
-                </label>
-                <label class="pill-option">
-                  <input type="radio" name="property" value="2bed" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">🛏️</span>
-                    <span>2 Bedroom</span>
-                  </span>
-                </label>
-                <label class="pill-option">
-                  <input type="radio" name="property" value="3bed" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">🏠</span>
-                    <span>3 Bedroom</span>
-                  </span>
-                </label>
-                <label class="pill-option">
-                  <input type="radio" name="property" value="4bed" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">🏡</span>
-                    <span>4+ Bedroom</span>
-                  </span>
-                </label>
-                <label class="pill-option">
-                  <input type="radio" name="property" value="flat" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">🏢</span>
-                    <span>Flat / Apartment</span>
-                  </span>
-                </label>
-                <label class="pill-option">
-                  <input type="radio" name="property" value="office" />
-                  <span class="pill-option__label">
-                    <span class="pill-option__icon">💼</span>
-                    <span>Office Move</span>
-                  </span>
-                </label>
-              </div>
-              <div class="form-step__error hidden" id="err-1">Please select a property type.</div>
-              <button type="button" class="btn btn--gold btn--full step-next" data-validate="property">Next Step →</button>
-            </div>
-
-            <!-- STEP 2: Moving From -->
-            <div class="form-step" id="step-2">
-              <h3 class="form-step__heading">Where are you moving from?</h3>
-              <p class="form-step__sub">Enter your current postcode or area</p>
-              <div class="form-field">
-                <label for="fromPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
-                <input type="text" id="fromPostcode" name="fromPostcode" class="form-input" placeholder="e.g. B1 1AA or Harborne, Birmingham" />
-              </div>
-              <div class="form-step__error hidden" id="err-2">Please enter your moving-from postcode or area.</div>
-              <div class="form-step__actions">
-                <button type="button" class="btn btn--outline step-back">← Back</button>
-                <button type="button" class="btn btn--gold step-next" data-validate="fromPostcode">Next Step →</button>
-              </div>
-            </div>
-
-            <!-- STEP 3: Moving To -->
-            <div class="form-step" id="step-3">
-              <h3 class="form-step__heading">Where are you moving to?</h3>
-              <p class="form-step__sub">Enter your destination postcode or area</p>
-              <div class="form-field">
-                <label for="toPostcode" class="form-label">Postcode / Area <span class="req">*</span></label>
-                <input type="text" id="toPostcode" name="toPostcode" class="form-input" placeholder="e.g. B15 2TT or Solihull" />
-              </div>
-              <div class="form-step__error hidden" id="err-3">Please enter your moving-to postcode or area.</div>
-              <div class="form-step__actions">
-                <button type="button" class="btn btn--outline step-back">← Back</button>
-                <button type="button" class="btn btn--gold step-next" data-validate="toPostcode">Next Step →</button>
-              </div>
-            </div>
-
-            <!-- STEP 4: Move Date + Extra Services -->
-            <div class="form-step" id="step-4">
-              <h3 class="form-step__heading">When are you moving?</h3>
-              <p class="form-step__sub">Please provide an estimated date — this can be flexible</p>
-              <div class="form-field">
-                <label for="moveDate" class="form-label">Estimated Move Date <span class="req">*</span></label>
-                <input type="date" id="moveDate" name="moveDate" class="form-input" />
-              </div>
-              <div class="form-field">
-                <label class="form-label">Do you require any extra services?</label>
-                <div class="checkbox-group">
-                  <label class="checkbox-pill">
-                    <input type="checkbox" name="extras" value="packing" />
-                    <span>📦 Packing Service</span>
-                  </label>
-                  <label class="checkbox-pill">
-                    <input type="checkbox" name="extras" value="materials" />
-                    <span>🗃️ Packing Materials</span>
-                  </label>
-                  <label class="checkbox-pill">
-                    <input type="checkbox" name="extras" value="dismantling" />
-                    <span>🔧 Dismantling &amp; Reassembling</span>
-                  </label>
-                  <label class="checkbox-pill">
-                    <input type="checkbox" name="extras" value="storage" />
-                    <span>🏪 Storage Solutions</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form-step__error hidden" id="err-4">Please select a move date.</div>
-              <div class="form-step__actions">
-                <button type="button" class="btn btn--outline step-back">← Back</button>
-                <button type="button" class="btn btn--gold step-next" data-validate="moveDate">Next Step →</button>
-              </div>
-            </div>
-
-            <!-- STEP 5: Contact Details -->
-            <div class="form-step" id="step-5">
-              <h3 class="form-step__heading">Your Contact Details</h3>
-              <p class="form-step__sub">We'll use these to send your personalised quote</p>
-              <div class="form-field">
-                <label for="fullName" class="form-label">Full Name <span class="req">*</span></label>
-                <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. James Smith" />
-              </div>
-              <div class="form-field">
-                <label for="phone" class="form-label">Phone Number <span class="req">*</span></label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 07700 900123" />
-              </div>
-              <div class="form-field">
-                <label for="email" class="form-label">Email Address <span class="req">*</span></label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. james@example.com" />
-              </div>
-              <div class="form-step__error hidden" id="err-5">Please fill in all required fields.</div>
-              <div class="form-step__actions">
-                <button type="button" class="btn btn--outline step-back">← Back</button>
-                <button type="submit" class="btn btn--gold btn--submit" id="submitBtn">
-                  <span class="btn__text">👑 Get My Free Quote</span>
-                  <span class="btn__loader hidden" id="btnLoader">Sending…</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- SUCCESS STATE -->
-            <div class="form-step form-success hidden" id="step-success">
-              <div class="form-success__icon">✅</div>
-              <h3 class="form-success__title">Quote Request Received!</h3>
-              <p class="form-success__msg">
-                Thank you! A member of <strong>The Royals Removals</strong> team will contact you within <strong>10–15 minutes</strong> with your personalised pricing and quote details.
-              </p>
-              <p class="form-success__note">📞 Can't wait? Call us direct: <a href="tel:{{phone}}" class="gold-text">{{phoneDisplay}}</a></p>
-            </div>
-
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Get Started →</button>
           </form>
         </div>
       </div>
