@@ -541,8 +541,6 @@
               <option value="Ground floor">Ground floor</option>
               <option value="Ground and 1st floor">Ground and 1st floor</option>
               <option value="1st floor">1st floor</option>
-              <option value="1st and Ground Floor">1st and Ground Floor</option>
-              <option value="1st 2nd and Ground Floor">1st 2nd and Ground Floor</option>
               <option value="2nd floor">2nd floor</option>
               <option value="3rd floor">3rd floor</option>
               <option value="4th floor">4th floor</option>
