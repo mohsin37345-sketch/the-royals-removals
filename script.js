@@ -564,8 +564,18 @@
 
   form.querySelectorAll('input[name="dateChoice"]').forEach(radio => {
     radio.addEventListener('change', () => {
-      if (radio.value === 'hasDate') { if (moveDateField) moveDateField.style.display = ''; }
-      else { if (moveDateField) moveDateField.style.display = 'none'; if (moveDateConfirm) moveDateConfirm.classList.add('hidden'); }
+      if (radio.value === 'hasDate') { 
+        if (moveDateField) moveDateField.style.display = ''; 
+        if (moveDateInput) {
+          setTimeout(() => {
+            try { moveDateInput.focus(); moveDateInput.showPicker(); } catch(e){}
+          }, 50);
+        }
+      }
+      else { 
+        if (moveDateField) moveDateField.style.display = 'none'; 
+        if (moveDateConfirm) moveDateConfirm.classList.add('hidden'); 
+      }
     });
   });
 
