@@ -511,14 +511,9 @@
             <select class="form-input form-select extra-stop-floor">
               <option value="" disabled selected>Select floor</option>
               <option value="Basement">Basement</option>
-              <option value="Ground floor">Ground floor</option>
-              <option value="1st floor">1st floor</option>
-              <option value="2nd floor">2nd floor</option>
-              <option value="3rd floor">3rd floor</option>
-              <option value="4th floor">4th floor</option>
-              <option value="5th floor">5th floor</option>
-              <option value="6th floor">6th floor</option>
-              <option value="Above 6th floor">Above 6th floor</option>
+              <option value="Ground">Ground</option>
+              <option value="1st and Ground Floor">1st and Ground Floor</option>
+              <option value="1st 2nd and Ground Floor">1st 2nd and Ground Floor</option>
             </select>
           </div>
         </div>
@@ -544,7 +539,7 @@
       if (floorSel && liftWrap) {
         floorSel.addEventListener('change', () => {
           const val = floorSel.value;
-          if (val && val !== 'Ground floor') {
+          if (val && val !== 'Ground') {
             liftWrap.classList.remove('hidden');
           } else {
             liftWrap.classList.add('hidden');
@@ -776,7 +771,7 @@
     floorSelect.addEventListener('change', () => {
       const val = floorSelect.value;
       // Only show lift for upper floors (not ground floor or basement)
-      if (val && val !== 'Ground floor') {
+      if (val && val !== 'Ground') {
         liftWrap.classList.remove('hidden');
       } else {
         liftWrap.classList.add('hidden');
