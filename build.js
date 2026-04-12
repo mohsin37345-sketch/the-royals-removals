@@ -285,8 +285,8 @@ function buildServicePages() {
 
   const hubVars = {
     ...getCommonVars(),
-    pageTitle: 'Our Removal Services' + config.seo.titleSuffix,
-    metaDescription: 'Explore the full range of professional removal services offered by The Royals Removals in Birmingham. House removals, office moves, packing services and more.',
+    pageTitle: 'Premium Removal Services | The Royals Removals',
+    metaDescription: 'Explore the full range of premium removal services offered by The Royals Removals across the West Midlands. House removals, office moves, packing services and more.',
     canonicalUrl: config.business.url + '/services/',
     navItems: getNavItems(),
     serviceLinks: getServiceLinks(),
@@ -372,6 +372,18 @@ function buildServicePages() {
       areaLinks: getAreaLinks(),
       ogType: 'article',
       h1: s.h1,
+      // Split H1 for modern multi-line heading: "Affordable House Removals Services in West Midlands & Birmingham"
+      // → h1FirstWord: "Affordable", h1ServiceName: "House Removals Services"
+      h1FirstWord: (() => {
+        const cleaned = s.h1.replace(/\s+in\s+West\s+Midlands\s*&?\s*Birmingham$/i, '');
+        const words = cleaned.split(' ');
+        return words[0];
+      })(),
+      h1ServiceName: (() => {
+        const cleaned = s.h1.replace(/\s+in\s+West\s+Midlands\s*&?\s*Birmingham$/i, '');
+        const words = cleaned.split(' ');
+        return words.slice(1).join(' ');
+      })(),
       heroIntro: s.heroIntro,
       icon: s.icon,
       serviceIntro: s.sections && s.sections.intro ? s.sections.intro.replace(/\n\n/g, '</p><p>') : '',

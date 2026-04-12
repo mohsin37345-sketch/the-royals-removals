@@ -1,4 +1,11 @@
 {
+  "name": "the-royals-removals",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node serve.js"
+  },
   "dependencies": {
     "sharp": "^0.34.5"
   }
