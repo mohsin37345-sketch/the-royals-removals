@@ -1,0 +1,20 @@
+const fs = require('fs');
+const path = require('path');
+const distAreas = path.join('dist', 'areas');
+const regions = fs.readdirSync(distAreas).filter(f => fs.statSync(path.join(distAreas, f)).isDirectory());
+regions.forEach(r => {
+  const idx = path.join(distAreas, r, 'index.html');
+  if (!fs.existsSync(idx)) return;
+  const c = fs.readFileSync(idx, 'utf8');
+  const titleMatch = c.match(/<title>(.*?)<\/title>/);
+  const h1Match = c.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+  const metaDescMatch = c.match(/<meta\s+name="description"\s+content="([^"]*)"/);
+  const metaTitle = titleMatch ? titleMatch[1].trim() : 'N/A';
+  let h1 = h1Match ? h1Match[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : 'N/A';
+  const metaDesc = metaDescMatch ? metaDescMatch[1].trim() : 'N/A';
+  console.log('--- ' + r);
+  console.log('H1: ' + h1);
+  console.log('Title: ' + metaTitle);
+  console.log('Desc: ' + metaDesc);
+  console.log('');
+});

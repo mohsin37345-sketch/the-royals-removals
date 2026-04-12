@@ -154,7 +154,7 @@
     const service = getSelectedService();
     document.body.classList.remove('flow-house', 'flow-furniture', 'flow-piano', 'flow-office', 'flow-packing', 'flow-equip', 'flow-storage', 'flow-clear', 'flow-comm', 'flow-student', 'flow-simple');
 
-    if (service === 'Home removals' || service === 'Man and van') {
+    if (service === 'House removals' || service === 'Man and van') {
       stepFlow = FLOW_HOUSE;
       document.body.classList.add('flow-house');
     } else if (service === 'Furniture & appliance delivery') {
@@ -278,6 +278,11 @@
       const md = (form.querySelector('#moveDate') || {}).value || '';
       if (!pa.trim() || !pt || !da.trim() || !dt) valid = false;
       if (hasDate && !md) valid = false;
+      // Validate additional services (at least one required)
+      const additionalChecked = form.querySelectorAll('#additionalServicesGrid input[name="additionalServices"]:checked');
+      const addSvcErr = document.getElementById('err-additional-services');
+      if (additionalChecked.length === 0) { valid = false; if (addSvcErr) addSvcErr.classList.remove('hidden'); }
+      else { if (addSvcErr) addSvcErr.classList.add('hidden'); }
     } else if (stepId === 3) {
       errElId = 'err-3';
       if (getTotalInventoryCount() === 0) valid = false;
@@ -301,6 +306,11 @@
       const da = (form.querySelector('#furnitureDeliveryAddress') || {}).value || '';
       const df = (form.querySelector('#furnitureDeliveryFloor') || {}).value || '';
       if (!pa.trim() || !pf || !da.trim() || !df) valid = false;
+      // Validate furniture additional services (at least one required)
+      const fAddChecked = form.querySelectorAll('#furnitureAdditionalServicesGrid input[name="furnitureAdditionalServices"]:checked');
+      const fAddErr = document.getElementById('err-furniture-additional-services');
+      if (fAddChecked.length === 0) { valid = false; if (fAddErr) fAddErr.classList.remove('hidden'); }
+      else { if (fAddErr) fAddErr.classList.add('hidden'); }
     } else if (stepId === 'furniture-2') {
       errElId = 'err-furniture-2';
       const count = Object.values(furnitureAddedItems).reduce((sum, qty) => sum + qty, 0);
@@ -2217,7 +2227,7 @@
     // House removals inventory has different structure: { id: { name, qty } }
     const mergeHouseInventory = (inv) => Object.entries(inv).filter(([k,v]) => v.qty > 0).map(([k,v]) => `${v.qty}x ${v.name}`).join(', ');
 
-    if (service === 'Home removals' || service === 'Man and van') inventoryText = mergeHouseInventory(inventory);
+    if (service === 'House removals' || service === 'Man and van') inventoryText = mergeHouseInventory(inventory);
     else if (service === 'Furniture & appliance delivery') inventoryText = mergeInventory(furnitureAddedItems);
     else if (service === 'Office removals') inventoryText = mergeInventory(officeAddedItems);
     else if (service === 'Packing services') inventoryText = mergeInventory(packingAddedItems);
@@ -2230,6 +2240,13 @@
        payload.Inventory_Items = inventoryText;
     }
 
+    // Collect additional services checkboxes
+    const addSvcName = (service === 'Furniture & appliance delivery') ? 'furnitureAdditionalServices' : 'additionalServices';
+    const addSvcChecked = form.querySelectorAll('input[name="' + addSvcName + '"]:checked');
+    if (addSvcChecked.length > 0) {
+      payload.Additional_Services = Array.from(addSvcChecked).map(cb => cb.value).join(', ');
+    }
+
     // Capture custom piano type if piano is selected but custom text is filled
     if (service === 'Piano delivery' && !payload.pianoType) {
        const pianoCustom = form.querySelector('#pianoCustomType');
@@ -2237,7 +2254,7 @@
     }
 
     // Send to email and Make.com in parallel
-    const emailPromise = fetch('https://formsubmit.co/ajax/jhsmohsin@gmail.com', {
+    const emailPromise = fetch('https://formsubmit.co/ajax/theroyalsremovals@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)

@@ -91,6 +91,7 @@ function getCommonVars() {
   return {
     businessName: config.business.name,
     phone: config.business.phone,
+    phoneTel: config.business.phone.replace(/\s/g, ''),
     phoneDisplay: config.business.phoneDisplay,
     email: config.business.email,
     address: config.business.address.full,
@@ -101,6 +102,8 @@ function getCommonVars() {
     domain: config.business.domain,
     siteUrl: config.business.url,
     whatsapp: config.business.social.whatsapp,
+    facebook: config.business.social.facebook || 'BLANK',
+    instagram: config.business.social.instagram || 'BLANK',
     yearFounded: config.business.yearFounded,
     currentYear: new Date().getFullYear(),
     titleSuffix: config.seo.titleSuffix,
@@ -286,7 +289,7 @@ function buildServicePages() {
   const hubVars = {
     ...getCommonVars(),
     pageTitle: 'Premium Removal Services | The Royals Removals',
-    metaDescription: 'Explore the full range of premium removal services offered by The Royals Removals across the West Midlands. House removals, office moves, packing services and more.',
+    metaDescription: 'Explore our full range of premium removal services across the West Midlands. House removals, office moves, packing, man and van, and more.',
     canonicalUrl: config.business.url + '/services/',
     navItems: getNavItems(),
     serviceLinks: getServiceLinks(),
@@ -370,7 +373,7 @@ function buildServicePages() {
       navItems: getNavItems(),
       serviceLinks: getServiceLinks(),
       areaLinks: getAreaLinks(),
-      ogType: 'article',
+      ogType: 'website',
       h1: s.h1,
       // Split H1 for modern multi-line heading: "Affordable House Removals Services in West Midlands & Birmingham"
       // → h1FirstWord: "Affordable", h1ServiceName: "House Removals Services"
@@ -415,15 +418,26 @@ function buildAreaPages() {
 
   // Areas hub
   const hubTpl = readTemplate('area-hub.html');
-  const regionCardsHtml = regions.map(r => `
-    <div class="area-region-card glass-card">
-      <h3><a href="/areas/${r.slug}/">${r.name}</a></h3>
-      ${r.children.length > 0 ? `<p>${r.children.length} areas covered</p>` : ''}
-      <div class="area-region-card__children">
-        ${r.children.slice(0, 6).map(c => `<a href="/areas/${r.slug}/${c.slug}/" class="area-pill area-pill--sm">${c.name}</a>`).join('')}
-        ${r.children.length > 6 ? `<a href="/areas/${r.slug}/" class="area-pill area-pill--sm area-pill--more">+${r.children.length - 6} more</a>` : ''}
+  const regionCardsHtml = regions.map((r, i) => `
+    <a href="/areas/${r.slug}/" class="region-card" style="--card-index: ${i}">
+      <div class="region-card__accent"></div>
+      <div class="region-card__header">
+        <div class="region-card__icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <h3 class="region-card__title">${r.name}</h3>
+          ${r.children.length > 0 ? `<span class="region-card__count">${r.children.length} areas covered</span>` : ''}
+        </div>
       </div>
-    </div>
+      <div class="region-card__areas">
+        ${r.children.slice(0, 6).map(c => `<span class="region-card__tag">${c.name}</span>`).join('')}
+        ${r.children.length > 6 ? `<span class="region-card__tag region-card__tag--more">+${r.children.length - 6} more</span>` : ''}
+      </div>
+      <div class="region-card__footer">
+        <span class="region-card__cta">Explore Region <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </div>
+    </a>
   `).join('');
 
   const hubVars = {
@@ -472,14 +486,14 @@ function buildAreaPages() {
     const regionTrustNote = getTrustNote(region.name);
     const regionVars = {
       ...getCommonVars(),
-      pageTitle: `${region.h1}${config.seo.titleSuffix}`,
+      pageTitle: region.metaTitle || `${region.h1}${config.seo.titleSuffix}`,
       metaDescription: region.metaDescription,
       canonicalUrl: `${config.business.url}/areas/${region.slug}/`,
       keywords: [region.primaryKeyword, ...(region.secondaryKeywords || [])].join(', '),
       navItems: getNavItems(),
       serviceLinks: getServiceLinks(),
       areaLinks: getAreaLinks(),
-      ogType: 'article',
+      ogType: 'website',
       h1: region.h1,
       regionName: region.name,
       regionIntro: region.customIntro || region.intro.replace(/\n\n/g, '</p><p>'),
@@ -650,7 +664,7 @@ function buildAreaPages() {
         navItems: getNavItems(),
         serviceLinks: getServiceLinks(),
         areaLinks: getAreaLinks(),
-        ogType: 'article',
+        ogType: 'website',
         h1: `House Removals in ${child.name}`,
         childName: child.name,
         regionName: region.name,
@@ -1040,25 +1054,80 @@ function buildSupportingPages() {
 
 // ── Generate XML Sitemap ──────────────────────────────────
 function generateSitemap() {
-  console.log('\n🗺️  Generating sitemap.xml...');
+  console.log('\n🗺️  Generating split sitemaps...');
   const today = new Date().toISOString().split('T')[0];
-  const entries = sitemapUrls.map(url => {
-    const fullUrl = config.business.url + '/' + url;
-    const priority = url === '' ? '1.0' : url.startsWith('services/') ? '0.8' : url.startsWith('areas/') ? '0.7' : '0.5';
-    return `  <url>
+  const baseUrl = config.business.url;
+
+  // Categorise URLs into groups
+  const pageUrls = [];
+  const serviceUrls = [];
+  const areaUrls = [];
+  const blogUrls = [];
+
+  sitemapUrls.forEach(url => {
+    if (url.startsWith('services/')) {
+      serviceUrls.push(url);
+    } else if (url.startsWith('areas/')) {
+      areaUrls.push(url);
+    } else if (url.startsWith('blog/')) {
+      blogUrls.push(url);
+    } else {
+      pageUrls.push(url);
+    }
+  });
+
+  // Helper to build a single sitemap XML
+  function buildSitemapXml(urls, defaultPriority) {
+    const entries = urls.map(url => {
+      const fullUrl = baseUrl + '/' + url;
+      let priority = defaultPriority;
+      if (url === '') priority = '1.0';
+      else if (url === 'services/' || url === 'areas/') priority = '0.9';
+      return `  <url>
     <loc>${fullUrl}</loc>
     <lastmod>${today}</lastmod>
+    <changefreq>${url === '' ? 'daily' : url.startsWith('blog/') ? 'monthly' : 'weekly'}</changefreq>
     <priority>${priority}</priority>
   </url>`;
-  }).join('\n');
+    }).join('\n');
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+    return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries}
 </urlset>`;
+  }
 
-  fs.writeFileSync(path.join(DIST, 'sitemap.xml'), xml, 'utf8');
-  console.log('  ✓ sitemap.xml');
+  // Write individual sitemaps
+  const sitemaps = [
+    { file: 'sitemap-pages.xml', urls: pageUrls, priority: '0.6' },
+    { file: 'sitemap-services.xml', urls: serviceUrls, priority: '0.8' },
+    { file: 'sitemap-areas.xml', urls: areaUrls, priority: '0.7' },
+    { file: 'sitemap-blog.xml', urls: blogUrls, priority: '0.6' },
+  ];
+
+  sitemaps.forEach(sm => {
+    if (sm.urls.length === 0) return;
+    const xml = buildSitemapXml(sm.urls, sm.priority);
+    fs.writeFileSync(path.join(DIST, sm.file), xml, 'utf8');
+    console.log(`  ✓ ${sm.file} (${sm.urls.length} URLs)`);
+  });
+
+  // Write sitemap index
+  const indexEntries = sitemaps
+    .filter(sm => sm.urls.length > 0)
+    .map(sm => `  <sitemap>
+    <loc>${baseUrl}/${sm.file}</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>`)
+    .join('\n');
+
+  const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${indexEntries}
+</sitemapindex>`;
+
+  fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemapIndex, 'utf8');
+  console.log(`  ✓ sitemap.xml (index → ${sitemaps.filter(sm => sm.urls.length > 0).length} sitemaps)`);
 }
 
 // ── Generate robots.txt ───────────────────────────────────
@@ -1067,6 +1136,10 @@ function generateRobots() {
 Allow: /
 
 Sitemap: ${config.business.url}/sitemap.xml
+Sitemap: ${config.business.url}/sitemap-pages.xml
+Sitemap: ${config.business.url}/sitemap-services.xml
+Sitemap: ${config.business.url}/sitemap-areas.xml
+Sitemap: ${config.business.url}/sitemap-blog.xml
 `;
   fs.writeFileSync(path.join(DIST, 'robots.txt'), robots, 'utf8');
   console.log('  ✓ robots.txt');
@@ -1221,7 +1294,45 @@ function buildBlogPosts() {
   ];
 
   posts.forEach(post => {
-    const content = render(tpl, {
+    // BlogPosting schema
+    const blogPostingSchema = `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "${post.h1.replace(/"/g, '\\"')}",
+      "datePublished": "${post.datePublished || '2026-03-01'}",
+      "dateModified": "${new Date().toISOString().split('T')[0]}",
+      "author": {
+        "@type": "Organization",
+        "name": "${config.business.name}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "${config.business.name}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "${config.business.url}/images/logo_trimmed.png"
+        }
+      },
+      "mainEntityOfPage": "${config.business.url}/blog/${post.slug}/",
+      "description": "${post.metaDescription.replace(/"/g, '\\"').replace(/'/g, "\\'")}"
+    }
+    </script>`;
+
+    // BreadcrumbList schema for blog post
+    const blogBreadcrumbSchema = `<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "${config.business.url}/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "${config.business.url}/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "${post.breadcrumbName.replace(/"/g, '\\"')}", "item": "${config.business.url}/blog/${post.slug}/" }
+      ]
+    }
+    </script>`;
+
+    const blogVars = {
       ...getCommonVars(),
       pageTitle: post.metaTitle,
       metaDescription: post.metaDescription,
@@ -1235,17 +1346,11 @@ function buildBlogPosts() {
       publishDate: post.publishDate,
       breadcrumbName: post.breadcrumbName,
       articleBody: post.articleBody,
-    });
-    const html = buildPage(content, {
-      ...getCommonVars(),
-      pageTitle: post.metaTitle,
-      metaDescription: post.metaDescription,
-      canonicalUrl: `${config.business.url}/blog/${post.slug}/`,
-      navItems: getNavItems(),
-      serviceLinks: getServiceLinks(),
-      areaLinks: getAreaLinks(),
-      ogType: 'article',
-    });
+      blogPostingSchema: blogPostingSchema,
+      blogBreadcrumbSchema: blogBreadcrumbSchema,
+    };
+    const content = render(tpl, blogVars);
+    const html = buildPage(content, blogVars);
     writePage(`blog/${post.slug}/index.html`, html);
   });
 }

@@ -38,7 +38,7 @@
             <p style="margin-bottom:1.5rem;opacity:0.85;">Tell us your property size and location — we'll give you a transparent, itemised price with no hidden fees.</p>
             <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
               <a href="/get-a-quote/" class="btn btn--gold">👑 Get Your Free Quote</a>
-              <a href="tel:{{phone}}" class="btn btn--outline" style="border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
+              <a href="tel:{{phoneTel}}" class="btn btn--outline" style="border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
               <a href="{{whatsapp}}" class="btn btn--outline" target="_blank" style="border-color:var(--gold);color:var(--gold);">📱 WhatsApp Us</a>
             </div>
           </div>
@@ -50,7 +50,7 @@
             <h4 style="font-family:var(--font-serif);margin-bottom:1rem;font-size:1.2rem;">Get a Free Quote</h4>
             <p style="font-size:0.95rem;margin-bottom:1.5rem;opacity:0.85;">Our team responds within 10–15 minutes. No obligation.</p>
             <a href="/get-a-quote/" class="btn btn--gold btn--full">Get Quote →</a>
-            <a href="tel:{{phone}}" class="btn btn--outline btn--full" style="margin-top:0.75rem;border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
+            <a href="tel:{{phoneTel}}" class="btn btn--outline btn--full" style="margin-top:0.75rem;border-color:var(--gold);color:var(--gold);">📞 {{phoneDisplay}}</a>
           </div>
 
           <div class="glass-card" style="padding:2rem;margin-bottom:2rem;">
@@ -165,3 +165,7 @@
       }
     }
   </style>
+
+  <!-- Blog Post Schema -->
+  {{blogPostingSchema}}
+  {{blogBreadcrumbSchema}}

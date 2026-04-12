@@ -7,13 +7,13 @@
     "url": "{{siteUrl}}",
     "logo": "{{siteUrl}}/images/logo_trimmed.png",
     "image": "{{siteUrl}}/images/og-image.jpg",
-    "telephone": "{{phone}}",
+    "telephone": "{{phoneTel}}",
     "email": "{{email}}",
     "taxID": "{{registrationNumber}}",
     "sameAs": [
-      "{{whatsapp}}",
-      "{{facebook}}",
-      "{{instagram}}"
+      "{{whatsapp}}"{{#if facebook}},
+      "{{facebook}}"{{/if}}{{#if instagram}},
+      "{{instagram}}"{{/if}}
     ],
     "address": {
       "@type": "PostalAddress",

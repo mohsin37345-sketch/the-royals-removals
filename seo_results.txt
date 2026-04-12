@@ -1,0 +1,603 @@
+﻿
+============================================================
+PAGE: index.html
+============================================================
+Title (59 chars): Professional Removal Services in West Midlands & Birmingham
+Description (259 chars): The Royals Removals provides professional, fully insured house and commercial removal services across the West Midlands ...
+Canonical: https://theroyalremovals.co.uk/
+H1 (count: 1): Professional Removal Services in West Midlands & Birmingham
+OG:Title: Professional Removal Services in West Midlands & Birmingham
+OG:Desc: The Royals Removals provides professional, fully insured house and commercial re...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (259 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/index.html
+============================================================
+Title (46 chars): Premium Removal Services | The Royals Removals
+Description (164 chars): Explore the full range of premium removal services offered by The Royals Removals across the West Midlands. House remova...
+Canonical: https://theroyalremovals.co.uk/services/
+H1 (count: 1): Our Premium Removal Services - The Royals Removals
+OG:Title: Premium Removal Services | The Royals Removals
+OG:Desc: Explore the full range of premium removal services offered by The Royals Removal...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (164 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/house-removals-services/index.html
+============================================================
+Title (51 chars): Affordable House Removals Services in West Midlands
+Description (214 chars): Looking for reliable house removals Birmingham families trust? Our affordable house removals services cover the entire W...
+Canonical: https://theroyalremovals.co.uk/services/house-removals-services/
+H1 (count: 1): Affordable House Removals Services in West Midlands &amp; Birmingham
+OG:Title: Affordable House Removals Services in West Midlands
+OG:Desc: Looking for reliable house removals Birmingham families trust? Our affordable ho...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/house-removals-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (214 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/furniture-removals-services/index.html
+============================================================
+Title (48 chars): Professional Furniture Removals in West Midlands
+Description (189 chars): Need professional furniture removal in Birmingham or the West Midlands? Careful wrapping, safe transport, and expert han...
+Canonical: https://theroyalremovals.co.uk/services/furniture-removals-services/
+H1 (count: 1): Professional Furniture Removals Services in West Midlands &amp; Birmingham
+OG:Title: Professional Furniture Removals in West Midlands
+OG:Desc: Need professional furniture removal in Birmingham or the West Midlands? Careful ...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/furniture-removals-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (189 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/office-relocation-services/index.html
+============================================================
+Title (50 chars): Expert Office Relocation Services in West Midlands
+Description (186 chars): Trusted office relocation Birmingham businesses rely on. Expert office removals across the West Midlands with minimal do...
+Canonical: https://theroyalremovals.co.uk/services/office-relocation-services/
+H1 (count: 1): Expert Office Relocation Services in West Midlands &amp; Birmingham
+OG:Title: Expert Office Relocation Services in West Midlands
+OG:Desc: Trusted office relocation Birmingham businesses rely on. Expert office removals ...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/office-relocation-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (186 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/commercial-removals-services/index.html
+============================================================
+Title (45 chars): Reliable Commercial Removals in West Midlands
+Description (195 chars): Looking for dependable commercial movers in Birmingham? Reliable commercial removals across the West Midlands ΓÇö warehous...
+Canonical: https://theroyalremovals.co.uk/services/commercial-removals-services/
+H1 (count: 1): Reliable Commercial Removals Services in West Midlands &amp; Birmingham
+OG:Title: Reliable Commercial Removals in West Midlands
+OG:Desc: Looking for dependable commercial movers in Birmingham? Reliable commercial remo...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/commercial-removals-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (195 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/packing-services/index.html
+============================================================
+Title (41 chars): Premium Packing Services in West Midlands
+Description (199 chars): Need a removals packing service in Birmingham? Premium packing services across the West Midlands with full and partial o...
+Canonical: https://theroyalremovals.co.uk/services/packing-services/
+H1 (count: 1): Premium Packing Services in West Midlands &amp; Birmingham
+OG:Title: Premium Packing Services in West Midlands
+OG:Desc: Need a removals packing service in Birmingham? Premium packing services across t...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/packing-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (199 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/man-and-van-services/index.html
+============================================================
+Title (44 chars): Budget-Friendly Man and Van in West Midlands
+Description (189 chars): Need a man with a van Birmingham locals can trust? Budget-friendly man and van services across the West Midlands. Perfec...
+Canonical: https://theroyalremovals.co.uk/services/man-and-van-services/
+H1 (count: 1): Budget-Friendly Man and Van Services in West Midlands &amp; Birmingham
+OG:Title: Budget-Friendly Man and Van in West Midlands
+OG:Desc: Need a man with a van Birmingham locals can trust? Budget-friendly man and van s...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/man-and-van-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (189 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/equipment-removals-services/index.html
+============================================================
+Title (46 chars): Specialist Equipment Removals in West Midlands
+Description (188 chars): Searching for heavy equipment movers near Birmingham? Specialist equipment removals across the West Midlands. Safe handl...
+Canonical: https://theroyalremovals.co.uk/services/equipment-removals-services/
+H1 (count: 1): Specialist Equipment Removals Services in West Midlands &amp; Birmingham
+OG:Title: Specialist Equipment Removals in West Midlands
+OG:Desc: Searching for heavy equipment movers near Birmingham? Specialist equipment remov...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/equipment-removals-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (188 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: services/student-removals-services/index.html
+============================================================
+Title (48 chars): Cheap Student Removals Services in West Midlands
+Description (160 chars): Affordable student removals Birmingham university students trust. Cheap, fast, and fully insured student moves across th...
+Canonical: https://theroyalremovals.co.uk/services/student-removals-services/
+H1 (count: 1): Cheap Student Removals Services in West Midlands &amp; Birmingham
+OG:Title: Cheap Student Removals Services in West Midlands
+OG:Desc: Affordable student removals Birmingham university students trust. Cheap, fast, a...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/services/student-removals-services/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: about/index.html
+============================================================
+Title (30 chars): About Us | The Royals Removals
+Description (137 chars): Learn about The Royals Removals ΓÇö Birmingham's trusted premium removal company. Our story, values, and commitment to exc...
+Canonical: https://theroyalremovals.co.uk/about/
+H1 (count: 1): About The Royals Removals
+OG:Title: About Us | The Royals Removals
+OG:Desc: Learn about The Royals Removals ΓÇö Birmingham's trusted premium removal company. ...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/about/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: contact/index.html
+============================================================
+Title (32 chars): Contact Us | The Royals Removals
+Description (128 chars): Contact The Royals Removals for a free removal quote. Call, email, or fill in our contact form. We respond within 10-15 ...
+Canonical: https://theroyalremovals.co.uk/contact/
+H1 (count: 1): Contact Us
+OG:Title: Contact Us | The Royals Removals
+OG:Desc: Contact The Royals Removals for a free removal quote. Call, email, or fill in ou...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/contact/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 4
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 4 EMPTY HREF(S)
+
+============================================================
+PAGE: prices/index.html
+============================================================
+Title (36 chars): Removal Prices | The Royals Removals
+Description (125 chars): Transparent removal pricing from The Royals Removals. Get a clear, honest quote with no hidden fees for your Birmingham ...
+Canonical: https://theroyalremovals.co.uk/prices/
+H1 (count: 1): Removal Prices
+OG:Title: Removal Prices | The Royals Removals
+OG:Desc: Transparent removal pricing from The Royals Removals. Get a clear, honest quote ...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/prices/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: reviews/index.html
+============================================================
+Title (38 chars): Customer Reviews | The Royals Removals
+Description (125 chars): Read genuine customer reviews of The Royals Removals. See why Birmingham families trust us with their house and office m...
+Canonical: https://theroyalremovals.co.uk/reviews/
+H1 (count: 1): Customer Reviews
+OG:Title: Customer Reviews | The Royals Removals
+OG:Desc: Read genuine customer reviews of The Royals Removals. See why Birmingham familie...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/reviews/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: insurance/index.html
+============================================================
+Title (41 chars): Our Insurance Cover | The Royals Removals
+Description (146 chars): The Royals Removals is a fully insured removal company in Birmingham. Public liability up to ┬ú5M and goods in transit up...
+Canonical: https://theroyalremovals.co.uk/insurance/
+H1 (count: 1): Fully Insured Removals Birmingham
+OG:Title: Our Insurance Cover | The Royals Removals
+OG:Desc: The Royals Removals is a fully insured removal company in Birmingham. Public lia...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/insurance/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: get-a-quote/index.html
+============================================================
+Title (38 chars): Get a Free Quote | The Royals Removals
+Description (137 chars): Get your free, no-obligation removal quote from The Royals Removals in just 2 minutes. Professional Birmingham removals ...
+Canonical: https://theroyalremovals.co.uk/get-a-quote/
+H1 (count: 1): Get Your Free Quote
+OG:Title: Get a Free Quote | The Royals Removals
+OG:Desc: Get your free, no-obligation removal quote from The Royals Removals in just 2 mi...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/get-a-quote/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: blog/index.html
+============================================================
+Title (26 chars): Blog | The Royals Removals
+Description (130 chars): Moving tips, guides, and news from The Royals Removals. Expert advice on house removals, packing, and settling into your...
+Canonical: https://theroyalremovals.co.uk/blog/
+H1 (count: 1): Moving Tips &amp; Blog
+OG:Title: Blog | The Royals Removals
+OG:Desc: Moving tips, guides, and news from The Royals Removals. Expert advice on house r...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/blog/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: privacy/index.html
+============================================================
+Title (36 chars): Privacy Policy | The Royals Removals
+Description (92 chars): Privacy policy for The Royals Removals. How we collect, use, and protect your personal data....
+Canonical: https://theroyalremovals.co.uk/privacy/
+H1 (count: 1): Privacy Policy
+OG:Title: Privacy Policy | The Royals Removals
+OG:Desc: Privacy policy for The Royals Removals. How we collect, use, and protect your pe...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/privacy/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: terms/index.html
+============================================================
+Title (40 chars): Terms & Conditions | The Royals Removals
+Description (103 chars): Terms and conditions for The Royals Removals services. Read our full terms before booking your removal....
+Canonical: https://theroyalremovals.co.uk/terms/
+H1 (count: 1): Terms &amp; Conditions
+OG:Title: Terms & Conditions | The Royals Removals
+OG:Desc: Terms and conditions for The Royals Removals services. Read our full terms befor...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/terms/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: sitemap/index.html
+============================================================
+Title (29 chars): Sitemap | The Royals Removals
+Description (79 chars): Full sitemap of The Royals Removals website. Find any page on our site quickly....
+Canonical: https://theroyalremovals.co.uk/sitemap/
+H1 (count: 1): Sitemap
+OG:Title: Sitemap | The Royals Removals
+OG:Desc: Full sitemap of The Royals Removals website. Find any page on our site quickly....
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/sitemap/
+Twitter Card: summary
+Schema blocks: 1
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/index.html
+============================================================
+Title (36 chars): Areas We Serve | The Royals Removals
+Description (148 chars): The Royals Removals covers all areas across Birmingham and the West Midlands. Find your local area for professional, ins...
+Canonical: https://theroyalremovals.co.uk/areas/
+H1 (count: 1): Areas We Serve
+OG:Title: Areas We Serve | The Royals Removals
+OG:Desc: The Royals Removals covers all areas across Birmingham and the West Midlands. Fi...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/
+Twitter Card: summary
+Schema blocks: 2
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/birmingham/index.html
+============================================================
+Title (44 chars): Removals in Birmingham | The Royals Removals
+Description (155 chars): Professional removal services across Birmingham. The Royals Removals covers every neighbourhood in Birmingham with caref...
+Canonical: https://theroyalremovals.co.uk/areas/birmingham/
+H1 (count: 1): Removals in Birmingham
+OG:Title: Removals in Birmingham | The Royals Removals
+OG:Desc: Professional removal services across Birmingham. The Royals Removals covers ever...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/birmingham/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/dudley/index.html
+============================================================
+Title (40 chars): Removals in Dudley | The Royals Removals
+Description (159 chars): Professional removal services across Dudley and the Black Country. The Royals Removals provides careful, insured house a...
+Canonical: https://theroyalremovals.co.uk/areas/dudley/
+H1 (count: 1): Removals in Dudley
+OG:Title: Removals in Dudley | The Royals Removals
+OG:Desc: Professional removal services across Dudley and the Black Country. The Royals Re...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/dudley/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/solihull/index.html
+============================================================
+Title (42 chars): Removals in Solihull | The Royals Removals
+Description (158 chars): Professional removal services in Solihull. Careful, insured house and office moves across all Solihull areas. Get a free...
+Canonical: https://theroyalremovals.co.uk/areas/solihull/
+H1 (count: 1): Removals in Solihull
+OG:Title: Removals in Solihull | The Royals Removals
+OG:Desc: Professional removal services in Solihull. Careful, insured house and office mov...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/solihull/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/coventry/index.html
+============================================================
+Title (42 chars): Removals in Coventry | The Royals Removals
+Description (152 chars): Professional removal services in Coventry. Trusted, insured house and office moves across all Coventry areas. Get a free...
+Canonical: https://theroyalremovals.co.uk/areas/coventry/
+H1 (count: 1): Removals in Coventry
+OG:Title: Removals in Coventry | The Royals Removals
+OG:Desc: Professional removal services in Coventry. Trusted, insured house and office mov...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/coventry/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/wolverhampton/index.html
+============================================================
+Title (47 chars): Removals in Wolverhampton | The Royals Removals
+Description (157 chars): Professional removal services in Wolverhampton. Trusted, insured house and office moves across all Wolverhampton areas. ...
+Canonical: https://theroyalremovals.co.uk/areas/wolverhampton/
+H1 (count: 1): Removals in Wolverhampton
+OG:Title: Removals in Wolverhampton | The Royals Removals
+OG:Desc: Professional removal services in Wolverhampton. Trusted, insured house and offic...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/wolverhampton/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/walsall/index.html
+============================================================
+Title (41 chars): Removals in Walsall | The Royals Removals
+Description (148 chars): Professional removal services in Walsall and surrounding areas. Trusted, insured house and office movers. Get a free quo...
+Canonical: https://theroyalremovals.co.uk/areas/walsall/
+H1 (count: 1): Removals in Walsall
+OG:Title: Removals in Walsall | The Royals Removals
+OG:Desc: Professional removal services in Walsall and surrounding areas. Trusted, insured...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/walsall/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/sandwell/index.html
+============================================================
+Title (42 chars): Removals in Sandwell | The Royals Removals
+Description (142 chars): Professional removal services across Sandwell, West Bromwich, and Smethwick. Trusted house movers with full insurance. G...
+Canonical: https://theroyalremovals.co.uk/areas/sandwell/
+H1 (count: 1): Removals in Sandwell
+OG:Title: Removals in Sandwell | The Royals Removals
+OG:Desc: Professional removal services across Sandwell, West Bromwich, and Smethwick. Tru...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/sandwell/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/birmingham/edgbaston/index.html
+============================================================
+Title (46 chars): House Removals Edgbaston | The Royals Removals
+Description (159 chars): Professional removal services in Edgbaston, Birmingham. Trusted, insured house movers covering Edgbaston and nearby area...
+Canonical: https://theroyalremovals.co.uk/areas/birmingham/edgbaston/
+H1 (count: 1): House Removals in Edgbaston
+OG:Title: House Removals Edgbaston | The Royals Removals
+OG:Desc: Professional removal services in Edgbaston, Birmingham. Trusted, insured house m...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/birmingham/edgbaston/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+PAGE: areas/birmingham/sutton-coldfield/index.html
+============================================================
+Title (53 chars): House Removals Sutton Coldfield | The Royals Removals
+Description (173 chars): Professional removal services in Sutton Coldfield, Birmingham. Trusted, insured house movers covering Sutton Coldfield a...
+Canonical: https://theroyalremovals.co.uk/areas/birmingham/sutton-coldfield/
+H1 (count: 1): House Removals in Sutton Coldfield
+OG:Title: House Removals Sutton Coldfield | The Royals Removals
+OG:Desc: Professional removal services in Sutton Coldfield, Birmingham. Trusted, insured ...
+OG:Image: https://theroyalremovals.co.uk/images/og-image.jpg
+OG:URL: https://theroyalremovals.co.uk/areas/birmingham/sutton-coldfield/
+Twitter Card: summary
+Schema blocks: 4
+Empty hrefs: 2
+Images missing alt: 0, Empty alt: 0
+
+  ISSUES:
+    ΓÜá∩╕Å DESC TOO LONG (173 chars, max 160)
+    ΓÜá∩╕Å 2 EMPTY HREF(S)
+
+============================================================
+SITEMAP CHECK
+============================================================
+Total URLs in sitemap: 241
+  Γ£à /about/ in sitemap
+  Γ£à /contact/ in sitemap
+  Γ£à /prices/ in sitemap
+  Γ£à /reviews/ in sitemap
+  Γ£à /insurance/ in sitemap
+  Γ£à /get-a-quote/ in sitemap
+  Γ£à /blog/ in sitemap
+  Γ£à /privacy/ in sitemap
+  Γ£à /terms/ in sitemap
+
+============================================================
+ROBOTS.TXT CHECK
+============================================================
+User-agent: *
+Allow: /
+
+Sitemap: https://theroyalremovals.co.uk/sitemap.xml
+

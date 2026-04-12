@@ -197,10 +197,10 @@
                 <p class="form-step__sub">Select your service to get started</p>
                 <div class="service-select-grid" id="serviceSelectGrid">
                   <label class="service-select-card">
-                    <input type="radio" name="service" value="Home removals" />
+                    <input type="radio" name="service" value="House removals" />
                     <span class="service-select-card__inner">
                       <span class="service-select-card__icon">🏠</span>
-                      <span class="service-select-card__label">Home removals</span>
+                      <span class="service-select-card__label">House removals</span>
                     </span>
                   </label>
                   <label class="service-select-card">
@@ -358,6 +358,53 @@
                   </button>
                 </div>
 
+                <!-- Additional Services Section (Furniture) -->
+                <div class="move-details__section" id="furnitureAdditionalServicesSection">
+                  <h3 class="move-details__section-title">
+                    <span class="move-details__section-icon">🛠️</span>
+                    Additional services <span class="req">*</span>
+                  </h3>
+                  <p class="form-step__sub" style="margin-bottom:12px;">Select the services you need (you can choose multiple)</p>
+                  <div class="additional-services-grid" id="furnitureAdditionalServicesGrid">
+                    <label class="additional-service-card">
+                      <input type="checkbox" name="furnitureAdditionalServices" value="Packing" />
+                      <span class="additional-service-card__inner">
+                        <span class="additional-service-card__icon">📦</span>
+                        <span class="additional-service-card__label">Packing</span>
+                      </span>
+                    </label>
+                    <label class="additional-service-card">
+                      <input type="checkbox" name="furnitureAdditionalServices" value="Unpacking" />
+                      <span class="additional-service-card__inner">
+                        <span class="additional-service-card__icon">📭</span>
+                        <span class="additional-service-card__label">Unpacking</span>
+                      </span>
+                    </label>
+                    <label class="additional-service-card">
+                      <input type="checkbox" name="furnitureAdditionalServices" value="Dismantling & Reassembly" />
+                      <span class="additional-service-card__inner">
+                        <span class="additional-service-card__icon">🔧</span>
+                        <span class="additional-service-card__label">Dismantling &amp; Reassembly</span>
+                      </span>
+                    </label>
+                    <label class="additional-service-card">
+                      <input type="checkbox" name="furnitureAdditionalServices" value="Storage" />
+                      <span class="additional-service-card__inner">
+                        <span class="additional-service-card__icon">🏬</span>
+                        <span class="additional-service-card__label">Storage</span>
+                      </span>
+                    </label>
+                    <label class="additional-service-card">
+                      <input type="checkbox" name="furnitureAdditionalServices" value="Cleaning" />
+                      <span class="additional-service-card__inner">
+                        <span class="additional-service-card__icon">🧹</span>
+                        <span class="additional-service-card__label">Cleaning</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="form-step__error hidden" id="err-furniture-additional-services">Please select at least one additional service.</div>
+                </div>
+
                 <div class="form-step__error hidden" id="err-furniture-1">Please fill in all pickup and delivery details.</div>
                 <div class="form-step__actions">
                   <button type="button" class="btn btn--outline step-back">← Back</button>
@@ -487,6 +534,53 @@
                         <span class="lift-checkbox__label">Lift Available</span>
                       </label>
                     </div>
+                  </div>
+
+                  <!-- Additional Services Section -->
+                  <div class="move-details__section" id="additionalServicesSection">
+                    <h3 class="move-details__section-title">
+                      <span class="move-details__section-icon">🛠️</span>
+                      Additional services <span class="req">*</span>
+                    </h3>
+                    <p class="form-step__sub" style="margin-bottom:12px;">Select the services you need (you can choose multiple)</p>
+                    <div class="additional-services-grid" id="additionalServicesGrid">
+                      <label class="additional-service-card">
+                        <input type="checkbox" name="additionalServices" value="Packing" />
+                        <span class="additional-service-card__inner">
+                          <span class="additional-service-card__icon">📦</span>
+                          <span class="additional-service-card__label">Packing</span>
+                        </span>
+                      </label>
+                      <label class="additional-service-card">
+                        <input type="checkbox" name="additionalServices" value="Unpacking" />
+                        <span class="additional-service-card__inner">
+                          <span class="additional-service-card__icon">📭</span>
+                          <span class="additional-service-card__label">Unpacking</span>
+                        </span>
+                      </label>
+                      <label class="additional-service-card">
+                        <input type="checkbox" name="additionalServices" value="Dismantling & Reassembly" />
+                        <span class="additional-service-card__inner">
+                          <span class="additional-service-card__icon">🔧</span>
+                          <span class="additional-service-card__label">Dismantling &amp; Reassembly</span>
+                        </span>
+                      </label>
+                      <label class="additional-service-card">
+                        <input type="checkbox" name="additionalServices" value="Storage" />
+                        <span class="additional-service-card__inner">
+                          <span class="additional-service-card__icon">🏬</span>
+                          <span class="additional-service-card__label">Storage</span>
+                        </span>
+                      </label>
+                      <label class="additional-service-card">
+                        <input type="checkbox" name="additionalServices" value="Cleaning" />
+                        <span class="additional-service-card__inner">
+                          <span class="additional-service-card__icon">🧹</span>
+                          <span class="additional-service-card__label">Cleaning</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="form-step__error hidden" id="err-additional-services">Please select at least one additional service.</div>
                   </div>
 
                   <!-- Move Date Section -->
@@ -1900,7 +1994,7 @@
                       <div class="quote-success__option-icon">⚡</div>
                       <h4>Need It Quicker?</h4>
                       <p>Call us directly for an <strong>instant quote</strong> right now:</p>
-                      <a href="tel:{{phone}}" class="btn btn--gold btn--full quote-success__phone-btn">
+                      <a href="tel:{{phoneTel}}" class="btn btn--gold btn--full quote-success__phone-btn">
                         📞 {{phoneDisplay}}
                       </a>
                     </div>
@@ -1953,7 +2047,7 @@
             <hr style="border-color:rgba(191,155,48,0.2);margin:1.5rem 0;" />
             <h3>Need Help Now?</h3>
             <p style="margin-bottom:1rem;">Call us directly for an instant quote:</p>
-            <a href="tel:{{phone}}" class="btn btn--gold btn--full">📞 {{phoneDisplay}}</a>
+            <a href="tel:{{phoneTel}}" class="btn btn--gold btn--full">📞 {{phoneDisplay}}</a>
           </div>
         </div>
       </div>
