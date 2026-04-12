@@ -118,6 +118,33 @@
     });
   });
 
+  /* ── FAQs ACCORDION ── */
+  window.toggleFaq = function (el) {
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+    if (!isOpen) el.classList.add('open');
+  };
+
+  /* ── INTERSECTION OBSERVER (Scroll Animations) ── */
+  const revealEls = document.querySelectorAll('.feature-card, .service-card, .testimonial-card, .faq-item, .steps-timeline__item, .area-pill');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { 
+        if (entry.isIntersecting) { 
+          entry.target.style.opacity = '1'; 
+          entry.target.style.transform = 'translateY(0)'; 
+          observer.unobserve(entry.target); 
+        } 
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach((el, i) => {
+      el.style.opacity = '0'; 
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.5s ease ${i * 0.04}s, transform 0.5s ease ${i * 0.04}s`;
+      observer.observe(el);
+    });
+  }
+
   /* ══════════════════════════════════════════════
      MULTI-STEP FORM LOGIC
      ══════════════════════════════════════════════
@@ -2308,25 +2335,7 @@
     if (fw) window.scrollTo({ top: fw.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
   }
 
-  /* ── FAQs ACCORDION ── */
-  window.toggleFaq = function (el) {
-    const isOpen = el.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
-    if (!isOpen) el.classList.add('open');
-  };
 
-  /* ── INTERSECTION OBSERVER ── */
-  const revealEls = document.querySelectorAll('.feature-card, .service-card, .testimonial-card, .faq-item, .steps-timeline__item, .area-pill');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; observer.unobserve(entry.target); } });
-    }, { threshold: 0.1 });
-    revealEls.forEach((el, i) => {
-      el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
-      el.style.transition = `opacity 0.5s ease ${i * 0.04}s, transform 0.5s ease ${i * 0.04}s`;
-      observer.observe(el);
-    });
-  }
 
   /* ── INIT ── */
   updateStepFlow();
