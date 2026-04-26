@@ -2378,5 +2378,25 @@
     });
   });
 
-})();
+  /* ── QUICK CTA FORM WHATSAPP REDIRECT ── */
+  document.querySelectorAll('.quick-cta-form').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+      const name = fd.get('name') || '';
+      const email = fd.get('email') || '';
+      const phone = fd.get('phone') || '';
+      const date = fd.get('date') || '';
+      
+      let text = `New Call Back Request:\n`;
+      if (name) text += `\nName: ${name}`;
+      if (email) text += `\nEmail: ${email}`;
+      if (phone) text += `\nPhone: ${phone}`;
+      if (date) text += `\nDate: ${date}`;
+      
+      const url = `https://wa.me/447345624506?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  });
 
+})();
