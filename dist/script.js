@@ -2378,7 +2378,7 @@
     });
   });
 
-  /* ── QUICK CTA FORM WHATSAPP REDIRECT ── */
+  /* ── QUICK CTA FORM MAILTO REDIRECT ── */
   document.querySelectorAll('.quick-cta-form').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -2394,8 +2394,9 @@
       if (phone) text += `\nPhone: ${phone}`;
       if (date) text += `\nDate: ${date}`;
       
-      const url = `https://wa.me/447345624506?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+      const subject = `New Call Back Request - ${name || 'Website Lead'}`;
+      const url = `mailto:theroyalsremovals@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+      window.location.href = url;
     });
   });
 
