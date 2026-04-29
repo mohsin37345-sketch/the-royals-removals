@@ -4460,3 +4460,84 @@ body.flow-student .form-progress__connector--student {
     font-size: 1.4rem;
   }
 }
+
+/* ══════════════════════════════════════════════
+   FORM TOAST NOTIFICATION
+   ══════════════════════════════════════════════ */
+.form-toast {
+  position: fixed;
+  top: 90px;
+  right: 24px;
+  z-index: 10000;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 420px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  box-shadow: 0 16px 56px rgba(0,0,0,0.18), 0 0 0 1px rgba(201,168,76,0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+  pointer-events: auto;
+}
+.form-toast--visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+.form-toast--success {
+  background: rgba(26, 23, 20, 0.95);
+  border: 1.5px solid rgba(201,168,76,0.35);
+}
+.form-toast--error {
+  background: rgba(26, 23, 20, 0.95);
+  border: 1.5px solid rgba(220, 80, 60, 0.4);
+}
+.form-toast__icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.form-toast__content {
+  flex: 1;
+}
+.form-toast__content strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.form-toast__content p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+.form-toast__close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.form-toast__close:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+/* Mobile toast */
+@media (max-width: 600px) {
+  .form-toast {
+    right: 12px;
+    left: 12px;
+    max-width: none;
+    top: 80px;
+  }
+}

@@ -146,6 +146,74 @@
   }
 
   /* ══════════════════════════════════════════════
+     QUICK CALLBACK FORM (Hero + CTA sections)
+     — AJAX submit to Formsubmit.co + Toast notification
+  ══════════════════════════════════════════════ */
+  document.querySelectorAll('.quick-cta-form').forEach(function(ctaForm) {
+    ctaForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var btn = ctaForm.querySelector('button[type="submit"]');
+      var origHTML = btn ? btn.innerHTML : '';
+      if (btn) { btn.disabled = true; btn.innerHTML = '<span>Sending…</span>'; }
+
+      var formData = new FormData(ctaForm);
+
+      fetch(ctaForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        // Show success notification
+        showFormToast(true);
+        ctaForm.reset();
+        if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
+      }).catch(function(error) {
+        showFormToast(false);
+        if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
+      });
+    });
+  });
+
+  function showFormToast(success) {
+    // Remove any existing toast
+    var old = document.getElementById('formToast');
+    if (old) old.remove();
+
+    var toast = document.createElement('div');
+    toast.id = 'formToast';
+    toast.className = 'form-toast ' + (success ? 'form-toast--success' : 'form-toast--error');
+    toast.innerHTML = success
+      ? '<div class="form-toast__icon">✅</div>'
+        + '<div class="form-toast__content">'
+        + '<strong>Request Received!</strong>'
+        + '<p>Thank you! We\'ll call you back within 15 minutes.</p>'
+        + '</div>'
+        + '<button class="form-toast__close" onclick="this.parentElement.remove()">✕</button>'
+      : '<div class="form-toast__icon">⚠️</div>'
+        + '<div class="form-toast__content">'
+        + '<strong>Something went wrong</strong>'
+        + '<p>Please try again or call us at 07345 624506.</p>'
+        + '</div>'
+        + '<button class="form-toast__close" onclick="this.parentElement.remove()">✕</button>';
+
+    document.body.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(function() {
+      toast.classList.add('form-toast--visible');
+    });
+
+    // Auto-dismiss after 8 seconds
+    setTimeout(function() {
+      if (toast.parentElement) {
+        toast.classList.remove('form-toast--visible');
+        setTimeout(function() { if (toast.parentElement) toast.remove(); }, 400);
+      }
+    }, 8000);
+  }
+
+  /* ══════════════════════════════════════════════
      MULTI-STEP FORM LOGIC
      ══════════════════════════════════════════════
      Flows:
