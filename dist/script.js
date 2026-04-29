@@ -159,14 +159,20 @@
 
       var formData = new FormData(ctaForm);
 
-      fetch(ctaForm.action, {
+      // Convert form action to AJAX endpoint (formsubmit.co/ajax/email)
+      var ajaxUrl = ctaForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+
+      fetch(ajaxUrl, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
-        // Show success notification
-        showFormToast(true);
-        ctaForm.reset();
+        if (response.ok) {
+          showFormToast(true);
+          ctaForm.reset();
+        } else {
+          showFormToast(false);
+        }
         if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
       }).catch(function(error) {
         showFormToast(false);
