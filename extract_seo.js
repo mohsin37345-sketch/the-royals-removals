@@ -154,7 +154,8 @@ try {
   const robots = fs.readFileSync(path.join(dist, 'robots.txt'), 'utf8');
   console.log(robots);
   if (!robots.includes('Sitemap:')) console.log('❌ No Sitemap directive');
-  if (!robots.includes('theroyalremovals.co.uk')) console.log('⚠️ Sitemap URL might be wrong');
+  if (!robots.includes('theroyalsremovals.co.uk')) console.log('⚠️ Sitemap URL might be wrong');
 } catch(e) {
   console.log('Error: ' + e.message);
 }
+

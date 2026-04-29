@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://theroyalremovals.co.uk/sitemap.xml
-Sitemap: https://theroyalremovals.co.uk/sitemap-pages.xml
-Sitemap: https://theroyalremovals.co.uk/sitemap-services.xml
-Sitemap: https://theroyalremovals.co.uk/sitemap-areas.xml
-Sitemap: https://theroyalremovals.co.uk/sitemap-blog.xml
+Sitemap: https://theroyalsremovals.co.uk/sitemap.xml
+Sitemap: https://theroyalsremovals.co.uk/sitemap-pages.xml
+Sitemap: https://theroyalsremovals.co.uk/sitemap-services.xml
+Sitemap: https://theroyalsremovals.co.uk/sitemap-areas.xml
+Sitemap: https://theroyalsremovals.co.uk/sitemap-blog.xml
+
