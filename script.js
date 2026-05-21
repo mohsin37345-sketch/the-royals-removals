@@ -228,7 +228,7 @@
        All other services:        [1, 'simple']
   ────────────────────────────────────────────── */
   const form = document.getElementById('quoteForm');
-  if (!form) return;
+  if (form) {
 
   const FLOW_HOUSE = [1, 2, 3, 'contact'];
   const FLOW_FURNITURE = [1, 'furniture-1', 'furniture-2', 'simple'];
@@ -379,11 +379,9 @@
       const md = (form.querySelector('#moveDate') || {}).value || '';
       if (!pa.trim() || !pt || !da.trim() || !dt) valid = false;
       if (hasDate && !md) valid = false;
-      // Validate additional services (at least one required)
-      const additionalChecked = form.querySelectorAll('#additionalServicesGrid input[name="additionalServices"]:checked');
+      // Validate additional services (optional)
       const addSvcErr = document.getElementById('err-additional-services');
-      if (additionalChecked.length === 0) { valid = false; if (addSvcErr) addSvcErr.classList.remove('hidden'); }
-      else { if (addSvcErr) addSvcErr.classList.add('hidden'); }
+      if (addSvcErr) addSvcErr.classList.add('hidden');
     } else if (stepId === 3) {
       errElId = 'err-3';
       if (getTotalInventoryCount() === 0) valid = false;
@@ -407,11 +405,9 @@
       const da = (form.querySelector('#furnitureDeliveryAddress') || {}).value || '';
       const df = (form.querySelector('#furnitureDeliveryFloor') || {}).value || '';
       if (!pa.trim() || !pf || !da.trim() || !df) valid = false;
-      // Validate furniture additional services (at least one required)
-      const fAddChecked = form.querySelectorAll('#furnitureAdditionalServicesGrid input[name="furnitureAdditionalServices"]:checked');
+      // Validate furniture additional services (optional)
       const fAddErr = document.getElementById('err-furniture-additional-services');
-      if (fAddChecked.length === 0) { valid = false; if (fAddErr) fAddErr.classList.remove('hidden'); }
-      else { if (fAddErr) fAddErr.classList.add('hidden'); }
+      if (fAddErr) fAddErr.classList.add('hidden');
     } else if (stepId === 'furniture-2') {
       errElId = 'err-furniture-2';
       const count = Object.values(furnitureAddedItems).reduce((sum, qty) => sum + qty, 0);
@@ -2451,6 +2447,7 @@
       if (customInput) customInput.value = '';
     });
   });
+  } // End of if (form)
 
   /* ── QUICK CTA FORM MAILTO REDIRECT ── */
   document.querySelectorAll('.quick-cta-form').forEach(form => {
