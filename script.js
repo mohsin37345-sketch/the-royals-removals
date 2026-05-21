@@ -2449,26 +2449,7 @@
   });
   } // End of if (form)
 
-  /* ── QUICK CTA FORM MAILTO REDIRECT ── */
-  document.querySelectorAll('.quick-cta-form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fd = new FormData(form);
-      const name = fd.get('name') || '';
-      const email = fd.get('email') || '';
-      const phone = fd.get('phone') || '';
-      const date = fd.get('date') || '';
-      
-      let text = `New Call Back Request:\n`;
-      if (name) text += `\nName: ${name}`;
-      if (email) text += `\nEmail: ${email}`;
-      if (phone) text += `\nPhone: ${phone}`;
-      if (date) text += `\nDate: ${date}`;
-      
-      const subject = `New Call Back Request - ${name || 'Website Lead'}`;
-      const url = `mailto:theroyalsremovals@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
-      window.location.href = url;
-    });
-  });
+  // The quick-cta-form is submitted via AJAX using formsubmit.co (defined at the top of this script)
+  // displaying a modern success toast to the user instead of opening their mail client.
 
 })();
