@@ -168,10 +168,16 @@
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
         if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }).then(function(data) {
+        if (data && (data.success === 'false' || data.success === false)) {
+          showFormToast(false, data.message);
+        } else {
           showFormToast(true);
           ctaForm.reset();
-        } else {
-          showFormToast(false);
         }
         if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
       }).catch(function(error) {
@@ -181,7 +187,7 @@
     });
   });
 
-  function showFormToast(success) {
+  function showFormToast(success, message) {
     // Remove any existing toast
     var old = document.getElementById('formToast');
     if (old) old.remove();
@@ -189,17 +195,17 @@
     var toast = document.createElement('div');
     toast.id = 'formToast';
     toast.className = 'form-toast ' + (success ? 'form-toast--success' : 'form-toast--error');
-    toast.innerHTML = success
-      ? '<div class="form-toast__icon">✅</div>'
+    
+    var bodyText = message || (success 
+      ? "Thank you! We'll call you back within 15 minutes." 
+      : "Please try again or call us at 07345 624506.");
+    var titleText = success ? "Request Received!" : "Something went wrong";
+
+    toast.innerHTML = 
+        '<div class="form-toast__icon">' + (success ? '✅' : '⚠️') + '</div>'
         + '<div class="form-toast__content">'
-        + '<strong>Request Received!</strong>'
-        + '<p>Thank you! We\'ll call you back within 15 minutes.</p>'
-        + '</div>'
-        + '<button class="form-toast__close" onclick="this.parentElement.remove()">✕</button>'
-      : '<div class="form-toast__icon">⚠️</div>'
-        + '<div class="form-toast__content">'
-        + '<strong>Something went wrong</strong>'
-        + '<p>Please try again or call us at 07345 624506.</p>'
+        + '<strong>' + titleText + '</strong>'
+        + '<p>' + bodyText + '</p>'
         + '</div>'
         + '<button class="form-toast__close" onclick="this.parentElement.remove()">✕</button>';
 
@@ -2366,6 +2372,14 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
+    }).then(res => {
+        if (!res.ok) throw new Error('FormSubmit network error');
+        return res.json();
+    }).then(data => {
+        if (data && (data.success === 'false' || data.success === false)) {
+            throw new Error(data.message || 'FormSubmit activation required');
+        }
+        return data;
     });
 
     // Make.com webhook for Slack forwarding & countdown reminders
@@ -2401,7 +2415,7 @@
       submitBtn.disabled = false;
       if (btnText) btnText.classList.remove('hidden');
       if (btnLoader) btnLoader.classList.add('hidden');
-      alert('There was a problem submitting your request. Please call us directly.');
+      alert(error.message || 'There was a problem submitting your request. Please call us directly.');
     });
   });
 
