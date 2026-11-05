@@ -5,6 +5,9 @@
 (function () {
   'use strict';
 
+  // Make.com webhook for Slack forwarding & countdown reminders
+  const MAKE_WEBHOOK = 'https://hook.eu1.make.com/838q63uv1gxtcvj5jypyqr9rjiadx36b';
+
   /* ─────────────────────────────────────────────
      UK POSTCODE AUTOCOMPLETE
   ───────────────────────────────────────────── */
@@ -147,9 +150,9 @@
 
   /* ══════════════════════════════════════════════
      QUICK CALLBACK FORM (Hero + CTA sections)
-     — AJAX submit to Formsubmit.co + Toast notification
+     — AJAX submit to Formsubmit.co and Make.com + Toast notification
   ══════════════════════════════════════════════ */
-  document.querySelectorAll('.quick-cta-form').forEach(function(ctaForm) {
+  document.querySelectorAll('.quick-cta-form, #contactForm').forEach(function(ctaForm) {
     ctaForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -162,26 +165,50 @@
       // Convert form action to AJAX endpoint (formsubmit.co/ajax/email)
       var ajaxUrl = ctaForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
 
-      fetch(ajaxUrl, {
+      var emailPromise = fetch(ajaxUrl, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Network response was not ok');
-        }
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
       }).then(function(data) {
         if (data && (data.success === 'false' || data.success === false)) {
-          showFormToast(false, data.message);
+          throw new Error(data.message || 'FormSubmit activation required');
+        }
+      });
+
+      // Same field names as the quote form so Make.com handles both alike
+      var isContact = ctaForm.id === 'contactForm';
+      var makePayload = {
+        _subject: formData.get('_subject'),
+        Service: isContact ? 'Contact message' : 'Call back request',
+        fullName: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        _inventoryText: ''
+      };
+      if (isContact) makePayload.Message = formData.get('message');
+
+      // Skip Make.com for bots that filled the honeypot; FormSubmit filters those itself
+      var makePromise = formData.get('_honey') ? Promise.reject(new Error('Honeypot filled')) : fetch(MAKE_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(makePayload)
+      }).then(function(response) {
+        if (!response.ok) throw new Error('Make.com network error');
+      });
+
+      // The lead is safe if either channel received it
+      Promise.allSettled([emailPromise, makePromise]).then(function(results) {
+        var failed = results.filter(function(r) { return r.status === 'rejected'; });
+        failed.forEach(function(r) { console.warn('Form delivery failed:', r.reason); });
+        if (failed.length === results.length) {
+          showFormToast(false);
         } else {
           showFormToast(true);
           ctaForm.reset();
         }
-        if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
-      }).catch(function(error) {
-        showFormToast(false);
         if (btn) { btn.disabled = false; btn.innerHTML = origHTML; }
       });
     });
@@ -2382,8 +2409,6 @@
         return data;
     });
 
-    // Make.com webhook for Slack forwarding & countdown reminders
-    const MAKE_WEBHOOK = 'https://hook.eu1.make.com/838q63uv1gxtcvj5jypyqr9rjiadx36b';
     const makePayload = Object.assign({}, payload, {
       _inventoryText: inventoryText || ''
     });
@@ -2391,10 +2416,19 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(makePayload)
-    }).catch(err => console.warn('Make.com notification failed:', err));
+    }).then(res => {
+        if (!res.ok) throw new Error('Make.com network error');
+    });
 
-    Promise.all([emailPromise, makePromise])
-    .then(() => {
+    // The lead is safe if either channel received it
+    Promise.allSettled([emailPromise, makePromise])
+    .then(results => {
+      const failed = results.filter(r => r.status === 'rejected');
+      failed.forEach(r => console.warn('Form delivery failed:', r.reason));
+      if (failed.length === results.length) {
+        throw new Error('There was a problem submitting your request. Please call us on 07345 624506.');
+      }
+
       // Show success
       const currentStepEl = document.getElementById(getStepElementId(lastStepId));
       if (currentStepEl) currentStepEl.classList.remove('active');
@@ -2463,7 +2497,7 @@
   });
   } // End of if (form)
 
-  // The quick-cta-form is submitted via AJAX using formsubmit.co (defined at the top of this script)
+  // The quick-cta-form is submitted via AJAX to formsubmit.co and Make.com (defined at the top of this script)
   // displaying a modern success toast to the user instead of opening their mail client.
 
 })();
