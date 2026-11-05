@@ -5,6 +5,10 @@
 (function () {
   'use strict';
 
+  // Web3Forms emails enquiries to the business; the access key is public by design
+  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+  const WEB3FORMS_KEY = '257bfd98-b90f-4f5b-ae99-f9566a6e35bb';
+
   // Make.com webhook for Slack forwarding & countdown reminders
   const MAKE_WEBHOOK = 'https://hook.eu1.make.com/838q63uv1gxtcvj5jypyqr9rjiadx36b';
 
@@ -150,7 +154,7 @@
 
   /* ══════════════════════════════════════════════
      QUICK CALLBACK FORM (Hero + CTA sections)
-     — AJAX submit to Formsubmit.co and Make.com + Toast notification
+     — AJAX submit to Web3Forms and Make.com + Toast notification
   ══════════════════════════════════════════════ */
   document.querySelectorAll('.quick-cta-form, #contactForm').forEach(function(ctaForm) {
     ctaForm.addEventListener('submit', function(e) {
@@ -162,26 +166,20 @@
 
       var formData = new FormData(ctaForm);
 
-      // Convert form action to AJAX endpoint (formsubmit.co/ajax/email)
-      var ajaxUrl = ctaForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-      var emailPromise = fetch(ajaxUrl, {
+      var emailPromise = fetch(WEB3FORMS_URL, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
-        if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
       }).then(function(data) {
-        if (data && (data.success === 'false' || data.success === false)) {
-          throw new Error(data.message || 'FormSubmit activation required');
-        }
+        if (!data || !data.success) throw new Error((data && data.message) || 'Web3Forms error');
       });
 
       // Same field names as the quote form so Make.com handles both alike
       var isContact = ctaForm.id === 'contactForm';
       var makePayload = {
-        _subject: formData.get('_subject'),
+        _subject: formData.get('subject'),
         Service: isContact ? 'Contact message' : 'Call back request',
         fullName: formData.get('name'),
         email: formData.get('email'),
@@ -190,8 +188,8 @@
       };
       if (isContact) makePayload.Message = formData.get('message');
 
-      // Skip Make.com for bots that filled the honeypot; FormSubmit filters those itself
-      var makePromise = formData.get('_honey') ? Promise.reject(new Error('Honeypot filled')) : fetch(MAKE_WEBHOOK, {
+      // Skip Make.com for bots that ticked the honeypot; Web3Forms filters those itself
+      var makePromise = formData.get('botcheck') ? Promise.reject(new Error('Honeypot filled')) : fetch(MAKE_WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(makePayload)
@@ -2395,17 +2393,17 @@
     }
 
     // Send to email and Make.com in parallel
-    const emailPromise = fetch('https://formsubmit.co/ajax/theroyalsremovals@gmail.com', {
+    const { _subject, ...emailFields } = payload;
+    const emailPromise = fetch(WEB3FORMS_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
-    }).then(res => {
-        if (!res.ok) throw new Error('FormSubmit network error');
-        return res.json();
-    }).then(data => {
-        if (data && (data.success === 'false' || data.success === false)) {
-            throw new Error(data.message || 'FormSubmit activation required');
-        }
+        body: JSON.stringify(Object.assign({
+          access_key: WEB3FORMS_KEY,
+          subject: _subject,
+          from_name: 'The Royals Removals Website'
+        }, emailFields))
+    }).then(res => res.json()).then(data => {
+        if (!data || !data.success) throw new Error((data && data.message) || 'Web3Forms error');
         return data;
     });
 
@@ -2497,7 +2495,7 @@
   });
   } // End of if (form)
 
-  // The quick-cta-form is submitted via AJAX to formsubmit.co and Make.com (defined at the top of this script)
+  // The quick-cta-form is submitted via AJAX to Web3Forms and Make.com (defined at the top of this script)
   // displaying a modern success toast to the user instead of opening their mail client.
 
 })();
