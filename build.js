@@ -470,10 +470,21 @@ function buildAreaPages() {
   const childTpl = readTemplate('area-child.html');
 
   regions.forEach(region => {
+    // Hand-written area pages have their own template
+    if (region.customTemplate) {
+      buildCustomAreaPage(region);
+      return;
+    }
+
     // Region page
-    const childLinksHtml = region.children.map(c =>
-      `<a href="/areas/${region.slug}/${c.slug}/" class="area-pill">${c.name}</a>`
-    ).join('\n');
+    const childLinksHtml = [
+      ...region.children.map(c =>
+        `<a href="/areas/${region.slug}/${c.slug}/" class="area-pill">${c.name}</a>`
+      ),
+      ...(region.extraAreas || []).map(slug =>
+        `<a href="/areas/${slug}/" class="area-pill">${regions.find(r => r.slug === slug).name}</a>`
+      ),
+    ].join('\n');
 
     const serviceLinksHtml = services.filter(s => s.published).map(s =>
       `<li><a href="/services/${s.slug}/">${s.icon} ${s.title}</a></li>`
@@ -767,6 +778,106 @@ function buildAreaPages() {
       writePage(`areas/${region.slug}/${child.slug}/index.html`, childHtml);
     });
   });
+}
+
+/** Build an area page from its own template, with one JSON-LD graph */
+function buildCustomAreaPage(region) {
+  const url = config.business.url;
+  const pageUrl = `${url}/areas/${region.slug}/`;
+  const orgId = `${url}/#organization`;
+  const stripTags = html => html.replace(/<[^>]+>/g, '');
+
+  const faqsHtml = region.customFaqs.map(faq => `
+        <details class="faq-item area-faq">
+          <summary class="faq-item__question">${faq.q}<span class="faq-item__icon" aria-hidden="true">+</span></summary>
+          <div class="faq-item__answer">${faq.a}</div>
+        </details>`).join('\n');
+
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'MovingCompany',
+        '@id': orgId,
+        name: config.business.name,
+        legalName: 'TRSR LTD',
+        url,
+        logo: `${url}/images/logo_trimmed.png`,
+        image: `${url}/images/og-image.jpg`,
+        telephone: '+447345624506',
+        email: config.business.email,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '22 Whitehall Rd, Small Heath',
+          addressLocality: 'Birmingham',
+          postalCode: 'B9 5EJ',
+          addressCountry: 'GB',
+        },
+        sameAs: [
+          config.business.social.facebook,
+          config.business.social.instagram,
+          'https://www.trustpilot.com/review/theroyalsremovals.co.uk',
+        ],
+      },
+      { '@type': 'WebSite', '@id': `${url}/#website`, url, name: config.business.name, publisher: { '@id': orgId } },
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: region.metaTitle,
+        description: region.metaDescription,
+        isPartOf: { '@id': `${url}/#website` },
+        primaryImageOfPage: { '@type': 'ImageObject', url: `${url}/images/house-removals-${region.slug}-van-loading.jpg` },
+        breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+        dateModified: region.dateModified,
+      },
+      {
+        '@type': 'Service',
+        name: `House removals in ${region.name}`,
+        serviceType: 'House removals',
+        provider: { '@id': orgId },
+        areaServed: { '@type': 'Place', name: `${region.name}, Worcestershire` },
+        url: pageUrl,
+        offers: { '@type': 'Offer', priceCurrency: 'GBP', priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'GBP', minPrice: 400 }, description: '£400–£2,500+' },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${url}/` },
+          { '@type': 'ListItem', position: 2, name: 'Areas', item: `${url}/areas/` },
+          { '@type': 'ListItem', position: 3, name: region.name, item: pageUrl },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: region.customFaqs.map(faq => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: { '@type': 'Answer', text: stripTags(faq.a) },
+        })),
+      },
+    ],
+  };
+
+  const vars = {
+    ...getCommonVars(),
+    pageTitle: region.metaTitle,
+    metaDescription: region.metaDescription,
+    canonicalUrl: pageUrl,
+    keywords: [region.primaryKeyword, ...(region.secondaryKeywords || [])].join(', '),
+    navItems: getNavItems(),
+    serviceLinks: getServiceLinks(),
+    areaLinks: getAreaLinks(),
+    ogType: 'website',
+    h1: region.h1,
+    regionName: region.name,
+    dateModified: region.dateModified,
+    areaFaqs: faqsHtml,
+    pageSchema: `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2).replace(/<\//g, '<\\/')}\n</script>`,
+  };
+  const content = render(readTemplate(region.customTemplate), vars);
+  writePage(`areas/${region.slug}/index.html`, buildPage(content, vars));
 }
 
 // ── Simple string hash for deterministic variation ─────────

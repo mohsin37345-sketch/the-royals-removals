@@ -1320,7 +1320,10 @@
     ],
     "customIntro": "As the second-largest city in the UK, Birmingham features incredibly diverse housing—from grand Victorian properties in Edgbaston to chic new-build apartments in the Jewellery Quarter. Our Birmingham removals team knows every rat-run, one-way system, and access challenge the city has to offer. Whether you're moving your family across town or relocating your business to Colmore Row, we deliver a stress-free experience.",
     "whyChooseUs": "The Royals Removals isn't just a man-with-a-van service. We are a fully insured, heavily equipped moving company dedicated to serving Birmingham. We provide free wardrobe boxes on moving day, heavy-duty floor runners to protect your carpets, and professional dismantling and reassembly for your large beds and wardrobes.",
-    "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne."
+    "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne.",
+    "extraAreas": [
+      "wythall"
+    ]
   },
   {
     "slug": "dudley",
@@ -2839,7 +2842,10 @@
     ],
     "customIntro": "Widely regarded as one of the most affluent and desirable places to live in the West Midlands, moving to or within Solihull demands a premier removal service. Whether you are transitioning to a substantial property in Knowle or Dorridge, or downsizing to an apartment near Touchwood, our Solihull removals team guarantees exceptional care for your possessions.",
     "whyChooseUs": "We specialize in high-value, complex house moves. We offer complete packing and unpacking services, fine art wrapping, and piano relocations. When moving within Solihull, our clients expect discretion, punctuality, and extreme diligence—standards that form the absolute core of our business.",
-    "logistics": "While Solihull's leafy avenues offer better access than the inner city, large properties often have intricate gated driveways. Our logistical teams conduct thorough pre-move surveys to assess access points, ensuring we deploy the correct vehicles—from nimble 3.5t Luton vans to larger HGVs—for a flawless move."
+    "logistics": "While Solihull's leafy avenues offer better access than the inner city, large properties often have intricate gated driveways. Our logistical teams conduct thorough pre-move surveys to assess access points, ensuring we deploy the correct vehicles—from nimble 3.5t Luton vans to larger HGVs—for a flawless move.",
+    "extraAreas": [
+      "wythall"
+    ]
   },
   {
     "slug": "coventry",
@@ -3907,7 +3913,10 @@
       }
     ],
     "regionLandscape": "Redditch is famously designated as a New Town, which means it benefits from a highly efficient road network, including the ring road and dual carriageways that make moving logistics straightforward. However, the town incorporates older villages and districts with tighter roads. Parking is generally plentiful, though some terraced streets in older parts of the town require careful van positioning.",
-    "propertyTypeSummary": "Housing in Redditch ranges from large 1970s and 1980s estates to much older Victorian properties in areas like Headless Cross and Astwood Bank. We frequently handle moves for standard 3-bed family semi-detached houses and modern new-builds, which typically offer great access for our removal teams."
+    "propertyTypeSummary": "Housing in Redditch ranges from large 1970s and 1980s estates to much older Victorian properties in areas like Headless Cross and Astwood Bank. We frequently handle moves for standard 3-bed family semi-detached houses and modern new-builds, which typically offer great access for our removal teams.",
+    "extraAreas": [
+      "wythall"
+    ]
   },
   {
     "slug": "bromsgrove",
@@ -3927,6 +3936,59 @@
     "children": [],
     "regionLandscape": "Bromsgrove sits perfectly between Birmingham and Worcester, offering fantastic links via the M5 and M42. The town centre can be busy, particularly around the high street, but the surrounding residential roads are generally wide and accommodate removal vans easily. We always map the best routes to avoid rush-hour bottlenecks on the A38.",
     "propertyTypeSummary": "The mix of properties in Bromsgrove is vast. We move clients in and out of Victorian red-brick terraces near the town centre, traditional 1930s semis, and sprawling modern developments in the Aston Fields and Oakalls areas. Larger detached properties in the surrounding villages are also a common request."
+  },
+  {
+    "slug": "wythall",
+    "name": "Wythall",
+    "h1": "House Removals in Wythall",
+    "metaTitle": "House Removals Wythall | Fully Insured | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Wythall, B47. Fixed prices, furniture wrapped and rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
+    "primaryKeyword": "house removals wythall",
+    "secondaryKeywords": [
+      "removals wythall",
+      "wythall removals",
+      "removal company wythall",
+      "man and van wythall",
+      "movers wythall"
+    ],
+    "intro": "House removals in Wythall from The Royals Removals, 7 days a week.",
+    "children": [],
+    "customTemplate": "area-wythall.html",
+    "dateModified": "2026-11-06",
+    "customFaqs": [
+      {
+        "q": "How much does a house removal in Wythall cost?",
+        "a": "A house removal in Wythall costs from <strong>£400 – £700 for a 1-bed house to £1,400 – £2,500+ for a 5+ bed house.</strong> These prices are for a local move under 50 miles (80 km). Your quote is fixed once agreed. <a href=\"/prices/\">Compare every guide price</a>."
+      },
+      {
+        "q": "How far in advance should I book removals in Wythall?",
+        "a": "Book removals in Wythall <strong>2–4 weeks ahead</strong>, if you can. We take short-notice moves when a crew is free, so call us even if your date is close."
+      },
+      {
+        "q": "Are my belongings insured during the move?",
+        "a": "<strong>Yes. Your belongings have goods-in-transit cover up to £50,000</strong>, and we hold public liability cover up to £5 million. Items you pack yourself are not covered by the goods-in-transit policy. <a href=\"/insurance/\">Read what our insurance excludes</a>."
+      },
+      {
+        "q": "Do you take apart and rebuild furniture?",
+        "a": "<strong>Yes. Your crew takes apart and rebuilds beds, wardrobes and tables.</strong> Tell us about these items when you ask for your quote."
+      },
+      {
+        "q": "Can you help with parking when moving in Wythall?",
+        "a": "<strong>Yes. We check parking at both addresses at the quote stage.</strong> We advise on cones or a parking suspension, and your local council handles any permission."
+      },
+      {
+        "q": "Do you move pianos and other heavy items?",
+        "a": "<strong>Yes. We move 5 special items: pianos, safes, gym equipment, pool tables and American-style fridges.</strong> Each item is priced on its own and gets extra crew and protection."
+      },
+      {
+        "q": "Do you work weekends and bank holidays?",
+        "a": "<strong>Yes. We move homes 7 days a week, including weekends and bank holidays.</strong> Weekend moves cost 10% to 20% more."
+      },
+      {
+        "q": "Do you charge the Clean Air Zone fee for moves into Birmingham?",
+        "a": "<strong>No. Our fleet is compliant with the Birmingham Clean Air Zone (CAZ)</strong>, so you pay no CAZ charge on our vehicles."
+      }
+    ]
   },
   {
     "slug": "droitwich-spa",

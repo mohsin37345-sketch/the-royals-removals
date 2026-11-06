@@ -1,0 +1,497 @@
+  <style>
+    article > section:not(.hero) { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+    .hero .trustpilot-widget { min-height: 52px; }
+    .breadcrumb a { color: #6b5a3a; }
+    .wythall-hero-photo { position: absolute; inset: 0; z-index: 0; }
+    .wythall-hero-photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.32; }
+    .wythall-prose { max-width: 800px; margin: 0 auto; }
+    .wythall-prose h3 { margin: 1.75rem 0 0.5rem; font-family: var(--font-serif); font-size: 1.2rem; color: var(--dark); }
+    .wythall-prose p, .wythall-split p { margin-bottom: 1rem; line-height: 1.75; }
+    .wythall-list { margin: 0 0 1.25rem; padding-left: 1.25rem; list-style: disc; }
+    .wythall-list li { margin-bottom: 0.6rem; line-height: 1.65; }
+    .wythall-split h3 { margin: 0 0 0.75rem; font-family: var(--font-serif); font-size: 1.2rem; color: var(--dark); }
+    .wythall-split + .wythall-split { margin-top: 48px; }
+    .wythall-split picture { display: block; }
+    .wythall-split img { height: auto; box-shadow: var(--shadow-sm); }
+    .wythall-links { margin-top: 1rem; font-weight: 600; }
+    .wythall-prose a, .wythall-split a, .faq-item__answer a { color: #7a5c12; text-decoration: underline; }
+    .wythall-steps { list-style: none; margin: 0; padding: 0; gap: 20px; }
+    @media (min-width: 1025px) { .wythall-steps { grid-template-columns: repeat(4, 1fr); } }
+    .wythall-area-links { margin-bottom: 1.25rem; }
+    .service-card .btn { white-space: normal; text-align: center; }
+    .area-faq summary { list-style: none; cursor: pointer; }
+    .area-faq summary::-webkit-details-marker { display: none; }
+    .area-faq[open] { border-color: var(--gold-1); background: rgba(255,255,255,0.9); }
+    .area-faq[open] .faq-item__icon { transform: rotate(45deg); }
+    .area-faq[open] .faq-item__answer { max-height: none; padding: 0 22px 18px; }
+    .wythall-address { font-style: normal; color: #e5e5e5; line-height: 1.7; margin-bottom: 1.5rem; }
+    .wythall-address a, .wythall-closing-links a { color: #f0d78c; text-decoration: underline; }
+    .wythall-closing-links { color: #e5e5e5; margin-bottom: 1.5rem; }
+    .wythall-updated { color: rgba(255,255,255,0.75); font-size: 0.85rem; margin-top: 1rem; }
+    @media (max-width: 899px) { .services-grid.wythall-services { grid-template-columns: 1fr; } }
+  </style>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb-bar">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/areas/">Areas</a></li>
+          <li class="active" aria-current="page">{{regionName}}</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <article>
+
+  <!-- Page Hero -->
+  <section class="hero" aria-labelledby="wythall-title">
+    <picture class="wythall-hero-photo">
+      <source media="(max-width: 767px)" type="image/avif" srcset="/images/house-removals-wythall-van-loading-640.avif" />
+      <source media="(max-width: 767px)" type="image/webp" srcset="/images/house-removals-wythall-van-loading-640.webp" />
+      <source type="image/avif" srcset="/images/house-removals-wythall-van-loading.avif" />
+      <source type="image/webp" srcset="/images/house-removals-wythall-van-loading.webp" />
+      <img src="/images/house-removals-wythall-van-loading.jpg" alt="The Royals Removals crew loading a removal van for a house move in Wythall" width="1280" height="960" loading="eager" fetchpriority="high" />
+    </picture>
+    <div class="hero__bg-overlay"></div>
+    <div class="container hero__inner">
+
+      <!-- Left: Copy -->
+      <div class="hero__copy">
+        <h1 class="hero__h1" id="wythall-title">{{h1}}</h1>
+        <p class="hero__sub">
+          <strong>House removals in Wythall cover packing, loading, moving and unloading your home in the B47 area, from a 1-bed flat to a 5-bed family house.</strong> The Royals Removals is a Birmingham removal company that works across Wythall, Hollywood, Grimes Hill and the villages around them, 7 days a week.
+        </p>
+        <p class="hero__sub">
+          Every move comes with <strong>a fixed quote once agreed, furniture wrapped before it leaves the house, and goods-in-transit cover up to £50,000.</strong> Send your details and you get a quote back within 15 minutes.
+        </p>
+        <ul class="hero__trust-list">
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Fully insured: £50,000 goods in transit, £5 million public liability</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Free quote within 15 minutes</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Moves 7 days a week, including weekends</span>
+          </li>
+          <li>
+            <span class="hero__trust-icon">✓</span>
+            <span>Beds, wardrobes and tables taken apart and rebuilt</span>
+          </li>
+        </ul>
+
+        <div class="hero__ctas" style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="tel:+447345624506" class="btn btn--gold">📞 Call {{phoneDisplay}}</a>
+          <a href="{{whatsapp}}" class="btn btn--outline" target="_blank" rel="noopener" style="color:var(--white);border-color:rgba(255,255,255,0.3);">📱 WhatsApp Us</a>
+        </div>
+
+        <!-- Trust Review Badges -->
+        <div class="hero__trust-reviews" style="margin-top: 1.25rem; display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center;">
+          <!-- TrustBox widget - Review Collector -->
+          <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="69f6211d68a3e45cacfe1f93" data-style-height="52px" data-style-width="100%" data-token="329da09d-6ed3-4aff-8a41-45443a14059e" data-theme="dark" style="min-width: 140px;">
+            <a href="https://www.trustpilot.com/review/theroyalsremovals.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+          </div>
+          <!-- End TrustBox widget -->
+          <!-- Google Reviews Badge -->
+          <div class="trust-review-badge" style="display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 0.6rem 1rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            <div style="line-height: 1.2;">
+              <div style="font-size: 0.78rem; color: #fff; font-weight: 700; letter-spacing: 0.02em;">Google Reviews</div>
+              <div style="font-size: 0.7rem; color: rgba(255,255,255,0.85);">⭐⭐⭐⭐⭐ 5.0 Rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Quick Callback Form -->
+      <aside class="hero__form-wrap" id="quote-form" aria-label="Request a call back">
+        <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(20,18,14,0.72); border: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <form class="quick-cta-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="257bfd98-b90f-4f5b-ae99-f9566a6e35bb">
+            <input type="hidden" name="subject" value="New Call Back Request - The Royals Removals Website">
+            <input type="hidden" name="from_name" value="The Royals Removals Website">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+            <div class="form-field" style="margin-bottom: 1rem;">
+              <input type="text" name="name" class="form-input" placeholder="Your Name" aria-label="Your name" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+               <div class="form-field">
+                 <input type="email" name="email" class="form-input" placeholder="Email Address" aria-label="Email address" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+               <div class="form-field">
+                 <input type="tel" name="phone" class="form-input" placeholder="Phone Number" aria-label="Phone number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Get Started →</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Moving in Wythall -->
+  <section class="section section--gold-bg" aria-labelledby="wythall-moving">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-moving">Moving in <span class="gold-text">Wythall</span>: What You Need to Know</h2>
+      </div>
+      <div class="wythall-prose">
+        <p><strong>Moving in Wythall means planning around 3 things: narrow village lanes, the Alcester Road (A435), and traffic at M42 junction 3.</strong> The village sits about 7 miles (11 km) south of Birmingham city centre, on the border with Solihull, so many moves run north into Birmingham or east into Shirley and Solihull.</p>
+        <p>We plan the route and the arrival time around rush hour on the A435 and the M42. Lanes near Tanner's Green and Inkford are tight for large vans, so we check access at your address before the day and send the right size of vehicle.</p>
+        <p><strong>Moving into central Birmingham?</strong> Our vans are compliant with the Birmingham Clean Air Zone (CAZ), which covers the roads inside the A4540 Middleway. You pay no CAZ charge on our vehicles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost -->
+  <section class="section" aria-labelledby="wythall-cost">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-cost">How Much Do House Removals in <span class="gold-text">Wythall</span> Cost?</h2>
+      </div>
+      <div class="wythall-prose">
+        <p><strong>House removals in Wythall cost from £400 – £700 for a 1-bed house to £1,000 – £1,800 for a 4-bed house, for a local move under 50 miles (80 km).</strong> These are guide prices. Your quote is fixed once agreed.</p>
+        <div class="pricing-table-wrap glass-card">
+          <table class="pricing-table">
+            <thead>
+              <tr><th scope="col">Property size</th><th scope="col">Guide price (local move)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1-bed house</td><td>£400 – £700</td></tr>
+              <tr><td>2-bed house</td><td>£600 – £1,000</td></tr>
+              <tr><td>3-bed house</td><td>£800 – £1,400</td></tr>
+              <tr><td>4-bed house</td><td>£1,000 – £1,800</td></tr>
+              <tr><td>5+ bed house</td><td>£1,400 – £2,500+</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 1.5rem;">Smaller jobs are booked by the hour, with a 2-hour minimum: <strong>£40 – £60 an hour for 1 man and a van, £60 – £95 for 2 men and a van, and £70 – £110 for 3 men and a Luton van.</strong></p>
+        <p>Your price depends on <strong>4 factors: the amount you are moving, the distance, access at both addresses, and extras such as packing or storage.</strong> Weekend moves cost 10% to 20% more. Month-end dates cost 15% more. Any change in scope is discussed with you before the move.</p>
+        <p class="wythall-links"><a href="/prices/">See our full price list</a>, including flat moves · <a href="/get-a-quote/">Get your fixed quote</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--gold-bg" aria-labelledby="wythall-services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-services">Removal Services Available in <span class="gold-text">Wythall</span></h2>
+        <p class="section-sub"><strong>The Royals Removals offers 8 removal services in Wythall: house removals, furniture removals, man and van, packing, student removals, office relocation, commercial removals and equipment removals.</strong></p>
+      </div>
+      <div class="services-grid wythall-services">
+        <div class="service-card"><div class="service-card__body">
+          <h3>House Removals</h3>
+          <p><strong>A house removal includes wrapping, loading, transport, unloading, and taking apart and rebuilding beds, wardrobes and tables.</strong> Your crew arrives in uniform with blankets and straps. Larger homes get a 3-person crew and a Luton van.</p>
+          <a href="/services/house-removals-services/" class="btn btn--gold-outline">House removals in Wythall</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Furniture Removals</h3>
+          <p><strong>Furniture removals move single pieces or a few large items, such as a sofa, a wardrobe or a dining table.</strong> Use this for a shop collection, a family hand-me-down or one room's worth of furniture.</p>
+          <a href="/services/furniture-removals-services/" class="btn btn--gold-outline">Furniture removals</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Man and Van</h3>
+          <p><strong>Man and van in Wythall is a 1- or 2-person crew with a van, booked by the hour with a 2-hour minimum.</strong> It suits flat moves, partial moves and quick runs into Birmingham or Solihull.</p>
+          <a href="/services/man-and-van-services/" class="btn btn--gold-outline">Man and van in Wythall</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Packing Services</h3>
+          <p><strong>Packing services come in 3 levels: fragile items only, partial packing and full packing.</strong> We bring boxes, wardrobe boxes and bubble wrap. Items we pack are covered by our goods-in-transit insurance.</p>
+          <a href="/services/packing-services/" class="btn btn--gold-outline">Packing services</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Student Removals</h3>
+          <p><strong>Student removals move rooms in halls, shared houses and House in Multiple Occupation (HMO) lets.</strong> Each student's boxes are labelled and loaded separately.</p>
+          <a href="/services/student-removals-services/" class="btn btn--gold-outline">Student removals</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Office Relocation</h3>
+          <p><strong>Office relocation moves desks, chairs, IT equipment and files with labelled crates and a planned order of work.</strong> Moves run at weekends, if a weekday move would stop your business.</p>
+          <a href="/services/office-relocation-services/" class="btn btn--gold-outline">Office relocation</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Commercial Removals</h3>
+          <p><strong>Commercial removals move shops, stock rooms and business premises.</strong> We plan the move around your trading hours.</p>
+          <a href="/services/commercial-removals-services/" class="btn btn--gold-outline">Commercial removals</a>
+        </div></div>
+        <div class="service-card"><div class="service-card__body">
+          <h3>Equipment Removals</h3>
+          <p><strong>Equipment removals cover heavy and awkward items, including pianos, safes, gym equipment, pool tables and American-style fridges.</strong> Each item is priced on its own and gets extra crew and protection.</p>
+          <a href="/services/equipment-removals-services/" class="btn btn--gold-outline">Equipment removals</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Types -->
+  <section class="section" aria-labelledby="wythall-property">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-property">Property Types We Move in <span class="gold-text">Wythall</span></h2>
+      </div>
+      <div class="split-section wythall-split">
+        <div>
+          <p><strong>The property types we move in Wythall fall into 5 groups: older cottages, family semis, detached houses, bungalows and flats.</strong> Each group needs different planning, so we ask about your home at the quote stage.</p>
+          <ul class="wythall-list">
+            <li><strong>Older cottages and 18th-century buildings along Alcester Road:</strong> Low beams and narrow stairs mean large furniture is usually taken apart before it moves.</li>
+            <li><strong>Family semis in Hollywood and Grimes Hill:</strong> Beds and wardrobes come down one staircase, so they are usually taken apart first.</li>
+            <li><strong>Detached houses:</strong> Long drives can add a carry between the front door and the van, so we check the distance before the day.</li>
+            <li><strong>Bungalows:</strong> Level access makes a bungalow move quicker, and a clear driveway lets the van park close to the door.</li>
+            <li><strong>Flats and apartments:</strong> Flat removals in Wythall depend on the floor, the lift size and the nearest parking, so we check all 3.</li>
+          </ul>
+        </div>
+        <picture>
+          <source type="image/avif" srcset="/images/furniture-reassembly-wythall.avif" />
+          <source type="image/webp" srcset="/images/furniture-reassembly-wythall.webp" />
+          <img src="/images/furniture-reassembly-wythall.jpg" alt="Cordless drill and bed frame part-way through being rebuilt at a customer's new home" width="800" height="600" loading="lazy" decoding="async" class="split-section__img" />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section--gold-bg" aria-labelledby="wythall-process">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-process">How Your <span class="gold-text">Wythall</span> Move Works</h2>
+        <p class="section-sub"><strong>Your Wythall move works in 4 steps, from a free quote to settling into your new home.</strong></p>
+      </div>
+      <ol class="steps-timeline wythall-steps">
+        <li class="steps-timeline__item">
+          <div class="steps-timeline__num">01</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Get Your Free Quote</h3>
+            <p><a href="/get-a-quote/">Send your move details online</a> and you get a quote back within 15 minutes.</p>
+          </div>
+        </li>
+        <li class="steps-timeline__item">
+          <div class="steps-timeline__num">02</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Book Your Move</h3>
+            <p>Choose your date and confirm your booking, and your quote is fixed once agreed.</p>
+          </div>
+        </li>
+        <li class="steps-timeline__item">
+          <div class="steps-timeline__num">03</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>We Do the Heavy Lifting</h3>
+            <p>Your crew wraps, loads, moves and unloads your belongings, and keeps you updated through the day.</p>
+          </div>
+        </li>
+        <li class="steps-timeline__item">
+          <div class="steps-timeline__num">04</div>
+          <div class="steps-timeline__content glass-card">
+            <h3>Settle Into Your New Home</h3>
+            <p>Your crew rebuilds your furniture and puts your boxes in the right rooms before leaving.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="section" aria-labelledby="wythall-included">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-included">What's Included in Your <span class="gold-text">Wythall</span> Removal</h2>
+      </div>
+      <div class="split-section wythall-split">
+        <div>
+          <p><strong>Your Wythall removal includes 7 things as standard, from careful loading to a free quote.</strong></p>
+          <ul class="wythall-list">
+            <li>Careful loading and unloading</li>
+            <li>Furniture wrapping and protection</li>
+            <li>Dismantling and reassembly of beds, wardrobes and tables</li>
+            <li>Vans with blankets and straps</li>
+            <li>Uniformed crew</li>
+            <li>Weekend scheduling</li>
+            <li>Free quote</li>
+          </ul>
+        </div>
+        <picture>
+          <source type="image/avif" srcset="/images/house-removals-wythall-furniture-wrapping.avif" />
+          <source type="image/webp" srcset="/images/house-removals-wythall-furniture-wrapping.webp" />
+          <img src="/images/house-removals-wythall-furniture-wrapping.jpg" alt="Removal crew wrapping furniture in protective film before a Wythall house move" width="800" height="600" loading="lazy" decoding="async" class="split-section__img" />
+        </picture>
+      </div>
+      <div class="split-section wythall-split">
+        <picture>
+          <source type="image/avif" srcset="/images/packing-services-wythall-boxes.avif" />
+          <source type="image/webp" srcset="/images/packing-services-wythall-boxes.webp" />
+          <img src="/images/packing-services-wythall-boxes.jpg" alt="Removal boxes packed and taped for a move in Wythall" width="800" height="600" loading="lazy" decoding="async" class="split-section__img" />
+        </picture>
+        <div>
+          <h3>Optional Extras</h3>
+          <p>You can add 4 optional extras to your removal. <a href="/prices/">Check the price of each extra</a>.</p>
+          <ul class="wythall-list">
+            <li><strong>Packing:</strong> £80 – £200 for fragile items only, £100 – £300 for partial packing and £200 – £800+ for full packing.</li>
+            <li><strong>Packing materials:</strong> Boxes, wardrobe boxes and bubble wrap, bought as you need them.</li>
+            <li><strong>Special items:</strong> Pianos, American-style fridges, safes, gym equipment and pool tables.</li>
+            <li><strong>Storage:</strong> £80 – £150 a month for a small unit, £100 – £200 for a medium unit and £200 – £400 for a large unit.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance -->
+  <section class="section section--gold-bg" aria-labelledby="wythall-insurance">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-insurance">Fully Insured House Removals in <span class="gold-text">Wythall</span></h2>
+      </div>
+      <div class="wythall-prose">
+        <p><strong>Fully insured removals in Wythall come with 2 types of cover: Goods in Transit (GIT) up to £50,000 and public liability up to £5 million.</strong></p>
+        <p>GIT insurance protects your belongings against accidental damage, theft or loss while they are being moved. Public liability insurance covers injury or property damage during your move.</p>
+        <p>Items you pack yourself and items in storage are not covered by the GIT policy. Enhanced cover is available for high-value belongings.</p>
+        <p class="wythall-links"><a href="/insurance/">See what our insurance covers and excludes</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parking and Completion -->
+  <section class="section" aria-labelledby="wythall-parking">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-parking">Parking and Completion Day in <span class="gold-text">Wythall</span></h2>
+      </div>
+      <div class="wythall-prose">
+        <p><strong>Parking and completion day in Wythall are the 2 likeliest causes of delay, so we plan for both at the quote stage.</strong></p>
+        <h3>Parking for the Removal Van</h3>
+        <p><strong>Parking for the removal van is usually simple in Wythall, because most homes have driveways.</strong> Terraces and roads near Alcester Road may need cones or a parking suspension. We check parking at both addresses when we prepare your quote.</p>
+        <p>Wythall is in Bromsgrove District, so a <a href="https://www.birmingham.gov.uk/info/20109/parking/2012/parking_dispensations" rel="noopener">Birmingham parking dispensation</a> only applies at a Birmingham address. Check with your local council for a Wythall or Solihull address.</p>
+        <h3>If Your Completion Is Delayed</h3>
+        <p><strong>If your completion is delayed, your belongings are already loaded and ready to go when the keys are released.</strong> We start loading early on the day. We also keep you updated by phone or WhatsApp.</p>
+        <p>Storage is available if the keys do not come through that day. <a href="/prices/">View our storage prices</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Areas -->
+  <section class="section section--gold-bg" aria-labelledby="wythall-popular">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-popular">Popular Areas to Live in <span class="gold-text">Wythall</span></h2>
+      </div>
+      <div class="wythall-prose">
+        <p><strong>Popular areas to live in Wythall include 6 places in and around the village.</strong> Wythall is a large village and civil parish in Bromsgrove District, in the north-east corner of Worcestershire. The parish had 12,269 residents at the 2021 census and borders Solihull and Birmingham.</p>
+        <ul class="wythall-list">
+          <li><strong>Wythall village and Silver Street:</strong> Homes here sit close to Alcester Road, with Meadow Green Primary in the village.</li>
+          <li><strong>Grimes Hill:</strong> The eastern part of the village sits around Wythall railway station.</li>
+          <li><strong>Hollywood:</strong> The northern side of the area is nearest Birmingham and home to The Coppice Primary.</li>
+          <li><strong>Drakes Cross:</strong> This neighbourhood sits next to Hollywood.</li>
+          <li><strong>Inkford and Tanner's Green:</strong> These smaller settlements have narrow lanes, so van size matters.</li>
+          <li><strong>Majors Green:</strong> This area sits on the Solihull border.</li>
+        </ul>
+        <p>Wythall railway station is on the Shakespeare Line, and trains to Birmingham Snow Hill take about 20 minutes. The Transport Museum Wythall is also in the parish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Areas -->
+  <section class="section" aria-labelledby="wythall-nearby">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-nearby">Nearby Areas <span class="gold-text">We Cover</span></h2>
+        <p class="section-sub"><strong>Nearby areas we cover from Wythall include 6 towns and cities across Worcestershire, Warwickshire and the West Midlands.</strong></p>
+      </div>
+      <div class="areas-grid wythall-area-links">
+        <a href="/areas/bromsgrove/" class="area-pill">Removals in Bromsgrove</a>
+        <a href="/areas/solihull/" class="area-pill">Removals in Solihull</a>
+        <a href="/areas/birmingham/" class="area-pill">Removals in Birmingham</a>
+        <a href="/areas/redditch/" class="area-pill">Removals in Redditch</a>
+        <a href="/areas/alcester/" class="area-pill">Removals in Alcester</a>
+        <a href="/areas/droitwich-spa/" class="area-pill">Removals in Droitwich Spa</a>
+      </div>
+      <div class="wythall-prose" style="text-align: center;">
+        <p>We also cover Earlswood, Hollywood, Majors Green, Dickens Heath, Shirley, Kings Norton, Alvechurch and Hockley Heath.</p>
+        <p class="wythall-links"><a href="/areas/">See all the areas we cover</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="section section--gold-bg" id="faqs" aria-labelledby="wythall-faqs">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="wythall-faqs">Wythall Removal <span class="gold-text">FAQs</span></h2>
+      </div>
+      <div class="faqs-wrap">
+        {{areaFaqs}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section cta-section" id="cta" aria-labelledby="wythall-plan">
+    <div class="cta-section__bg">
+      <img src="/images/modern_home_exterior.png" alt="" width="640" height="640" loading="lazy" decoding="async" />
+    </div>
+    <div class="cta-section__overlay" style="background: rgba(17,17,17, 0.9);"></div>
+    <div class="container cta-section__inner split-section" style="align-items: center; gap: 48px;">
+
+      <!-- LEFT SIDE: Text + Call Button -->
+      <div class="cta-section__copy">
+        <h2 class="cta-section__title" id="wythall-plan" style="margin-bottom: 1rem;">Your Wythall Move Deserves a Proper Plan</h2>
+        <p class="cta-section__sub" style="margin-bottom: 1.25rem; font-size: 1.15rem; color: #e5e5e5; line-height: 1.6;"><strong>House removals in Wythall start with a fixed quote, and you get yours within 15 minutes.</strong> Your move is fully insured, and our crews work 7 days a week.</p>
+
+        <address class="wythall-address">
+          The Royals Removals, 22 Whitehall Rd, Small Heath, Birmingham B9 5EJ<br />
+          Phone: <a href="tel:+447345624506">{{phoneDisplay}}</a> · <a href="{{whatsapp}}" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        </address>
+
+        <p class="wythall-closing-links"><a href="/get-a-quote/">Start your online quote</a> · <a href="/contact/">Contact our team</a> · <a href="/reviews/">Read our customer reviews</a></p>
+
+        <div class="cta-section__badges">
+          <span>✓ Fixed Quote</span>
+          <span>✓ Fully Insured</span>
+        </div>
+        <p class="wythall-updated">Page updated <time datetime="{{dateModified}}">6 November 2026</time></p>
+      </div>
+
+      <!-- RIGHT SIDE: Quick Form -->
+      <aside class="cta-section__form-wrap" aria-label="Request a call back about your move">
+        <div class="glass-card" style="padding: 2.5rem; text-align: left; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <h3 style="margin-bottom: 1.5rem; color: #fff; font-size: 1.5rem; font-family: var(--font-serif);">Request a Quick Call Back</h3>
+          <form class="quick-cta-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="257bfd98-b90f-4f5b-ae99-f9566a6e35bb">
+            <input type="hidden" name="subject" value="New Call Back Request - The Royals Removals Website">
+            <input type="hidden" name="from_name" value="The Royals Removals Website">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+            <div class="form-field" style="margin-bottom: 1rem;">
+              <input type="text" name="name" class="form-input" placeholder="Your Name" aria-label="Your name" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+               <div class="form-field">
+                 <input type="email" name="email" class="form-input" placeholder="Email Address" aria-label="Email address" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+               <div class="form-field">
+                 <input type="tel" name="phone" class="form-input" placeholder="Phone Number" aria-label="Phone number" required style="width: 100%; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;" />
+               </div>
+            </div>
+            <button type="submit" class="btn btn--gold btn--full" style="width: 100%; font-size: 1.1rem; padding: 1rem;">Request My Call Back</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  </article>
+
+  <!-- Schema -->
+  {{pageSchema}}
