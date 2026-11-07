@@ -806,6 +806,7 @@ function buildCustomAreaPage(region) {
         image: `${url}/images/og-image.jpg`,
         telephone: '+447345624506',
         email: config.business.email,
+        priceRange: '£400–£2,500+',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '22 Whitehall Rd, Small Heath',
@@ -836,9 +837,9 @@ function buildCustomAreaPage(region) {
         name: `House removals in ${region.name}`,
         serviceType: 'House removals',
         provider: { '@id': orgId },
-        areaServed: { '@type': 'Place', name: `${region.name}, Worcestershire` },
+        areaServed: region.areaServed,
         url: pageUrl,
-        offers: { '@type': 'Offer', priceCurrency: 'GBP', priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'GBP', minPrice: 400 }, description: '£400–£2,500+' },
+        offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: 400, maxPrice: 2500, priceCurrency: 'GBP' } },
       },
       {
         '@type': 'BreadcrumbList',

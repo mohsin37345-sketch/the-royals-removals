@@ -1322,6 +1322,7 @@
     "whyChooseUs": "The Royals Removals isn't just a man-with-a-van service. We are a fully insured, heavily equipped moving company dedicated to serving Birmingham. We provide free wardrobe boxes on moving day, heavy-duty floor runners to protect your carpets, and professional dismantling and reassembly for your large beds and wardrobes.",
     "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne.",
     "extraAreas": [
+      "walmley",
       "wythall"
     ]
   },
@@ -3987,6 +3988,71 @@
       {
         "q": "Do you charge the Clean Air Zone fee for moves into Birmingham?",
         "a": "<strong>No. Our fleet is compliant with the Birmingham Clean Air Zone (CAZ)</strong>, so you pay no CAZ charge on our vehicles."
+      }
+    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Wythall, Worcestershire"
+    }
+  },
+  {
+    "slug": "walmley",
+    "name": "Walmley",
+    "h1": "House Removals in Walmley",
+    "metaTitle": "House Removals Walmley | Fully Insured | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Walmley, B76. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
+    "primaryKeyword": "house removals walmley",
+    "secondaryKeywords": [
+      "removals walmley",
+      "walmley removals",
+      "removal company walmley",
+      "man and van walmley",
+      "removals sutton coldfield"
+    ],
+    "intro": "House removals in Walmley from The Royals Removals, 7 days a week.",
+    "children": [],
+    "customTemplate": "area-walmley.html",
+    "dateModified": "2026-11-07",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Walmley, Sutton Coldfield",
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Birmingham"
+      }
+    },
+    "customFaqs": [
+      {
+        "q": "How much does a house removal in Walmley cost?",
+        "a": "A house removal in Walmley costs from <strong>£400 – £700 for a 1-bed house to £1,400 – £2,500+ for a 5+ bed house.</strong> These prices are for a local move under 50 miles (80 km). Your quote is fixed once agreed."
+      },
+      {
+        "q": "How can I move house cheaply in Walmley?",
+        "a": "<strong>Book man and van by the hour, with a 2-hour minimum.</strong> Rates are £40 – £60 an hour for 1 man and a van, and £60 – £95 for 2 men and a van. <a href=\"/prices/\">Compare all our prices</a>."
+      },
+      {
+        "q": "How far in advance should I book removals in Walmley?",
+        "a": "Book removals in Walmley <strong>2–4 weeks ahead</strong>, if you can. We take short-notice moves when a crew is free."
+      },
+      {
+        "q": "Are my belongings insured during the move?",
+        "a": "<strong>Yes. Your belongings have goods-in-transit cover up to £50,000</strong>, and we hold public liability cover up to £5 million. Items you pack yourself are not covered by the goods-in-transit policy. <a href=\"/insurance/\">Read our insurance limits and exclusions</a>."
+      },
+      {
+        "q": "Do you take apart and rebuild furniture?",
+        "a": "<strong>Yes. Your crew takes apart and rebuilds beds, wardrobes and tables.</strong> Tell us about these items when you ask for your quote."
+      },
+      {
+        "q": "Can I get a parking dispensation for the removal van in Walmley?",
+        "a": "<strong>Yes. Walmley is in Birmingham, so you can apply to Birmingham City Council for a parking dispensation.</strong> Check the council's current terms before you apply."
+      },
+      {
+        "q": "Do you work weekends and bank holidays?",
+        "a": "<strong>Yes. Our crews work 7 days a week, including weekends and bank holidays.</strong> Weekend moves cost 10% to 20% more. Bank holiday moves are priced on your quote."
+      },
+      {
+        "q": "Where can I read reviews of The Royals Removals?",
+        "a": "<strong>You can read our reviews on Google, where we are rated 5.0, and on Trustpilot.</strong> <a href=\"/reviews/\">See our customer reviews</a>."
       }
     ]
   },
