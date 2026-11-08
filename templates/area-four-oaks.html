@@ -1,0 +1,632 @@
+  <style>
+    .wm { --wm-gold: #E8A020; --wm-gold-soft: #C9A84C; --wm-tint: #FBF4E4; --wm-ink: #1A1714; --wm-text: #4A443D; --wm-line: #ECE6DB; --wm-alt: #FAF8F4; --wm-radius: 18px; --wm-shadow: 0 10px 30px -12px rgba(26,23,20,.18); --wm-shadow-lg: 0 30px 60px -20px rgba(26,23,20,.35); color: var(--wm-text); font-size: 16px; line-height: 1.7; }
+    .wm > section:not(.wm-hero) { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+    .wm *, .wm *::before, .wm *::after { box-sizing: border-box; }
+    .wm img { max-width: 100%; display: block; }
+    .wm strong { color: var(--wm-ink); font-weight: 600; }
+    .wm-wrap { width: min(1200px, 92%); margin-inline: auto; }
+    .wm-sec { padding: 96px 0; background: #fff; }
+    .wm-sec.wm-alt { background: var(--wm-alt); }
+    .wm h1, .wm h2, .wm h3 { color: var(--wm-ink); line-height: 1.2; margin: 0; }
+    .wm h2 { font-family: var(--font-serif); font-size: clamp(30px, 3.6vw, 44px); font-weight: 700; letter-spacing: -.01em; }
+    .wm h3 { font-size: 19px; font-weight: 700; }
+    .wm p { margin: 0; }
+    .wm-head { max-width: 780px; margin-bottom: 48px; }
+    .wm-head.wm-center { margin-inline: auto; text-align: center; }
+    .wm-head p { margin-top: 16px; font-size: 17px; }
+    .wm p a, .wm li a { color: var(--wm-ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--wm-gold); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+    .wm p a:hover, .wm li a:hover { color: #9a6508; }
+    .wm .wm-text-link { color: var(--wm-ink); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--wm-gold); }
+    .wm .wm-text-link:hover { color: #9a6508; }
+
+    /* Buttons */
+    .wm-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 26px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 0; cursor: pointer; transition: transform .2s, background .2s; font-family: inherit; }
+    .wm-btn:hover { transform: translateY(-2px); }
+    .wm-btn-gold { background: var(--wm-gold); color: var(--wm-ink); box-shadow: 0 10px 24px -8px rgba(232,160,32,.6); }
+    .wm-btn-gold:hover { background: #F2B23C; }
+    .wm-btn-ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .wm-btn-ghost:hover { background: rgba(255,255,255,.16); }
+    .wm-btn-dark { background: var(--wm-ink); color: #fff; }
+
+    /* Hero */
+    .wm-hero { position: relative; color: #fff; overflow: hidden; background: var(--wm-ink); padding: 0; }
+    .wm-hero-bg { position: absolute; inset: 0; }
+    .wm-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .wm-hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(26,23,20,.96) 0%, rgba(26,23,20,.88) 45%, rgba(26,23,20,.55) 100%); }
+    .wm-hero-grid { position: relative; display: grid; grid-template-columns: 1.25fr .85fr; gap: 56px; align-items: center; padding: 112px 0 96px; }
+    .wm-crumbs { grid-column: 1 / -1; font-size: 13px; }
+    .wm-crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; color: #bfb6a8; }
+    .wm-crumbs li + li::before { content: "›"; margin-right: 8px; }
+    .wm .wm-crumbs a { color: #d6cec2; text-decoration: none; font-weight: 400; }
+    .wm .wm-crumbs a:hover { color: var(--wm-gold); }
+    .wm-crumbs [aria-current] { color: var(--wm-gold); }
+    .wm-hero h1 { font-family: var(--font-serif); font-size: clamp(40px, 5.4vw, 66px); color: #fff; font-weight: 700; letter-spacing: -.015em; margin-bottom: 22px; }
+    .wm-hero h1 em { font-style: normal; color: var(--wm-gold); }
+    .wm-hero p { color: #ddd5c8; font-size: 17px; margin-bottom: 16px; max-width: 640px; }
+    .wm-hero p strong { color: #fff; }
+    .wm-hero-checks { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 22px; margin: 28px 0 32px; padding: 0; max-width: 660px; }
+    .wm-hero-checks li { display: flex; gap: 12px; font-size: 15px; color: #f1ebe0; align-items: flex-start; line-height: 1.5; }
+    .wm-tick { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--wm-gold); color: var(--wm-ink); display: grid; place-items: center; font-size: 12px; font-weight: 800; margin-top: 1px; }
+    .wm-hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+    .wm-ratings { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .wm-rating { display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); text-decoration: none; color: #fff; line-height: 1.35; }
+    .wm-rating-name { display: block; font-weight: 700; font-size: 14px; }
+    .wm-rating-sub { display: block; font-size: 12.5px; color: #d6cec2; }
+
+    /* Form card */
+    .wm-form-card { background: #fff; color: var(--wm-text); border-radius: 22px; padding: 38px 34px 34px; box-shadow: var(--wm-shadow-lg); position: relative; overflow: hidden; }
+    .wm-form-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--wm-gold), var(--wm-gold-soft)); }
+    .wm-form-card h3 { font-family: var(--font-serif); font-size: 26px; margin-bottom: 22px; }
+    .wm-field { margin-bottom: 14px; }
+    .wm-field input { width: 100%; padding: 15px 18px; border: 1.5px solid var(--wm-line); border-radius: 12px; font: inherit; font-size: 15px; color: var(--wm-ink); background: var(--wm-alt); transition: border-color .2s, background .2s; }
+    .wm-field input::placeholder { color: #6f675d; }
+    .wm-field input:focus { outline: none; border-color: var(--wm-gold); background: #fff; }
+    .wm-form-card .wm-btn { width: 100%; margin-top: 6px; padding: 17px; }
+
+    /* Moving in the area */
+    .wm-know { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
+    .wm-know h2 { margin-bottom: 26px; }
+    .wm-know p { margin-bottom: 18px; font-size: 17px; }
+    .wm-callout { background: var(--wm-ink); color: #e6dfd3; border-radius: var(--wm-radius); padding: 34px; position: relative; overflow: hidden; }
+    .wm-callout::after { content: "CAZ"; position: absolute; right: -10px; bottom: -30px; font-family: var(--font-serif); font-size: 130px; font-weight: 700; color: rgba(232,160,32,.09); line-height: 1; }
+    .wm-callout .wm-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--wm-gold); display: grid; place-items: center; margin-bottom: 18px; }
+    .wm-callout p { margin: 0; position: relative; z-index: 1; font-size: 16.5px; }
+    .wm-callout strong { color: var(--wm-gold); display: block; font-size: 20px; margin-bottom: 8px; font-family: var(--font-serif); }
+
+    /* Pricing */
+    .wm-price { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: start; }
+    .wm-table { background: #fff; border-radius: var(--wm-radius); box-shadow: var(--wm-shadow); overflow: hidden; border: 1px solid var(--wm-line); }
+    .wm-table table { width: 100%; border-collapse: collapse; }
+    .wm-table th { background: var(--wm-ink); color: #fff; text-align: left; padding: 18px 26px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+    .wm-table th:last-child, .wm-table td:last-child { text-align: right; }
+    .wm-table td { padding: 18px 26px; border-bottom: 1px solid var(--wm-line); font-size: 16px; }
+    .wm-table tr:last-child td { border-bottom: 0; }
+    .wm-table td:first-child { font-weight: 600; color: var(--wm-ink); white-space: nowrap; }
+    .wm-table td:first-child::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--wm-gold); margin-right: 12px; vertical-align: middle; }
+    .wm-table td:last-child { font-weight: 700; color: var(--wm-ink); font-variant-numeric: tabular-nums; }
+    .wm-table tbody tr:hover { background: var(--wm-tint); }
+    .wm-notes { display: flex; flex-direction: column; gap: 18px; }
+    .wm-note { background: #fff; border: 1px solid var(--wm-line); border-radius: var(--wm-radius); padding: 26px; display: flex; gap: 18px; }
+    .wm-note .wm-ic { flex: none; width: 46px; height: 46px; border-radius: 12px; background: var(--wm-tint); display: grid; place-items: center; }
+    .wm-price-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+    /* Services */
+    .wm-svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .wm-svc { background: #fff; border: 1px solid var(--wm-line); border-radius: var(--wm-radius); padding: 30px 26px; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
+    .wm-svc:hover { transform: translateY(-6px); box-shadow: var(--wm-shadow); }
+    .wm-svc::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--wm-gold); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+    .wm-svc:hover::after { transform: scaleX(1); }
+    .wm-svc .wm-ic { width: 54px; height: 54px; border-radius: 14px; background: var(--wm-tint); display: grid; place-items: center; margin-bottom: 20px; transition: background .25s; }
+    .wm-svc:hover .wm-ic { background: var(--wm-gold); }
+    .wm-svc h3 { margin-bottom: 10px; }
+    .wm-svc p { font-size: 14.5px; line-height: 1.65; flex: 1; margin-bottom: 20px; }
+    .wm-svc p strong { font-weight: 500; color: var(--wm-text); }
+    .wm-svc > a { font-size: 14px; font-weight: 600; color: var(--wm-ink); text-decoration: none; display: inline-flex; gap: 8px; align-items: center; }
+    .wm-svc > a span { color: #9a6508; transition: transform .2s; }
+    .wm-svc > a:hover span { transform: translateX(4px); }
+
+    /* Property types */
+    .wm-prop { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .wm-prop h2 + p { margin-top: 18px; font-size: 17px; }
+    .wm-prop-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 28px 0 0; padding: 0; }
+    .wm-prop-list li { display: flex; gap: 16px; padding: 18px 20px; background: #fff; border: 1px solid var(--wm-line); border-radius: 14px; font-size: 15px; line-height: 1.6; transition: border-color .2s; }
+    .wm-prop-list li:hover { border-color: var(--wm-gold); }
+    .wm-num { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--wm-ink); color: var(--wm-gold); font-weight: 700; display: grid; place-items: center; font-size: 14px; }
+    .wm-frame { position: relative; z-index: 0; }
+    .wm-frame img { border-radius: 24px; box-shadow: var(--wm-shadow-lg); width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+    .wm-frame::before { content: ""; position: absolute; inset: 24px -24px -24px 24px; border: 2px solid var(--wm-gold); border-radius: 24px; z-index: -1; }
+
+    /* Steps */
+    .wm-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+    .wm-steps::before { content: ""; position: absolute; top: 36px; left: 12%; right: 12%; height: 2px; background: repeating-linear-gradient(90deg, var(--wm-gold) 0 8px, transparent 8px 16px); }
+    .wm-step { text-align: center; position: relative; display: flex; flex-direction: column; }
+    .wm-step-n { width: 72px; height: 72px; border-radius: 50%; background: var(--wm-ink); color: var(--wm-gold); font-family: var(--font-serif); font-size: 26px; font-weight: 700; display: grid; place-items: center; margin: 0 auto 22px; border: 6px solid #fff; box-shadow: 0 0 0 2px var(--wm-gold); position: relative; }
+    .wm-step-card { background: #fff; border-radius: var(--wm-radius); padding: 26px 22px; border: 1px solid var(--wm-line); flex: 1; }
+    .wm-step h3 { margin-bottom: 10px; font-size: 18px; }
+    .wm-step p { font-size: 14.5px; }
+
+    /* Included */
+    .wm-inc { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .wm-inc h2 + p { margin-top: 18px; font-size: 17px; }
+    .wm-checks { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 0; padding: 0; }
+    .wm-checks li { display: flex; gap: 12px; align-items: center; padding: 14px 16px; background: #fff; border: 1px solid var(--wm-line); border-radius: 12px; font-weight: 500; color: var(--wm-ink); font-size: 15px; line-height: 1.4; }
+    .wm-checks .wm-tick { width: 24px; height: 24px; margin: 0; }
+    .wm-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .wm-duo img { border-radius: 20px; width: 100%; height: 440px; object-fit: cover; box-shadow: var(--wm-shadow); }
+    .wm-duo picture:last-child img { margin-top: 48px; }
+    .wm-extras { margin-top: 72px; background: var(--wm-ink); border-radius: 28px; padding: 52px; color: #d9d2c6; }
+    .wm-extras-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 34px; }
+    .wm-extras h3 { font-family: var(--font-serif); font-size: 32px; color: #fff; }
+    .wm-extra-grid { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 0; padding: 0; }
+    .wm-extra-grid li { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 24px; font-size: 14.5px; line-height: 1.65; }
+    .wm-extra-grid li strong { display: block; color: var(--wm-gold); font-size: 17px; margin-bottom: 8px; }
+    .wm-extras-foot { margin-top: 24px; font-size: 14.5px; }
+
+    /* Insurance */
+    .wm-ins { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: center; background: linear-gradient(135deg, var(--wm-tint), #fff); border: 1px solid #F1E3C2; border-radius: 28px; padding: 56px; }
+    .wm-shield { width: 150px; height: 170px; }
+    .wm-ins h2 { margin-bottom: 20px; }
+    .wm-ins p { margin-bottom: 14px; font-size: 16.5px; }
+    .wm-ins p:last-child { margin: 22px 0 0; }
+
+    /* Parking */
+    .wm-park-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .wm-park { background: #fff; border: 1px solid var(--wm-line); border-radius: 22px; padding: 38px; }
+    .wm-park .wm-ic { width: 58px; height: 58px; border-radius: 16px; background: var(--wm-ink); display: grid; place-items: center; margin-bottom: 22px; }
+    .wm-park h3 { font-size: 22px; margin-bottom: 14px; }
+    .wm-park p { margin-bottom: 14px; font-size: 15.5px; }
+    .wm-park p:last-child { margin-bottom: 0; }
+
+    /* Popular areas */
+    .wm-area-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; list-style: none; margin: 0; padding: 0; }
+    .wm-area-grid li { background: #fff; border: 1px solid var(--wm-line); border-radius: 16px; padding: 24px 24px 24px 58px; font-size: 15px; line-height: 1.6; position: relative; }
+    .wm-area-grid li::before { content: ""; position: absolute; left: 22px; top: 28px; width: 20px; height: 20px; background: var(--wm-gold); -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z'/></svg>") center / contain no-repeat; mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z'/></svg>") center / contain no-repeat; }
+    .wm-area-grid strong { display: block; margin-bottom: 4px; font-size: 16px; }
+    .wm-area-foot { margin-top: 28px; padding: 22px 26px; border-left: 4px solid var(--wm-gold); background: var(--wm-tint); border-radius: 0 14px 14px 0; }
+    .wm-area-foot p + p { margin-top: 12px; }
+
+    /* Nearby */
+    .wm-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 28px; }
+    .wm-chips a { padding: 13px 22px; border-radius: 999px; border: 1.5px solid var(--wm-line); background: #fff; text-decoration: none; color: var(--wm-ink); font-weight: 600; font-size: 14.5px; transition: all .2s; }
+    .wm-chips a:hover { background: var(--wm-ink); color: #fff; border-color: var(--wm-ink); }
+    .wm-nearby-foot { text-align: center; max-width: 720px; margin: 0 auto; }
+    .wm-nearby-foot p { margin-bottom: 14px; }
+
+    /* FAQ */
+    .wm-faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: start; }
+    .wm-faq-side { position: sticky; top: 110px; }
+    .wm .area-faq { background: #fff; border: 1px solid var(--wm-line); border-radius: 16px; margin: 0 0 12px; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; transition: border-color .2s, box-shadow .2s; }
+    .wm .area-faq[open] { border-color: var(--wm-gold); box-shadow: var(--wm-shadow); background: #fff; }
+    .wm .area-faq summary { list-style: none; cursor: pointer; padding: 22px 26px; font-weight: 600; color: var(--wm-ink); display: flex; justify-content: space-between; gap: 18px; align-items: center; font-size: 16px; }
+    .wm .area-faq summary::-webkit-details-marker { display: none; }
+    .wm .area-faq .faq-item__icon { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--wm-tint); display: grid; place-items: center; transition: transform .25s, background .25s; color: var(--wm-ink); font-size: 18px; line-height: 1; }
+    .wm .area-faq[open] .faq-item__icon { transform: rotate(45deg); background: var(--wm-gold); }
+    .wm .area-faq .faq-item__answer { max-height: none; overflow: visible; padding: 0 26px 24px; font-size: 15.5px; color: var(--wm-text); line-height: 1.7; }
+
+    /* Final CTA */
+    .wm-cta { position: relative; color: #fff; overflow: hidden; padding: 110px 0; }
+    .wm-cta-bg { position: absolute; inset: 0; }
+    .wm-cta-bg img { width: 100%; height: 100%; object-fit: cover; }
+    .wm-cta-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,23,20,.95), rgba(26,23,20,.82)); }
+    .wm-cta-grid { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 56px; align-items: center; }
+    .wm-cta h2 { color: #fff; font-size: clamp(34px, 4.4vw, 54px); margin-bottom: 20px; }
+    .wm-cta p { color: #ddd5c8; margin-bottom: 14px; font-size: 16.5px; }
+    .wm-cta p strong { color: #fff; }
+    .wm-cta p a, .wm-cta address a { color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: var(--wm-gold); text-underline-offset: 3px; }
+    .wm-cta address { font-style: normal; font-size: 15px; color: #cfc7ba; margin-bottom: 14px; line-height: 1.7; }
+    .wm-badges { display: flex; gap: 12px; margin: 22px 0 18px; flex-wrap: wrap; }
+    .wm-badges span { padding: 9px 16px; border-radius: 999px; background: rgba(232,160,32,.15); border: 1px solid rgba(232,160,32,.4); color: var(--wm-gold); font-weight: 600; font-size: 14px; }
+    .wm-cta .wm-updated { font-size: 13px; color: #b3aa9d; }
+
+    @media (max-width: 1080px) {
+      .wm-svc-grid, .wm-extra-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 960px) {
+      .wm-sec { padding: 72px 0; }
+      .wm-hero-grid, .wm-know, .wm-price, .wm-prop, .wm-inc, .wm-faq, .wm-cta-grid { grid-template-columns: 1fr; }
+      .wm-hero-grid { padding: 100px 0 64px; gap: 40px; }
+      .wm-steps { grid-template-columns: 1fr 1fr; }
+      .wm-steps::before { display: none; }
+      .wm-park-grid { grid-template-columns: 1fr; }
+      .wm-area-grid { grid-template-columns: 1fr 1fr; }
+      .wm-ins { grid-template-columns: 1fr; padding: 40px 30px; }
+      .wm-shield { width: 100px; height: 115px; }
+      .wm-faq-side { position: static; }
+      .wm-frame::before { display: none; }
+    }
+    @media (max-width: 640px) {
+      .wm-hero-checks, .wm-checks, .wm-svc-grid, .wm-extra-grid, .wm-area-grid, .wm-steps { grid-template-columns: 1fr; }
+      .wm-duo img { height: 300px; }
+      .wm-duo picture:last-child img { margin-top: 28px; }
+      .wm-extras { padding: 34px 22px; }
+      .wm-form-card { padding: 26px; }
+      .wm-table th, .wm-table td { padding: 15px 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .wm-btn, .wm-svc, .wm-svc::after { transition: none; } }
+  </style>
+
+  <article class="wm">
+
+  <!-- Hero -->
+  <section class="wm-hero" aria-labelledby="four-oaks-title">
+    <div class="wm-hero-bg">
+      <picture>
+        <source media="(max-width: 767px)" type="image/avif" srcset="/images/house-removals-four-oaks-van-loading-640.avif" />
+        <source media="(max-width: 767px)" type="image/webp" srcset="/images/house-removals-four-oaks-van-loading-640.webp" />
+        <source type="image/avif" srcset="/images/house-removals-four-oaks-van-loading.avif" />
+        <source type="image/webp" srcset="/images/house-removals-four-oaks-van-loading.webp" />
+        <img src="/images/house-removals-four-oaks-van-loading.jpg" alt="Removal van with its tail lift down, loaded for house removals in Four Oaks" width="1280" height="960" loading="eager" fetchpriority="high" />
+      </picture>
+    </div>
+    <div class="wm-wrap wm-hero-grid">
+      <nav class="wm-crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/areas/">Areas</a></li>
+          <li aria-current="page">{{regionName}}</li>
+        </ol>
+      </nav>
+
+      <div>
+        <h1 id="four-oaks-title">House Removals in <em>Four Oaks</em></h1>
+        <p><strong>House removals in Four Oaks cover packing, loading, moving and unloading your home in the B74 and B75 areas of Sutton Coldfield, from a 1-bed flat to a 5-bed detached house.</strong> The Royals Removals is a Birmingham removal company that works across Four Oaks, Mere Green, Little Aston and Streetly, 7 days a week.</p>
+        <p>Every move comes with <strong>a fixed quote once agreed, furniture wrapped before it leaves the house, and goods-in-transit cover up to £50,000.</strong> Send your details and you get a quote back within 15 minutes.</p>
+        <ul class="wm-hero-checks">
+          <li><span class="wm-tick" aria-hidden="true">✓</span>Insurance: £50,000 goods in transit, £5 million public liability</li>
+          <li><span class="wm-tick" aria-hidden="true">✓</span>Quotes: free, and back within 15 minutes</li>
+          <li><span class="wm-tick" aria-hidden="true">✓</span>Moves: 7 days a week, including weekends</li>
+          <li><span class="wm-tick" aria-hidden="true">✓</span>Furniture: beds, wardrobes and tables taken apart and rebuilt</li>
+        </ul>
+        <div class="wm-hero-btns">
+          <a class="wm-btn wm-btn-gold" href="tel:+447345624506">📞 Call {{phoneDisplay}}</a>
+          <a class="wm-btn wm-btn-ghost" href="{{whatsapp}}" target="_blank" rel="noopener">📱 WhatsApp Us</a>
+        </div>
+        <div class="wm-ratings">
+          <a class="wm-rating" href="https://www.trustpilot.com/review/theroyalsremovals.co.uk" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l3.1 7.3 7.9.7-6 5.2 1.8 7.7L12 18.3l-6.8 4.1L7 14.7 1 9.5l7.9-.7z" fill="#00B67A"/></svg>
+            <span><span class="wm-rating-name">Trustpilot</span> <span class="wm-rating-sub">Review us on Trustpilot</span></span>
+          </a>
+          <div class="wm-rating">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            <span><span class="wm-rating-name">Google Reviews</span> <span class="wm-rating-sub">⭐⭐⭐⭐⭐ 5.0 Rating</span></span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="wm-form-card" id="quote-form" aria-label="Request a call back">
+        <h3>Request a Quick Call Back</h3>
+        <form class="quick-cta-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="257bfd98-b90f-4f5b-ae99-f9566a6e35bb">
+          <input type="hidden" name="subject" value="New Call Back Request - The Royals Removals Website">
+          <input type="hidden" name="from_name" value="The Royals Removals Website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+          <div class="wm-field"><input type="text" name="name" placeholder="Your Name" aria-label="Your name" required /></div>
+          <div class="wm-field"><input type="email" name="email" placeholder="Email Address" aria-label="Email address" required /></div>
+          <div class="wm-field"><input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number" required /></div>
+          <button type="submit" class="wm-btn wm-btn-gold">Get Started →</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Moving in Four Oaks -->
+  <section class="wm-sec" aria-labelledby="four-oaks-moving">
+    <div class="wm-wrap wm-know">
+      <div>
+        <h2 id="four-oaks-moving">Moving in <span class="gold-text">Four Oaks</span>: What You Need to Know</h2>
+        <p><strong>Moving in Four Oaks means planning around 3 things: the size of the house, access on long drives and estate roads, and parking for the van.</strong> Four Oaks sits about 7.5 miles (12 km) north of Birmingham city centre, on the north and east edges of Sutton Park.</p>
+        <p>Many Four Oaks homes are large detached houses with lofts, garages and outbuildings. List every room, including the loft, garage and shed, when you ask for a quote, so the crew size, van and time booked match the house.</p>
+        <p>Roads on the Four Oaks Estate are tree-lined and have speed humps. Tell us about gates, long drives and where a van can stop, and the quote is built on that access.</p>
+      </div>
+      <div class="wm-callout">
+        <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+        <p><strong>Moving into central Birmingham?</strong> Four Oaks is outside the Birmingham Clean Air Zone (CAZ), which covers the roads inside the A4540 Middleway. Our vans are CAZ compliant, so you pay no CAZ charge on our vehicles at either end.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cost -->
+  <section class="wm-sec wm-alt" aria-labelledby="four-oaks-cost">
+    <div class="wm-wrap">
+      <div class="wm-head">
+        <h2 id="four-oaks-cost">How Much Do House Removals in <span class="gold-text">Four Oaks</span> Cost?</h2>
+        <p><strong>House removals in Four Oaks cost from £400 – £700 for a 1-bed house to £1,400 – £2,500+ for a house with 5 or more bedrooms, for a local move under 50 miles (80 km).</strong> These are guide prices. Your quote is fixed once agreed.</p>
+      </div>
+      <div class="wm-price">
+        <div class="wm-table">
+          <table>
+            <thead><tr><th scope="col">Property size</th><th scope="col">Guide price (local move)</th></tr></thead>
+            <tbody>
+              <tr><td>1-bed house</td><td>£400 – £700</td></tr>
+              <tr><td>2-bed house</td><td>£600 – £1,000</td></tr>
+              <tr><td>3-bed house</td><td>£800 – £1,400</td></tr>
+              <tr><td>4-bed house</td><td>£1,000 – £1,800</td></tr>
+              <tr><td>5+ bed house</td><td>£1,400 – £2,500+</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wm-notes">
+          <div class="wm-note">
+            <div class="wm-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9a6508" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <p>Smaller jobs are booked by the hour, with a 2-hour minimum: <strong>£40 – £60 an hour for 1 man and a van, £60 – £95 for 2 men and a van, and £70 – £110 for 3 men and a Luton van.</strong></p>
+          </div>
+          <div class="wm-note">
+            <div class="wm-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9a6508" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+            <p>Your price depends on <strong>4 factors: the amount you are moving, the distance, access at both addresses, and extras such as packing or storage.</strong> Weekend moves cost 10% to 20% more. Month-end dates cost 15% more. Any change in scope is discussed with you before the move.</p>
+          </div>
+          <div class="wm-price-links">
+            <a class="wm-btn wm-btn-dark" href="/get-a-quote/">Get your fixed quote →</a>
+            <span><a class="wm-text-link" href="/prices/">See our full price list</a>, including flat moves</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="wm-sec" aria-labelledby="four-oaks-services">
+    <div class="wm-wrap">
+      <div class="wm-head wm-center">
+        <h2 id="four-oaks-services">Removal Services Available in <span class="gold-text">Four Oaks</span></h2>
+        <p><strong>The Royals Removals offers 8 removal services in Four Oaks: house removals, furniture removals, man and van, packing, student removals, office relocation, commercial removals and equipment removals.</strong></p>
+      </div>
+      <div class="wm-svc-grid">
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+          <h3>House Removals</h3>
+          <p><strong>A house removal includes wrapping, loading, transport, unloading, and taking apart and rebuilding beds, wardrobes and tables.</strong> Your crew arrives in uniform, with blankets and straps in the van.</p>
+          <a href="/services/house-removals-services/">House removals <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/></svg></div>
+          <h3>Furniture Removals</h3>
+          <p><strong>Furniture removals move single pieces or a few large items, such as a sofa, a wardrobe or a dining table.</strong> Use this for an auction or shop collection, a family hand-me-down or one room's worth of furniture.</p>
+          <a href="/services/furniture-removals-services/">Furniture removals <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+          <h3>Man and Van</h3>
+          <p><strong>Man and van in Four Oaks is a 1- or 2-person crew with a van, booked by the hour with a 2-hour minimum.</strong> It suits flat moves, partial moves and quick runs across Sutton Coldfield.</p>
+          <a href="/services/man-and-van-services/">Man and van in Four Oaks <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></div>
+          <h3>Packing Services</h3>
+          <p><strong>Packing services come in 3 levels: fragile items only, partial packing and full packing.</strong> Fragile-only packing suits glassware, mirrors, pictures and ornaments.</p>
+          <a href="/services/packing-services/">Packing services <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+          <h3>Student Removals</h3>
+          <p><strong>Student removals move rooms in halls, shared houses and House in Multiple Occupation (HMO) lets.</strong> Book by the hour for a single room.</p>
+          <a href="/services/student-removals-services/">Student removals <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+          <h3>Office Relocation</h3>
+          <p><strong>Office relocation moves desks, chairs, IT equipment and files with a planned order of work.</strong> Book a weekend move, if a weekday move would stop your business.</p>
+          <a href="/services/office-relocation-services/">Office relocation <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v8h14v-8"/></svg></div>
+          <h3>Commercial Removals</h3>
+          <p><strong>Commercial removals move shops, stock rooms and business premises.</strong> The move is booked around your trading hours.</p>
+          <a href="/services/commercial-removals-services/">Commercial removals <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="wm-svc">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1A1714" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12"/></svg></div>
+          <h3>Equipment Removals</h3>
+          <p><strong>Equipment removals cover 5 heavy or awkward items: pianos, safes, gym equipment, pool tables and American-style fridges.</strong> Each item is listed as an extra on our price list.</p>
+          <a href="/services/equipment-removals-services/">Equipment removals <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Types -->
+  <section class="wm-sec wm-alt" aria-labelledby="four-oaks-property">
+    <div class="wm-wrap wm-prop">
+      <div>
+        <h2 id="four-oaks-property">Property Types We Move in <span class="gold-text">Four Oaks</span></h2>
+        <p><strong>Property types in Four Oaks fall into 5 groups: Four Oaks Estate houses, other detached homes, semi-detached homes, flats and bungalows.</strong> A detached house move needs the right crew size and van, so list every room when you ask for a quote.</p>
+        <ul class="wm-prop-list">
+          <li><span class="wm-num" aria-hidden="true">01</span> <span><strong>Large detached houses on the Four Oaks Estate, built from the 1890s:</strong> Lofts, garages and outbuildings go on your inventory.</span></li>
+          <li><span class="wm-num" aria-hidden="true">02</span> <span><strong>Other detached family homes:</strong> Long drives add a carry between the front door and the van, so tell us the distance.</span></li>
+          <li><span class="wm-num" aria-hidden="true">03</span> <span><strong>Semi-detached homes, such as those on Four Oaks Common Road:</strong> Beds and wardrobes come down one staircase, so they are usually taken apart first.</span></li>
+          <li><span class="wm-num" aria-hidden="true">04</span> <span><strong>Flats and apartments, such as those on Walsall Road:</strong> Stairs and lift access shape loading, so tell us the floor and lift size.</span></li>
+          <li><span class="wm-num" aria-hidden="true">05</span> <span><strong>Bungalows:</strong> Heavy and antique furniture moves on one level, and each piece is still wrapped before it leaves.</span></li>
+        </ul>
+      </div>
+      <div class="wm-frame">
+        <picture>
+          <source type="image/avif" srcset="/images/furniture-reassembly-four-oaks.avif" />
+          <source type="image/webp" srcset="/images/furniture-reassembly-four-oaks.webp" />
+          <img src="/images/furniture-reassembly-four-oaks.jpg" alt="Upholstered bed frame with its slats fitted, rebuilt at a customer's new home" width="640" height="800" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="wm-sec" aria-labelledby="four-oaks-process">
+    <div class="wm-wrap">
+      <div class="wm-head wm-center">
+        <h2 id="four-oaks-process">How Your <span class="gold-text">Four Oaks</span> Move Works</h2>
+        <p><strong>Your Four Oaks move works in 4 steps, from a free quote to settling into your new home.</strong></p>
+      </div>
+      <ol class="wm-steps">
+        <li class="wm-step"><span class="wm-step-n" aria-hidden="true">01</span> <div class="wm-step-card"><h3>Get Your Free Quote</h3> <p><a href="/get-a-quote/">Send your move details online</a>, including the loft, garage and drive, and you get a quote back within 15 minutes.</p></div></li>
+        <li class="wm-step"><span class="wm-step-n" aria-hidden="true">02</span> <div class="wm-step-card"><h3>Book Your Move</h3> <p>Pick your date and confirm your booking, and your quote is fixed once agreed.</p></div></li>
+        <li class="wm-step"><span class="wm-step-n" aria-hidden="true">03</span> <div class="wm-step-card"><h3>We Do the Heavy Lifting</h3> <p>Your crew wraps, loads, moves and unloads your belongings, and keeps you updated through the day.</p></div></li>
+        <li class="wm-step"><span class="wm-step-n" aria-hidden="true">04</span> <div class="wm-step-card"><h3>Settle Into Your New Home</h3> <p>Your crew rebuilds beds, wardrobes and tables and puts your boxes in the rooms you choose.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="wm-sec wm-alt" aria-labelledby="four-oaks-included">
+    <div class="wm-wrap">
+      <div class="wm-inc">
+        <div>
+          <h2 id="four-oaks-included">What's Included in Your <span class="gold-text">Four Oaks</span> Removal</h2>
+          <p><strong>Your Four Oaks removal includes 7 things as standard, from careful loading to a free quote.</strong></p>
+          <ul class="wm-checks">
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Careful loading and unloading</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Furniture wrapping and protection</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Dismantling and reassembly of beds, wardrobes and tables</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Vans with blankets and straps</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Uniformed crew</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Weekend scheduling</li>
+            <li><span class="wm-tick" aria-hidden="true">✓</span>Free quote</li>
+          </ul>
+        </div>
+        <div class="wm-duo">
+          <picture>
+            <source type="image/avif" srcset="/images/house-removals-four-oaks-furniture-wrapping.avif" />
+            <source type="image/webp" srcset="/images/house-removals-four-oaks-furniture-wrapping.webp" />
+            <img src="/images/house-removals-four-oaks-furniture-wrapping.jpg" alt="Furniture wrapped in protective film, ready to leave a Four Oaks home" width="520" height="880" loading="lazy" decoding="async" />
+          </picture>
+          <picture>
+            <source type="image/avif" srcset="/images/packing-services-four-oaks-fragile.avif" />
+            <source type="image/webp" srcset="/images/packing-services-four-oaks-fragile.webp" />
+            <img src="/images/packing-services-four-oaks-fragile.jpg" alt="Boxes sealed with fragile tape, packed for a move in Four Oaks" width="520" height="880" loading="lazy" decoding="async" />
+          </picture>
+        </div>
+      </div>
+
+      <div class="wm-extras">
+        <div class="wm-extras-head">
+          <h3>Optional Extras</h3>
+          <p>You can add 4 optional extras to your removal.</p>
+        </div>
+        <ul class="wm-extra-grid">
+          <li><strong>Packing:</strong> £80 – £200 for fragile items only, £100 – £300 for partial packing and £200 – £800+ for full packing.</li>
+          <li><strong>Packing materials:</strong> Boxes, wardrobe boxes and bubble wrap, bought as you need them.</li>
+          <li><strong>Special items:</strong> Pianos, American-style fridges, safes, gym equipment and pool tables.</li>
+          <li><strong>Storage:</strong> £80 – £150 a month for a small unit, £100 – £200 for a medium unit and £200 – £400 for a large unit.</li>
+        </ul>
+        <p class="wm-extras-foot">Storage includes collection to storage and redelivery to your new home.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance -->
+  <section class="wm-sec" aria-labelledby="four-oaks-insurance">
+    <div class="wm-wrap">
+      <div class="wm-ins">
+        <div class="wm-shield" aria-hidden="true">
+          <svg viewBox="0 0 100 115" width="100%" height="100%"><path d="M50 4L8 20v32c0 28 18 48 42 59 24-11 42-31 42-59V20z" fill="#1A1714"/><path d="M50 14L18 26v26c0 22 14 38 32 47 18-9 32-25 32-47V26z" fill="none" stroke="#E8A020" stroke-width="2"/><path d="M34 56l11 11 22-24" fill="none" stroke="#E8A020" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h2 id="four-oaks-insurance">Fully Insured House Removals in <span class="gold-text">Four Oaks</span></h2>
+          <p><strong>Fully insured removals in Four Oaks carry 2 covers: Goods in Transit (GIT) up to £50,000 and public liability up to £5 million.</strong></p>
+          <p>GIT insurance covers your belongings while they are loaded, moved and unloaded. Public liability insurance covers injury or property damage during your move.</p>
+          <p>If your contents, antiques or art are worth more than £50,000, check what your home contents policy covers during a move. Ask us about these items before the day.</p>
+          <p>Items you pack yourself and items in storage are not covered by the GIT policy.</p>
+          <p><a class="wm-text-link" href="/insurance/">See the limits and exclusions of our insurance</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parking and Completion -->
+  <section class="wm-sec wm-alt" aria-labelledby="four-oaks-parking">
+    <div class="wm-wrap">
+      <div class="wm-head wm-center">
+        <h2 id="four-oaks-parking">Parking and Completion Day in <span class="gold-text">Four Oaks</span></h2>
+        <p><strong>Parking and completion day in Four Oaks are the 2 likeliest causes of delay, so we plan for both at the quote stage.</strong></p>
+      </div>
+      <div class="wm-park-grid">
+        <div class="wm-park">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div>
+          <h3>Parking for the Removal Van</h3>
+          <p><strong>Parking for the removal van in Four Oaks comes under Birmingham City Council, because Four Oaks is in Birmingham.</strong> A <a href="https://www.birmingham.gov.uk/info/20109/parking/2012/parking_dispensations" rel="noopener">Birmingham parking dispensation</a> can apply at a Four Oaks address. Check the council's current terms before you apply.</p>
+          <p>Little Aston addresses are under Lichfield District Council, so check with that council instead. Check with the estate as well, if your road is gated.</p>
+          <p>Most large homes load from the drive. Tell us the drive length, any gates and the turning space when you ask for a quote.</p>
+        </div>
+        <div class="wm-park">
+          <div class="wm-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E8A020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.85 12.15L19 4M18 5l2 2M15 8l2 2"/></svg></div>
+          <h3>If Your Completion Is Delayed</h3>
+          <p><strong>If your completion is delayed, we keep you updated by phone or WhatsApp through the day.</strong> Ask for storage, if the keys do not come through.</p>
+          <p>Storage starts at £80 – £150 a month for a small unit. <a href="/prices/">View all our storage prices</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Areas -->
+  <section class="wm-sec" aria-labelledby="four-oaks-popular">
+    <div class="wm-wrap">
+      <div class="wm-head">
+        <h2 id="four-oaks-popular">Popular Areas to Live in <span class="gold-text">Four Oaks</span></h2>
+        <p><strong>Popular areas to live in Four Oaks include 6 places in and around the B74 area.</strong> Four Oaks is a residential area of Sutton Coldfield, in the Sutton Four Oaks ward of the City of Birmingham.</p>
+      </div>
+      <ul class="wm-area-grid">
+        <li><strong>The Four Oaks Estate:</strong> The estate centres on Four Oaks Tennis Club, between Lichfield Road, Four Oaks Road and Sutton Park.</li>
+        <li><strong>Mere Green:</strong> The shopping area has supermarkets, restaurants and cafés.</li>
+        <li><strong>Little Aston:</strong> This area is about 1 mile (1.6 km) away, under Lichfield District Council, and includes the gated Little Aston Park estate.</li>
+        <li><strong>Streetly:</strong> This area shares a border with Four Oaks.</li>
+        <li><strong>Roads near Sutton Park:</strong> The park is a Site of Special Scientific Interest (SSSI) of about 2,400 acres (970 hectares).</li>
+        <li><strong>Sutton Coldfield town centre:</strong> The town centre also borders Four Oaks.</li>
+      </ul>
+      <div class="wm-area-foot">
+        <p>Four Oaks has 4 nearby passenger stations: Four Oaks, Butlers Lane, Sutton Coldfield and Blake Street.</p>
+        <p>Moving elsewhere in the town? See our <a href="/areas/birmingham/sutton-coldfield/">removals in Sutton Coldfield</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Areas -->
+  <section class="wm-sec wm-alt" aria-labelledby="four-oaks-nearby">
+    <div class="wm-wrap">
+      <div class="wm-head wm-center">
+        <h2 id="four-oaks-nearby">Nearby Areas <span class="gold-text">We Cover</span></h2>
+        <p><strong>Nearby areas we cover from Four Oaks include 6 towns and areas across the West Midlands and Staffordshire.</strong></p>
+      </div>
+      <div class="wm-chips">
+        <a href="/areas/birmingham/">Removals in Birmingham</a>
+        <a href="/areas/walmley/">Removals in Walmley</a>
+        <a href="/areas/lichfield/">Removals in Lichfield</a>
+        <a href="/areas/walsall/">Removals in Walsall</a>
+        <a href="/areas/tamworth/">Removals in Tamworth</a>
+        <a href="/areas/cannock/">Removals in Cannock</a>
+      </div>
+      <div class="wm-nearby-foot">
+        <p>We also cover Mere Green, Little Aston, Streetly, Boldmere, Wylde Green, Shenstone and Aldridge.</p>
+        <p><a class="wm-text-link" href="/areas/">See all the areas we cover</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="wm-sec" id="faqs" aria-labelledby="four-oaks-faqs">
+    <div class="wm-wrap wm-faq">
+      <div class="wm-faq-side">
+        <h2 id="four-oaks-faqs">Four Oaks Removal <span class="gold-text">FAQs</span></h2>
+      </div>
+      <div>
+        {{areaFaqs}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="wm-cta" id="cta" aria-labelledby="four-oaks-plan">
+    <div class="wm-cta-bg"><img src="/images/modern_home_exterior.png" alt="" width="640" height="640" loading="lazy" decoding="async" /></div>
+    <div class="wm-wrap wm-cta-grid">
+      <div>
+        <h2 id="four-oaks-plan">Your <span class="gold-text">Four Oaks</span> Move Deserves a Proper Plan</h2>
+        <p><strong>House removals in Four Oaks start with a fixed quote, and you get yours within 15 minutes.</strong> Your move is fully insured, and our crews work 7 days a week.</p>
+        <address>
+          The Royals Removals, 22 Whitehall Rd, Small Heath, Birmingham B9 5EJ<br />
+          Phone: <a href="tel:+447345624506">{{phoneDisplay}}</a> · <a href="{{whatsapp}}" target="_blank" rel="noopener">Message us on WhatsApp</a>
+        </address>
+        <p><a href="/get-a-quote/">Start your online quote</a> · <a href="/contact/">Contact our team</a></p>
+        <div class="wm-badges"><span>✓ Fixed Quote</span><span>✓ Fully Insured</span></div>
+        <p class="wm-updated">Page updated <time datetime="{{dateModified}}">8 November 2026</time></p>
+      </div>
+      <aside class="wm-form-card" aria-label="Request a call back about your move">
+        <h3>Request a Quick Call Back</h3>
+        <form class="quick-cta-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="257bfd98-b90f-4f5b-ae99-f9566a6e35bb">
+          <input type="hidden" name="subject" value="New Call Back Request - The Royals Removals Website">
+          <input type="hidden" name="from_name" value="The Royals Removals Website">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+          <div class="wm-field"><input type="text" name="name" placeholder="Your Name" aria-label="Your name" required /></div>
+          <div class="wm-field"><input type="email" name="email" placeholder="Email Address" aria-label="Email address" required /></div>
+          <div class="wm-field"><input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone number" required /></div>
+          <button type="submit" class="wm-btn wm-btn-gold">Request My Call Back</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  </article>
+
+  <!-- Schema -->
+  {{pageSchema}}
