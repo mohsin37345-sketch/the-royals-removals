@@ -1322,6 +1322,7 @@
     "whyChooseUs": "The Royals Removals isn't just a man-with-a-van service. We are a fully insured, heavily equipped moving company dedicated to serving Birmingham. We provide free wardrobe boxes on moving day, heavy-duty floor runners to protect your carpets, and professional dismantling and reassembly for your large beds and wardrobes.",
     "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne.",
     "extraAreas": [
+      "four-oaks",
       "walmley",
       "wythall"
     ]
@@ -4049,6 +4050,67 @@
       {
         "q": "Do you work weekends and bank holidays?",
         "a": "<strong>Yes. Our crews work 7 days a week, including weekends and bank holidays.</strong> Weekend moves cost 10% to 20% more. Bank holiday moves are priced on your quote."
+      },
+      {
+        "q": "Where can I read reviews of The Royals Removals?",
+        "a": "<strong>You can read our reviews on Google, where we are rated 5.0, and on Trustpilot.</strong> <a href=\"/reviews/\">See our customer reviews</a>."
+      }
+    ]
+  },
+  {
+    "slug": "four-oaks",
+    "name": "Four Oaks",
+    "h1": "House Removals in Four Oaks",
+    "metaTitle": "House Removals Four Oaks | Fixed Quote | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Four Oaks, B74. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
+    "primaryKeyword": "house removals four oaks",
+    "secondaryKeywords": [
+      "removals four oaks",
+      "four oaks removals",
+      "removal company four oaks",
+      "man and van four oaks",
+      "removals sutton coldfield"
+    ],
+    "intro": "House removals in Four Oaks from The Royals Removals, 7 days a week.",
+    "children": [],
+    "customTemplate": "area-four-oaks.html",
+    "dateModified": "2026-11-08",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Four Oaks, Sutton Coldfield",
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Birmingham"
+      }
+    },
+    "customFaqs": [
+      {
+        "q": "How much does a house removal in Four Oaks cost?",
+        "a": "A house removal in Four Oaks costs from <strong>£400 – £700 for a 1-bed house to £1,400 – £2,500+ for a 5+ bed house.</strong> These prices are for a local move under 50 miles (80 km). Your quote is fixed once agreed."
+      },
+      {
+        "q": "How can I move house cheaply in Four Oaks?",
+        "a": "<strong>Book man and van by the hour, with a 2-hour minimum.</strong> Rates are £40 – £60 an hour for 1 man and a van, and £60 – £95 for 2 men and a van. <a href=\"/prices/\">Compare all our prices</a>."
+      },
+      {
+        "q": "How far in advance should I book removals in Four Oaks?",
+        "a": "Book removals in Four Oaks <strong>2–4 weeks ahead</strong>, if you can. We take short-notice moves when a crew is free."
+      },
+      {
+        "q": "Are my belongings insured during the move?",
+        "a": "<strong>Yes. Your belongings have goods-in-transit cover up to £50,000</strong>, and we hold public liability cover up to £5 million. If your contents are worth more than £50,000, check your home contents policy and ask us before the day. <a href=\"/insurance/\">Read our insurance limits and exclusions</a>."
+      },
+      {
+        "q": "Do you move antiques and pianos?",
+        "a": "<strong>Yes. We move antiques and pianos, using fragile-only packing and furniture wrapping for delicate pieces.</strong> Pianos are listed as an extra on our price list."
+      },
+      {
+        "q": "Can I get a parking dispensation for the removal van in Four Oaks?",
+        "a": "<strong>Yes. Four Oaks is in Birmingham, so you can apply to Birmingham City Council for a parking dispensation.</strong> Check the council's current terms before you apply."
+      },
+      {
+        "q": "Do you move homes on private estates such as Little Aston Park?",
+        "a": "<strong>Yes. Our crews work on private estates, including gated estates such as Little Aston Park.</strong> Tell us about gates, access times and any estate rules when you ask for a quote."
       },
       {
         "q": "Where can I read reviews of The Royals Removals?",
