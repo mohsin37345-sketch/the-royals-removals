@@ -1323,6 +1323,7 @@
     "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne.",
     "extraAreas": [
       "four-oaks",
+      "hollywood",
       "walmley",
       "wythall"
     ]
@@ -4115,6 +4116,69 @@
       {
         "q": "Where can I read reviews of The Royals Removals?",
         "a": "<strong>You can read our reviews on Google, where we are rated 5.0, and on Trustpilot.</strong> <a href=\"/reviews/\">See our customer reviews</a>."
+      }
+    ]
+  },
+  {
+    "slug": "hollywood",
+    "name": "Hollywood",
+    "h1": "House Removals in Hollywood",
+    "metaTitle": "House Removals Hollywood, Birmingham | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Hollywood, B47, near Wythall. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call 07345 624506.",
+    "primaryKeyword": "house removals hollywood",
+    "secondaryKeywords": [
+      "removals hollywood",
+      "removal company hollywood",
+      "removals hollywood worcestershire",
+      "removals b47",
+      "man and van hollywood"
+    ],
+    "intro": "House removals in Hollywood, Worcestershire (B47), from The Royals Removals, 7 days a week.",
+    "children": [],
+    "customTemplate": "area-hollywood.html",
+    "dateModified": "2026-11-09",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Hollywood, Worcestershire",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "B47",
+        "addressRegion": "Worcestershire",
+        "addressCountry": "GB"
+      }
+    },
+    "customFaqs": [
+      {
+        "q": "How much does a house removal in Hollywood cost?",
+        "a": "A house removal in Hollywood costs <strong>£400 – £700 for a 1-bed house, rising to £1,400 – £2,500+ for a 5+ bed house.</strong> Those guide prices cover a local move under 50 miles (80 km). Once agreed, the quote stays fixed."
+      },
+      {
+        "q": "How can I move house cheaply in Hollywood?",
+        "a": "<strong>Hire man and van by the hour, with a 2-hour minimum.</strong> 1 man and a van costs £40 – £60 an hour, and 2 men and a van cost £60 – £95. <a href=\"/prices/\">See every hourly rate</a>."
+      },
+      {
+        "q": "How far in advance should I book removals in Hollywood?",
+        "a": "Book removals in Hollywood <strong>2–4 weeks before your moving day</strong>, if possible. A short-notice date can still work when a crew is free."
+      },
+      {
+        "q": "Are my belongings insured during the move?",
+        "a": "<strong>Yes. Goods-in-transit insurance covers your belongings up to £50,000</strong>, and public liability cover reaches £5 million. Items you pack yourself fall outside the goods-in-transit policy. <a href=\"/insurance/\">See what the insurance excludes</a>."
+      },
+      {
+        "q": "Do you take apart and rebuild furniture?",
+        "a": "<strong>Yes. Beds, wardrobes and tables are taken apart at the old home and rebuilt at the new one.</strong> List these pieces on your quote request."
+      },
+      {
+        "q": "Is Hollywood in Birmingham or Worcestershire?",
+        "a": "<strong>Both. Most of Hollywood is in Bromsgrove District, Worcestershire, and the Highter's Heath edge is inside Birmingham.</strong> Every Hollywood address uses Birmingham as its postal town."
+      },
+      {
+        "q": "Do you work weekends and bank holidays?",
+        "a": "<strong>Yes. Moves run 7 days a week, including weekends and bank holidays.</strong> A weekend move costs 10% to 20% more, and a bank holiday move is priced on your quote."
+      },
+      {
+        "q": "Where can I read reviews of The Royals Removals?",
+        "a": "<strong>Read our reviews on Google, where the rating is 5.0, and on Trustpilot.</strong> <a href=\"/reviews/\">Go to our reviews page</a>."
       }
     ]
   },
