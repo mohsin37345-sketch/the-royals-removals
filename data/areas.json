@@ -1322,6 +1322,7 @@
     "whyChooseUs": "The Royals Removals isn't just a man-with-a-van service. We are a fully insured, heavily equipped moving company dedicated to serving Birmingham. We provide free wardrobe boxes on moving day, heavy-duty floor runners to protect your carpets, and professional dismantling and reassembly for your large beds and wardrobes.",
     "logistics": "Birmingham's Clean Air Zone (CAZ) catches many unprepared moving companies out, resulting in hidden fees passed to you. Our entire fleet is modern and 100% CAZ-compliant. Additionally, we regularly help customers liaise with Birmingham City Council to acquire necessary parking dispensations on tight terraced streets like those in Moseley or Harborne.",
     "extraAreas": [
+      "boldmere",
       "four-oaks",
       "hollywood",
       "walmley",
@@ -4179,6 +4180,67 @@
       {
         "q": "Where can I read reviews of The Royals Removals?",
         "a": "<strong>Read our reviews on Google, where the rating is 5.0, and on Trustpilot.</strong> <a href=\"/reviews/\">Go to our reviews page</a>."
+      }
+    ]
+  },
+  {
+    "slug": "boldmere",
+    "name": "Boldmere",
+    "h1": "House Removals in Boldmere",
+    "metaTitle": "House Removals Boldmere | Fixed Quote | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Boldmere, B73. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
+    "primaryKeyword": "house removals boldmere",
+    "secondaryKeywords": [
+      "removals boldmere",
+      "boldmere removals",
+      "removal company boldmere",
+      "man and van boldmere",
+      "house removals sutton coldfield"
+    ],
+    "intro": "House removals in Boldmere, Sutton Coldfield, from The Royals Removals, 7 days a week.",
+    "children": [],
+    "customTemplate": "area-boldmere.html",
+    "dateModified": "2026-11-09",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Boldmere, Sutton Coldfield",
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Birmingham"
+      }
+    },
+    "customFaqs": [
+      {
+        "q": "How much is a house removal in Boldmere?",
+        "a": "A house removal in Boldmere costs <strong>£400 – £700 for a 1-bed house and up to £1,400 – £2,500+ for a 5+ bed house.</strong> The figures cover local moves under 50 miles (80 km), and the agreed quote stays fixed."
+      },
+      {
+        "q": "How can I move house cheaply in Boldmere?",
+        "a": "<strong>Choose man and van, charged hourly with a 2-hour minimum.</strong> Expect £40 – £60 per hour for 1 man and a van, or £60 – £95 per hour with 2 men. <a href=\"/prices/\">View the hourly rates</a>."
+      },
+      {
+        "q": "How far in advance should I book removals in Boldmere?",
+        "a": "<strong>Book removals in Boldmere 2–4 weeks ahead</strong>, where you can. Short-notice moves depend on crew availability."
+      },
+      {
+        "q": "Are my belongings insured during the move?",
+        "a": "<strong>Yes. Goods-in-transit cover protects your belongings up to £50,000</strong>, alongside public liability cover of up to £5 million. Self-packed items are outside the goods-in-transit policy. <a href=\"/insurance/\">See what the insurance leaves out</a>."
+      },
+      {
+        "q": "Do you take apart and rebuild furniture?",
+        "a": "<strong>Yes. The crew takes beds, wardrobes and tables apart, then rebuilds them at your new address.</strong> Add these pieces to your quote request."
+      },
+      {
+        "q": "Can I get a parking dispensation for the removal van in Boldmere?",
+        "a": "<strong>Yes. Boldmere is part of Birmingham, so Birmingham City Council handles parking dispensations there.</strong> Read the council's current terms before applying."
+      },
+      {
+        "q": "Do you work weekends and bank holidays?",
+        "a": "<strong>Yes. Crews move homes 7 days a week, weekends and bank holidays included.</strong> Bank holiday moves are priced when you get your quote, and weekend moves carry a 10% to 20% surcharge."
+      },
+      {
+        "q": "Where can I read reviews of The Royals Removals?",
+        "a": "<strong>Our reviews are on Google, with a 5.0 rating, and on Trustpilot.</strong> <a href=\"/reviews/\">Visit our reviews page</a>."
       }
     ]
   },
