@@ -783,7 +783,9 @@ function buildAreaPages() {
 /** Build an area page from its own template, with one JSON-LD graph */
 function buildCustomAreaPage(region) {
   const url = config.business.url;
-  const pageUrl = `${url}/areas/${region.slug}/`;
+  // A page can override its own host, e.g. to match the domain Vercel serves it on
+  const pageHost = region.canonicalHost || url;
+  const pageUrl = `${pageHost}/areas/${region.slug}/`;
   const orgId = `${url}/#organization`;
   const stripTags = html => html.replace(/<[^>]+>/g, '');
 
@@ -828,7 +830,7 @@ function buildCustomAreaPage(region) {
         name: region.metaTitle,
         description: region.metaDescription,
         isPartOf: { '@id': `${url}/#website` },
-        primaryImageOfPage: { '@type': 'ImageObject', url: `${url}/images/house-removals-${region.slug}-van-loading.jpg` },
+        primaryImageOfPage: { '@type': 'ImageObject', url: `${pageHost}/images/house-removals-${region.slug}-van-loading.jpg` },
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         dateModified: region.dateModified,
       },
@@ -845,8 +847,8 @@ function buildCustomAreaPage(region) {
         '@type': 'BreadcrumbList',
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: `${url}/` },
-          { '@type': 'ListItem', position: 2, name: 'Areas', item: `${url}/areas/` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${pageHost}/` },
+          { '@type': 'ListItem', position: 2, name: 'Areas', item: `${pageHost}/areas/` },
           { '@type': 'ListItem', position: 3, name: region.name, item: pageUrl },
         ],
       },
@@ -1191,7 +1193,8 @@ function generateSitemap() {
   // Helper to build a single sitemap XML
   function buildSitemapXml(urls, defaultPriority) {
     const entries = urls.map(url => {
-      const fullUrl = baseUrl + '/' + url;
+      const host = (regions.find(r => `areas/${r.slug}/` === url) || {}).canonicalHost;
+      const fullUrl = (host || baseUrl) + '/' + url;
       let priority = defaultPriority;
       if (url === '') priority = '1.0';
       else if (url === 'services/' || url === 'areas/') priority = '0.9';
