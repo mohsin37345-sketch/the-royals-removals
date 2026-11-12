@@ -579,6 +579,12 @@ function buildAreaPages() {
 
     // Child area pages
     region.children.forEach(child => {
+      // Hand-written village pages have their own template, nested under the hub
+      if (child.customTemplate) {
+        buildCustomAreaPage(child, region);
+        return;
+      }
+
       const nearbyHtml = (child.nearbyAreas || []).map(slug => {
         // Check if slug is a top-level region (e.g. bromsgrove, solihull, walsall, dudley)
         const matchedRegion = regions.find(r => r.slug === slug);
@@ -780,18 +786,20 @@ function buildAreaPages() {
   });
 }
 
-/** Build an area page from its own template, with one JSON-LD graph */
-function buildCustomAreaPage(region) {
+/** Build an area page from its own template, with one JSON-LD graph.
+ *  Pass the hub as `parent` for a village page nested at /areas/{hub}/{village}/ */
+function buildCustomAreaPage(region, parent) {
   const url = config.business.url;
   // A page can override its own host, e.g. to match the domain Vercel serves it on
   const pageHost = region.canonicalHost || url;
-  const pageUrl = `${pageHost}/areas/${region.slug}/`;
+  const pagePath = parent ? `${parent.slug}/${region.slug}` : region.slug;
+  const pageUrl = `${pageHost}/areas/${pagePath}/`;
   const orgId = `${url}/#organization`;
   const stripTags = html => html.replace(/<[^>]+>/g, '');
 
   const faqsHtml = region.customFaqs.map(faq => `
         <details class="faq-item area-faq">
-          <summary class="faq-item__question">${faq.q}<span class="faq-item__icon" aria-hidden="true">+</span></summary>
+          <summary class="faq-item__question">${region.faqHeadings ? `<h3>${faq.q}</h3>` : faq.q}<span class="faq-item__icon" aria-hidden="true">+</span></summary>
           <div class="faq-item__answer">${faq.a}</div>
         </details>`).join('\n');
 
@@ -830,7 +838,7 @@ function buildCustomAreaPage(region) {
         name: region.metaTitle,
         description: region.metaDescription,
         isPartOf: { '@id': `${url}/#website` },
-        primaryImageOfPage: { '@type': 'ImageObject', url: `${pageHost}/images/house-removals-${region.slug}-van-loading.jpg` },
+        primaryImageOfPage: { '@type': 'ImageObject', url: `${pageHost}${region.primaryImage || `/images/house-removals-${region.slug}-van-loading.jpg`}` },
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         dateModified: region.dateModified,
       },
@@ -849,7 +857,8 @@ function buildCustomAreaPage(region) {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${pageHost}/` },
           { '@type': 'ListItem', position: 2, name: 'Areas', item: `${pageHost}/areas/` },
-          { '@type': 'ListItem', position: 3, name: region.name, item: pageUrl },
+          ...(parent ? [{ '@type': 'ListItem', position: 3, name: parent.name, item: `${pageHost}/areas/${parent.slug}/` }] : []),
+          { '@type': 'ListItem', position: parent ? 4 : 3, name: region.name, item: pageUrl },
         ],
       },
       {
@@ -875,12 +884,14 @@ function buildCustomAreaPage(region) {
     ogType: 'website',
     h1: region.h1,
     regionName: region.name,
+    parentName: parent ? parent.name : '',
+    parentSlug: parent ? parent.slug : '',
     dateModified: region.dateModified,
     areaFaqs: faqsHtml,
     pageSchema: `<script type="application/ld+json">\n${JSON.stringify(graph, null, 2).replace(/<\//g, '<\\/')}\n</script>`,
   };
   const content = render(readTemplate(region.customTemplate), vars);
-  writePage(`areas/${region.slug}/index.html`, buildPage(content, vars));
+  writePage(`areas/${pagePath}/index.html`, buildPage(content, vars));
 }
 
 // ── Simple string hash for deterministic variation ─────────

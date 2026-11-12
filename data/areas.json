@@ -2542,22 +2542,73 @@
       {
         "slug": "knowle",
         "name": "Knowle",
+        "customTemplate": "area-knowle.html",
+        "faqHeadings": true,
+        "h1": "House Removals in Knowle",
+        "metaTitle": "House Removals Knowle | Fixed Quote | The Royals Removals",
+        "metaDescription": "Fully insured house removals in Knowle, Solihull B93. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
         "primaryKeyword": "house removals knowle",
         "secondaryKeywords": [
-          "house removals in knowle",
-          "house removal company knowle",
-          "house removal knowle",
-          "man with a van knowle"
+          "removals knowle",
+          "removal company knowle",
+          "removals knowle solihull",
+          "house removals b93",
+          "man and van knowle",
+          "removal services knowle"
         ],
+        "dateModified": "2026-11-12",
+        "primaryImage": "/images/house-removals-walmley-van-loading.jpg",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Knowle, Solihull",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "B93",
+            "addressLocality": "Knowle",
+            "addressRegion": "West Midlands",
+            "addressCountry": "GB"
+          }
+        },
         "nearbyAreas": [
           "dorridge",
           "balsall-common",
           "solihull-town",
           "bentley-heath"
         ],
-        "propertyTypes": "predominantly 1970s and 1980s residential estates",
-        "accessNotes": "narrow residential streets with high on-street parking",
-        "mainRoads": "local routes connecting to Solihull"
+        "customFaqs": [
+          {
+            "q": "How much do house removals cost in Knowle?",
+            "a": "<strong>House removals in Knowle cost £400 – £700 for a 1-bed home, rising to £1,400 – £2,500+ for a house with 5 or more bedrooms.</strong> These guide prices cover local moves under 50 miles (80 km), and your quote is fixed once agreed."
+          },
+          {
+            "q": "How far in advance should I book a removal company in Knowle?",
+            "a": "<strong>Book 2–4 weeks before your moving date, where you can.</strong> Short-notice moves are taken when a crew is free."
+          },
+          {
+            "q": "Can you do same day removals in Knowle?",
+            "a": "<strong>Yes, when a crew is free on the day you call.</strong> To hold a set date, book 2–4 weeks ahead."
+          },
+          {
+            "q": "Can you move me from Knowle to anywhere in the UK?",
+            "a": "<strong>Yes. Moves run from Knowle to any address in the UK, as well as locally.</strong> Moves over 50 miles (80 km) are priced on the quote."
+          },
+          {
+            "q": "Do you offer packing services in Knowle?",
+            "a": "<strong>Yes. Packing comes in 3 levels: fragile items only for £80 – £200, partial packing for £100 – £300, and full packing for £200 – £800+.</strong> Items our crew packs are covered by the goods-in-transit policy."
+          },
+          {
+            "q": "Are your Knowle removals insured?",
+            "a": "<strong>Yes. Each move carries Goods in Transit (GIT) cover up to £50,000 and public liability cover up to £5 million.</strong> <a href=\"/insurance/\">Check the insurance limits and exclusions</a>."
+          },
+          {
+            "q": "Do you take apart and rebuild furniture?",
+            "a": "<strong>Yes. Beds, wardrobes and tables are taken apart before loading and rebuilt at your new home.</strong> List them when you ask for a quote."
+          },
+          {
+            "q": "What is the lowest-cost way to move house in Knowle?",
+            "a": "<strong>Book man and van by the hour on a weekday in mid-month, and pack your own boxes.</strong> 1 man and a van costs £40 – £60 an hour, with a 2-hour minimum. Boxes you pack yourself are not covered by GIT insurance. <a href=\"/prices/\">Compare the hourly rates</a>."
+          }
+        ]
       },
       {
         "slug": "dorridge",
