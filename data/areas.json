@@ -2502,17 +2502,21 @@
   },
   {
     "slug": "solihull",
+    "customTemplate": "area-solihull.html",
+    "faqHeadings": true,
     "name": "Solihull",
-    "h1": "Expert House Removals in Solihull",
-    "metaTitle": "Expert House Removals Solihull | The Royals Removals",
-    "metaDescription": "Expert house removals in Solihull. Premium, careful and fully insured moving services at affordable rates. Get a free quote from The Royals Removals today.",
+    "h1": "House Removals in Solihull",
+    "metaTitle": "House Removals Solihull | Fixed Quote | The Royals Removals",
+    "metaDescription": "Fully insured house removals in Solihull, B90 to B94. Fixed quotes, furniture wrapped and beds rebuilt, 7 days a week. Call The Royals Removals on 07345 624506.",
     "primaryKeyword": "house removals solihull",
     "secondaryKeywords": [
       "removals solihull",
-      "expert removals solihull",
       "removal company solihull",
+      "removal companies in solihull",
       "removal firms solihull",
-      "affordable movers solihull"
+      "house movers solihull",
+      "man and van solihull",
+      "solihull removals and storage"
     ],
     "intro": "Solihull is one of the most desirable places to live in the West Midlands, offering a perfect blend of countryside charm and urban convenience. The Royals Removals provides premium removal services across the entire Solihull borough.\n\nWhether you are moving within Solihull or relocating from Birmingham, our team delivers the same careful, professional service. We handle everything from packing and loading to transport and setup at your new property.",
     "heroIntro": "Solihull is consistently ranked among the most desirable places to live in the UK — from the executive homes of Dorridge and Knowle to the family-friendly streets of Shirley and Olton. Our team serves the full Solihull borough and covers it on a weekly basis.",
@@ -2898,8 +2902,132 @@
     "customIntro": "Widely regarded as one of the most affluent and desirable places to live in the West Midlands, moving to or within Solihull demands a premier removal service. Whether you are transitioning to a substantial property in Knowle or Dorridge, or downsizing to an apartment near Touchwood, our Solihull removals team guarantees exceptional care for your possessions.",
     "whyChooseUs": "We specialize in high-value, complex house moves. We offer complete packing and unpacking services, fine art wrapping, and piano relocations. When moving within Solihull, our clients expect discretion, punctuality, and extreme diligence—standards that form the absolute core of our business.",
     "logistics": "While Solihull's leafy avenues offer better access than the inner city, large properties often have intricate gated driveways. Our logistical teams conduct thorough pre-move surveys to assess access points, ensuring we deploy the correct vehicles—from nimble 3.5t Luton vans to larger HGVs—for a flawless move.",
-    "extraAreas": [
-      "wythall"
+    "dateModified": "2026-11-13",
+    "primaryImage": "/images/house-removals-four-oaks-van-loading.jpg",
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Metropolitan Borough of Solihull"
+      },
+      {
+        "@type": "Place",
+        "name": "Shirley",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/shirley/"
+      },
+      {
+        "@type": "Place",
+        "name": "Knowle",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/knowle/"
+      },
+      {
+        "@type": "Place",
+        "name": "Dorridge",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/dorridge/"
+      },
+      {
+        "@type": "Place",
+        "name": "Balsall Common",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/balsall-common/"
+      },
+      {
+        "@type": "Place",
+        "name": "Chelmsley Wood",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/chelmsley-wood/"
+      },
+      {
+        "@type": "Place",
+        "name": "Marston Green",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/marston-green/"
+      },
+      {
+        "@type": "Place",
+        "name": "Olton",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/olton/"
+      },
+      {
+        "@type": "Place",
+        "name": "Hockley Heath",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/hockley-heath/"
+      },
+      {
+        "@type": "Place",
+        "name": "Dickens Heath",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/dickens-heath/"
+      },
+      {
+        "@type": "Place",
+        "name": "Smiths Wood",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/smiths-wood/"
+      },
+      {
+        "@type": "Place",
+        "name": "Solihull Town",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/solihull-town/"
+      },
+      {
+        "@type": "Place",
+        "name": "Monkspath",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/monkspath/"
+      },
+      {
+        "@type": "Place",
+        "name": "Bentley Heath",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/bentley-heath/"
+      },
+      {
+        "@type": "Place",
+        "name": "Meriden",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/meriden/"
+      },
+      {
+        "@type": "Place",
+        "name": "Elmdon",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/elmdon/"
+      },
+      {
+        "@type": "Place",
+        "name": "Birmingham Airport",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/birmingham-airport/"
+      },
+      {
+        "@type": "Place",
+        "name": "Cheswick Green",
+        "url": "https://theroyalsremovals.co.uk/areas/solihull/cheswick-green/"
+      }
+    ],
+    "customFaqs": [
+      {
+        "q": "How much does a house removal cost in Solihull?",
+        "a": "<strong>A house removal in Solihull costs £400 – £700 for a 1-bed home and £800 – £1,400 for a 3-bed house, up to £1,400 – £2,500+ for 5 bedrooms or more.</strong> These guide prices apply to local moves under 50 miles (80 km). Once you accept the quote, the price is fixed."
+      },
+      {
+        "q": "How long does a 3-bedroom house move take in Solihull?",
+        "a": "<strong>The time for a 3-bedroom move is set in your quote, and it depends on the same 4 factors as the price.</strong> Those factors are the volume of belongings, the distance, access at both homes and any extras. If you book full packing, a typical 3-bedroom home is packed in a single day."
+      },
+      {
+        "q": "Do you offer packing and storage in Solihull?",
+        "a": "<strong>Yes. Packing comes in 3 levels, and storage is charged by the month.</strong> Fragile-only packing costs £80 – £200, partial packing £100 – £300 and full packing £200 – £800+. Storage runs from £80 – £150 a month for a small space to £200 – £400 for a large one."
+      },
+      {
+        "q": "Do I need a parking permit for the removal van in Solihull?",
+        "a": "<strong>No, not if the van can park on your driveway.</strong> If your road has parking restrictions, check with Solihull Council before moving day."
+      },
+      {
+        "q": "Are you fully insured for removals in Solihull?",
+        "a": "<strong>Yes. Solihull moves carry Goods in Transit (GIT) cover up to £50,000 and public liability cover up to £5 million.</strong> <a href=\"/insurance/\">See what the insurance covers and excludes</a>."
+      },
+      {
+        "q": "Can you move me from Solihull to anywhere in the UK?",
+        "a": "<strong>Yes. Moves from Solihull can go to any address in the UK.</strong> A move over 50 miles (80 km) is priced on the quote, and a move to Birmingham is priced as a local move."
+      },
+      {
+        "q": "Can you do short-notice or same-day removals in Solihull?",
+        "a": "<strong>Yes, when a crew is free.</strong> Short-notice and same-day moves depend on availability, so book 2–4 weeks ahead to hold a set date."
+      },
+      {
+        "q": "What is the cheapest way to move house in Solihull?",
+        "a": "<strong>Book an hourly man and van for a midweek date in the middle of the month, and pack your own boxes.</strong> Rates start at £40 – £60 an hour for 1 man and a van, with a 2-hour minimum. Self-packed boxes are not covered by GIT insurance. <a href=\"/prices/\">View the hourly man and van rates</a>."
+      }
     ]
   },
   {
