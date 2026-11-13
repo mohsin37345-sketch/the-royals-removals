@@ -473,7 +473,8 @@ function buildAreaPages() {
     // Hand-written area pages have their own template
     if (region.customTemplate) {
       buildCustomAreaPage(region);
-      return;
+      // A hub with its own template still builds its village pages below
+      if (!region.children.length) return;
     }
 
     // Region page
@@ -575,7 +576,7 @@ function buildAreaPages() {
     };
     const regionContent = render(regionTpl, regionVars);
     const regionHtml = buildPage(regionContent, regionVars);
-    writePage(`areas/${region.slug}/index.html`, regionHtml);
+    if (!region.customTemplate) writePage(`areas/${region.slug}/index.html`, regionHtml);
 
     // Child area pages
     region.children.forEach(child => {
@@ -841,6 +842,10 @@ function buildCustomAreaPage(region, parent) {
         primaryImageOfPage: { '@type': 'ImageObject', url: `${pageHost}${region.primaryImage || `/images/house-removals-${region.slug}-van-loading.jpg`}` },
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         dateModified: region.dateModified,
+        // A hub page lists its village pages
+        ...(!parent && region.children && region.children.length ? {
+          hasPart: region.children.map(c => ({ '@type': 'WebPage', name: `Removals in ${c.name}`, url: `${pageHost}/areas/${region.slug}/${c.slug}/` })),
+        } : {}),
       },
       {
         '@type': 'Service',
