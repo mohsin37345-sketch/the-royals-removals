@@ -838,37 +838,131 @@
       {
         "slug": "sutton-coldfield",
         "name": "Sutton Coldfield",
+        "customTemplate": "area-sutton-coldfield.html",
+        "faqHeadings": true,
+        "h1": "House Removals in Sutton Coldfield",
+        "metaTitle": "House Removals Sutton Coldfield | The Royals Removals",
+        "metaDescription": "Fully insured house removals in Sutton Coldfield, B72 to B76. Fixed quotes, packing and storage, 7 days a week. Call The Royals Removals on 07345 624506.",
         "primaryKeyword": "house removals sutton coldfield",
         "secondaryKeywords": [
-          "house removals in sutton coldfield",
-          "house removal company sutton coldfield",
+          "removals sutton coldfield",
           "house removal sutton coldfield",
-          "man with a van sutton coldfield"
+          "removal company sutton coldfield",
+          "house movers sutton coldfield",
+          "man and van sutton coldfield",
+          "removals and storage sutton coldfield"
         ],
-        "nearbyAreas": [],
-        "customIntro": "Sutton Coldfield is one of the most sought-after residential areas in the West Midlands. Whether you are moving from a large family home near Sutton Park or a stylish apartment in the town center, our Royal Town removals team provides an elite, white-glove service to match the prestigious postcode.",
-        "whyChooseUs": "Our Sutton Coldfield clients expect perfection, and we deliver. We specialize in fragile packing, handling valuable antiques, and moving high-end furniture with absolute care. Every surface is protected, and our crew operates with total discretion and professionalism.",
-        "logistics": "Many properties in Four Oaks or Little Aston have long, private driveways that require careful logistical planning. We conduct thorough pre-move surveys to assess access, ensuring we send the right mix of vehicles. We also carefully navigate Sutton's busy high street to coordinate unloading perfectly.",
-        "customFaqs": [
+        "dateModified": "2026-11-17",
+        "primaryImage": "/images/house-removals-wythall-van-strapped-load.jpg",
+        "areaServed": [
           {
-            "q": "Do you offer a full packing service in Sutton Coldfield?",
-            "a": "Yes, our white-glove service includes complete packing and unpacking. We handle all fine china, artwork, and delicate items with specialized materials."
+            "@type": "Place",
+            "name": "Sutton Coldfield",
+            "containedInPlace": {
+              "@type": "City",
+              "name": "Birmingham"
+            }
           },
           {
-            "q": "How do you protect light-colored carpets during the move?",
-            "a": "We utilize heavy-duty, clean floor runners throughout your home to guarantee carpets and hard floors remain perfectly unblemished."
+            "@type": "Place",
+            "name": "Boldmere",
+            "url": "https://theroyalsremovals.co.uk/areas/boldmere/"
           },
           {
-            "q": "Can you move a piano from my Sutton property?",
-            "a": "Yes, we are highly experienced in specialist items, including upright and grand pianos, using dedicated covers and dollies."
+            "@type": "Place",
+            "name": "Four Oaks",
+            "url": "https://theroyalsremovals.co.uk/areas/four-oaks/"
           },
           {
-            "q": "Are quotes free of charge?",
-            "a": "Yes, we offer free, no-obligation moving surveys (either via video or in-person) for all Sutton Coldfield residents."
+            "@type": "Place",
+            "name": "Little Aston",
+            "url": "https://theroyalsremovals.co.uk/areas/lichfield/little-aston/"
+          },
+          {
+            "@type": "Place",
+            "name": "Streetly",
+            "url": "https://theroyalsremovals.co.uk/areas/walsall/streetly/"
+          },
+          {
+            "@type": "Place",
+            "name": "Falcon Lodge",
+            "url": "https://theroyalsremovals.co.uk/areas/birmingham/falcon-lodge/"
+          },
+          {
+            "@type": "Place",
+            "name": "Walmley",
+            "url": "https://theroyalsremovals.co.uk/areas/walmley/"
           }
         ],
-        "propertyTypes": "modern apartment complexes and new-build houses",
-        "accessNotes": "busy main routes requiring careful van positioning",
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "name": "Removals in Boldmere",
+            "url": "https://theroyalsremovals.co.uk/areas/boldmere/"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Removals in Four Oaks",
+            "url": "https://theroyalsremovals.co.uk/areas/four-oaks/"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Removals in Little Aston",
+            "url": "https://theroyalsremovals.co.uk/areas/lichfield/little-aston/"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Removals in Streetly",
+            "url": "https://theroyalsremovals.co.uk/areas/walsall/streetly/"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Removals in Falcon Lodge",
+            "url": "https://theroyalsremovals.co.uk/areas/birmingham/falcon-lodge/"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Removals in Walmley",
+            "url": "https://theroyalsremovals.co.uk/areas/walmley/"
+          }
+        ],
+        "nearbyAreas": [],
+        "customFaqs": [
+          {
+            "q": "How much do house removals cost in Sutton Coldfield?",
+            "a": "<strong>House removals in Sutton Coldfield cost £400 – £700 for a 1-bed home, up to £1,400 – £2,500+ for 5 or more bedrooms, on a local move.</strong> A 3-bedroom house costs £800 – £1,400 to move. Weekend and month-end dates cost more, and your quote is fixed once agreed."
+          },
+          {
+            "q": "How far in advance should I book removals in Sutton Coldfield?",
+            "a": "<strong>Book 2–4 weeks before your moving date.</strong> Short-notice moves are taken when a crew is free, so call 07345 624506 to check a closer date."
+          },
+          {
+            "q": "Do you provide packing materials and packing services?",
+            "a": "<strong>Yes.</strong> Packing comes in 3 levels: fragile items only (£80 – £200), partial packing (£100 – £300) and full packing (£200 – £800+). Packing materials include boxes, wardrobe boxes and bubble wrap."
+          },
+          {
+            "q": "Can you move large or valuable furniture from detached homes?",
+            "a": "<strong>Yes.</strong> Large furniture is wrapped in blankets, and beds, wardrobes and tables are taken apart and rebuilt. Fragile-only packing protects glassware and pictures, and equipment removals handle pianos and safes. Tell us before the day, if your contents are worth more than the £50,000 Goods in Transit limit."
+          },
+          {
+            "q": "Do you offer storage in Sutton Coldfield?",
+            "a": "<strong>Yes.</strong> Storage is an extra on any move: we collect your belongings into storage and redeliver them when your new home is ready. A small space costs £80 – £150 a month, medium £100 – £200 and large £200 – £400."
+          },
+          {
+            "q": "Are your removals fully insured?",
+            "a": "<strong>Yes.</strong> Every move carries Goods in Transit cover up to £50,000 and public liability cover up to £5 million. <a href=\"/insurance/\">Read the full insurance details</a> for the limits and exclusions."
+          },
+          {
+            "q": "Can you do short-notice removals in Sutton Coldfield?",
+            "a": "<strong>Yes, when a crew is free on your date.</strong> Call 07345 624506 with the date and the size of your home, and we check which crews are available."
+          },
+          {
+            "q": "What is the cheapest way to move house in Sutton Coldfield?",
+            "a": "<strong>The lowest-cost option is an hourly man and van on a weekday mid-month, with your packing done before the crew arrives.</strong> Rates start at £40 – £60 an hour for 1 man and a van, with a 2-hour minimum. <a href=\"/prices/\">Compare every rate on our price list</a>."
+          }
+        ],
+        "propertyTypes": "large detached houses, family homes and town-centre flats",
+        "accessNotes": "town-centre parking and long private drives",
         "mainRoads": "local routes connecting to Birmingham"
       },
       {

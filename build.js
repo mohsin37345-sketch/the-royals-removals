@@ -842,8 +842,9 @@ function buildCustomAreaPage(region, parent) {
         primaryImageOfPage: { '@type': 'ImageObject', url: `${pageHost}${region.primaryImage || `/images/house-removals-${region.slug}-van-loading.jpg`}` },
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         dateModified: region.dateModified,
-        // A hub page lists its village pages
-        ...(!parent && region.children && region.children.length ? {
+        // A hub page lists its village pages; a page can also list them in its data
+        ...(region.hasPart ? { hasPart: region.hasPart } : {}),
+        ...(!region.hasPart && !parent && region.children && region.children.length ? {
           hasPart: region.children.map(c => ({ '@type': 'WebPage', name: `Removals in ${c.name}`, url: `${pageHost}/areas/${region.slug}/${c.slug}/` })),
         } : {}),
       },
