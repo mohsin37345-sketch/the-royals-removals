@@ -418,22 +418,71 @@
       {
         "slug": "harborne",
         "name": "Harborne",
+        "customTemplate": "area-harborne.html",
+        "faqHeadings": true,
+        "h1": "House Removals in Harborne",
+        "metaTitle": "House Removals Harborne, B17 | The Royals Removals",
+        "metaDescription": "Fully insured house removals in Harborne, B17. Fixed quotes, packing, storage and flat moves, 7 days a week. Call The Royals Removals on 07345 624506.",
         "primaryKeyword": "house removals harborne",
         "secondaryKeywords": [
-          "house removals in harborne",
-          "house removal company harborne",
-          "house removal harborne",
-          "man with a van harborne"
+          "removals harborne",
+          "removal company harborne",
+          "house movers harborne",
+          "man and van harborne",
+          "removals harborne birmingham",
+          "house removals b17"
         ],
+        "dateModified": "2026-11-18",
+        "primaryImage": "/images/house-removals-hollywood-van-loading.jpg",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Harborne, Birmingham",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "B17",
+            "addressLocality": "Birmingham",
+            "addressCountry": "GB"
+          },
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Birmingham"
+          }
+        },
         "nearbyAreas": [
           "edgbaston",
           "quinton",
           "selly-oak",
           "bearwood"
         ],
-        "propertyTypes": "Victorian and Edwardian semi-detached and detached homes",
-        "accessNotes": "High Street has double yellow lines; residential side streets are mostly unrestricted",
-        "mainRoads": "Harborne High Street, Lordswood Road (B4124)"
+        "customFaqs": [
+          {
+            "q": "How much do house removals cost in Harborne?",
+            "a": "<strong>House removals in Harborne cost from £400 – £700 for a 1-bed home to £1,400 – £2,500+ for 5 or more bedrooms.</strong> Those guide prices cover local moves under 50 miles (80 km). Weekend moves cost 10% to 20% more, and your quote is fixed once agreed."
+          },
+          {
+            "q": "Can you handle parking restrictions on Harborne streets?",
+            "a": "<strong>Yes.</strong> A Birmingham parking dispensation applies at a Harborne address, so check the council's current terms before your moving date. Tell us about permit parking on your street when you ask for a quote."
+          },
+          {
+            "q": "Do you offer packing and storage in Harborne?",
+            "a": "<strong>Yes.</strong> Packing comes in 3 levels: fragile items only (£80 – £200), partial packing (£100 – £300) and full packing (£200 – £800+). Storage costs £80 – £150 a month for a small space, up to £200 – £400 for a large one. <a href=\"/prices/\">See packing and storage prices</a>."
+          },
+          {
+            "q": "Do you do small moves and flat removals in Harborne?",
+            "a": "<strong>Yes.</strong> Small moves and flat removals are booked as a man and van by the hour, with a 2-hour minimum. Rates start at £40 – £60 an hour for 1 man and a van."
+          },
+          {
+            "q": "Are your removals fully insured?",
+            "a": "<strong>Yes.</strong> Every move carries Goods in Transit (GIT) cover up to £50,000 and public liability cover up to £5 million. <a href=\"/insurance/\">Read our insurance details</a> for the limits and exclusions."
+          },
+          {
+            "q": "Can you do short-notice removals in Harborne?",
+            "a": "<strong>Yes, when a crew is free on your date.</strong> For a set date, book 2–4 weeks ahead. Call 07345 624506 to check a closer date."
+          }
+        ],
+        "propertyTypes": "Victorian terraces, Edwardian homes and flats",
+        "accessNotes": "narrow residential streets and a busy High Street",
+        "mainRoads": "Harborne High Street, Lordswood Road"
       },
       {
         "slug": "hodge-hill",
@@ -509,7 +558,8 @@
           "edgbaston",
           "birmingham-city-centre",
           "jewellery-quarter",
-          "five-ways"
+          "five-ways",
+          "harborne"
         ],
         "propertyTypes": "beautiful period properties and converted flats",
         "accessNotes": "generally good access with wide tree-lined roads",
@@ -608,7 +658,8 @@
           "kings-norton",
           "longbridge",
           "rubery",
-          "cotteridge"
+          "cotteridge",
+          "harborne"
         ],
         "propertyTypes": "post-war semi-detached and inter-war terraced homes",
         "accessNotes": "Bristol Road South has restrictions; residential streets are mostly unrestricted",
@@ -1138,7 +1189,8 @@
         "nearbyAreas": [
           "bartley-green",
           "northfield",
-          "rubery"
+          "rubery",
+          "harborne"
         ],
         "propertyTypes": "a mix of historic cottages and mid-century family homes",
         "accessNotes": "quiet cul-de-sacs perfect for large removal vehicles",
