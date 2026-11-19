@@ -2499,3 +2499,46 @@
   // displaying a modern success toast to the user instead of opening their mail client.
 
 })();
+
+/* Cursor van: a small removal van follows the mouse on desktop.
+   Skipped on touch screens and for visitors who prefer reduced motion. */
+(function () {
+  if (!window.matchMedia || !window.requestAnimationFrame) return;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var van = document.createElement('div');
+  van.className = 'cursor-van';
+  van.setAttribute('aria-hidden', 'true');
+  van.innerHTML = '<svg viewBox="0 0 76 40" width="62" height="33" focusable="false"><g class="cv-speed" stroke="#E8A020" stroke-width="2.4" stroke-linecap="round"><path d="M3 10h6M0 16h9M3 22h6"/></g><rect x="12" y="3" width="38" height="25" rx="4" fill="#E8A020" stroke="#1A1714" stroke-width="2"/><path d="M24 20.5l-1.6-8 4.6 3.6 4-6.1 4 6.1 4.6-3.6-1.6 8z" fill="#1A1714"/><rect x="24" y="21.8" width="14" height="2.2" rx="1.1" fill="#1A1714"/><path d="M50 9h10.5a3 3 0 0 1 2.4 1.2l6.3 8.4a3 3 0 0 1 .6 1.8V28H50z" fill="#1A1714"/><path d="M53.5 12h6.5l4.7 6.3h-11.2z" fill="#BFE0F5"/><rect x="66.5" y="22" width="3.2" height="2.6" rx="1" fill="#FFD27A"/><rect x="10" y="27" width="61" height="4" rx="2" fill="#1A1714"/><g class="cv-wheel"><circle cx="22" cy="31.5" r="6" fill="#1A1714" stroke="#fff" stroke-width="1.6"/><circle cx="22" cy="31.5" r="2.3" fill="#E8A020"/><path d="M22 26.9v2M22 34.1v2M17.4 31.5h2M24.6 31.5h2" stroke="#E8A020" stroke-width="1.2" stroke-linecap="round"/></g><g class="cv-wheel"><circle cx="58" cy="31.5" r="6" fill="#1A1714" stroke="#fff" stroke-width="1.6"/><circle cx="58" cy="31.5" r="2.3" fill="#E8A020"/><path d="M58 26.9v2M58 34.1v2M53.4 31.5h2M60.6 31.5h2" stroke="#E8A020" stroke-width="1.2" stroke-linecap="round"/></g></svg>';
+  document.body.appendChild(van);
+
+  var OFFSET_X = 10, OFFSET_Y = 18, EASE = 0.16;
+  var tx = 0, ty = 0, x = 0, y = 0, dir = 1, frame = 0, shown = false;
+
+  function tick() {
+    x += (tx - x) * EASE;
+    y += (ty - y) * EASE;
+    var dx = tx - x;
+    if (Math.abs(dx) > 1.5) dir = dx > 0 ? 1 : -1;
+    van.style.transform = 'translate3d(' + (x + OFFSET_X) + 'px,' + (y + OFFSET_Y) + 'px,0) scaleX(' + dir + ')';
+    var moving = Math.abs(tx - x) + Math.abs(ty - y) > 0.4;
+    van.classList.toggle('is-moving', moving);
+    frame = moving ? requestAnimationFrame(tick) : 0;
+  }
+
+  document.addEventListener('mousemove', function (e) {
+    tx = e.clientX; ty = e.clientY;
+    if (!shown) { x = tx; y = ty; shown = true; van.classList.add('is-visible'); }
+    if (!frame) frame = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  document.addEventListener('mouseover', function (e) {
+    var t = e.target;
+    van.classList.toggle('is-over-link', !!(t && t.closest && t.closest('a, button, summary, label, [role="button"]')));
+  }, { passive: true });
+
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget) { van.classList.remove('is-visible'); shown = false; }
+  });
+})();
