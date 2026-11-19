@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=20260412" />
+  <link rel="stylesheet" href="/styles.css?v=20261119" />
   
   <!-- TrustBox script -->
   <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
@@ -33,13 +33,15 @@
 
 </head>
 <body>
-    <nav class="nav" id="navbar">
-    <div class="container nav__inner">
-      <a href="/" class="nav__logo">
-        <img src="/images/logo_trimmed.png" alt="The Royals Removals" style="height: 44px; width: auto;" />
-      </a>
-      <ul class="nav__links" id="navLinks">
-        <li class="nav__item"><a href="/">Home</a></li>
+    <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="nav" id="navbar" aria-label="Main">
+      <div class="container nav__inner">
+        <a href="/" class="nav__logo">
+          <img src="/images/logo_trimmed.png" alt="The Royals Removals" width="65" height="44" />
+        </a>
+        <ul class="nav__links" id="navLinks">
+          <li class="nav__item"><a href="/">Home</a></li>
               <li class="nav__item"><a href="/services/">Services</a></li>
               <li class="nav__item"><a href="/areas/">Areas We Serve</a></li>
               <li class="nav__item nav__item--dropdown">
@@ -47,21 +49,22 @@
                 <ul class="nav__dropdown"><li><a href="/prices/">Prices</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/insurance/">Insurance</a></li><li><a href="/blog/">Blog</a></li></ul>
               </li>
               <li class="nav__item"><a href="/contact/">Contact</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a href="tel:+447345624506" class="nav__phone-btn" aria-label="Call us">
-          <span class="nav__phone-icon">📞</span>
-          <span class="nav__phone-text">07345 624506</span>
-        </a>
-        <a href="/get-a-quote/" class="btn btn--gold nav__cta">Get Free Quote</a>
+        </ul>
+        <div class="nav__actions">
+          <a href="tel:+447345624506" class="nav__phone-btn" aria-label="Call 07345 624506">
+            <span class="nav__phone-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <span class="nav__phone-text">07345 624506</span>
+          </a>
+          <a href="/get-a-quote/" class="nav__cta">Get Free Quote</a>
+        </div>
+        <button class="nav__burger" id="navBurger" type="button" aria-label="Open menu" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <button class="nav__burger" id="navBurger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main>
+  <main id="main">
       <!-- Breadcrumb -->
   <section class="breadcrumb-bar">
     <div class="container">
@@ -300,19 +303,19 @@
     <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <div class="footer__logo" style="margin-bottom: 20px;">
-          <img src="/images/logo_trimmed.png" alt="The Royals Removals" style="height: 56px; width: auto; max-width: 100%; object-fit: contain; filter: brightness(0) invert(1);" />
-        </div>
+        <a href="/" class="footer__logo">
+          <img src="/images/logo_trimmed.png" alt="The Royals Removals" width="82" height="56" />
+        </a>
         <p>Birmingham's most trusted premium home removals service. Stress-free, insured, and royal-grade care for every move.</p>
-        <div class="footer__social" style="display:flex; gap:15px; margin-top:20px;">
-          <a href="https://www.facebook.com/theroyalsremovals" aria-label="Facebook" target="_blank" rel="noopener" style="color:#fff;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.48-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.54-4.5-10.02-10-10.02z"/></svg>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/theroyalsremovals" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.04c-5.5 0-10 4.48-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.54-4.5-10.02-10-10.02z"/></svg>
           </a>
-          <a href="https://www.instagram.com/theroyalsremovals" aria-label="Instagram" target="_blank" rel="noopener" style="color:#fff;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.22-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.05-.41-2.22-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.22-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.77.13 4.9.31 4.14.6c-.79.3-1.46.73-2.13 1.4C1.34 2.67.91 3.35.6 4.14.31 4.9.13 5.77.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.24 2.15.53 2.91.3.79.73 1.46 1.4 2.13.67.67 1.35 1.1 2.13 1.4.76.29 1.63.47 2.91.53 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.24 2.91-.53.79-.3 1.46-.73 2.13-1.4.67-.67 1.1-1.35 1.4-2.13.29-.76.47-1.63.53-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.24-2.15-.53-2.91-.3-.79-.73-1.46-1.4-2.13-.67-.67-1.35-1.1-2.13-1.4-.76-.29-1.63-.47-2.91-.53C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm5.8-9.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+          <a href="https://www.instagram.com/theroyalsremovals" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.22.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.05.41 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.22-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.05.36-2.22.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.22-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.05-.41-2.22-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.22.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.05-.36 2.22-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.77.13 4.9.31 4.14.6c-.79.3-1.46.73-2.13 1.4C1.34 2.67.91 3.35.6 4.14.31 4.9.13 5.77.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.24 2.15.53 2.91.3.79.73 1.46 1.4 2.13.67.67 1.35 1.1 2.13 1.4.76.29 1.63.47 2.91.53 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.24 2.91-.53.79-.3 1.46-.73 2.13-1.4.67-.67 1.1-1.35 1.4-2.13.29-.76.47-1.63.53-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.24-2.15-.53-2.91-.3-.79-.73-1.46-1.4-2.13-.67-.67-1.35-1.1-2.13-1.4-.76-.29-1.63-.47-2.91-.53C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm5.8-9.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
           </a>
-          <a href="https://wa.me/447345624506" aria-label="WhatsApp" target="_blank" rel="noopener" style="color:#fff;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
+          <a href="https://wa.me/447345624506" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413z"/></svg>
           </a>
         </div>
       </div>
@@ -340,15 +343,29 @@
           <li><a href="/areas/">View All Areas →</a></li>
         </ul>
       </div>
-      <div class="footer__col">
+      <div class="footer__col footer__contact">
         <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+447345624506">📞 07345 624506</a></li>
-          <li><a href="mailto:theroyalsremovals@gmail.com">✉ theroyalsremovals@gmail.com</a></li>
-          <li><span>📍 22 Whitehall Rd, Small Heath, Birmingham B9 5EJ, United Kingdom</span></li>
-          <li><span>🕐 Open 24 Hours</span></li>
-        </ul>
-        <a href="/get-a-quote/" class="btn btn--gold footer__cta">Get Free Quote</a>
+        <address>
+          <ul>
+            <li>
+              <span class="footer__ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <a href="tel:+447345624506">07345 624506</a>
+            </li>
+            <li>
+              <span class="footer__ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
+              <a href="mailto:theroyalsremovals@gmail.com">theroyalsremovals@gmail.com</a>
+            </li>
+            <li>
+              <span class="footer__ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.5 7-13a7 7 0 0 0-14 0c0 5.5 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+              <span>22 Whitehall Rd, Small Heath, Birmingham B9 5EJ, United Kingdom</span>
+            </li>
+            <li>
+              <span class="footer__ic" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <span>Open 24 Hours</span>
+            </li>
+          </ul>
+        </address>
+        <a href="/get-a-quote/" class="footer__cta">Get Free Quote <span aria-hidden="true">→</span></a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -363,16 +380,16 @@
     </div>
   </footer>
 
-  <div class="fixed-side-buttons">
-    <a href="/get-a-quote/" class="fixed-btn fixed-btn--left" aria-label="Get a Quote">
-      <span class="fixed-btn__icon">📝</span>
+  <aside class="fixed-side-buttons" aria-label="Quick contact">
+    <a href="/get-a-quote/" class="fixed-btn fixed-btn--left">
+      <span class="fixed-btn__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
       <span class="fixed-btn__text">Get Quote</span>
     </a>
-    <a href="tel:+447345624506" class="fixed-btn fixed-btn--right" aria-label="Call Us">
-      <span class="fixed-btn__icon">📞</span>
+    <a href="tel:+447345624506" class="fixed-btn fixed-btn--right">
+      <span class="fixed-btn__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
       <span class="fixed-btn__text">Call Us</span>
     </a>
-  </div>
+  </aside>
 
     <script type="application/ld+json">
   {
