@@ -2510,20 +2510,10 @@
   var van = document.createElement('div');
   van.className = 'cursor-van';
   van.setAttribute('aria-hidden', 'true');
-  van.innerHTML =
-    '<svg viewBox="0 0 44 26" width="34" height="20" focusable="false">' +
-      '<g stroke="#1A1714" stroke-width="1.6" stroke-linejoin="round">' +
-        '<rect x="1.5" y="2.5" width="27" height="15" rx="2" fill="#fff"/>' +
-        '<path d="M28.5 6.5h7.5l5.5 5.5v5.5h-13z" fill="#fff"/>' +
-        '<path d="M30.5 8.5h4.5l3.5 3.5h-8z" fill="#CFE3F2"/>' +
-      '</g>' +
-      '<path d="M5 9h19" stroke="#E8A020" stroke-width="2.4" stroke-linecap="round"/>' +
-      '<g class="cv-wheel"><circle cx="9" cy="19.5" r="3.6" fill="#1A1714"/><path d="M9 16.7v5.6M6.2 19.5h5.6" stroke="#E8A020" stroke-width="1.1"/></g>' +
-      '<g class="cv-wheel"><circle cx="34" cy="19.5" r="3.6" fill="#1A1714"/><path d="M34 16.7v5.6M31.2 19.5h5.6" stroke="#E8A020" stroke-width="1.1"/></g>' +
-    '</svg>';
+  van.innerHTML = '<svg viewBox="0 0 76 40" width="62" height="33" focusable="false"><g class="cv-speed" stroke="#E8A020" stroke-width="2.4" stroke-linecap="round"><path d="M3 10h6M0 16h9M3 22h6"/></g><rect x="12" y="3" width="38" height="25" rx="4" fill="#E8A020" stroke="#1A1714" stroke-width="2"/><path d="M24 20.5l-1.6-8 4.6 3.6 4-6.1 4 6.1 4.6-3.6-1.6 8z" fill="#1A1714"/><rect x="24" y="21.8" width="14" height="2.2" rx="1.1" fill="#1A1714"/><path d="M50 9h10.5a3 3 0 0 1 2.4 1.2l6.3 8.4a3 3 0 0 1 .6 1.8V28H50z" fill="#1A1714"/><path d="M53.5 12h6.5l4.7 6.3h-11.2z" fill="#BFE0F5"/><rect x="66.5" y="22" width="3.2" height="2.6" rx="1" fill="#FFD27A"/><rect x="10" y="27" width="61" height="4" rx="2" fill="#1A1714"/><g class="cv-wheel"><circle cx="22" cy="31.5" r="6" fill="#1A1714" stroke="#fff" stroke-width="1.6"/><circle cx="22" cy="31.5" r="2.3" fill="#E8A020"/><path d="M22 26.9v2M22 34.1v2M17.4 31.5h2M24.6 31.5h2" stroke="#E8A020" stroke-width="1.2" stroke-linecap="round"/></g><g class="cv-wheel"><circle cx="58" cy="31.5" r="6" fill="#1A1714" stroke="#fff" stroke-width="1.6"/><circle cx="58" cy="31.5" r="2.3" fill="#E8A020"/><path d="M58 26.9v2M58 34.1v2M53.4 31.5h2M60.6 31.5h2" stroke="#E8A020" stroke-width="1.2" stroke-linecap="round"/></g></svg>';
   document.body.appendChild(van);
 
-  var OFFSET_X = 14, OFFSET_Y = 16, EASE = 0.16;
+  var OFFSET_X = 10, OFFSET_Y = 18, EASE = 0.16;
   var tx = 0, ty = 0, x = 0, y = 0, dir = 1, frame = 0, shown = false;
 
   function tick() {
