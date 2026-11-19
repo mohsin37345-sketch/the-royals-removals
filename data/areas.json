@@ -518,7 +518,8 @@
           "moseley",
           "billesley",
           "brandwood",
-          "hall-green"
+          "hall-green",
+          "kings-norton"
         ],
         "propertyTypes": "Edwardian and inter-war semi-detached homes with mature gardens",
         "accessNotes": "Vicarage Road and side streets are mostly unrestricted; high street has loading bays",
@@ -527,22 +528,66 @@
       {
         "slug": "kings-norton",
         "name": "Kings Norton",
+        "customTemplate": "area-kings-norton.html",
+        "faqHeadings": true,
+        "h1": "House Removals in Kings Norton",
+        "metaTitle": "House Removals Kings Norton, B30 | The Royals Removals",
+        "metaDescription": "Fully insured house removals in Kings Norton, B30 and B38. Fixed quotes, packing and storage, 7 days a week. Call The Royals Removals on 07345 624506.",
         "primaryKeyword": "house removals kings norton",
         "secondaryKeywords": [
-          "house removals in kings norton",
-          "house removal company kings norton",
-          "house removal kings norton",
-          "man with a van kings norton"
+          "removals kings norton",
+          "removal company kings norton",
+          "house movers kings norton",
+          "man and van kings norton",
+          "removals kings norton birmingham",
+          "house removals b30",
+          "house removals b38"
         ],
+        "dateModified": "2026-11-19",
+        "primaryImage": "/images/removal-van-loaded-wythall-street.jpg",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Kings Norton, Birmingham",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Birmingham"
+          }
+        },
         "nearbyAreas": [
           "cotteridge",
           "bournville",
           "northfield",
           "brandwood"
         ],
-        "propertyTypes": "post-war semi-detached and 1960s–1970s terraced homes",
-        "accessNotes": "most residential streets have unrestricted parking; Pershore Road has loading restrictions",
-        "mainRoads": "Pershore Road (A441), Lifford Lane"
+        "customFaqs": [
+          {
+            "q": "How much do house removals cost in Kings Norton?",
+            "a": "<strong>House removals in Kings Norton run from £400 – £700 for a 1-bed home up to £1,400 – £2,500+ for 5 bedrooms or more.</strong> Both ranges assume a local move under 50 miles (80 km), and weekend or month-end dates cost more. Once agreed, your quote stays fixed."
+          },
+          {
+            "q": "How soon can you do a move in Kings Norton?",
+            "a": "<strong>2–4 weeks' notice secures a set date.</strong> Shorter-notice moves go ahead when a crew is free, and every quote comes back within 15 minutes."
+          },
+          {
+            "q": "Do you offer packing and storage?",
+            "a": "<strong>Yes.</strong> Full packing costs £200 – £800+, partial packing £100 – £300 and fragile-only packing £80 – £200. Storage costs £80 – £150 monthly for a small space, up to £200 – £400 for a large one. <a href=\"/prices/\">Find packing and storage on our price list</a>."
+          },
+          {
+            "q": "Do you handle small moves and single items?",
+            "a": "<strong>Yes.</strong> Small moves go on the man and van service, billed hourly over a minimum of 2 hours, from £40 – £60 an hour with 1 man. Single pieces, such as a sofa or wardrobe, are moved as furniture removals."
+          },
+          {
+            "q": "Are your removals fully insured?",
+            "a": "<strong>Yes.</strong> Every booking carries Goods in Transit (GIT) insurance worth up to £50,000, alongside public liability cover of up to £5 million. <a href=\"/insurance/\">Read how our insurance works</a>."
+          },
+          {
+            "q": "Do I need a parking permit for the removal van in Kings Norton?",
+            "a": "<strong>No, not if the van can use your driveway.</strong> On a road with parking restrictions, check the Birmingham City Council parking dispensation terms first, and mention the restriction in your quote request."
+          }
+        ],
+        "propertyTypes": "terraced houses, semis, flats and new-build homes",
+        "accessNotes": "through traffic on Pershore Road South and at the Green",
+        "mainRoads": "Pershore Road South (A441), Redditch Road"
       },
       {
         "slug": "ladywood",
@@ -739,7 +784,8 @@
           "harborne",
           "bournville",
           "edgbaston",
-          "stirchley"
+          "stirchley",
+          "kings-norton"
         ],
         "propertyTypes": "Victorian and Edwardian terraced and semi-detached homes; student flat conversions near university",
         "accessNotes": "Bristol Road has loading restrictions; Oak Tree Lane and side streets mostly unrestricted",
@@ -880,7 +926,8 @@
           "bournville",
           "selly-oak",
           "cotteridge",
-          "kings-heath"
+          "kings-heath",
+          "kings-norton"
         ],
         "propertyTypes": "inter-war and post-war semi-detached homes",
         "accessNotes": "Pershore Road South mostly unrestricted at property level; high street has double yellows",
