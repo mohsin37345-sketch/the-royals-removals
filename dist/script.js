@@ -2499,3 +2499,56 @@
   // displaying a modern success toast to the user instead of opening their mail client.
 
 })();
+
+/* Cursor van: a small removal van follows the mouse on desktop.
+   Skipped on touch screens and for visitors who prefer reduced motion. */
+(function () {
+  if (!window.matchMedia || !window.requestAnimationFrame) return;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var van = document.createElement('div');
+  van.className = 'cursor-van';
+  van.setAttribute('aria-hidden', 'true');
+  van.innerHTML =
+    '<svg viewBox="0 0 44 26" width="34" height="20" focusable="false">' +
+      '<g stroke="#1A1714" stroke-width="1.6" stroke-linejoin="round">' +
+        '<rect x="1.5" y="2.5" width="27" height="15" rx="2" fill="#fff"/>' +
+        '<path d="M28.5 6.5h7.5l5.5 5.5v5.5h-13z" fill="#fff"/>' +
+        '<path d="M30.5 8.5h4.5l3.5 3.5h-8z" fill="#CFE3F2"/>' +
+      '</g>' +
+      '<path d="M5 9h19" stroke="#E8A020" stroke-width="2.4" stroke-linecap="round"/>' +
+      '<g class="cv-wheel"><circle cx="9" cy="19.5" r="3.6" fill="#1A1714"/><path d="M9 16.7v5.6M6.2 19.5h5.6" stroke="#E8A020" stroke-width="1.1"/></g>' +
+      '<g class="cv-wheel"><circle cx="34" cy="19.5" r="3.6" fill="#1A1714"/><path d="M34 16.7v5.6M31.2 19.5h5.6" stroke="#E8A020" stroke-width="1.1"/></g>' +
+    '</svg>';
+  document.body.appendChild(van);
+
+  var OFFSET_X = 14, OFFSET_Y = 16, EASE = 0.16;
+  var tx = 0, ty = 0, x = 0, y = 0, dir = 1, frame = 0, shown = false;
+
+  function tick() {
+    x += (tx - x) * EASE;
+    y += (ty - y) * EASE;
+    var dx = tx - x;
+    if (Math.abs(dx) > 1.5) dir = dx > 0 ? 1 : -1;
+    van.style.transform = 'translate3d(' + (x + OFFSET_X) + 'px,' + (y + OFFSET_Y) + 'px,0) scaleX(' + dir + ')';
+    var moving = Math.abs(tx - x) + Math.abs(ty - y) > 0.4;
+    van.classList.toggle('is-moving', moving);
+    frame = moving ? requestAnimationFrame(tick) : 0;
+  }
+
+  document.addEventListener('mousemove', function (e) {
+    tx = e.clientX; ty = e.clientY;
+    if (!shown) { x = tx; y = ty; shown = true; van.classList.add('is-visible'); }
+    if (!frame) frame = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  document.addEventListener('mouseover', function (e) {
+    var t = e.target;
+    van.classList.toggle('is-over-link', !!(t && t.closest && t.closest('a, button, summary, label, [role="button"]')));
+  }, { passive: true });
+
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget) { van.classList.remove('is-visible'); shown = false; }
+  });
+})();

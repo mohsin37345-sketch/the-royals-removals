@@ -4674,3 +4674,17 @@ body.flow-student .form-progress__connector--student {
   from { transform: translateX(-100%); }
   to   { transform: translateX(26px); }
 }
+
+/* ══════════════════════════════════════
+   CURSOR VAN — a small removal van follows the mouse (desktop only)
+   Created by script.js; never blocks clicks.
+══════════════════════════════════════ */
+.cursor-van { position: fixed; top: 0; left: 0; z-index: 9999; pointer-events: none; opacity: 0; transition: opacity .25s; will-change: transform; }
+.cursor-van.is-visible { opacity: 1; }
+.cursor-van svg { display: block; transform-origin: 30% 20%; transition: transform .2s ease; filter: drop-shadow(0 3px 4px rgba(26,23,20,.28)); }
+.cursor-van.is-over-link svg { transform: scale(1.3); }
+.cursor-van .cv-wheel { transform-box: fill-box; transform-origin: center; }
+.cursor-van.is-moving .cv-wheel { animation: cv-wheel-spin .45s linear infinite; }
+@keyframes cv-wheel-spin { to { transform: rotate(360deg); } }
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-van { display: none; } }
+@media print { .cursor-van { display: none; } }
