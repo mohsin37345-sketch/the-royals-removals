@@ -4646,3 +4646,31 @@ body.flow-student .form-progress__connector--student {
 .fixed-btn__icon { display: grid; place-items: center; font-size: 0; }
 .fixed-btn__text { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .nav__cta, .footer__cta, .skip-link { transition: none; } }
+
+/* ══════════════════════════════════════
+   QUOTE BUTTONS — a small removal van drives across on hover
+   Desktop pointers only; off for reduced motion. The van runs along
+   the bottom padding, below the label, so it never covers the text.
+══════════════════════════════════════ */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .btn--gold, .wm-btn-gold, .nav__cta, .footer__cta { position: relative; overflow: hidden; }
+  .btn--gold::after, .wm-btn-gold::after, .nav__cta::after, .footer__cta::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    transform: translateX(-100%);
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 26'%3E%3Cg stroke='%231A1714' stroke-width='1.6' stroke-linejoin='round'%3E%3Crect x='1.5' y='2.5' width='27' height='15' rx='2' fill='%23fff'/%3E%3Cpath d='M28.5 6.5h7.5l5.5 5.5v5.5h-13z' fill='%23fff'/%3E%3Cpath d='M30.5 8.5h4.5l3.5 3.5h-8z' fill='%23CFE3F2'/%3E%3C/g%3E%3Cpath d='M5 9h19' stroke='%23E8A020' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='9' cy='19.5' r='3.6' fill='%231A1714'/%3E%3Ccircle cx='34' cy='19.5' r='3.6' fill='%231A1714'/%3E%3Ccircle cx='9' cy='19.5' r='1.3' fill='%23E8A020'/%3E%3Ccircle cx='34' cy='19.5' r='1.3' fill='%23E8A020'/%3E%3C/svg%3E") right center / 23px 13px no-repeat;
+  }
+  .btn--gold:hover::after, .wm-btn-gold:hover::after, .nav__cta:hover::after, .footer__cta:hover::after,
+  .btn--gold:focus-visible::after, .wm-btn-gold:focus-visible::after, .nav__cta:focus-visible::after, .footer__cta:focus-visible::after {
+    animation: rr-van-drive 1.1s cubic-bezier(.45, .05, .4, 1) 1 both;
+  }
+}
+@keyframes rr-van-drive {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(26px); }
+}
