@@ -1157,7 +1157,8 @@
           "acocks-green",
           "moseley",
           "sparkhill",
-          "yardley-wood"
+          "yardley-wood",
+          "shirley"
         ],
         "propertyTypes": "predominantly 1970s and 1980s residential estates",
         "accessNotes": "narrow residential streets with high on-street parking",
@@ -2719,22 +2720,68 @@
       {
         "slug": "shirley",
         "name": "Shirley",
-        "primaryKeyword": "house removals shirley",
+        "customTemplate": "area-shirley.html",
+        "faqHeadings": true,
+        "h1": "House Removals in Shirley, Solihull",
+        "metaTitle": "House Removals Shirley, Solihull | The Royals Removals",
+        "metaDescription": "Fully insured house removals in Shirley, Solihull B90. Fixed quotes, packing, storage and office moves, 7 days a week. Call The Royals Removals on 07345 624506.",
+        "primaryKeyword": "house removals shirley solihull",
         "secondaryKeywords": [
           "house removals in shirley",
-          "house removal company shirley",
-          "house removal shirley",
-          "man with a van shirley"
+          "removals shirley solihull",
+          "removal company shirley",
+          "house movers shirley solihull",
+          "man and van shirley solihull",
+          "house removals b90"
         ],
+        "dateModified": "2026-11-20",
+        "primaryImage": "/images/house-removals-wythall-van-loading.jpg",
+        "areaServed": {
+          "@type": "Place",
+          "name": "Shirley, Solihull",
+          "address": {
+            "@type": "PostalAddress",
+            "postalCode": "B90",
+            "addressLocality": "Shirley",
+            "addressRegion": "West Midlands",
+            "addressCountry": "GB"
+          }
+        },
         "nearbyAreas": [
           "olton",
           "solihull-town",
           "monkspath",
           "hall-green"
         ],
-        "propertyTypes": "post-war semi-detached houses and bungalows",
-        "accessNotes": "permit parking zones in place on several roads",
-        "mainRoads": "local routes connecting to Solihull"
+        "customFaqs": [
+          {
+            "q": "How much do house removals cost in Shirley, Solihull?",
+            "a": "<strong>House removals in Shirley, Solihull cost between £400 – £700 for a 1-bed home and £1,400 – £2,500+ for the largest homes of 5+ bedrooms.</strong> The figures are guide prices for a local move. Weekend dates add 10% to 20% and month-end dates 15%; once accepted, the quote stays fixed."
+          },
+          {
+            "q": "How far in advance should I book my move?",
+            "a": "<strong>2–4 weeks before moving day is the usual booking window for a set date.</strong> A crew can take a shorter-notice move when one is free."
+          },
+          {
+            "q": "Do you offer packing and storage in Shirley?",
+            "a": "<strong>Yes.</strong> Packing comes in 3 levels: fragile-only at £80 – £200, partial at £100 – £300 and full at £200 – £800+. Storage is charged monthly, from £80 – £150 for a small space to £200 – £400 for a large one. <a href=\"/prices/\">See packing and storage prices</a>."
+          },
+          {
+            "q": "Do you handle office moves at Blythe Valley Park?",
+            "a": "<strong>Yes.</strong> Our office relocation service plans the order of work for desks, IT equipment and files. Weekend dates are available, if moving on a weekday would interrupt trading."
+          },
+          {
+            "q": "Are your removals fully insured?",
+            "a": "<strong>Yes.</strong> Each Shirley move has public liability cover up to £5 million alongside Goods in Transit (GIT) cover up to £50,000. <a href=\"/insurance/\">Check our insurance cover and limits</a>."
+          },
+          {
+            "q": "Do you do small moves and single items in Shirley?",
+            "a": "<strong>Yes.</strong> Small jobs use our hourly man and van, with a minimum booking of 2 hours and rates from £40 – £60 an hour for 1 man and a van. A single sofa or wardrobe goes as a furniture removal."
+          }
+        ],
+        "propertyTypes": "semis, new-build homes, flats and detached houses",
+        "accessNotes": "traffic and loading on Stratford Road",
+        "mainRoads": "Stratford Road (A34)"
       },
       {
         "slug": "knowle",
@@ -3085,7 +3132,8 @@
         "nearbyAreas": [
           "dickens-heath",
           "hockley-heath",
-          "solihull-town"
+          "solihull-town",
+          "shirley"
         ],
         "propertyTypes": "large detached properties with generous gardens",
         "accessNotes": "historic narrow lanes that require smaller luton vans",
